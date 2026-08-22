@@ -8,7 +8,7 @@ The tap action triggers this method invocation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ClickEvent--><!--Device-unnamed-export declare interface ClickEvent-End-->
 
@@ -22,7 +22,7 @@ getCurrentLocalPosition(): Coordinate2D
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ClickEvent-getCurrentLocalPosition(): Coordinate2D--><!--Device-ClickEvent-getCurrentLocalPosition(): Coordinate2D-End-->
 
@@ -40,7 +40,7 @@ Prevent the default function.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +84,7 @@ X coordinate of the click relative to the upper left corner of the application s
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,7 +104,7 @@ Y coordinate of the click relative to the upper left corner of the application s
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,7 +124,7 @@ X coordinate of the point relative to the global display.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +144,7 @@ Y coordinate of the point relative to the global display.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,7 +164,7 @@ Whether the event is triggered by a left-hand or right-hand tap.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,7 +184,7 @@ X coordinate of the click relative to the upper left corner of the application w
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,7 +204,7 @@ Y coordinate of the click relative to the upper left corner of the application w
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,7 +224,7 @@ X coordinate of the click point relative to the left edge of the clicked element
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,7 +244,7 @@ Y coordinate of the click point relative to the left edge of the clicked element
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

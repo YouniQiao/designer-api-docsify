@@ -6,7 +6,7 @@ Defines menu grid position.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare enum MenuGridPosition--><!--Device-unnamed-export declare enum MenuGridPosition-End-->
 
@@ -22,7 +22,7 @@ The grid is located at the top of the menu.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ The grid is located at the bottom of the menu.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

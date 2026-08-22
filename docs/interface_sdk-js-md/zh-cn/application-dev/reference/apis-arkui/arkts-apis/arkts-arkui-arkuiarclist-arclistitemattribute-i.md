@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ArcListItemAttribute--><!--Device-unnamed-export declare interface ArcListItemAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeM
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ArcListItemAttribute-attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ArcListItemAttribute-attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ autoScale(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ArcListItemAttribute-autoScale(enable: boolean | undefined): this--><!--Device-ArcListItemAttribute-autoScale(enable: boolean | undefined): this-End-->
 
@@ -70,7 +70,7 @@ setArcListItemOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ArcListItemAttribute-setArcListItemOptions(): this--><!--Device-ArcListItemAttribute-setArcListItemOptions(): this-End-->
 
@@ -86,7 +86,7 @@ swipeAction(options: SwipeActionOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ArcListItemAttribute-swipeAction(options: SwipeActionOptions | undefined): this--><!--Device-ArcListItemAttribute-swipeAction(options: SwipeActionOptions | undefined): this-End-->
 
@@ -110,7 +110,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcListItemAttribute-default--><!--Device-ArcListItemAttribute-default-End-->
 

@@ -4,7 +4,7 @@ Declare the animation mode of tab content.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum AnimationMode--><!--Device-unnamed-export declare enum AnimationMode-End-->
 
@@ -20,7 +20,7 @@ Load the content of the target page before starting the switching animation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Start the switching animation before loading the content of the target page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +56,7 @@ Disable the default switching animation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +74,7 @@ Load the content of the target page first, then jump to the vicinity of the targ
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,7 +92,7 @@ Jump to the vicinity of the target page without animation first, then jump to th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

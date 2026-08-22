@@ -4,7 +4,7 @@ Defines the preview menu options.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface PreviewMenuOptions--><!--Device-unnamed-export declare interface PreviewMenuOptions-End-->
 
@@ -22,7 +22,7 @@ Defines the haptic feedback mode of preview menu.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

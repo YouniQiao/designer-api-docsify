@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface SecurityUIExtensionComponentAttribute--><!--Device-unnamed-export declare interface SecurityUIExtensionComponentAttribute-End-->
 
@@ -22,7 +22,7 @@ setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtension
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SecurityUIExtensionComponentAttribute-setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtensionOptions): this--><!--Device-SecurityUIExtensionComponentAttribute-setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtensionOptions): this-End-->
 

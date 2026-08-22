@@ -6,7 +6,7 @@ Defines the Progress component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ProgressAttribute--><!--Device-unnamed-export declare interface ProgressAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ProgressAttribute> | AttributeModi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-attributeModifier(modifier: AttributeModifier<ProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ProgressAttribute-attributeModifier(modifier: AttributeModifier<ProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ color(value: ResourceColor | LinearGradient | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient | undefined): this--><!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient | undefined): this-End-->
 
@@ -64,7 +64,7 @@ contentModifier(modifier: ContentModifier<ProgressConfiguration> | undefined): t
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration> | undefined): this--><!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration> | undefined): this-End-->
 
@@ -86,7 +86,7 @@ privacySensitive(isPrivacySensitiveMode: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this--><!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this-End-->
 
@@ -108,7 +108,7 @@ setProgressOptions(options: ProgressOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-setProgressOptions(options: ProgressOptions): this--><!--Device-ProgressAttribute-setProgressOptions(options: ProgressOptions): this-End-->
 
@@ -130,7 +130,7 @@ style(value: LinearStyleOptions | RingStyleOptions | CapsuleStyleOptions | Progr
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-style(value: LinearStyleOptions | RingStyleOptions | CapsuleStyleOptions | ProgressStyleOptions | undefined): this--><!--Device-ProgressAttribute-style(value: LinearStyleOptions | RingStyleOptions | CapsuleStyleOptions | ProgressStyleOptions | undefined): this-End-->
 
@@ -152,7 +152,7 @@ value(value: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ProgressAttribute-value(value: double | undefined): this--><!--Device-ProgressAttribute-value(value: double | undefined): this-End-->
 
@@ -176,7 +176,7 @@ Set Progress options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

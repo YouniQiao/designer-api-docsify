@@ -15,7 +15,7 @@ Copies the source directory and its content to the destination path. You can set
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyDir(src: string, dest: string, mode?: int): Promise<void>--><!--Device-fileIo-function copyDir(src: string, dest: string, mode?: int): Promise<void>-End-->
 
@@ -71,7 +71,7 @@ An exception will be thrown if the destination directory contains a directory wi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -118,7 +118,7 @@ Copies the source directory and its content to the destination path. You can set
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyDir(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copyDir(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void-End-->
 

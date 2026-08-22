@@ -4,7 +4,7 @@ Defines the selection menu options.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface SelectionMenuOptionsExt--><!--Device-unnamed-export declare interface SelectionMenuOptionsExt-End-->
 
@@ -22,7 +22,7 @@ Menu type, default value is MenuType.SELECTION_MENU.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-menuType?: MenuType--><!--Device-SelectionMenuOptionsExt-menuType?: MenuType-End-->
 
@@ -40,7 +40,7 @@ Callback function when the selection menu appears.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-onAppear?: VoidCallback--><!--Device-SelectionMenuOptionsExt-onAppear?: VoidCallback-End-->
 
@@ -58,7 +58,7 @@ Callback function when the selection menu disappears.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-onDisappear?: VoidCallback--><!--Device-SelectionMenuOptionsExt-onDisappear?: VoidCallback-End-->
 
@@ -76,7 +76,7 @@ Callback function when the selection menu is hidden.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-onMenuHide?: VoidCallback--><!--Device-SelectionMenuOptionsExt-onMenuHide?: VoidCallback-End-->
 
@@ -94,7 +94,7 @@ Callback function when the selection menu is displayed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-onMenuShow?: VoidCallback--><!--Device-SelectionMenuOptionsExt-onMenuShow?: VoidCallback-End-->
 
@@ -112,7 +112,7 @@ The preview content of selection menu.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-preview?: CustomBuilder--><!--Device-SelectionMenuOptionsExt-preview?: CustomBuilder-End-->
 
@@ -130,7 +130,7 @@ Defines the options of preview menu.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SelectionMenuOptionsExt-previewMenuOptions?: PreviewMenuOptions--><!--Device-SelectionMenuOptionsExt-previewMenuOptions?: PreviewMenuOptions-End-->
 

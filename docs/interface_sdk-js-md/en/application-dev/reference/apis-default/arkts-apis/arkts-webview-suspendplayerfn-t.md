@@ -8,7 +8,7 @@ The function of suspend media play.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-type SuspendPlayerFn = (type: SuspendType) => void--><!--Device-webview-type SuspendPlayerFn = (type: SuspendType) => void-End-->
 

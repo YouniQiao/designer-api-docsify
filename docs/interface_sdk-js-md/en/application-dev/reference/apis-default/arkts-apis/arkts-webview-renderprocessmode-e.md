@@ -6,7 +6,7 @@ Defines the render process mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum RenderProcessMode--><!--Device-webview-enum RenderProcessMode-End-->
 
@@ -22,7 +22,7 @@ ArkWeb single rendering subprocess mode. In this mode, multiple Web pages reuse 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderProcessMode-SINGLE = 0--><!--Device-RenderProcessMode-SINGLE = 0-End-->
 
@@ -38,7 +38,7 @@ ArkWeb multi-rendering subprocess mode. In this mode, there is one rendering sub
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderProcessMode-MULTIPLE--><!--Device-RenderProcessMode-MULTIPLE-End-->
 

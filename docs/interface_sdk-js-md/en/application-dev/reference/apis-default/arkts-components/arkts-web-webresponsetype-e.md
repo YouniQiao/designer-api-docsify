@@ -4,7 +4,7 @@ ResponseType for contextMenu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum WebResponseType--><!--Device-unnamed-export declare enum WebResponseType-End-->
 
@@ -20,7 +20,7 @@ The menu is displayed when the component is long-pressed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebResponseType-LONG_PRESS = 1--><!--Device-WebResponseType-LONG_PRESS = 1-End-->
 
@@ -36,7 +36,7 @@ The menu is displayed when the component is right-clicked.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebResponseType-RIGHT_CLICK = 2--><!--Device-WebResponseType-RIGHT_CLICK = 2-End-->
 

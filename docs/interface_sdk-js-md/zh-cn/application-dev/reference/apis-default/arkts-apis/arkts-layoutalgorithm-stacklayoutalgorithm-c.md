@@ -13,7 +13,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 <!--Device-unnamed-export declare class StackLayoutAlgorithm--><!--Device-unnamed-export declare class StackLayoutAlgorithm-End-->
 
@@ -29,7 +29,7 @@ constructor(option?: StackLayoutAlgorithmOptions)
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 <!--Device-StackLayoutAlgorithm-constructor(option?: StackLayoutAlgorithmOptions)--><!--Device-StackLayoutAlgorithm-constructor(option?: StackLayoutAlgorithmOptions)-End-->
 
@@ -53,7 +53,7 @@ constructor(option?: StackLayoutAlgorithmOptions)
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 <!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithm-@Trace public alignContent?: LocalizedAlignment-End-->
 

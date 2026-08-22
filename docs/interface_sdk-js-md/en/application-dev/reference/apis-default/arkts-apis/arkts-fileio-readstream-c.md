@@ -8,7 +8,7 @@ The data obtained by **ReadStream** is a decoded string. Currently, only the UTF
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-class ReadStream--><!--Device-fileIo-class ReadStream-End-->
 
@@ -29,7 +29,7 @@ Closes this readable stream.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
@@ -56,7 +56,7 @@ The ReadStream constructor.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
 
@@ -72,7 +72,7 @@ Adjusts the position of the readable stream offset pointer.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadStream-seek(offset: long, whence?: WhenceType): long--><!--Device-ReadStream-seek(offset: long, whence?: WhenceType): long-End-->
 
@@ -112,7 +112,7 @@ Number of bytes read by the readable stream.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadStream-readonly bytesRead: long--><!--Device-ReadStream-readonly bytesRead: long-End-->
 
@@ -130,7 +130,7 @@ Path of the file corresponding to the readable stream.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 

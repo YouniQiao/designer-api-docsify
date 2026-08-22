@@ -4,7 +4,7 @@ Interface for handling method invocations on a proxy object. Defines methods to 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-reflect-interface InvocationHandler--><!--Device-reflect-interface InvocationHandler-End-->
 
@@ -25,7 +25,7 @@ Intercepts the getter operation for the each property on the proxy object.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +56,7 @@ Intercepts invocation of a method on the proxy object with the provided argument
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,7 +88,7 @@ Intercepts the setter operation of a method on the proxy object.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

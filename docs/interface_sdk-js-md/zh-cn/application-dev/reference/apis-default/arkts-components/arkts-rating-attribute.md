@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface RatingAttribute--><!--Device-unnamed-export declare interface RatingAttribute-End-->
 
@@ -18,7 +18,7 @@ attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RatingAttribute-attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RatingAttribute-attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -40,7 +40,7 @@ contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RatingAttribute-contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): this--><!--Device-RatingAttribute-contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): this-End-->
 
@@ -62,7 +62,7 @@ onChange(callback: OnRatingChangeCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RatingAttribute-onChange(callback: OnRatingChangeCallback | undefined): this--><!--Device-RatingAttribute-onChange(callback: OnRatingChangeCallback | undefined): this-End-->
 
@@ -84,7 +84,7 @@ starStyle(options: StarStyleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this-End-->
 
@@ -106,7 +106,7 @@ stars(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RatingAttribute-stars(value: int | undefined): this--><!--Device-RatingAttribute-stars(value: int | undefined): this-End-->
 
@@ -128,7 +128,7 @@ stepSize(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RatingAttribute-stepSize(value: double | undefined): this--><!--Device-RatingAttribute-stepSize(value: double | undefined): this-End-->
 
@@ -152,7 +152,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -8,7 +8,7 @@ Defines the TimePicker component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface TimePickerAttribute--><!--Device-unnamed-export declare interface TimePickerAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<TimePickerAttribute> | AttributeMo
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-attributeModifier(modifier: AttributeModifier<TimePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TimePickerAttribute-attributeModifier(modifier: AttributeModifier<TimePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ dateTimeOptions(value: DateTimeOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-dateTimeOptions(value: DateTimeOptions | undefined): this--><!--Device-TimePickerAttribute-dateTimeOptions(value: DateTimeOptions | undefined): this-End-->
 
@@ -66,7 +66,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-TimePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -88,7 +88,7 @@ disappearTextStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this--><!--Device-TimePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -110,7 +110,7 @@ enableCascade(enabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-enableCascade(enabled: boolean | undefined): this--><!--Device-TimePickerAttribute-enableCascade(enabled: boolean | undefined): this-End-->
 
@@ -132,7 +132,7 @@ enableHapticFeedback(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this--><!--Device-TimePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this-End-->
 
@@ -154,7 +154,7 @@ loop(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-loop(value: boolean | undefined): this--><!--Device-TimePickerAttribute-loop(value: boolean | undefined): this-End-->
 
@@ -176,7 +176,7 @@ onChange(callback: OnTimePickerChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-onChange(callback: OnTimePickerChangeCallback | undefined): this--><!--Device-TimePickerAttribute-onChange(callback: OnTimePickerChangeCallback | undefined): this-End-->
 
@@ -198,7 +198,7 @@ onEnterSelectedArea(callback: Callback<TimePickerResult> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-onEnterSelectedArea(callback: Callback<TimePickerResult> | undefined): this--><!--Device-TimePickerAttribute-onEnterSelectedArea(callback: Callback<TimePickerResult> | undefined): this-End-->
 
@@ -220,7 +220,7 @@ selectedTextStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this--><!--Device-TimePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -242,7 +242,7 @@ setTimePickerOptions(options?: TimePickerOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-setTimePickerOptions(options?: TimePickerOptions): this--><!--Device-TimePickerAttribute-setTimePickerOptions(options?: TimePickerOptions): this-End-->
 
@@ -264,7 +264,7 @@ textStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-textStyle(value: PickerTextStyle | undefined): this--><!--Device-TimePickerAttribute-textStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -286,7 +286,7 @@ useMilitaryTime(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TimePickerAttribute-useMilitaryTime(value: boolean | undefined): this--><!--Device-TimePickerAttribute-useMilitaryTime(value: boolean | undefined): this-End-->
 
@@ -310,7 +310,7 @@ Set the attribute modifier
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

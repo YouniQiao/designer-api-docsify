@@ -15,7 +15,7 @@ Opens a file stream based on the file descriptor. This API uses a promise to ret
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function fdopenStream(fd: int, mode: string): Promise<Stream>--><!--Device-fileIo-function fdopenStream(fd: int, mode: string): Promise<Stream>-End-->
 
@@ -77,7 +77,7 @@ Opens a stream based on the file descriptor. To close the stream, use **close()*
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function fdopenStream(fd: int, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-fileIo-function fdopenStream(fd: int, mode: string, callback: AsyncCallback<Stream>): void-End-->
 

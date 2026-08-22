@@ -4,7 +4,7 @@ Declare the size of the swiper on the spindle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum SwiperDisplayMode--><!--Device-unnamed-export declare enum SwiperDisplayMode-End-->
 
@@ -20,7 +20,7 @@ Carousel map extension.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

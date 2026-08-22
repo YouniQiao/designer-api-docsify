@@ -250,7 +250,7 @@ Obtains the size of the image receiver through an [ImageReceiverNative](capi-ima
 | Parameter | Description |
 | -- | -- |
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
-| struct OhosImageSize* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
+| [struct OhosImageSize](capi-image-ohosimagesize.md)* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
 
 **Returns**:
 

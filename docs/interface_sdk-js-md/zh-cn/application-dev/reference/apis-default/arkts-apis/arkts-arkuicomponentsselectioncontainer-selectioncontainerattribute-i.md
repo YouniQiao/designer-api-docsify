@@ -13,7 +13,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface SelectionContainerAttribute--><!--Device-unnamed-export declare interface SelectionContainerAttribute-End-->
 
@@ -33,7 +33,7 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>    | undefined): this--><!--Device-SelectionContainerAttribute-attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>    | undefined): this-End-->
 
@@ -56,7 +56,7 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this-End-->
 
@@ -81,7 +81,7 @@ caretColor(color: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-caretColor(color: ResourceColor | undefined): this--><!--Device-SelectionContainerAttribute-caretColor(color: ResourceColor | undefined): this-End-->
 
@@ -103,7 +103,7 @@ copyOption(value: CopyOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-copyOption(value: CopyOptions | undefined): this--><!--Device-SelectionContainerAttribute-copyOption(value: CopyOptions | undefined): this-End-->
 
@@ -125,7 +125,7 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this--><!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this-End-->
 
@@ -147,7 +147,7 @@ enableHapticFeedback(isEnabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: boolean | undefined): this--><!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: boolean | undefined): this-End-->
 
@@ -169,7 +169,7 @@ onCopy(callback: Callback<string> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-onCopy(callback: Callback<string> | undefined): this--><!--Device-SelectionContainerAttribute-onCopy(callback: Callback<string> | undefined): this-End-->
 
@@ -191,7 +191,7 @@ onTextSelectionChange(callback: Callback<Array<string>> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Callback<Array<string>> | undefined): this--><!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Callback<Array<string>> | undefined): this-End-->
 
@@ -213,7 +213,7 @@ onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-onWillCopy(callback: Callback<string, boolean> | undefined): this--><!--Device-SelectionContainerAttribute-onWillCopy(callback: Callback<string, boolean> | undefined): this-End-->
 
@@ -235,7 +235,7 @@ selectedBackgroundColor(color: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: ResourceColor | undefined): this--><!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: ResourceColor | undefined): this-End-->
 
@@ -257,7 +257,7 @@ setSelectionContainerOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-setSelectionContainerOptions(): this--><!--Device-SelectionContainerAttribute-setSelectionContainerOptions(): this-End-->
 
@@ -273,7 +273,7 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectionContainerAttribute-textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this--><!--Device-SelectionContainerAttribute-textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this-End-->
 
@@ -297,7 +297,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

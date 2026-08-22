@@ -6,7 +6,7 @@ Defines the PatternLock component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface PatternLockAttribute--><!--Device-unnamed-export declare interface PatternLockAttribute-End-->
 
@@ -20,7 +20,7 @@ activateCircleStyle(options: CircleStyleOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-activateCircleStyle(options: CircleStyleOptions | undefined): this--><!--Device-PatternLockAttribute-activateCircleStyle(options: CircleStyleOptions | undefined): this-End-->
 
@@ -42,7 +42,7 @@ activeColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-activeColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-activeColor(value: ResourceColor | undefined): this-End-->
 
@@ -64,7 +64,7 @@ attributeModifier(modifier: AttributeModifier<PatternLockAttribute> | AttributeM
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-attributeModifier(modifier: AttributeModifier<PatternLockAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PatternLockAttribute-attributeModifier(modifier: AttributeModifier<PatternLockAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -86,7 +86,7 @@ autoReset(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-autoReset(value: boolean | undefined): this--><!--Device-PatternLockAttribute-autoReset(value: boolean | undefined): this-End-->
 
@@ -108,7 +108,7 @@ backgroundColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-backgroundColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-backgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -130,7 +130,7 @@ circleRadius(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-circleRadius(value: Length | undefined): this--><!--Device-PatternLockAttribute-circleRadius(value: Length | undefined): this-End-->
 
@@ -152,7 +152,7 @@ onDotConnect(callback: Callback<int> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-onDotConnect(callback: Callback<int> | undefined): this--><!--Device-PatternLockAttribute-onDotConnect(callback: Callback<int> | undefined): this-End-->
 
@@ -174,7 +174,7 @@ onPatternComplete(callback: Callback<Array<int>> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-onPatternComplete(callback: Callback<Array<int>> | undefined): this--><!--Device-PatternLockAttribute-onPatternComplete(callback: Callback<Array<int>> | undefined): this-End-->
 
@@ -196,7 +196,7 @@ pathColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-pathColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-pathColor(value: ResourceColor | undefined): this-End-->
 
@@ -218,7 +218,7 @@ pathStrokeWidth(value: double | string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-pathStrokeWidth(value: double | string | undefined): this--><!--Device-PatternLockAttribute-pathStrokeWidth(value: double | string | undefined): this-End-->
 
@@ -240,7 +240,7 @@ regularColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-regularColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-regularColor(value: ResourceColor | undefined): this-End-->
 
@@ -262,7 +262,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -284,7 +284,7 @@ setPatternLockOptions(controller?: PatternLockController): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-setPatternLockOptions(controller?: PatternLockController): this--><!--Device-PatternLockAttribute-setPatternLockOptions(controller?: PatternLockController): this-End-->
 
@@ -306,7 +306,7 @@ sideLength(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-sideLength(value: Length | undefined): this--><!--Device-PatternLockAttribute-sideLength(value: Length | undefined): this-End-->
 
@@ -328,7 +328,7 @@ skipUnselectedPoint(skipped: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-PatternLockAttribute-skipUnselectedPoint(skipped: boolean | undefined): this--><!--Device-PatternLockAttribute-skipUnselectedPoint(skipped: boolean | undefined): this-End-->
 
@@ -352,7 +352,7 @@ Set PatternLock options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

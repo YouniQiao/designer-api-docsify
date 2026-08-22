@@ -8,7 +8,7 @@ Defines the Image component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ImageAttribute--><!--Device-unnamed-export declare interface ImageAttribute-End-->
 
@@ -22,7 +22,7 @@ alt(value: string | Resource | PixelMap | ImageAlt | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-alt(value: string | Resource | PixelMap | ImageAlt | undefined): this--><!--Device-ImageAttribute-alt(value: string | Resource | PixelMap | ImageAlt | undefined): this-End-->
 
@@ -44,7 +44,7 @@ analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-analyzerConfig(config: ImageAnalyzerConfig | undefined): this--><!--Device-ImageAttribute-analyzerConfig(config: ImageAnalyzerConfig | undefined): this-End-->
 
@@ -66,7 +66,7 @@ antialiased(isAntialiased: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-antialiased(isAntialiased: boolean | undefined): this--><!--Device-ImageAttribute-antialiased(isAntialiased: boolean | undefined): this-End-->
 
@@ -88,7 +88,7 @@ attributeModifier(modifier: AttributeModifier<ImageAttribute> | AttributeModifie
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-attributeModifier(modifier: AttributeModifier<ImageAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ImageAttribute-attributeModifier(modifier: AttributeModifier<ImageAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -110,7 +110,7 @@ autoResize(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-autoResize(value: boolean | undefined): this--><!--Device-ImageAttribute-autoResize(value: boolean | undefined): this-End-->
 
@@ -132,7 +132,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor | undefined)
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor | undefined): this--><!--Device-ImageAttribute-colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor | undefined): this-End-->
 
@@ -154,7 +154,7 @@ contentTransition(transition: ContentTransitionEffect | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-contentTransition(transition: ContentTransitionEffect | undefined): this--><!--Device-ImageAttribute-contentTransition(transition: ContentTransitionEffect | undefined): this-End-->
 
@@ -176,7 +176,7 @@ copyOption(value: CopyOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-copyOption(value: CopyOptions | undefined): this--><!--Device-ImageAttribute-copyOption(value: CopyOptions | undefined): this-End-->
 
@@ -198,7 +198,7 @@ draggable(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-draggable(value: boolean | undefined): this--><!--Device-ImageAttribute-draggable(value: boolean | undefined): this-End-->
 
@@ -220,7 +220,7 @@ dynamicRangeMode(value: DynamicRangeMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-dynamicRangeMode(value: DynamicRangeMode | undefined): this--><!--Device-ImageAttribute-dynamicRangeMode(value: DynamicRangeMode | undefined): this-End-->
 
@@ -242,7 +242,7 @@ edgeAntialiasing(value: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-edgeAntialiasing(value: double | undefined): this--><!--Device-ImageAttribute-edgeAntialiasing(value: double | undefined): this-End-->
 
@@ -264,7 +264,7 @@ enableAnalyzer(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-enableAnalyzer(enable: boolean | undefined): this--><!--Device-ImageAttribute-enableAnalyzer(enable: boolean | undefined): this-End-->
 
@@ -286,7 +286,7 @@ enhancedImageQuality(imageQuality: ResolutionQuality | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-enhancedImageQuality(imageQuality: ResolutionQuality | undefined): this--><!--Device-ImageAttribute-enhancedImageQuality(imageQuality: ResolutionQuality | undefined): this-End-->
 
@@ -308,7 +308,7 @@ fillColor(color: ResourceColor | ColorContent | ColorMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-fillColor(color: ResourceColor | ColorContent | ColorMetrics | undefined): this--><!--Device-ImageAttribute-fillColor(color: ResourceColor | ColorContent | ColorMetrics | undefined): this-End-->
 
@@ -330,7 +330,7 @@ fitOriginalSize(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-fitOriginalSize(value: boolean | undefined): this--><!--Device-ImageAttribute-fitOriginalSize(value: boolean | undefined): this-End-->
 
@@ -352,7 +352,7 @@ hdrBrightness(brightness: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-hdrBrightness(brightness: double | undefined): this--><!--Device-ImageAttribute-hdrBrightness(brightness: double | undefined): this-End-->
 
@@ -374,7 +374,7 @@ imageMatrix(matrix: ImageMatrix | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-imageMatrix(matrix: ImageMatrix | undefined): this--><!--Device-ImageAttribute-imageMatrix(matrix: ImageMatrix | undefined): this-End-->
 
@@ -396,7 +396,7 @@ interpolation(value: ImageInterpolation | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-interpolation(value: ImageInterpolation | undefined): this--><!--Device-ImageAttribute-interpolation(value: ImageInterpolation | undefined): this-End-->
 
@@ -418,7 +418,7 @@ matchTextDirection(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-matchTextDirection(value: boolean | undefined): this--><!--Device-ImageAttribute-matchTextDirection(value: boolean | undefined): this-End-->
 
@@ -440,7 +440,7 @@ objectFit(value: ImageFit | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-objectFit(value: ImageFit | undefined): this--><!--Device-ImageAttribute-objectFit(value: ImageFit | undefined): this-End-->
 
@@ -462,7 +462,7 @@ objectRepeat(value: ImageRepeat | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-objectRepeat(value: ImageRepeat | undefined): this--><!--Device-ImageAttribute-objectRepeat(value: ImageRepeat | undefined): this-End-->
 
@@ -484,7 +484,7 @@ onComplete(callback: ImageOnCompleteCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-onComplete(callback: ImageOnCompleteCallback | undefined): this--><!--Device-ImageAttribute-onComplete(callback: ImageOnCompleteCallback | undefined): this-End-->
 
@@ -506,7 +506,7 @@ onError(callback: ImageErrorCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-onError(callback: ImageErrorCallback | undefined): this--><!--Device-ImageAttribute-onError(callback: ImageErrorCallback | undefined): this-End-->
 
@@ -528,7 +528,7 @@ onFinish(event: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-onFinish(event: VoidCallback | undefined): this--><!--Device-ImageAttribute-onFinish(event: VoidCallback | undefined): this-End-->
 
@@ -550,7 +550,7 @@ orientation(orientation: ImageRotateOrientation | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-orientation(orientation: ImageRotateOrientation | undefined): this--><!--Device-ImageAttribute-orientation(orientation: ImageRotateOrientation | undefined): this-End-->
 
@@ -572,7 +572,7 @@ pointLight(value: PointLightStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-pointLight(value: PointLightStyle | undefined): this--><!--Device-ImageAttribute-pointLight(value: PointLightStyle | undefined): this-End-->
 
@@ -594,7 +594,7 @@ privacySensitive(supported: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-privacySensitive(supported: boolean | undefined): this--><!--Device-ImageAttribute-privacySensitive(supported: boolean | undefined): this-End-->
 
@@ -616,7 +616,7 @@ renderMode(value: ImageRenderMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-renderMode(value: ImageRenderMode | undefined): this--><!--Device-ImageAttribute-renderMode(value: ImageRenderMode | undefined): this-End-->
 
@@ -638,7 +638,7 @@ resizable(value: ResizableOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-resizable(value: ResizableOptions | undefined): this--><!--Device-ImageAttribute-resizable(value: ResizableOptions | undefined): this-End-->
 
@@ -663,7 +663,7 @@ setImageOptions(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-setImageOptions(        src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,         imageAIOptions?: ImageAIOptions    ): this--><!--Device-ImageAttribute-setImageOptions(        src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,         imageAIOptions?: ImageAIOptions    ): this-End-->
 
@@ -690,7 +690,7 @@ setImageOptions(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-setImageOptions(        src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,         imageAIOptions?: ImageAIOptions,        reloadKey?: string    ): this--><!--Device-ImageAttribute-setImageOptions(        src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,         imageAIOptions?: ImageAIOptions,        reloadKey?: string    ): this-End-->
 
@@ -717,7 +717,7 @@ setImageOptions(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-setImageOptions(        src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,         reloadKey?: string    ): this--><!--Device-ImageAttribute-setImageOptions(        src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent | undefined,         reloadKey?: string    ): this-End-->
 
@@ -740,7 +740,7 @@ sourceSize(value: ImageSourceSize | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-sourceSize(value: ImageSourceSize | undefined): this--><!--Device-ImageAttribute-sourceSize(value: ImageSourceSize | undefined): this-End-->
 
@@ -762,7 +762,7 @@ supportSvg2(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-supportSvg2(enable: boolean | undefined): this--><!--Device-ImageAttribute-supportSvg2(enable: boolean | undefined): this-End-->
 
@@ -784,7 +784,7 @@ syncLoad(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAttribute-syncLoad(value: boolean | undefined): this--><!--Device-ImageAttribute-syncLoad(value: boolean | undefined): this-End-->
 
@@ -808,7 +808,7 @@ Set the attribute modifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

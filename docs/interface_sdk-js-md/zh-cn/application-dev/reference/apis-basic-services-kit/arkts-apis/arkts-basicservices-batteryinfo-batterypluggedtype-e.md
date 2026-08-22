@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-batteryInfo-export enum BatteryPluggedType--><!--Device-batteryInfo-export enum BatteryPluggedType-End-->
 
@@ -22,7 +22,7 @@ NONE
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryPluggedType-NONE--><!--Device-BatteryPluggedType-NONE-End-->
 
@@ -38,7 +38,7 @@ AC
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryPluggedType-AC--><!--Device-BatteryPluggedType-AC-End-->
 
@@ -54,7 +54,7 @@ USB
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryPluggedType-USB--><!--Device-BatteryPluggedType-USB-End-->
 
@@ -70,7 +70,7 @@ WIRELESS
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryPluggedType-WIRELESS--><!--Device-BatteryPluggedType-WIRELESS-End-->
 

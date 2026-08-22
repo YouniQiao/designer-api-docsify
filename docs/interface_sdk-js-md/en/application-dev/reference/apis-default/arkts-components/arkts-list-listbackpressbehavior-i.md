@@ -4,7 +4,7 @@ Defines the back press behavior for List component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface ListBackPressBehavior--><!--Device-unnamed-export declare interface ListBackPressBehavior-End-->
 
@@ -24,7 +24,7 @@ Whether to close the swipe menu when back key is pressed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

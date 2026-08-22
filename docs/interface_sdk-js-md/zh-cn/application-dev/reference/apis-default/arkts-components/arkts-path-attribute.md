@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface PathAttribute--><!--Device-unnamed-export declare interface PathAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PathAttribute-attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PathAttribute-attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ commands(value: ResourceStr | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PathAttribute-commands(value: ResourceStr | undefined): this--><!--Device-PathAttribute-commands(value: ResourceStr | undefined): this-End-->
 
@@ -66,7 +66,7 @@ setPathOptions(options?: PathOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PathAttribute-setPathOptions(options?: PathOptions): this--><!--Device-PathAttribute-setPathOptions(options?: PathOptions): this-End-->
 
@@ -90,7 +90,7 @@ Call attributeModifier.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

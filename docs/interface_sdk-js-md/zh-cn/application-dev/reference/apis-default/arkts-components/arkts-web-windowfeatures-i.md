@@ -6,7 +6,7 @@ Defines the window features info for window.open.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface WindowFeatures--><!--Device-unnamed-export declare interface WindowFeatures-End-->
 
@@ -24,7 +24,7 @@ The requested height of the containing window. Unit:pixels.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WindowFeatures-height: double--><!--Device-WindowFeatures-height: double-End-->
 
@@ -42,7 +42,7 @@ The requested width of the containing window. Unit:pixels.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WindowFeatures-width: double--><!--Device-WindowFeatures-width: double-End-->
 
@@ -60,7 +60,7 @@ The requested x-coordinate of the containing window. Unit:pixels.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WindowFeatures-x: double--><!--Device-WindowFeatures-x: double-End-->
 
@@ -78,7 +78,7 @@ The requested y-coordinate of the containing window. Unit:pixels.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WindowFeatures-y: double--><!--Device-WindowFeatures-y: double-End-->
 

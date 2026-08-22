@@ -10,7 +10,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ListAttribute--><!--Device-unnamed-export declare interface ListAttribute-End-->
 
@@ -24,7 +24,7 @@ alignListItem(value: ListItemAlign | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-alignListItem(value: ListItemAlign | undefined): this--><!--Device-ListAttribute-alignListItem(value: ListItemAlign | undefined): this-End-->
 
@@ -46,7 +46,7 @@ attributeModifier(modifier: AttributeModifier<ListAttribute> | AttributeModifier
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-attributeModifier(modifier: AttributeModifier<ListAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ListAttribute-attributeModifier(modifier: AttributeModifier<ListAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -68,7 +68,7 @@ backPressBehavior(behavior: ListBackPressBehavior | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-backPressBehavior(behavior: ListBackPressBehavior | undefined): this--><!--Device-ListAttribute-backPressBehavior(behavior: ListBackPressBehavior | undefined): this-End-->
 
@@ -90,7 +90,7 @@ cachedCount(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-cachedCount(value: int | undefined): this--><!--Device-ListAttribute-cachedCount(value: int | undefined): this-End-->
 
@@ -112,7 +112,7 @@ cachedCount(count: int | CacheCountInfo | undefined, show: boolean | undefined):
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-cachedCount(count: int | CacheCountInfo | undefined, show: boolean | undefined): this--><!--Device-ListAttribute-cachedCount(count: int | CacheCountInfo | undefined, show: boolean | undefined): this-End-->
 
@@ -135,7 +135,7 @@ chainAnimation(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-chainAnimation(value: boolean | undefined): this--><!--Device-ListAttribute-chainAnimation(value: boolean | undefined): this-End-->
 
@@ -157,7 +157,7 @@ chainAnimationOptions(value: ChainAnimationOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-chainAnimationOptions(value: ChainAnimationOptions | undefined): this--><!--Device-ListAttribute-chainAnimationOptions(value: ChainAnimationOptions | undefined): this-End-->
 
@@ -179,7 +179,7 @@ childrenMainSize(value: ChildrenMainSize | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-childrenMainSize(value: ChildrenMainSize | undefined): this--><!--Device-ListAttribute-childrenMainSize(value: ChildrenMainSize | undefined): this-End-->
 
@@ -201,7 +201,7 @@ contentEndOffset(offset: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-contentEndOffset(offset: double | Resource | undefined): this--><!--Device-ListAttribute-contentEndOffset(offset: double | Resource | undefined): this-End-->
 
@@ -223,7 +223,7 @@ contentStartOffset(offset: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-contentStartOffset(offset: double | Resource | undefined): this--><!--Device-ListAttribute-contentStartOffset(offset: double | Resource | undefined): this-End-->
 
@@ -245,7 +245,7 @@ divider(value: ListDividerOptions | null | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-divider(value: ListDividerOptions | null | undefined): this--><!--Device-ListAttribute-divider(value: ListDividerOptions | null | undefined): this-End-->
 
@@ -267,7 +267,7 @@ editModeOptions(options?: EditModeOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-editModeOptions(options?: EditModeOptions): this--><!--Device-ListAttribute-editModeOptions(options?: EditModeOptions): this-End-->
 
@@ -289,7 +289,7 @@ enableEditMode(enabled: boolean | Bindable<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-enableEditMode(enabled: boolean | Bindable<boolean> | undefined): this--><!--Device-ListAttribute-enableEditMode(enabled: boolean | Bindable<boolean> | undefined): this-End-->
 
@@ -311,7 +311,7 @@ focusWrapMode(mode: FocusWrapMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-focusWrapMode(mode: FocusWrapMode | undefined): this--><!--Device-ListAttribute-focusWrapMode(mode: FocusWrapMode | undefined): this-End-->
 
@@ -333,7 +333,7 @@ lanes(value: int | LengthConstrain | ItemFillPolicy | undefined, gutter?: Dimens
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-lanes(value: int | LengthConstrain | ItemFillPolicy | undefined, gutter?: Dimension | undefined): this--><!--Device-ListAttribute-lanes(value: int | LengthConstrain | ItemFillPolicy | undefined, gutter?: Dimension | undefined): this-End-->
 
@@ -356,7 +356,7 @@ listDirection(value: Axis | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-listDirection(value: Axis | undefined): this--><!--Device-ListAttribute-listDirection(value: Axis | undefined): this-End-->
 
@@ -378,7 +378,7 @@ maintainVisibleContentPosition(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-maintainVisibleContentPosition(enabled: boolean | undefined): this--><!--Device-ListAttribute-maintainVisibleContentPosition(enabled: boolean | undefined): this-End-->
 
@@ -400,7 +400,7 @@ multiSelectable(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-multiSelectable(value: boolean | undefined): this--><!--Device-ListAttribute-multiSelectable(value: boolean | undefined): this-End-->
 
@@ -422,7 +422,7 @@ onDidScroll(handler: OnScrollCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onDidScroll(handler: OnScrollCallback | undefined): this--><!--Device-ListAttribute-onDidScroll(handler: OnScrollCallback | undefined): this-End-->
 
@@ -444,7 +444,7 @@ onEditModeChange(callback: Callback<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onEditModeChange(callback: Callback<boolean> | undefined): this--><!--Device-ListAttribute-onEditModeChange(callback: Callback<boolean> | undefined): this-End-->
 
@@ -466,7 +466,7 @@ onItemDragEnter(event: ((event: ItemDragInfo) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onItemDragEnter(event: ((event: ItemDragInfo) => void) | undefined): this--><!--Device-ListAttribute-onItemDragEnter(event: ((event: ItemDragInfo) => void) | undefined): this-End-->
 
@@ -488,7 +488,7 @@ onItemDragLeave(event: ((event: ItemDragInfo, itemIndex: int) => void) | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onItemDragLeave(event: ((event: ItemDragInfo, itemIndex: int) => void) | undefined): this--><!--Device-ListAttribute-onItemDragLeave(event: ((event: ItemDragInfo, itemIndex: int) => void) | undefined): this-End-->
 
@@ -510,7 +510,7 @@ onItemDragMove(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int) =
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onItemDragMove(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int) => void) | undefined): this--><!--Device-ListAttribute-onItemDragMove(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int) => void) | undefined): this-End-->
 
@@ -532,7 +532,7 @@ onItemDragStart(event: OnItemDragStartCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onItemDragStart(event: OnItemDragStartCallback | undefined): this--><!--Device-ListAttribute-onItemDragStart(event: OnItemDragStartCallback | undefined): this-End-->
 
@@ -554,7 +554,7 @@ onItemDrop(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int, isSuc
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onItemDrop(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int, isSuccess: boolean) => void) | undefined): this--><!--Device-ListAttribute-onItemDrop(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int, isSuccess: boolean) => void) | undefined): this-End-->
 
@@ -576,7 +576,7 @@ onItemMove(event: ((from: int, to: int) => boolean) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onItemMove(event: ((from: int, to: int) => boolean) | undefined): this--><!--Device-ListAttribute-onItemMove(event: ((from: int, to: int) => boolean) | undefined): this-End-->
 
@@ -598,7 +598,7 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this--><!--Device-ListAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this-End-->
 
@@ -620,7 +620,7 @@ onScrollIndex(event: ((start: int, end: int, center: int) => void) | undefined):
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onScrollIndex(event: ((start: int, end: int, center: int) => void) | undefined): this--><!--Device-ListAttribute-onScrollIndex(event: ((start: int, end: int, center: int) => void) | undefined): this-End-->
 
@@ -642,7 +642,7 @@ onScrollVisibleContentChange(handler: OnScrollVisibleContentChangeCallback | und
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onScrollVisibleContentChange(handler: OnScrollVisibleContentChangeCallback | undefined): this--><!--Device-ListAttribute-onScrollVisibleContentChange(handler: OnScrollVisibleContentChangeCallback | undefined): this-End-->
 
@@ -664,7 +664,7 @@ onWillScroll(handler: OnWillScrollCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this--><!--Device-ListAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this-End-->
 
@@ -686,7 +686,7 @@ scrollSnapAlign(value: ScrollSnapAlign | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-scrollSnapAlign(value: ScrollSnapAlign | undefined): this--><!--Device-ListAttribute-scrollSnapAlign(value: ScrollSnapAlign | undefined): this-End-->
 
@@ -708,7 +708,7 @@ scrollSnapAnimationSpeed(speed: ScrollSnapAnimationSpeed | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-scrollSnapAnimationSpeed(speed: ScrollSnapAnimationSpeed | undefined): this--><!--Device-ListAttribute-scrollSnapAnimationSpeed(speed: ScrollSnapAnimationSpeed | undefined): this-End-->
 
@@ -730,7 +730,7 @@ setListOptions(options?: ListOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-setListOptions(options?: ListOptions): this--><!--Device-ListAttribute-setListOptions(options?: ListOptions): this-End-->
 
@@ -752,7 +752,7 @@ stackFromEnd(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-stackFromEnd(enabled: boolean | undefined): this--><!--Device-ListAttribute-stackFromEnd(enabled: boolean | undefined): this-End-->
 
@@ -774,7 +774,7 @@ sticky(value: StickyStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-sticky(value: StickyStyle | undefined): this--><!--Device-ListAttribute-sticky(value: StickyStyle | undefined): this-End-->
 
@@ -796,7 +796,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this--><!--Device-ListAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this-End-->
 
@@ -818,7 +818,7 @@ syncLoad(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListAttribute-syncLoad(enable: boolean | undefined): this--><!--Device-ListAttribute-syncLoad(enable: boolean | undefined): this-End-->
 
@@ -842,7 +842,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -19,7 +19,7 @@ function read(
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function read(  fd: int,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<long>--><!--Device-fileIo-function read(  fd: int,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<long>-End-->
 
@@ -65,7 +65,7 @@ function read(fd: int, buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function read(fd: int, buffer: ArrayBuffer, callback: AsyncCallback<long>): void--><!--Device-fileIo-function read(fd: int, buffer: ArrayBuffer, callback: AsyncCallback<long>): void-End-->
 
@@ -109,7 +109,7 @@ function read(
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function read(  fd: int,  buffer: ArrayBuffer,  options: ReadOptions,  callback: AsyncCallback<long>): void--><!--Device-fileIo-function read(  fd: int,  buffer: ArrayBuffer,  options: ReadOptions,  callback: AsyncCallback<long>): void-End-->
 

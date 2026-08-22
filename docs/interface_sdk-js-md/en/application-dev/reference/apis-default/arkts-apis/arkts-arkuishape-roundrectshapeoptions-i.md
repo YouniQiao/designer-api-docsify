@@ -8,7 +8,7 @@ Interface for RectShape constructor parameters with separate radius values.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface RoundRectShapeOptions--><!--Device-unnamed-export interface RoundRectShapeOptions-End-->
 
@@ -31,7 +31,7 @@ Defines the height of the corner radius for RectShape.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +51,7 @@ Defines the width of the corner radius for RectShape.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

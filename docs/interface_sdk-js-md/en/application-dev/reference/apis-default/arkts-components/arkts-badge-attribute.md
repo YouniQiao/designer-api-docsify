@@ -6,7 +6,7 @@ Defines the Button component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface BadgeAttribute--><!--Device-unnamed-export declare interface BadgeAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<BadgeAttribute> | AttributeModifie
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-BadgeAttribute-attributeModifier(modifier: AttributeModifier<BadgeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-BadgeAttribute-attributeModifier(modifier: AttributeModifier<BadgeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ setBadgeOptions(value: BadgeParamWithNumber | BadgeParamWithString): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-BadgeAttribute-setBadgeOptions(value: BadgeParamWithNumber | BadgeParamWithString): this--><!--Device-BadgeAttribute-setBadgeOptions(value: BadgeParamWithNumber | BadgeParamWithString): this-End-->
 
@@ -66,7 +66,7 @@ Set badge options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

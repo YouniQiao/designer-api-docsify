@@ -6,7 +6,7 @@ Enum type supplied to [blurOnKeyboardHideMode](arkts-web-attribute.md#bluronkeyb
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum BlurOnKeyboardHideMode--><!--Device-unnamed-export declare enum BlurOnKeyboardHideMode-End-->
 
@@ -22,7 +22,7 @@ The focused input elements on webview will not blur when soft keyboard is hidden
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BlurOnKeyboardHideMode-SILENT = 0--><!--Device-BlurOnKeyboardHideMode-SILENT = 0-End-->
 
@@ -38,7 +38,7 @@ The focused input elements on webview will blur when soft keyboard is hidden man
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BlurOnKeyboardHideMode-BLUR = 1--><!--Device-BlurOnKeyboardHideMode-BLUR = 1-End-->
 

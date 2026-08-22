@@ -4,7 +4,7 @@ Defines the Web resource error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class WebResourceError--><!--Device-unnamed-export declare class WebResourceError-End-->
 
@@ -20,7 +20,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebResourceError-constructor()--><!--Device-WebResourceError-constructor()-End-->
 
@@ -36,7 +36,7 @@ Gets the custom error code of the Web resource.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 <!--Device-WebResourceError-getCustomErrorCode(): int--><!--Device-WebResourceError-getCustomErrorCode(): int-End-->
 
@@ -58,7 +58,7 @@ Gets the code of the Web resource error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebResourceError-getErrorCode(): int--><!--Device-WebResourceError-getErrorCode(): int-End-->
 
@@ -80,7 +80,7 @@ Gets the info of the Web resource error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebResourceError-getErrorInfo(): string--><!--Device-WebResourceError-getErrorInfo(): string-End-->
 

@@ -4,7 +4,7 @@ Defines the function Triggered when the over scrolling.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnOverScrollEvent--><!--Device-unnamed-export declare interface OnOverScrollEvent-End-->
 
@@ -22,7 +22,7 @@ Based on the leftmost part of the page, the horizontal scroll offset is over. Th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnOverScrollEvent-xOffset: double--><!--Device-OnOverScrollEvent-xOffset: double-End-->
 
@@ -40,7 +40,7 @@ Based on the top of the page, the vertical scroll offset is over. The unit is vp
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnOverScrollEvent-yOffset: double--><!--Device-OnOverScrollEvent-yOffset: double-End-->
 

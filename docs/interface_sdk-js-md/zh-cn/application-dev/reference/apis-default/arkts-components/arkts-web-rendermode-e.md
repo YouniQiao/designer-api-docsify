@@ -6,7 +6,7 @@ Enumerates the rendering mode of Web components. By default, the asynchronous re
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum RenderMode--><!--Device-unnamed-export declare enum RenderMode-End-->
 
@@ -22,7 +22,7 @@ The Web component is rendered asynchronously. The ArkWeb component as a graphic 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RenderMode-ASYNC_RENDER = 0--><!--Device-RenderMode-ASYNC_RENDER = 0-End-->
 
@@ -38,7 +38,7 @@ The Web component is rendered synchronously. The ArkWeb component as a graphic c
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RenderMode-SYNC_RENDER = 1--><!--Device-RenderMode-SYNC_RENDER = 1-End-->
 

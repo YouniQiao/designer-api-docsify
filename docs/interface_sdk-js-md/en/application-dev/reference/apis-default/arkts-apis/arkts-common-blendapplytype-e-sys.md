@@ -6,7 +6,7 @@ Enum for BlendApplyType. Indicate how to apply specified blend mode to the view'
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum BlendApplyType--><!--Device-unnamed-export declare enum BlendApplyType-End-->
 
@@ -22,7 +22,7 @@ The content of the component and its child components are drawn on the offscreen
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

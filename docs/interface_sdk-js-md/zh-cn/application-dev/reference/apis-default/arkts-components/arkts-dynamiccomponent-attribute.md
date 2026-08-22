@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface DynamicComponentAttribute--><!--Device-unnamed-export declare interface DynamicComponentAttribute-End-->
 
@@ -22,7 +22,7 @@ onError(callback: ErrorCallback<BusinessError> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DynamicComponentAttribute-onError(callback: ErrorCallback<BusinessError> | undefined): this--><!--Device-DynamicComponentAttribute-onError(callback: ErrorCallback<BusinessError> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ setDynamicComponentOptions(options: DynamicOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DynamicComponentAttribute-setDynamicComponentOptions(options: DynamicOptions): this--><!--Device-DynamicComponentAttribute-setDynamicComponentOptions(options: DynamicOptions): this-End-->
 

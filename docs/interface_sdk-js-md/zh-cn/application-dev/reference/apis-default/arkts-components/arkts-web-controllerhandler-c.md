@@ -4,7 +4,7 @@ Defines the onWindowNew callback, related to [onWindowNew](arkts-web-attribute.m
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare class ControllerHandler--><!--Device-unnamed-export declare class ControllerHandler-End-->
 
@@ -20,7 +20,7 @@ Constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ControllerHandler-constructor()--><!--Device-ControllerHandler-constructor()-End-->
 
@@ -36,7 +36,7 @@ Set WebviewController object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ControllerHandler-setWebController(controller: WebviewController): void--><!--Device-ControllerHandler-setWebController(controller: WebviewController): void-End-->
 

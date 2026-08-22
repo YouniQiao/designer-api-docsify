@@ -4,7 +4,7 @@ CustomComponent LifecycleObserver. When a user registers a custom component life
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-unnamed-export declare interface CustomComponentLifecycleObserver--><!--Device-unnamed-export declare interface CustomComponentLifecycleObserver-End-->
 
@@ -18,7 +18,7 @@ aboutToAppear(): void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CustomComponentLifecycleObserver-aboutToAppear(): void--><!--Device-CustomComponentLifecycleObserver-aboutToAppear(): void-End-->
 
@@ -30,7 +30,7 @@ aboutToDisappear(): void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CustomComponentLifecycleObserver-aboutToDisappear(): void--><!--Device-CustomComponentLifecycleObserver-aboutToDisappear(): void-End-->
 
@@ -42,7 +42,7 @@ aboutToRecycle(): void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CustomComponentLifecycleObserver-aboutToRecycle(): void--><!--Device-CustomComponentLifecycleObserver-aboutToRecycle(): void-End-->
 
@@ -54,7 +54,7 @@ aboutToReuse(params?: ReuseObject): void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CustomComponentLifecycleObserver-aboutToReuse(params?: ReuseObject): void--><!--Device-CustomComponentLifecycleObserver-aboutToReuse(params?: ReuseObject): void-End-->
 
@@ -72,7 +72,7 @@ onDidBuild(): void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CustomComponentLifecycleObserver-onDidBuild(): void--><!--Device-CustomComponentLifecycleObserver-onDidBuild(): void-End-->
 
@@ -86,7 +86,7 @@ Callback function invoked when the component is about to be recycled.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

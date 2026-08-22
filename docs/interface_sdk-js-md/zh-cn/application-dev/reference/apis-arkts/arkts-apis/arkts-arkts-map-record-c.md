@@ -6,7 +6,7 @@ Map的子类，其键只能为数字、字符串或枚举。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 <!--Device-unnamed-export class Record--><!--Device-unnamed-export class Record-End-->
 
@@ -34,7 +34,7 @@ $_get(k : K) : V | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,7 +64,7 @@ $_set(k: K, v: V) : void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

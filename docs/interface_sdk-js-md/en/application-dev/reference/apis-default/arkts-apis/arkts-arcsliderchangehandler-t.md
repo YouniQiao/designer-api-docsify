@@ -8,7 +8,7 @@ Handler of ArcSlider, used in OnChange.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare type ArcSliderChangeHandler = (progress: double) => void--><!--Device-unnamed-export declare type ArcSliderChangeHandler = (progress: double) => void-End-->
 

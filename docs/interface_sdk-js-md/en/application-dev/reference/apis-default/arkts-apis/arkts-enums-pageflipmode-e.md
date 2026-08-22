@@ -4,7 +4,7 @@ Page flip mode of Swiper and Tabs on mouse wheel event. @enum { number } PageFli
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum PageFlipMode--><!--Device-unnamed-export declare enum PageFlipMode-End-->
 
@@ -20,7 +20,7 @@ Turn pages continuously according to the number of mouse wheel events.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ The page-turning animation remains unresponsive to other mouse wheel events unti
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

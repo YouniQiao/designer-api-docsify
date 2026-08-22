@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-i18n-export enum SuggestionType--><!--Device-i18n-export enum SuggestionType-End-->
 
@@ -22,7 +22,7 @@ SUGGESTION_TYPE_NONE = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SuggestionType-SUGGESTION_TYPE_NONE = 0--><!--Device-SuggestionType-SUGGESTION_TYPE_NONE = 0-End-->
 
@@ -40,7 +40,7 @@ SUGGESTION_TYPE_RELATED = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SuggestionType-SUGGESTION_TYPE_RELATED = 1--><!--Device-SuggestionType-SUGGESTION_TYPE_RELATED = 1-End-->
 
@@ -58,7 +58,7 @@ SIM卡国家地区推荐的语言。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SuggestionType-SUGGESTION_TYPE_SIM = 2--><!--Device-SuggestionType-SUGGESTION_TYPE_SIM = 2-End-->
 

@@ -19,7 +19,7 @@ function moveFile(src: string, dest: string, mode?: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, mode?: int): Promise<void>--><!--Device-fileIo-function moveFile(src: string, dest: string, mode?: int): Promise<void>-End-->
 
@@ -78,7 +78,7 @@ function moveFile(src: string, dest: string, callback: AsyncCallback<void>): voi
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -131,7 +131,7 @@ function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveFile(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void-End-->
 

@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface LazyColumnLayoutAttribute--><!--Device-unnamed-export declare interface LazyColumnLayoutAttribute-End-->
 
@@ -25,7 +25,7 @@ alignItems(value: HorizontalAlign | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-alignItems(value: HorizontalAlign | undefined): this--><!--Device-LazyColumnLayoutAttribute-alignItems(value: HorizontalAlign | undefined): this-End-->
 
@@ -47,7 +47,7 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyColumnLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -69,7 +69,7 @@ footer(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-footer(builder: CustomBuilder | undefined): this--><!--Device-LazyColumnLayoutAttribute-footer(builder: CustomBuilder | undefined): this-End-->
 
@@ -91,7 +91,7 @@ header(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-header(builder: CustomBuilder | undefined): this--><!--Device-LazyColumnLayoutAttribute-header(builder: CustomBuilder | undefined): this-End-->
 
@@ -113,7 +113,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this--><!--Device-LazyColumnLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this-End-->
 
@@ -135,7 +135,7 @@ setLazyColumnLayoutOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-setLazyColumnLayoutOptions(): this--><!--Device-LazyColumnLayoutAttribute-setLazyColumnLayoutOptions(): this-End-->
 
@@ -151,7 +151,7 @@ space(space: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-space(space: LengthMetrics | undefined): this--><!--Device-LazyColumnLayoutAttribute-space(space: LengthMetrics | undefined): this-End-->
 
@@ -173,7 +173,7 @@ sticky(sticky: StickyStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyColumnLayoutAttribute-sticky(sticky: StickyStyle | undefined): this--><!--Device-LazyColumnLayoutAttribute-sticky(sticky: StickyStyle | undefined): this-End-->
 
@@ -197,7 +197,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

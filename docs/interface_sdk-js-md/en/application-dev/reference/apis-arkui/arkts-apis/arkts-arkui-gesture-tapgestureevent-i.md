@@ -8,7 +8,7 @@ Defines event info for tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface TapGestureEvent--><!--Device-unnamed-export interface TapGestureEvent-End-->
 
@@ -26,7 +26,7 @@ The tap location info used in tap gesture.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

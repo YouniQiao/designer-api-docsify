@@ -6,7 +6,7 @@ LazyGridLayout组件属性。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface LazyGridLayoutAttribute--><!--Device-unnamed-export declare interface LazyGridLayoutAttribute-End-->
 
@@ -20,7 +20,7 @@ columnsGap(value: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyGridLayoutAttribute-columnsGap(value: LengthMetrics | undefined): this--><!--Device-LazyGridLayoutAttribute-columnsGap(value: LengthMetrics | undefined): this-End-->
 
@@ -42,7 +42,7 @@ footer(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyGridLayoutAttribute-footer(builder: CustomBuilder | undefined): this--><!--Device-LazyGridLayoutAttribute-footer(builder: CustomBuilder | undefined): this-End-->
 
@@ -64,7 +64,7 @@ header(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyGridLayoutAttribute-header(builder: CustomBuilder | undefined): this--><!--Device-LazyGridLayoutAttribute-header(builder: CustomBuilder | undefined): this-End-->
 
@@ -86,7 +86,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyGridLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this--><!--Device-LazyGridLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this-End-->
 
@@ -108,7 +108,7 @@ rowsGap(value: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyGridLayoutAttribute-rowsGap(value: LengthMetrics | undefined): this--><!--Device-LazyGridLayoutAttribute-rowsGap(value: LengthMetrics | undefined): this-End-->
 
@@ -130,7 +130,7 @@ sticky(sticky: StickyStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyGridLayoutAttribute-sticky(sticky: StickyStyle | undefined): this--><!--Device-LazyGridLayoutAttribute-sticky(sticky: StickyStyle | undefined): this-End-->
 
@@ -154,7 +154,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

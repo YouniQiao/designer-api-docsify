@@ -6,7 +6,7 @@ Enumerates charger types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-export enum BatteryPluggedType--><!--Device-batteryInfo-export enum BatteryPluggedType-End-->
 
@@ -22,7 +22,7 @@ Unknown charger type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryPluggedType-NONE--><!--Device-BatteryPluggedType-NONE-End-->
 
@@ -38,7 +38,7 @@ AC charger.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryPluggedType-AC--><!--Device-BatteryPluggedType-AC-End-->
 
@@ -54,7 +54,7 @@ USB charger.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryPluggedType-USB--><!--Device-BatteryPluggedType-USB-End-->
 
@@ -70,7 +70,7 @@ Wireless charger.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryPluggedType-WIRELESS--><!--Device-BatteryPluggedType-WIRELESS-End-->
 

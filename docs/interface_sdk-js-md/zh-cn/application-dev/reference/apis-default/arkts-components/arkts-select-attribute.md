@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface SelectAttribute--><!--Device-unnamed-export declare interface SelectAttribute-End-->
 
@@ -20,7 +20,7 @@ arrowModifier(modifier: SymbolGlyphModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-arrowModifier(modifier: SymbolGlyphModifier | undefined): this--><!--Device-SelectAttribute-arrowModifier(modifier: SymbolGlyphModifier | undefined): this-End-->
 
@@ -42,7 +42,7 @@ arrowPosition(value: ArrowPosition | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-arrowPosition(value: ArrowPosition | undefined): this--><!--Device-SelectAttribute-arrowPosition(value: ArrowPosition | undefined): this-End-->
 
@@ -65,7 +65,7 @@ attributeModifier(
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-attributeModifier(        modifier: AttributeModifier<SelectAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-SelectAttribute-attributeModifier(        modifier: AttributeModifier<SelectAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -87,7 +87,7 @@ avoidance(mode: AvoidanceMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-avoidance(mode: AvoidanceMode | undefined): this--><!--Device-SelectAttribute-avoidance(mode: AvoidanceMode | undefined): this-End-->
 
@@ -109,7 +109,7 @@ controlSize(value: ControlSize | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-controlSize(value: ControlSize | undefined): this--><!--Device-SelectAttribute-controlSize(value: ControlSize | undefined): this-End-->
 
@@ -131,7 +131,7 @@ divider(options: DividerOptions | null | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-divider(options: DividerOptions | null | undefined): this--><!--Device-SelectAttribute-divider(options: DividerOptions | null | undefined): this-End-->
 
@@ -153,7 +153,7 @@ dividerStyle(style: DividerStyleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-dividerStyle(style: DividerStyleOptions | undefined): this--><!--Device-SelectAttribute-dividerStyle(style: DividerStyleOptions | undefined): this-End-->
 
@@ -175,7 +175,7 @@ font(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-font(value: Font | undefined): this--><!--Device-SelectAttribute-font(value: Font | undefined): this-End-->
 
@@ -197,7 +197,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-SelectAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -219,7 +219,7 @@ keyboardAvoidMode(mode: MenuKeyboardAvoidMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-keyboardAvoidMode(mode: MenuKeyboardAvoidMode | undefined): this--><!--Device-SelectAttribute-keyboardAvoidMode(mode: MenuKeyboardAvoidMode | undefined): this-End-->
 
@@ -241,7 +241,7 @@ menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefined): this--><!--Device-SelectAttribute-menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefined): this-End-->
 
@@ -264,7 +264,7 @@ menuBackgroundBlurStyle(value: BlurStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuBackgroundBlurStyle(value: BlurStyle | undefined): this--><!--Device-SelectAttribute-menuBackgroundBlurStyle(value: BlurStyle | undefined): this-End-->
 
@@ -286,7 +286,7 @@ menuBackgroundBlurStyleOptions(blurStyle: BackgroundBlurStyleOptions | undefined
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuBackgroundBlurStyleOptions(blurStyle: BackgroundBlurStyleOptions | undefined): this--><!--Device-SelectAttribute-menuBackgroundBlurStyleOptions(blurStyle: BackgroundBlurStyleOptions | undefined): this-End-->
 
@@ -308,7 +308,7 @@ menuBackgroundColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuBackgroundColor(value: ResourceColor | undefined): this--><!--Device-SelectAttribute-menuBackgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -330,7 +330,7 @@ menuBackgroundEffect(effect: BackgroundEffectOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuBackgroundEffect(effect: BackgroundEffectOptions | undefined): this--><!--Device-SelectAttribute-menuBackgroundEffect(effect: BackgroundEffectOptions | undefined): this-End-->
 
@@ -352,7 +352,7 @@ menuDistortionMode(mode: DistortionMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuDistortionMode(mode: DistortionMode | undefined): this--><!--Device-SelectAttribute-menuDistortionMode(mode: DistortionMode | undefined): this-End-->
 
@@ -374,7 +374,7 @@ menuEdgeLightMode(mode: EdgeLightMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuEdgeLightMode(mode: EdgeLightMode | undefined): this--><!--Device-SelectAttribute-menuEdgeLightMode(mode: EdgeLightMode | undefined): this-End-->
 
@@ -396,7 +396,7 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration> | undef
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration> | undefined): this--><!--Device-SelectAttribute-menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration> | undefined): this-End-->
 
@@ -418,7 +418,7 @@ menuOutline(outline: MenuOutlineOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuOutline(outline: MenuOutlineOptions | undefined): this--><!--Device-SelectAttribute-menuOutline(outline: MenuOutlineOptions | undefined): this-End-->
 
@@ -440,7 +440,7 @@ menuSystemMaterial(material: SystemUiMaterial | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-menuSystemMaterial(material: SystemUiMaterial | undefined): this--><!--Device-SelectAttribute-menuSystemMaterial(material: SystemUiMaterial | undefined): this-End-->
 
@@ -462,7 +462,7 @@ minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this--><!--Device-SelectAttribute-minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this-End-->
 
@@ -484,7 +484,7 @@ onSelect(callback: OnSelectCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-onSelect(callback: OnSelectCallback | undefined): this--><!--Device-SelectAttribute-onSelect(callback: OnSelectCallback | undefined): this-End-->
 
@@ -506,7 +506,7 @@ optionBgColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-optionBgColor(value: ResourceColor | undefined): this--><!--Device-SelectAttribute-optionBgColor(value: ResourceColor | undefined): this-End-->
 
@@ -528,7 +528,7 @@ optionFont(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-optionFont(value: Font | undefined): this--><!--Device-SelectAttribute-optionFont(value: Font | undefined): this-End-->
 
@@ -550,7 +550,7 @@ optionFontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-optionFontColor(value: ResourceColor | undefined): this--><!--Device-SelectAttribute-optionFontColor(value: ResourceColor | undefined): this-End-->
 
@@ -572,7 +572,7 @@ optionHeight(value: Dimension | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-optionHeight(value: Dimension | undefined): this--><!--Device-SelectAttribute-optionHeight(value: Dimension | undefined): this-End-->
 
@@ -594,7 +594,7 @@ optionTextModifier(modifier: TextModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-optionTextModifier(modifier: TextModifier | undefined): this--><!--Device-SelectAttribute-optionTextModifier(modifier: TextModifier | undefined): this-End-->
 
@@ -616,7 +616,7 @@ optionWidth(value: Dimension | OptionWidthMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-optionWidth(value: Dimension | OptionWidthMode | undefined): this--><!--Device-SelectAttribute-optionWidth(value: Dimension | OptionWidthMode | undefined): this-End-->
 
@@ -638,7 +638,7 @@ selected(numCount: int | Resource | undefined | Bindable<int> | Bindable<Resourc
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-selected(numCount: int | Resource | undefined | Bindable<int> | Bindable<Resource>): this--><!--Device-SelectAttribute-selected(numCount: int | Resource | undefined | Bindable<int> | Bindable<Resource>): this-End-->
 
@@ -660,7 +660,7 @@ selectedOptionBgColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-selectedOptionBgColor(value: ResourceColor | undefined): this--><!--Device-SelectAttribute-selectedOptionBgColor(value: ResourceColor | undefined): this-End-->
 
@@ -682,7 +682,7 @@ selectedOptionFont(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-selectedOptionFont(value: Font | undefined): this--><!--Device-SelectAttribute-selectedOptionFont(value: Font | undefined): this-End-->
 
@@ -704,7 +704,7 @@ selectedOptionFontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-selectedOptionFontColor(value: ResourceColor | undefined): this--><!--Device-SelectAttribute-selectedOptionFontColor(value: ResourceColor | undefined): this-End-->
 
@@ -726,7 +726,7 @@ selectedOptionTextModifier(modifier: TextModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-selectedOptionTextModifier(modifier: TextModifier | undefined): this--><!--Device-SelectAttribute-selectedOptionTextModifier(modifier: TextModifier | undefined): this-End-->
 
@@ -748,7 +748,7 @@ showDefaultSelectedIcon(show:boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-showDefaultSelectedIcon(show:boolean | undefined): this--><!--Device-SelectAttribute-showDefaultSelectedIcon(show:boolean | undefined): this-End-->
 
@@ -770,7 +770,7 @@ showInSubWindow(showInSubWindow: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-showInSubWindow(showInSubWindow: boolean | undefined): this--><!--Device-SelectAttribute-showInSubWindow(showInSubWindow: boolean | undefined): this-End-->
 
@@ -792,7 +792,7 @@ space(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-space(value: Length | undefined): this--><!--Device-SelectAttribute-space(value: Length | undefined): this-End-->
 
@@ -814,7 +814,7 @@ textModifier(modifier: TextModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-textModifier(modifier: TextModifier | undefined): this--><!--Device-SelectAttribute-textModifier(modifier: TextModifier | undefined): this-End-->
 
@@ -836,7 +836,7 @@ value(resStr: ResourceStr | undefined | Bindable<string> | Bindable<Resource>): 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SelectAttribute-value(resStr: ResourceStr | undefined | Bindable<string> | Bindable<Resource>): this--><!--Device-SelectAttribute-value(resStr: ResourceStr | undefined | Bindable<string> | Bindable<Resource>): this-End-->
 

@@ -15,7 +15,7 @@ function mkdtemp(prefix: string): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function mkdtemp(prefix: string): Promise<string>--><!--Device-fileIo-function mkdtemp(prefix: string): Promise<string>-End-->
 
@@ -64,7 +64,7 @@ function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function mkdtemp(prefix: string, callback: AsyncCallback<string>): void--><!--Device-fileIo-function mkdtemp(prefix: string, callback: AsyncCallback<string>): void-End-->
 

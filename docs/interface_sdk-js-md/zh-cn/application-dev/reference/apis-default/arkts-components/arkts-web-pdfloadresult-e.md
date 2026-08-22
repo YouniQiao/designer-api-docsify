@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum PdfLoadResult--><!--Device-unnamed-export declare enum PdfLoadResult-End-->
 
@@ -20,7 +20,7 @@ PDF页面加载成功。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-PdfLoadResult-LOAD_SUCCESS = 0--><!--Device-PdfLoadResult-LOAD_SUCCESS = 0-End-->
 
@@ -36,7 +36,7 @@ PDF文件加载失败的错误码。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1--><!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1-End-->
 
@@ -52,7 +52,7 @@ PDF文件格式不支持的错误码。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2--><!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2-End-->
 
@@ -68,7 +68,7 @@ PDF文件密码不正确的错误码。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3--><!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3-End-->
 
@@ -84,7 +84,7 @@ PDF文件处理失败的错误码。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4--><!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4-End-->
 

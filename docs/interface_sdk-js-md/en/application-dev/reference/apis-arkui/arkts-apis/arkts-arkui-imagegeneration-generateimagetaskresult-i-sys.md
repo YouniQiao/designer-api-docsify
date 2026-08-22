@@ -6,7 +6,7 @@ Configuration result for AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-imageGeneration-interface GenerateImageTaskResult--><!--Device-imageGeneration-interface GenerateImageTaskResult-End-->
 
@@ -32,7 +32,7 @@ The image result corresponding to AI-generated image task.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

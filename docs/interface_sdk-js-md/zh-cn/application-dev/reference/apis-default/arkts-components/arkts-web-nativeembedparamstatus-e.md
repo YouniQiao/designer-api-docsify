@@ -4,7 +4,7 @@ Enum type supplied to [NativeEmbedParamItem](arkts-web-nativeembedparamitem-i.md
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum NativeEmbedParamStatus--><!--Device-unnamed-export declare enum NativeEmbedParamStatus-End-->
 
@@ -20,7 +20,7 @@ The param element is created.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-NativeEmbedParamStatus-ADD = 0--><!--Device-NativeEmbedParamStatus-ADD = 0-End-->
 
@@ -36,7 +36,7 @@ The param element is updated.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-NativeEmbedParamStatus-UPDATE = 1--><!--Device-NativeEmbedParamStatus-UPDATE = 1-End-->
 
@@ -52,7 +52,7 @@ The param element is deleted.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-NativeEmbedParamStatus-DELETE = 2--><!--Device-NativeEmbedParamStatus-DELETE = 2-End-->
 

@@ -8,7 +8,7 @@ Define the attribute functions of FormComponent.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface FormComponentAttribute--><!--Device-unnamed-export declare interface FormComponentAttribute-End-->
 
@@ -24,7 +24,7 @@ allowUpdate(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-allowUpdate(value: boolean | undefined): this--><!--Device-FormComponentAttribute-allowUpdate(value: boolean | undefined): this-End-->
 
@@ -46,7 +46,7 @@ attributeModifier(modifier: AttributeModifier<FormComponentAttribute> | Attribut
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-attributeModifier(modifier: AttributeModifier<FormComponentAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-FormComponentAttribute-attributeModifier(modifier: AttributeModifier<FormComponentAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -68,7 +68,7 @@ colorMode(value: FormColorMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-colorMode(value: FormColorMode | undefined): this--><!--Device-FormComponentAttribute-colorMode(value: FormColorMode | undefined): this-End-->
 
@@ -90,7 +90,7 @@ dimension(value: FormDimension | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-dimension(value: FormDimension | undefined): this--><!--Device-FormComponentAttribute-dimension(value: FormDimension | undefined): this-End-->
 
@@ -112,7 +112,7 @@ moduleName(value: string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-moduleName(value: string | undefined): this--><!--Device-FormComponentAttribute-moduleName(value: string | undefined): this-End-->
 
@@ -134,7 +134,7 @@ onAcquired(callback: Callback<FormCallbackInfo> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-onAcquired(callback: Callback<FormCallbackInfo> | undefined): this--><!--Device-FormComponentAttribute-onAcquired(callback: Callback<FormCallbackInfo> | undefined): this-End-->
 
@@ -156,7 +156,7 @@ onError(callback: Callback<ErrorInformation> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-onError(callback: Callback<ErrorInformation> | undefined): this--><!--Device-FormComponentAttribute-onError(callback: Callback<ErrorInformation> | undefined): this-End-->
 
@@ -178,7 +178,7 @@ onLoad(callback: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-onLoad(callback: VoidCallback | undefined): this--><!--Device-FormComponentAttribute-onLoad(callback: VoidCallback | undefined): this-End-->
 
@@ -200,7 +200,7 @@ onRouter(callback: Callback<RouterCallbackInfo> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-onRouter(callback: Callback<RouterCallbackInfo> | undefined): this--><!--Device-FormComponentAttribute-onRouter(callback: Callback<RouterCallbackInfo> | undefined): this-End-->
 
@@ -222,7 +222,7 @@ onUninstall(callback: Callback<FormCallbackInfo> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-onUninstall(callback: Callback<FormCallbackInfo> | undefined): this--><!--Device-FormComponentAttribute-onUninstall(callback: Callback<FormCallbackInfo> | undefined): this-End-->
 
@@ -244,7 +244,7 @@ onUpdate(callback: Callback<FormCallbackInfo> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-onUpdate(callback: Callback<FormCallbackInfo> | undefined): this--><!--Device-FormComponentAttribute-onUpdate(callback: Callback<FormCallbackInfo> | undefined): this-End-->
 
@@ -266,7 +266,7 @@ visibility(value: Visibility | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FormComponentAttribute-visibility(value: Visibility | undefined): this--><!--Device-FormComponentAttribute-visibility(value: Visibility | undefined): this-End-->
 

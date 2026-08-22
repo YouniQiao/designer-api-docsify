@@ -4,7 +4,7 @@ Provides international settings related APIs.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
 

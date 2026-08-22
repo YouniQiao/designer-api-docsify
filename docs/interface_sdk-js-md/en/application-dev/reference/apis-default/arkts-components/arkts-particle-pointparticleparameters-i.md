@@ -4,7 +4,7 @@ Defines the parameters for a point-like particle. @interface PointParticleParame
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface PointParticleParameters--><!--Device-unnamed-export interface PointParticleParameters-End-->
 
@@ -22,7 +22,7 @@ Particle radius.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

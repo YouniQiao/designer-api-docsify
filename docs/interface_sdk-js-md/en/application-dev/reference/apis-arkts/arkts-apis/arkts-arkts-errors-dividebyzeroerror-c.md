@@ -6,7 +6,7 @@ Represents an error that occurs when division by zero is performed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class DivideByZeroError--><!--Device-unnamed-export class DivideByZeroError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new DivideByZeroError instance with provided message and error spec
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

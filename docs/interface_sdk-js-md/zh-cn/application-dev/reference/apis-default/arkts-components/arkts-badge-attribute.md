@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface BadgeAttribute--><!--Device-unnamed-export declare interface BadgeAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<BadgeAttribute> | AttributeModifie
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-BadgeAttribute-attributeModifier(modifier: AttributeModifier<BadgeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-BadgeAttribute-attributeModifier(modifier: AttributeModifier<BadgeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ setBadgeOptions(value: BadgeParamWithNumber | BadgeParamWithString): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-BadgeAttribute-setBadgeOptions(value: BadgeParamWithNumber | BadgeParamWithString): this--><!--Device-BadgeAttribute-setBadgeOptions(value: BadgeParamWithNumber | BadgeParamWithString): this-End-->
 
@@ -68,7 +68,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

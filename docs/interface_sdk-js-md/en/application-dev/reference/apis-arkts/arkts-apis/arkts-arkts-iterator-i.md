@@ -4,7 +4,7 @@ Iterator interface that defines a method to get the next value in a sequence
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export interface Iterator--><!--Device-unnamed-export interface Iterator-End-->
 
@@ -25,7 +25,7 @@ Returns the next result in the iterator
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

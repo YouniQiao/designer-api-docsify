@@ -6,7 +6,7 @@ The ArcListItemAttribute
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ArcListItemAttribute--><!--Device-unnamed-export declare interface ArcListItemAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeM
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListItemAttribute-attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ArcListItemAttribute-attributeModifier(modifier: AttributeModifier<ArcListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ autoScale(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListItemAttribute-autoScale(enable: boolean | undefined): this--><!--Device-ArcListItemAttribute-autoScale(enable: boolean | undefined): this-End-->
 
@@ -70,7 +70,7 @@ setArcListItemOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListItemAttribute-setArcListItemOptions(): this--><!--Device-ArcListItemAttribute-setArcListItemOptions(): this-End-->
 
@@ -86,7 +86,7 @@ swipeAction(options: SwipeActionOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListItemAttribute-swipeAction(options: SwipeActionOptions | undefined): this--><!--Device-ArcListItemAttribute-swipeAction(options: SwipeActionOptions | undefined): this-End-->
 
@@ -110,7 +110,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcListItemAttribute-default--><!--Device-ArcListItemAttribute-default-End-->
 

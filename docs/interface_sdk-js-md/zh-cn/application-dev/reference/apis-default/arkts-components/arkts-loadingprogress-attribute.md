@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface LoadingProgressAttribute--><!--Device-unnamed-export declare interface LoadingProgressAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<LoadingProgressAttribute> | Attrib
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LoadingProgressAttribute-attributeModifier(modifier: AttributeModifier<LoadingProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LoadingProgressAttribute-attributeModifier(modifier: AttributeModifier<LoadingProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ color(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LoadingProgressAttribute-color(value: ResourceColor | undefined): this--><!--Device-LoadingProgressAttribute-color(value: ResourceColor | undefined): this-End-->
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration> | undefi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LoadingProgressAttribute-contentModifier(modifier: ContentModifier<LoadingProgressConfiguration> | undefined): this--><!--Device-LoadingProgressAttribute-contentModifier(modifier: ContentModifier<LoadingProgressConfiguration> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ enableLoading(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LoadingProgressAttribute-enableLoading(value: boolean | undefined): this--><!--Device-LoadingProgressAttribute-enableLoading(value: boolean | undefined): this-End-->
 
@@ -110,7 +110,7 @@ setLoadingProgressOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LoadingProgressAttribute-setLoadingProgressOptions(): this--><!--Device-LoadingProgressAttribute-setLoadingProgressOptions(): this-End-->
 
@@ -128,7 +128,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

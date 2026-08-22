@@ -4,7 +4,7 @@ A picker view to show availale input device list. @struct { AVInputCastPicker }
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
@@ -26,7 +26,7 @@ The method to build component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AVInputCastPicker-@Builder   build(): void--><!--Device-AVInputCastPicker-@Builder   build(): void-End-->
 
@@ -45,7 +45,7 @@ Set the custom builder for the picker appearance. If not set, system will show t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AVInputCastPicker-@BuilderParam  customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-@BuilderParam  customPicker?: CustomBuilder-End-->
 
@@ -63,7 +63,7 @@ Picker state change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback--><!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback-End-->
 

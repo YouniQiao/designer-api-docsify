@@ -15,7 +15,7 @@ function mkdirSync(path: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function mkdirSync(path: string): void--><!--Device-fileIo-function mkdirSync(path: string): void-End-->
 
@@ -58,7 +58,7 @@ function mkdirSync(path: string, recursion: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function mkdirSync(path: string, recursion: boolean): void--><!--Device-fileIo-function mkdirSync(path: string, recursion: boolean): void-End-->
 

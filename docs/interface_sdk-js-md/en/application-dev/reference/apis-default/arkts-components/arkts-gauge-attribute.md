@@ -6,7 +6,7 @@ Defines the Gauge component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface GaugeAttribute--><!--Device-unnamed-export declare interface GaugeAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<GaugeAttribute> | AttributeModifie
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-attributeModifier(modifier: AttributeModifier<GaugeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-GaugeAttribute-attributeModifier(modifier: AttributeModifier<GaugeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGra
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, double]> | undefined): this--><!--Device-GaugeAttribute-colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, double]> | undefined): this-End-->
 
@@ -64,7 +64,7 @@ contentModifier(modifier: ContentModifier<GaugeConfiguration> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-contentModifier(modifier: ContentModifier<GaugeConfiguration> | undefined): this--><!--Device-GaugeAttribute-contentModifier(modifier: ContentModifier<GaugeConfiguration> | undefined): this-End-->
 
@@ -86,7 +86,7 @@ description(value: CustomBuilder | undefined | null): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-description(value: CustomBuilder | undefined | null): this--><!--Device-GaugeAttribute-description(value: CustomBuilder | undefined | null): this-End-->
 
@@ -108,7 +108,7 @@ endAngle(angle: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-endAngle(angle: double | undefined): this--><!--Device-GaugeAttribute-endAngle(angle: double | undefined): this-End-->
 
@@ -130,7 +130,7 @@ indicator(value: GaugeIndicatorOptions | undefined | null): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-indicator(value: GaugeIndicatorOptions | undefined | null): this--><!--Device-GaugeAttribute-indicator(value: GaugeIndicatorOptions | undefined | null): this-End-->
 
@@ -152,7 +152,7 @@ privacySensitive(isPrivacySensitiveMode: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this--><!--Device-GaugeAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this-End-->
 
@@ -174,7 +174,7 @@ setGaugeOptions(options: GaugeOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-setGaugeOptions(options: GaugeOptions): this--><!--Device-GaugeAttribute-setGaugeOptions(options: GaugeOptions): this-End-->
 
@@ -196,7 +196,7 @@ startAngle(angle: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-startAngle(angle: double | undefined): this--><!--Device-GaugeAttribute-startAngle(angle: double | undefined): this-End-->
 
@@ -218,7 +218,7 @@ strokeWidth(length: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-strokeWidth(length: Length | undefined): this--><!--Device-GaugeAttribute-strokeWidth(length: Length | undefined): this-End-->
 
@@ -240,7 +240,7 @@ trackShadow(value: GaugeShadowOptions | undefined | null): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-trackShadow(value: GaugeShadowOptions | undefined | null): this--><!--Device-GaugeAttribute-trackShadow(value: GaugeShadowOptions | undefined | null): this-End-->
 
@@ -262,7 +262,7 @@ value(value: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-GaugeAttribute-value(value: double | undefined): this--><!--Device-GaugeAttribute-value(value: double | undefined): this-End-->
 
@@ -286,7 +286,7 @@ Set Gauge options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,4 +1,6 @@
 - 头文件
+    - [video_processing.h](capi-video-processing-h.md)
+    - [video_processing_types.h](capi-video-processing-types-h.md)
     - [avmedia_source.h](capi-avmedia-source-h.md)
     - [native_avscreen_capture.h](capi-native-avscreen-capture-h.md)
     - [avimage_generator_base.h](capi-avimage-generator-base-h.md)
@@ -21,6 +23,7 @@
     - [avmetadata_extractor.h](capi-avmetadata-extractor-h.md)
     - [avtranscoder.h](capi-avtranscoder-h.md)
 - 模块
+    - [VideoProcessing](capi-videoprocessing.md)
     - [AVMediaSource](capi-avmediasource.md)
     - [AVScreenCapture](capi-avscreencapture.md)
     - [AVImageGenerator](capi-avimagegenerator.md)
@@ -33,6 +36,11 @@
     - [AVMediaBase](capi-avmediabase.md)
     - [AVSinkBase](capi-avsinkbase.md)
 - 结构体
+    - [VideoProcessing_ColorSpaceInfo](capi-videoprocessing-videoprocessing-colorspaceinfo.md)
+    - [OH_VideoProcessing](capi-videoprocessing-oh-videoprocessing.md)
+    - [NativeWindow](capi-videoprocessing-nativewindow.md)
+    - [OH_AVFormat](capi-videoprocessing-oh-avformat.md)
+    - [VideoProcessing_Callback](capi-videoprocessing-videoprocessing-callback.md)
     - [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md)
     - [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md)
     - [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md)

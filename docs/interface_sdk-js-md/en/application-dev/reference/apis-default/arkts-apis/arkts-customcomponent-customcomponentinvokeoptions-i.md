@@ -6,7 +6,7 @@ Defining interface for _invokeImpl options.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-unnamed-export interface CustomComponentInvokeOptions--><!--Device-unnamed-export interface CustomComponentInvokeOptions-End-->
 
@@ -24,7 +24,7 @@ CustomComponent Class object. Used to generate default reuse key.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

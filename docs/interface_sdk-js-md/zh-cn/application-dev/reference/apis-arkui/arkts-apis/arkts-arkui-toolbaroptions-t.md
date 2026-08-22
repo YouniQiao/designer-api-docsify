@@ -8,7 +8,7 @@ Declare ToolBarOptions use in ToolBar.
 
 **起始版本：** 22
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为22。
+**ArkTS模式：** ArkTS-Sta起始版本为22。
 
 <!--Device-unnamed-export type ToolBarOptions = Array<ToolBarOption>--><!--Device-unnamed-export type ToolBarOptions = Array<ToolBarOption>-End-->
 

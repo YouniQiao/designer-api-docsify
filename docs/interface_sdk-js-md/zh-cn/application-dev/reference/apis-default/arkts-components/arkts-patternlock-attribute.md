@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface PatternLockAttribute--><!--Device-unnamed-export declare interface PatternLockAttribute-End-->
 
@@ -22,7 +22,7 @@ activateCircleStyle(options: CircleStyleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-activateCircleStyle(options: CircleStyleOptions | undefined): this--><!--Device-PatternLockAttribute-activateCircleStyle(options: CircleStyleOptions | undefined): this-End-->
 
@@ -44,7 +44,7 @@ activeColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-activeColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-activeColor(value: ResourceColor | undefined): this-End-->
 
@@ -66,7 +66,7 @@ attributeModifier(modifier: AttributeModifier<PatternLockAttribute> | AttributeM
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-attributeModifier(modifier: AttributeModifier<PatternLockAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-PatternLockAttribute-attributeModifier(modifier: AttributeModifier<PatternLockAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ autoReset(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-autoReset(value: boolean | undefined): this--><!--Device-PatternLockAttribute-autoReset(value: boolean | undefined): this-End-->
 
@@ -110,7 +110,7 @@ backgroundColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-backgroundColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-backgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -132,7 +132,7 @@ circleRadius(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-circleRadius(value: Length | undefined): this--><!--Device-PatternLockAttribute-circleRadius(value: Length | undefined): this-End-->
 
@@ -154,7 +154,7 @@ onDotConnect(callback: Callback<int> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-onDotConnect(callback: Callback<int> | undefined): this--><!--Device-PatternLockAttribute-onDotConnect(callback: Callback<int> | undefined): this-End-->
 
@@ -176,7 +176,7 @@ onPatternComplete(callback: Callback<Array<int>> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-onPatternComplete(callback: Callback<Array<int>> | undefined): this--><!--Device-PatternLockAttribute-onPatternComplete(callback: Callback<Array<int>> | undefined): this-End-->
 
@@ -198,7 +198,7 @@ pathColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-pathColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-pathColor(value: ResourceColor | undefined): this-End-->
 
@@ -220,7 +220,7 @@ pathStrokeWidth(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-pathStrokeWidth(value: double | string | undefined): this--><!--Device-PatternLockAttribute-pathStrokeWidth(value: double | string | undefined): this-End-->
 
@@ -242,7 +242,7 @@ regularColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-regularColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-regularColor(value: ResourceColor | undefined): this-End-->
 
@@ -264,7 +264,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-PatternLockAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -286,7 +286,7 @@ setPatternLockOptions(controller?: PatternLockController): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-setPatternLockOptions(controller?: PatternLockController): this--><!--Device-PatternLockAttribute-setPatternLockOptions(controller?: PatternLockController): this-End-->
 
@@ -308,7 +308,7 @@ sideLength(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-sideLength(value: Length | undefined): this--><!--Device-PatternLockAttribute-sideLength(value: Length | undefined): this-End-->
 
@@ -330,7 +330,7 @@ skipUnselectedPoint(skipped: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-PatternLockAttribute-skipUnselectedPoint(skipped: boolean | undefined): this--><!--Device-PatternLockAttribute-skipUnselectedPoint(skipped: boolean | undefined): this-End-->
 
@@ -354,7 +354,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface MenuAttribute--><!--Device-unnamed-export declare interface MenuAttribute-End-->
 
@@ -21,7 +21,7 @@ attributeModifier(
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-attributeModifier(        modifier: AttributeModifier<MenuAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-MenuAttribute-attributeModifier(        modifier: AttributeModifier<MenuAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -43,7 +43,7 @@ font(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-font(value: Font | undefined): this--><!--Device-MenuAttribute-font(value: Font | undefined): this-End-->
 
@@ -65,7 +65,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-MenuAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -87,7 +87,7 @@ menuItemDivider(options: DividerStyleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-menuItemDivider(options: DividerStyleOptions | undefined): this--><!--Device-MenuAttribute-menuItemDivider(options: DividerStyleOptions | undefined): this-End-->
 
@@ -109,7 +109,7 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-menuItemGroupDivider(options: DividerStyleOptions | undefined): this--><!--Device-MenuAttribute-menuItemGroupDivider(options: DividerStyleOptions | undefined): this-End-->
 
@@ -131,7 +131,7 @@ radius(value: Dimension | BorderRadiuses | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-radius(value: Dimension | BorderRadiuses | undefined): this--><!--Device-MenuAttribute-radius(value: Dimension | BorderRadiuses | undefined): this-End-->
 
@@ -153,7 +153,7 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this-End-->
 
@@ -175,7 +175,7 @@ subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-MenuAttribute-subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this--><!--Device-MenuAttribute-subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this-End-->
 
@@ -199,7 +199,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

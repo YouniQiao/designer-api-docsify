@@ -4,7 +4,7 @@ The custom component and UI component information. For the V2 @Monitor or @Compu
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-unnamed-export interface ElementInfo--><!--Device-unnamed-export interface ElementInfo-End-->
 
@@ -22,7 +22,7 @@ Dependent custom component and UI component id. For the V2 @Monitor or @Computed
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Dependent custom component and UI component name. For the V2 @Monitor or @Comput
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

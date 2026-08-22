@@ -4,7 +4,7 @@ Provides information for history item in BackForwardList.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
 
@@ -27,7 +27,7 @@ Original request url of this history item.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-HistoryItem-historyRawUrl: string--><!--Device-HistoryItem-historyRawUrl: string-End-->
 
@@ -45,7 +45,7 @@ Url of this history item.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-HistoryItem-historyUrl: string--><!--Device-HistoryItem-historyUrl: string-End-->
 
@@ -63,7 +63,7 @@ Pixelmap of icon.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-HistoryItem-icon: image.PixelMap--><!--Device-HistoryItem-icon: image.PixelMap-End-->
 
@@ -81,7 +81,7 @@ Title of this history item.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-HistoryItem-title: string--><!--Device-HistoryItem-title: string-End-->
 

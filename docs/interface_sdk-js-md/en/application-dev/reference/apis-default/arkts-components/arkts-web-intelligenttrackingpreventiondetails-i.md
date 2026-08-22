@@ -4,7 +4,7 @@ Defines the Intelligent Tracking Prevention details.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface IntelligentTrackingPreventionDetails--><!--Device-unnamed-export declare interface IntelligentTrackingPreventionDetails-End-->
 
@@ -22,7 +22,7 @@ The host of website url.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-IntelligentTrackingPreventionDetails-host: string--><!--Device-IntelligentTrackingPreventionDetails-host: string-End-->
 
@@ -40,7 +40,7 @@ The host of tracker url.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-IntelligentTrackingPreventionDetails-trackerHost: string--><!--Device-IntelligentTrackingPreventionDetails-trackerHost: string-End-->
 

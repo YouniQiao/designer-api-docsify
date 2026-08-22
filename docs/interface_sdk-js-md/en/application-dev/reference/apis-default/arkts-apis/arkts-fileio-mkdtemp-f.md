@@ -15,7 +15,7 @@ Create a temporary directory. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function mkdtemp(prefix: string): Promise<string>--><!--Device-fileIo-function mkdtemp(prefix: string): Promise<string>-End-->
 
@@ -64,7 +64,7 @@ Create a temporary directory. This API uses an asynchronous callback to return t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function mkdtemp(prefix: string, callback: AsyncCallback<string>): void--><!--Device-fileIo-function mkdtemp(prefix: string, callback: AsyncCallback<string>): void-End-->
 

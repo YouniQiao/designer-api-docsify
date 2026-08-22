@@ -4,7 +4,7 @@ Construct parameter types for ArcSliderLayoutOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ArcSliderLayoutOptionsConstructorOptions--><!--Device-unnamed-export interface ArcSliderLayoutOptionsConstructorOptions-End-->
 
@@ -29,7 +29,7 @@ Set the component's position on the screen.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderLayoutOptionsConstructorOptions-position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptionsConstructorOptions-position?: ArcSliderPosition-End-->
 
@@ -49,7 +49,7 @@ Set whether the component's arc direction is counterclockwise.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderLayoutOptionsConstructorOptions-reverse?: boolean--><!--Device-ArcSliderLayoutOptionsConstructorOptions-reverse?: boolean-End-->
 

@@ -15,7 +15,7 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function getxattr(path: string, key: string): Promise<string>--><!--Device-fileIo-function getxattr(path: string, key: string): Promise<string>-End-->
 

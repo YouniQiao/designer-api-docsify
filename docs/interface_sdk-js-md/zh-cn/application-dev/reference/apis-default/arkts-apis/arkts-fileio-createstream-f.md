@@ -15,7 +15,7 @@ function createStream(path: string, mode: string): Promise<Stream>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function createStream(path: string, mode: string): Promise<Stream>--><!--Device-fileIo-function createStream(path: string, mode: string): Promise<Stream>-End-->
 
@@ -77,7 +77,7 @@ function createStream(path: string, mode: string, callback: AsyncCallback<Stream
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-fileIo-function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 

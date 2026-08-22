@@ -4,7 +4,7 @@ Defining of entry of page
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare abstract class EntryPoint--><!--Device-unnamed-export declare abstract class EntryPoint-End-->
 
@@ -21,7 +21,7 @@ Define entry function of page
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

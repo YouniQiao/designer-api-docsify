@@ -8,7 +8,7 @@ Defines the attribute functions of Screen.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ScreenAttribute--><!--Device-unnamed-export declare interface ScreenAttribute-End-->
 
@@ -25,7 +25,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScreenAttribute-attributeModifier(      modifier: AttributeModifier<ScreenAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ScreenAttribute-attributeModifier(      modifier: AttributeModifier<ScreenAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 

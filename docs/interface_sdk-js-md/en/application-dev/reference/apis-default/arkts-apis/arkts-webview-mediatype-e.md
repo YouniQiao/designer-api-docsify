@@ -4,7 +4,7 @@ Enumerates the media types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum MediaType--><!--Device-webview-enum MediaType-End-->
 
@@ -20,7 +20,7 @@ Video.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaType-VIDEO = 0--><!--Device-MediaType-VIDEO = 0-End-->
 
@@ -36,7 +36,7 @@ Audio.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaType-AUDIO = 1--><!--Device-MediaType-AUDIO = 1-End-->
 

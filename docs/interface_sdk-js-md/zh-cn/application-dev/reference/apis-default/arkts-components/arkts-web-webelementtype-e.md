@@ -4,7 +4,7 @@ Defines Web Elements type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum WebElementType--><!--Device-unnamed-export declare enum WebElementType-End-->
 
@@ -20,7 +20,7 @@ Image.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebElementType-IMAGE = 1--><!--Device-WebElementType-IMAGE = 1-End-->
 
@@ -36,7 +36,7 @@ Hyperlink.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebElementType-LINK = 2--><!--Device-WebElementType-LINK = 2-End-->
 
@@ -52,7 +52,7 @@ Text or editable area.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebElementType-TEXT = 3--><!--Device-WebElementType-TEXT = 3-End-->
 

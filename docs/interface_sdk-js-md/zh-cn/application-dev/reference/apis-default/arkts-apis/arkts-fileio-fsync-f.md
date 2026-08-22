@@ -15,7 +15,7 @@ function fsync(fd: int): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function fsync(fd: int): Promise<void>--><!--Device-fileIo-function fsync(fd: int): Promise<void>-End-->
 
@@ -56,7 +56,7 @@ function fsync(fd: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function fsync(fd: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function fsync(fd: int, callback: AsyncCallback<void>): void-End-->
 

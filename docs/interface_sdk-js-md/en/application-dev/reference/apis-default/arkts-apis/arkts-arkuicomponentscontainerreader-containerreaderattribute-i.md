@@ -6,7 +6,7 @@ Defines the container reader attribute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface ContainerReaderAttribute--><!--Device-unnamed-export declare interface ContainerReaderAttribute-End-->
 
@@ -25,7 +25,7 @@ attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | Attrib
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ContainerReaderAttribute-attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ContainerReaderAttribute-attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -47,7 +47,7 @@ breakpointConfig(value?: BreakpointOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ContainerReaderAttribute-breakpointConfig(value?: BreakpointOptions): this--><!--Device-ContainerReaderAttribute-breakpointConfig(value?: BreakpointOptions): this-End-->
 
@@ -69,7 +69,7 @@ setContainerReaderOptions(value: ContainerReaderInfo): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ContainerReaderAttribute-setContainerReaderOptions(value: ContainerReaderInfo): this--><!--Device-ContainerReaderAttribute-setContainerReaderOptions(value: ContainerReaderInfo): this-End-->
 
@@ -93,7 +93,7 @@ Sets the attribute modifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

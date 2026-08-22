@@ -4,7 +4,7 @@ The class for ArcButtonOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class ArcButtonOptions--><!--Device-unnamed-export declare class ArcButtonOptions-End-->
 
@@ -25,7 +25,7 @@ Constructor of the CommonArcButtonOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-constructor(options: CommonArcButtonOptions)--><!--Device-ArcButtonOptions-constructor(options: CommonArcButtonOptions)-End-->
 
@@ -50,7 +50,7 @@ Describe the blurred background style of the arc-shaped button.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public backgroundBlurStyle: BlurStyle--><!--Device-ArcButtonOptions-@Trace  public backgroundBlurStyle: BlurStyle-End-->
 
@@ -69,7 +69,7 @@ Describes the arc button background color.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public backgroundColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public backgroundColor: ColorMetrics-End-->
 
@@ -88,7 +88,7 @@ Describes the arc button text color.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public fontColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public fontColor: ColorMetrics-End-->
 
@@ -107,7 +107,7 @@ Describes the arc button text family.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public fontFamily: string | Resource--><!--Device-ArcButtonOptions-@Trace  public fontFamily: string | Resource-End-->
 
@@ -126,7 +126,7 @@ Describes the arc button text margin.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public fontMargin: LocalizedMargin--><!--Device-ArcButtonOptions-@Trace  public fontMargin: LocalizedMargin-End-->
 
@@ -145,7 +145,7 @@ Describes the arc button text size.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public fontSize: LengthMetrics--><!--Device-ArcButtonOptions-@Trace  public fontSize: LengthMetrics-End-->
 
@@ -164,7 +164,7 @@ Describes the arc button text style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public fontStyle: FontStyle--><!--Device-ArcButtonOptions-@Trace  public fontStyle: FontStyle-End-->
 
@@ -183,7 +183,7 @@ Describes the arc button displays text.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public label: ResourceStr--><!--Device-ArcButtonOptions-@Trace  public label: ResourceStr-End-->
 
@@ -202,7 +202,7 @@ Describes the arc button click event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public onClick?: Callback<ClickEvent>--><!--Device-ArcButtonOptions-@Trace  public onClick?: Callback<ClickEvent>-End-->
 
@@ -221,7 +221,7 @@ Describes the arc button touch event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public onTouch?: Callback<TouchEvent>--><!--Device-ArcButtonOptions-@Trace  public onTouch?: Callback<TouchEvent>-End-->
 
@@ -240,7 +240,7 @@ Describes the position of button on screen.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public position: ArcButtonPosition--><!--Device-ArcButtonOptions-@Trace  public position: ArcButtonPosition-End-->
 
@@ -259,7 +259,7 @@ Describes the arc button pressed text color.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public pressedFontColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public pressedFontColor: ColorMetrics-End-->
 
@@ -278,7 +278,7 @@ Sets the ArcButton progress bar parameters. When not set, the button style is us
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,7 +299,7 @@ Describes the arc button shadow color.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public shadowColor: ColorMetrics--><!--Device-ArcButtonOptions-@Trace  public shadowColor: ColorMetrics-End-->
 
@@ -318,7 +318,7 @@ Describes the arc button shadow switch.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public shadowEnabled: boolean--><!--Device-ArcButtonOptions-@Trace  public shadowEnabled: boolean-End-->
 
@@ -337,7 +337,7 @@ Describes the arc button status.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public status: ArcButtonStatus--><!--Device-ArcButtonOptions-@Trace  public status: ArcButtonStatus-End-->
 
@@ -356,7 +356,7 @@ Describes the arc button style mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonOptions-@Trace  public styleMode: ArcButtonStyleMode--><!--Device-ArcButtonOptions-@Trace  public styleMode: ArcButtonStyleMode-End-->
 

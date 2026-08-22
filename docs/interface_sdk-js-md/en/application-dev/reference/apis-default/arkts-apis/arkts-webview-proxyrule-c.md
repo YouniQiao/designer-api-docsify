@@ -4,7 +4,7 @@ The ProxyRule used by insertProxyRule.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
 
@@ -25,7 +25,7 @@ Returns the scheme filter used for this rule.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter--><!--Device-ProxyRule-getSchemeFilter(): ProxySchemeFilter-End-->
 
@@ -47,7 +47,7 @@ Returns the proxy URL.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ProxyRule-getUrl(): string--><!--Device-ProxyRule-getUrl(): string-End-->
 

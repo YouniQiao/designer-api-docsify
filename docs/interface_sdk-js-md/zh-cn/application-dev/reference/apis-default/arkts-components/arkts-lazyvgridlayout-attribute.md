@@ -34,7 +34,7 @@ default rowsGap(value: LengthMetrics | undefined): this
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface LazyVGridLayoutAttribute--><!--Device-unnamed-export declare interface LazyVGridLayoutAttribute-End-->
 
@@ -48,7 +48,7 @@ attributeModifier(modifier: AttributeModifier<LazyVGridLayoutAttribute> | Attrib
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyVGridLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyVGridLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyVGridLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyVGridLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -70,7 +70,7 @@ columnsTemplate(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string | undefined): this--><!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string | undefined): this-End-->
 
@@ -92,7 +92,7 @@ setLazyVGridLayoutOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyVGridLayoutAttribute-setLazyVGridLayoutOptions(): this--><!--Device-LazyVGridLayoutAttribute-setLazyVGridLayoutOptions(): this-End-->
 
@@ -110,7 +110,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

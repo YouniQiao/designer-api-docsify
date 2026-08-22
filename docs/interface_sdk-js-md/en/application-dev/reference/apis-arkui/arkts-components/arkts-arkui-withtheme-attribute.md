@@ -4,7 +4,7 @@ Defines the WithTheme attribute functions..
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface WithThemeAttribute--><!--Device-unnamed-export declare interface WithThemeAttribute-End-->
 
@@ -18,7 +18,7 @@ applyAttributesFinish(): void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WithThemeAttribute-applyAttributesFinish(): void--><!--Device-WithThemeAttribute-applyAttributesFinish(): void-End-->
 
@@ -30,7 +30,7 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WithThemeAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-WithThemeAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
@@ -53,7 +53,7 @@ setWithThemeOptions(options: WithThemeOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WithThemeAttribute-setWithThemeOptions(options: WithThemeOptions | undefined): this--><!--Device-WithThemeAttribute-setWithThemeOptions(options: WithThemeOptions | undefined): this-End-->
 
@@ -77,7 +77,7 @@ Notify the component is finished setting up its attributes.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

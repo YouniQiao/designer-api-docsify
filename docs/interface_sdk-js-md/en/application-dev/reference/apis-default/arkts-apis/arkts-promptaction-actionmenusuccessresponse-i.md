@@ -4,7 +4,7 @@ Success response.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-promptAction-export interface ActionMenuSuccessResponse--><!--Device-promptAction-export interface ActionMenuSuccessResponse-End-->
 
@@ -27,7 +27,7 @@ Index of the selected button, starting from 0.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

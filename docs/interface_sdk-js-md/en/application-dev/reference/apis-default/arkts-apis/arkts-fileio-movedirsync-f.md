@@ -19,7 +19,7 @@ Moves the source directory and its content to the destination directory. This AP
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function moveDirSync(src: string, dest: string, mode?: int): void--><!--Device-fileIo-function moveDirSync(src: string, dest: string, mode?: int): void-End-->
 

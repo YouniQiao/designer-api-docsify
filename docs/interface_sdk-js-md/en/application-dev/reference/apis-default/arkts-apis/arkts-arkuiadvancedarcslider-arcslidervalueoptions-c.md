@@ -4,7 +4,7 @@ The options for ArcSlider progress value.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class ArcSliderValueOptions--><!--Device-unnamed-export declare class ArcSliderValueOptions-End-->
 
@@ -25,7 +25,7 @@ The constructor used to create a ArcSliderValueOptions object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)--><!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)-End-->
 
@@ -52,7 +52,7 @@ Set the maximum progress value.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptions-@Trace  max?: double--><!--Device-ArcSliderValueOptions-@Trace  max?: double-End-->
 
@@ -73,7 +73,7 @@ Set the minimum progress value.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptions-@Trace  min?: double--><!--Device-ArcSliderValueOptions-@Trace  min?: double-End-->
 
@@ -92,7 +92,7 @@ Set current progress value. The default value is consistent with the value of th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptions-@Trace  progress?: double--><!--Device-ArcSliderValueOptions-@Trace  progress?: double-End-->
 

@@ -4,7 +4,7 @@ Enumerates dark-mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-uiAppearance-enum DarkMode--><!--Device-uiAppearance-enum DarkMode-End-->
 
@@ -20,7 +20,7 @@ Always display with dark mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-DarkMode-ALWAYS_DARK = 0--><!--Device-DarkMode-ALWAYS_DARK = 0-End-->
 
@@ -36,7 +36,7 @@ Always display with light mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-DarkMode-ALWAYS_LIGHT = 1--><!--Device-DarkMode-ALWAYS_LIGHT = 1-End-->
 

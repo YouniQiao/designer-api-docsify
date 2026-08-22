@@ -6,7 +6,7 @@ The TabsAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface TabsAttribute--><!--Device-unnamed-export declare interface TabsAttribute-End-->
 
@@ -20,7 +20,7 @@ animationCurve(curve: Curve | ICurve| undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-animationCurve(curve: Curve | ICurve| undefined): this--><!--Device-TabsAttribute-animationCurve(curve: Curve | ICurve| undefined): this-End-->
 
@@ -42,7 +42,7 @@ animationDuration(value: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-animationDuration(value: int | undefined): this--><!--Device-TabsAttribute-animationDuration(value: int | undefined): this-End-->
 
@@ -64,7 +64,7 @@ animationMode(mode: AnimationMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-animationMode(mode: AnimationMode | undefined): this--><!--Device-TabsAttribute-animationMode(mode: AnimationMode | undefined): this-End-->
 
@@ -87,7 +87,7 @@ attributeModifier(modifier: AttributeModifier<TabsAttribute> |
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-attributeModifier(modifier: AttributeModifier<TabsAttribute> |        AttributeModifier<CommonMethod> | undefined): this--><!--Device-TabsAttribute-attributeModifier(modifier: AttributeModifier<TabsAttribute> |        AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -109,7 +109,7 @@ barBackgroundBlurStyle(value: BlurStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barBackgroundBlurStyle(value: BlurStyle | undefined): this--><!--Device-TabsAttribute-barBackgroundBlurStyle(value: BlurStyle | undefined): this-End-->
 
@@ -131,7 +131,7 @@ barBackgroundBlurStyle(style: BlurStyle | undefined, options: BackgroundBlurStyl
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barBackgroundBlurStyle(style: BlurStyle | undefined, options: BackgroundBlurStyleOptions | undefined): this--><!--Device-TabsAttribute-barBackgroundBlurStyle(style: BlurStyle | undefined, options: BackgroundBlurStyleOptions | undefined): this-End-->
 
@@ -154,7 +154,7 @@ barBackgroundColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barBackgroundColor(value: ResourceColor | undefined): this--><!--Device-TabsAttribute-barBackgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -176,7 +176,7 @@ barBackgroundEffect(options: BackgroundEffectOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barBackgroundEffect(options: BackgroundEffectOptions | undefined): this--><!--Device-TabsAttribute-barBackgroundEffect(options: BackgroundEffectOptions | undefined): this-End-->
 
@@ -198,7 +198,7 @@ barFloatingStyle(style: FloatingTabBarStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barFloatingStyle(style: FloatingTabBarStyle | undefined): this--><!--Device-TabsAttribute-barFloatingStyle(style: FloatingTabBarStyle | undefined): this-End-->
 
@@ -220,7 +220,7 @@ barGridAlign(value: BarGridColumnOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barGridAlign(value: BarGridColumnOptions | undefined): this--><!--Device-TabsAttribute-barGridAlign(value: BarGridColumnOptions | undefined): this-End-->
 
@@ -242,7 +242,7 @@ barHeight(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barHeight(value: Length | undefined): this--><!--Device-TabsAttribute-barHeight(value: Length | undefined): this-End-->
 
@@ -264,7 +264,7 @@ barHeight(value: Length | undefined, noMinHeightLimit: boolean| undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barHeight(value: Length | undefined, noMinHeightLimit: boolean| undefined): this--><!--Device-TabsAttribute-barHeight(value: Length | undefined, noMinHeightLimit: boolean| undefined): this-End-->
 
@@ -287,7 +287,7 @@ barMode(value: BarMode | undefined, options?: ScrollableBarModeOptions | undefin
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barMode(value: BarMode | undefined, options?: ScrollableBarModeOptions | undefined): this--><!--Device-TabsAttribute-barMode(value: BarMode | undefined, options?: ScrollableBarModeOptions | undefined): this-End-->
 
@@ -310,7 +310,7 @@ barOverlap(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barOverlap(value: boolean | undefined): this--><!--Device-TabsAttribute-barOverlap(value: boolean | undefined): this-End-->
 
@@ -332,7 +332,7 @@ barPosition(value: BarPosition | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barPosition(value: BarPosition | undefined): this--><!--Device-TabsAttribute-barPosition(value: BarPosition | undefined): this-End-->
 
@@ -354,7 +354,7 @@ barWidth(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-barWidth(value: Length | undefined): this--><!--Device-TabsAttribute-barWidth(value: Length | undefined): this-End-->
 
@@ -376,7 +376,7 @@ cachedMaxCount(count: int | undefined, mode: TabsCacheMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-cachedMaxCount(count: int | undefined, mode: TabsCacheMode | undefined): this--><!--Device-TabsAttribute-cachedMaxCount(count: int | undefined, mode: TabsCacheMode | undefined): this-End-->
 
@@ -399,7 +399,7 @@ customContentTransition(delegate: TabsCustomContentTransitionCallback | undefine
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-customContentTransition(delegate: TabsCustomContentTransitionCallback | undefined): this--><!--Device-TabsAttribute-customContentTransition(delegate: TabsCustomContentTransitionCallback | undefined): this-End-->
 
@@ -421,7 +421,7 @@ divider(value: DividerStyle | null | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-divider(value: DividerStyle | null | undefined): this--><!--Device-TabsAttribute-divider(value: DividerStyle | null | undefined): this-End-->
 
@@ -443,7 +443,7 @@ edgeEffect(edgeEffect: EdgeEffect | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-edgeEffect(edgeEffect: EdgeEffect | undefined): this--><!--Device-TabsAttribute-edgeEffect(edgeEffect: EdgeEffect | undefined): this-End-->
 
@@ -465,7 +465,7 @@ fadingEdge(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-fadingEdge(value: boolean | undefined): this--><!--Device-TabsAttribute-fadingEdge(value: boolean | undefined): this-End-->
 
@@ -487,7 +487,7 @@ nestedScroll(value: TabsNestedScrollMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-nestedScroll(value: TabsNestedScrollMode | undefined): this--><!--Device-TabsAttribute-nestedScroll(value: TabsNestedScrollMode | undefined): this-End-->
 
@@ -509,7 +509,7 @@ onAnimationEnd(handler: OnTabsAnimationEndCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onAnimationEnd(handler: OnTabsAnimationEndCallback | undefined): this--><!--Device-TabsAttribute-onAnimationEnd(handler: OnTabsAnimationEndCallback | undefined): this-End-->
 
@@ -531,7 +531,7 @@ onAnimationStart(handler: OnTabsAnimationStartCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onAnimationStart(handler: OnTabsAnimationStartCallback | undefined): this--><!--Device-TabsAttribute-onAnimationStart(handler: OnTabsAnimationStartCallback | undefined): this-End-->
 
@@ -553,7 +553,7 @@ onChange(event: Callback<int> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onChange(event: Callback<int> | undefined): this--><!--Device-TabsAttribute-onChange(event: Callback<int> | undefined): this-End-->
 
@@ -575,7 +575,7 @@ onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined): this--><!--Device-TabsAttribute-onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined): this-End-->
 
@@ -597,7 +597,7 @@ onContentWillChange(handler: OnTabsContentWillChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onContentWillChange(handler: OnTabsContentWillChangeCallback | undefined): this--><!--Device-TabsAttribute-onContentWillChange(handler: OnTabsContentWillChangeCallback | undefined): this-End-->
 
@@ -619,7 +619,7 @@ onGestureSwipe(handler: OnTabsGestureSwipeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onGestureSwipe(handler: OnTabsGestureSwipeCallback | undefined): this--><!--Device-TabsAttribute-onGestureSwipe(handler: OnTabsGestureSwipeCallback | undefined): this-End-->
 
@@ -641,7 +641,7 @@ onSelected(event: Callback<int> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onSelected(event: Callback<int> | undefined): this--><!--Device-TabsAttribute-onSelected(event: Callback<int> | undefined): this-End-->
 
@@ -663,7 +663,7 @@ onTabBarClick(event: Callback<int> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onTabBarClick(event: Callback<int> | undefined): this--><!--Device-TabsAttribute-onTabBarClick(event: Callback<int> | undefined): this-End-->
 
@@ -685,7 +685,7 @@ onUnselected(event: Callback<int> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-onUnselected(event: Callback<int> | undefined): this--><!--Device-TabsAttribute-onUnselected(event: Callback<int> | undefined): this-End-->
 
@@ -707,7 +707,7 @@ pageFlipMode(mode: PageFlipMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-pageFlipMode(mode: PageFlipMode | undefined): this--><!--Device-TabsAttribute-pageFlipMode(mode: PageFlipMode | undefined): this-End-->
 
@@ -729,7 +729,7 @@ scrollable(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-scrollable(value: boolean | undefined): this--><!--Device-TabsAttribute-scrollable(value: boolean | undefined): this-End-->
 
@@ -751,7 +751,7 @@ setTabsOptions(options?: TabsOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-setTabsOptions(options?: TabsOptions): this--><!--Device-TabsAttribute-setTabsOptions(options?: TabsOptions): this-End-->
 
@@ -773,7 +773,7 @@ vertical(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TabsAttribute-vertical(value: boolean | undefined): this--><!--Device-TabsAttribute-vertical(value: boolean | undefined): this-End-->
 
@@ -797,7 +797,7 @@ Enable floating style for bar.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@ The GridItemAttribute.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface GridItemAttribute--><!--Device-unnamed-export declare interface GridItemAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<GridItemAttribute> | AttributeModi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-attributeModifier(modifier: AttributeModifier<GridItemAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-GridItemAttribute-attributeModifier(modifier: AttributeModifier<GridItemAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ columnEnd(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-columnEnd(value: int | undefined): this--><!--Device-GridItemAttribute-columnEnd(value: int | undefined): this-End-->
 
@@ -64,7 +64,7 @@ columnStart(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-columnStart(value: int | undefined): this--><!--Device-GridItemAttribute-columnStart(value: int | undefined): this-End-->
 
@@ -86,7 +86,7 @@ onSelect(event: ((isSelected: boolean) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-onSelect(event: ((isSelected: boolean) => void) | undefined): this--><!--Device-GridItemAttribute-onSelect(event: ((isSelected: boolean) => void) | undefined): this-End-->
 
@@ -108,7 +108,7 @@ rowEnd(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-rowEnd(value: int | undefined): this--><!--Device-GridItemAttribute-rowEnd(value: int | undefined): this-End-->
 
@@ -130,7 +130,7 @@ rowStart(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-rowStart(value: int | undefined): this--><!--Device-GridItemAttribute-rowStart(value: int | undefined): this-End-->
 
@@ -152,7 +152,7 @@ selectable(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-selectable(value: boolean | undefined): this--><!--Device-GridItemAttribute-selectable(value: boolean | undefined): this-End-->
 
@@ -174,7 +174,7 @@ selected(value: boolean | Bindable<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-selected(value: boolean | Bindable<boolean> | undefined): this--><!--Device-GridItemAttribute-selected(value: boolean | Bindable<boolean> | undefined): this-End-->
 
@@ -196,7 +196,7 @@ setGridItemOptions(value?: GridItemOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridItemAttribute-setGridItemOptions(value?: GridItemOptions): this--><!--Device-GridItemAttribute-setGridItemOptions(value?: GridItemOptions): this-End-->
 
@@ -220,7 +220,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

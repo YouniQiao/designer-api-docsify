@@ -4,7 +4,7 @@ Define the handler to exit the full screen mode, related to the [onFullScreenEnt
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare class FullScreenExitHandler--><!--Device-unnamed-export declare class FullScreenExitHandler-End-->
 
@@ -20,7 +20,7 @@ WebKeyboardController的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-FullScreenExitHandler-constructor()--><!--Device-FullScreenExitHandler-constructor()-End-->
 
@@ -36,7 +36,7 @@ Exit the full screen mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-FullScreenExitHandler-exitFullScreen(): void--><!--Device-FullScreenExitHandler-exitFullScreen(): void-End-->
 

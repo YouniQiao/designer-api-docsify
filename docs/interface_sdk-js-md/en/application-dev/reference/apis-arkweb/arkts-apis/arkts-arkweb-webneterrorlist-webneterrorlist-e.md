@@ -6,7 +6,7 @@ Web net error list.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum WebNetErrorList--><!--Device-unnamed-export declare enum WebNetErrorList-End-->
 
@@ -22,7 +22,7 @@ Normal.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-NET_OK = 0--><!--Device-WebNetErrorList-NET_OK = 0-End-->
 
@@ -38,7 +38,7 @@ An asynchronous IO operation is not yet complete. This usually does not indicate
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_IO_PENDING = -1--><!--Device-WebNetErrorList-ERR_IO_PENDING = -1-End-->
 
@@ -54,7 +54,7 @@ A generic failure occurred.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FAILED = -2--><!--Device-WebNetErrorList-ERR_FAILED = -2-End-->
 
@@ -70,7 +70,7 @@ An operation was aborted (due to user action).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ABORTED = -3--><!--Device-WebNetErrorList-ERR_ABORTED = -3-End-->
 
@@ -86,7 +86,7 @@ An argument to the function is incorrect.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_ARGUMENT = -4--><!--Device-WebNetErrorList-ERR_INVALID_ARGUMENT = -4-End-->
 
@@ -102,7 +102,7 @@ The handle or file descriptor is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_HANDLE = -5--><!--Device-WebNetErrorList-ERR_INVALID_HANDLE = -5-End-->
 
@@ -118,7 +118,7 @@ The file or directory cannot be found.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FILE_NOT_FOUND = -6--><!--Device-WebNetErrorList-ERR_FILE_NOT_FOUND = -6-End-->
 
@@ -134,7 +134,7 @@ An operation timed out.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TIMED_OUT = -7--><!--Device-WebNetErrorList-ERR_TIMED_OUT = -7-End-->
 
@@ -150,7 +150,7 @@ The file is too large.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FILE_TOO_LARGE = -8--><!--Device-WebNetErrorList-ERR_FILE_TOO_LARGE = -8-End-->
 
@@ -166,7 +166,7 @@ An unexpected error. This may be caused by a programming mistake or an invalid a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNEXPECTED = -9--><!--Device-WebNetErrorList-ERR_UNEXPECTED = -9-End-->
 
@@ -182,7 +182,7 @@ Permission to access a resource, other than the network, was denied.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ACCESS_DENIED = -10--><!--Device-WebNetErrorList-ERR_ACCESS_DENIED = -10-End-->
 
@@ -198,7 +198,7 @@ The operation failed because of unimplemented functionality.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NOT_IMPLEMENTED = -11--><!--Device-WebNetErrorList-ERR_NOT_IMPLEMENTED = -11-End-->
 
@@ -214,7 +214,7 @@ There were not enough resources to complete the operation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INSUFFICIENT_RESOURCES = -12--><!--Device-WebNetErrorList-ERR_INSUFFICIENT_RESOURCES = -12-End-->
 
@@ -230,7 +230,7 @@ Memory allocation failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_OUT_OF_MEMORY = -13--><!--Device-WebNetErrorList-ERR_OUT_OF_MEMORY = -13-End-->
 
@@ -246,7 +246,7 @@ The file upload failed because the file's modification time was different from t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UPLOAD_FILE_CHANGED = -14--><!--Device-WebNetErrorList-ERR_UPLOAD_FILE_CHANGED = -14-End-->
 
@@ -262,7 +262,7 @@ The socket is not connected.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKET_NOT_CONNECTED = -15--><!--Device-WebNetErrorList-ERR_SOCKET_NOT_CONNECTED = -15-End-->
 
@@ -278,7 +278,7 @@ The file already exists.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FILE_EXISTS = -16--><!--Device-WebNetErrorList-ERR_FILE_EXISTS = -16-End-->
 
@@ -294,7 +294,7 @@ The path or file name is too long.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FILE_PATH_TOO_LONG = -17--><!--Device-WebNetErrorList-ERR_FILE_PATH_TOO_LONG = -17-End-->
 
@@ -310,7 +310,7 @@ Not enough room left on the disk.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FILE_NO_SPACE = -18--><!--Device-WebNetErrorList-ERR_FILE_NO_SPACE = -18-End-->
 
@@ -326,7 +326,7 @@ The file has a virus.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FILE_VIRUS_INFECTED = -19--><!--Device-WebNetErrorList-ERR_FILE_VIRUS_INFECTED = -19-End-->
 
@@ -342,7 +342,7 @@ The client chose to block the request.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_CLIENT = -20--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_CLIENT = -20-End-->
 
@@ -358,7 +358,7 @@ The network changed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NETWORK_CHANGED = -21--><!--Device-WebNetErrorList-ERR_NETWORK_CHANGED = -21-End-->
 
@@ -374,7 +374,7 @@ The request was blocked by the URL block list configured by the domain administr
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_ADMINISTRATOR = -22--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_ADMINISTRATOR = -22-End-->
 
@@ -390,7 +390,7 @@ The socket is already connected.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKET_CONNECTED = -23--><!--Device-WebNetErrorList-ERR_SOCKET_CONNECTED = -23-End-->
 
@@ -406,7 +406,7 @@ The upload failed because the upload stream needed to be re-read, due to a retry
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25--><!--Device-WebNetErrorList-ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25-End-->
 
@@ -422,7 +422,7 @@ The request failed because the URLRequestContext is shutting down, or has been s
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONTEXT_SHUT_DOWN = -26--><!--Device-WebNetErrorList-ERR_CONTEXT_SHUT_DOWN = -26-End-->
 
@@ -438,7 +438,7 @@ The request failed because the response was delivered along with requirements wh
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_RESPONSE = -27--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_RESPONSE = -27-End-->
 
@@ -454,7 +454,7 @@ The request was blocked by system policy disallowing some or all cleartext reque
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CLEARTEXT_NOT_PERMITTED = -29--><!--Device-WebNetErrorList-ERR_CLEARTEXT_NOT_PERMITTED = -29-End-->
 
@@ -470,7 +470,7 @@ The request was blocked by a Content Security Policy.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_CSP = -30--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_CSP = -30-End-->
 
@@ -486,7 +486,7 @@ The request was blocked because of no H/2 or QUIC session.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_H2_OR_QUIC_REQUIRED = -31--><!--Device-WebNetErrorList-ERR_H2_OR_QUIC_REQUIRED = -31-End-->
 
@@ -502,7 +502,7 @@ The request was blocked by CORB or ORB.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_ORB = -32--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_ORB = -32-End-->
 
@@ -518,7 +518,7 @@ A connection was closed (corresponding to a TCP FIN).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_CLOSED = -100--><!--Device-WebNetErrorList-ERR_CONNECTION_CLOSED = -100-End-->
 
@@ -534,7 +534,7 @@ A connection was reset (corresponding to a TCP RST).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_RESET = -101--><!--Device-WebNetErrorList-ERR_CONNECTION_RESET = -101-End-->
 
@@ -550,7 +550,7 @@ A connection attempt was refused.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_REFUSED = -102--><!--Device-WebNetErrorList-ERR_CONNECTION_REFUSED = -102-End-->
 
@@ -566,7 +566,7 @@ A connection timed out as a result of not receiving an ACK for data sent. This c
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_ABORTED = -103--><!--Device-WebNetErrorList-ERR_CONNECTION_ABORTED = -103-End-->
 
@@ -582,7 +582,7 @@ A connection attempt failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_FAILED = -104--><!--Device-WebNetErrorList-ERR_CONNECTION_FAILED = -104-End-->
 
@@ -598,7 +598,7 @@ The host name could not be resolved.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NAME_NOT_RESOLVED = -105--><!--Device-WebNetErrorList-ERR_NAME_NOT_RESOLVED = -105-End-->
 
@@ -614,7 +614,7 @@ The Internet connection has been lost.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INTERNET_DISCONNECTED = -106--><!--Device-WebNetErrorList-ERR_INTERNET_DISCONNECTED = -106-End-->
 
@@ -630,7 +630,7 @@ An SSL protocol error occurred.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_PROTOCOL_ERROR = -107--><!--Device-WebNetErrorList-ERR_SSL_PROTOCOL_ERROR = -107-End-->
 
@@ -646,7 +646,7 @@ The IP address or port number is invalid (e.g., cannot connect to the IP address
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ADDRESS_INVALID = -108--><!--Device-WebNetErrorList-ERR_ADDRESS_INVALID = -108-End-->
 
@@ -662,7 +662,7 @@ The IP address is unreachable. This usually means that there is no route to the 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ADDRESS_UNREACHABLE = -109--><!--Device-WebNetErrorList-ERR_ADDRESS_UNREACHABLE = -109-End-->
 
@@ -678,7 +678,7 @@ The server requested a client certificate for SSL client authentication.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110-End-->
 
@@ -694,7 +694,7 @@ A tunnel connection through the proxy could not be established.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TUNNEL_CONNECTION_FAILED = -111--><!--Device-WebNetErrorList-ERR_TUNNEL_CONNECTION_FAILED = -111-End-->
 
@@ -710,7 +710,7 @@ No SSL protocol versions are enabled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NO_SSL_VERSIONS_ENABLED = -112--><!--Device-WebNetErrorList-ERR_NO_SSL_VERSIONS_ENABLED = -112-End-->
 
@@ -726,7 +726,7 @@ The client and server don't support a common SSL protocol version or cipher suit
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113--><!--Device-WebNetErrorList-ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113-End-->
 
@@ -742,7 +742,7 @@ The server requested a renegotiation (rehandshake).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_RENEGOTIATION_REQUESTED = -114--><!--Device-WebNetErrorList-ERR_SSL_RENEGOTIATION_REQUESTED = -114-End-->
 
@@ -758,7 +758,7 @@ The proxy requested authentication (for tunnel establishment) with an unsupporte
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PROXY_AUTH_UNSUPPORTED = -115--><!--Device-WebNetErrorList-ERR_PROXY_AUTH_UNSUPPORTED = -115-End-->
 
@@ -774,7 +774,7 @@ The SSL handshake failed because of a bad or missing client certificate.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_BAD_SSL_CLIENT_AUTH_CERT = -117--><!--Device-WebNetErrorList-ERR_BAD_SSL_CLIENT_AUTH_CERT = -117-End-->
 
@@ -790,7 +790,7 @@ A connection attempt timed out.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_TIMED_OUT = -118--><!--Device-WebNetErrorList-ERR_CONNECTION_TIMED_OUT = -118-End-->
 
@@ -806,7 +806,7 @@ There are too many pending DNS resolves, so a request in the queue was aborted.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119--><!--Device-WebNetErrorList-ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119-End-->
 
@@ -822,7 +822,7 @@ Failed establishing a connection to the SOCKS proxy server for a target host.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_FAILED = -120--><!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_FAILED = -120-End-->
 
@@ -838,7 +838,7 @@ The SOCKS proxy server failed establishing connection to the target host because
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121--><!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121-End-->
 
@@ -854,7 +854,7 @@ The request to negotiate an alternate protocol failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ALPN_NEGOTIATION_FAILED = -122--><!--Device-WebNetErrorList-ERR_ALPN_NEGOTIATION_FAILED = -122-End-->
 
@@ -870,7 +870,7 @@ The peer sent an SSL no_renegotiation alert message.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_NO_RENEGOTIATION = -123--><!--Device-WebNetErrorList-ERR_SSL_NO_RENEGOTIATION = -123-End-->
 
@@ -886,7 +886,7 @@ Winsock sometimes reports more data written than passed. This is probably due to
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_WINSOCK_UNEXPECTED_WRITTEN_BYTES = -124--><!--Device-WebNetErrorList-ERR_WINSOCK_UNEXPECTED_WRITTEN_BYTES = -124-End-->
 
@@ -902,7 +902,7 @@ An SSL peer sent us a fatal decompression_failure alert. This typically occurs w
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_DECOMPRESSION_FAILURE_ALERT = -125--><!--Device-WebNetErrorList-ERR_SSL_DECOMPRESSION_FAILURE_ALERT = -125-End-->
 
@@ -918,7 +918,7 @@ An SSL peer sent us a fatal bad_record_mac alert. This has been observed from se
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_BAD_RECORD_MAC_ALERT = -126--><!--Device-WebNetErrorList-ERR_SSL_BAD_RECORD_MAC_ALERT = -126-End-->
 
@@ -934,7 +934,7 @@ The proxy requested authentication (for tunnel establishment).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED = -127--><!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED = -127-End-->
 
@@ -950,7 +950,7 @@ Could not create a connection to the proxy server. An error occurred either in r
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PROXY_CONNECTION_FAILED = -130--><!--Device-WebNetErrorList-ERR_PROXY_CONNECTION_FAILED = -130-End-->
 
@@ -966,7 +966,7 @@ A mandatory proxy configuration could not be used. Currently this means that a m
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131--><!--Device-WebNetErrorList-ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131-End-->
 
@@ -982,7 +982,7 @@ We've hit the max socket limit for the socket pool while preconnecting. We don't
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133--><!--Device-WebNetErrorList-ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133-End-->
 
@@ -998,7 +998,7 @@ The permission to use the SSL client certificate's private key was denied.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134-End-->
 
@@ -1014,7 +1014,7 @@ The SSL client certificate has no private key.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY = -135--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY = -135-End-->
 
@@ -1030,7 +1030,7 @@ The certificate presented by the HTTPS Proxy was invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PROXY_CERTIFICATE_INVALID = -136--><!--Device-WebNetErrorList-ERR_PROXY_CERTIFICATE_INVALID = -136-End-->
 
@@ -1046,7 +1046,7 @@ An error occurred when trying to do a name resolution (DNS).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NAME_RESOLUTION_FAILED = -137--><!--Device-WebNetErrorList-ERR_NAME_RESOLUTION_FAILED = -137-End-->
 
@@ -1062,7 +1062,7 @@ Permission to access the network was denied. This is used to distinguish errors 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NETWORK_ACCESS_DENIED = -138--><!--Device-WebNetErrorList-ERR_NETWORK_ACCESS_DENIED = -138-End-->
 
@@ -1078,7 +1078,7 @@ The request throttler module cancelled this request to avoid DDOS.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TEMPORARILY_THROTTLED = -139--><!--Device-WebNetErrorList-ERR_TEMPORARILY_THROTTLED = -139-End-->
 
@@ -1094,7 +1094,7 @@ A request to create an SSL tunnel connection through the HTTPS proxy received a 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140--><!--Device-WebNetErrorList-ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140-End-->
 
@@ -1110,7 +1110,7 @@ We were unable to sign the CertificateVerify data of an SSL client auth handshak
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141-End-->
 
@@ -1126,7 +1126,7 @@ The message was too large for the transport. (for example a UDP message which ex
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_MSG_TOO_BIG = -142--><!--Device-WebNetErrorList-ERR_MSG_TOO_BIG = -142-End-->
 
@@ -1142,7 +1142,7 @@ Websocket protocol error. Indicates that we are terminating the connection due t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_WS_PROTOCOL_ERROR = -145--><!--Device-WebNetErrorList-ERR_WS_PROTOCOL_ERROR = -145-End-->
 
@@ -1158,7 +1158,7 @@ Returned when attempting to bind an address that is already in use.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ADDRESS_IN_USE = -147--><!--Device-WebNetErrorList-ERR_ADDRESS_IN_USE = -147-End-->
 
@@ -1174,7 +1174,7 @@ An operation failed because the SSL handshake has not completed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148--><!--Device-WebNetErrorList-ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148-End-->
 
@@ -1190,7 +1190,7 @@ SSL peer's public key is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_BAD_PEER_PUBLIC_KEY = -149--><!--Device-WebNetErrorList-ERR_SSL_BAD_PEER_PUBLIC_KEY = -149-End-->
 
@@ -1206,7 +1206,7 @@ The certificate didn't match the built-in public key pins for the host name. The
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150--><!--Device-WebNetErrorList-ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150-End-->
 
@@ -1222,7 +1222,7 @@ Server request for client certificate did not contain any types we support.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151--><!--Device-WebNetErrorList-ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151-End-->
 
@@ -1238,7 +1238,7 @@ An SSL peer sent us a fatal decrypt_error alert. This typically occurs when a pe
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_DECRYPT_ERROR_ALERT = -153--><!--Device-WebNetErrorList-ERR_SSL_DECRYPT_ERROR_ALERT = -153-End-->
 
@@ -1254,7 +1254,7 @@ There are too many pending WebSocketJob instances, so the new job was not pushed
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154--><!--Device-WebNetErrorList-ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154-End-->
 
@@ -1270,7 +1270,7 @@ The SSL server certificate changed in a renegotiation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_CHANGED = -156--><!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_CHANGED = -156-End-->
 
@@ -1286,7 +1286,7 @@ The SSL server sent us a fatal unrecognized_name alert.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_UNRECOGNIZED_NAME_ALERT = -159--><!--Device-WebNetErrorList-ERR_SSL_UNRECOGNIZED_NAME_ALERT = -159-End-->
 
@@ -1302,7 +1302,7 @@ Failed to set the socket's receive buffer size as requested.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160--><!--Device-WebNetErrorList-ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160-End-->
 
@@ -1318,7 +1318,7 @@ Failed to set the socket's send buffer size as requested.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161--><!--Device-WebNetErrorList-ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161-End-->
 
@@ -1334,7 +1334,7 @@ Failed to set the socket's receive buffer size as requested, despite success ret
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162--><!--Device-WebNetErrorList-ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162-End-->
 
@@ -1350,7 +1350,7 @@ Failed to set the socket's send buffer size as requested, despite success return
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163--><!--Device-WebNetErrorList-ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163-End-->
 
@@ -1366,7 +1366,7 @@ Failed to import a client certificate from the platform store into the SSL libra
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164-End-->
 
@@ -1382,7 +1382,7 @@ Resolving a hostname to an IP address list included the IPv4 address "127.0.53.5
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ICANN_NAME_COLLISION = -166--><!--Device-WebNetErrorList-ERR_ICANN_NAME_COLLISION = -166-End-->
 
@@ -1398,7 +1398,7 @@ The SSL server presented a certificate which could not be decoded. This is not a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_BAD_FORMAT = -167--><!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_BAD_FORMAT = -167-End-->
 
@@ -1414,7 +1414,7 @@ Certificate Transparency: Received a signed tree head that failed to parse.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CT_STH_PARSING_FAILED = -168--><!--Device-WebNetErrorList-ERR_CT_STH_PARSING_FAILED = -168-End-->
 
@@ -1430,7 +1430,7 @@ Certificate Transparency: Received a signed tree head whose JSON parsing was OK 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CT_STH_INCOMPLETE = -169--><!--Device-WebNetErrorList-ERR_CT_STH_INCOMPLETE = -169-End-->
 
@@ -1446,7 +1446,7 @@ The attempt to reuse a connection to send proxy auth credentials failed before t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170--><!--Device-WebNetErrorList-ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170-End-->
 
@@ -1462,7 +1462,7 @@ Certificate Transparency: Failed to parse the received consistency proof.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CT_CONSISTENCY_PROOF_PARSING_FAILED = -171--><!--Device-WebNetErrorList-ERR_CT_CONSISTENCY_PROOF_PARSING_FAILED = -171-End-->
 
@@ -1478,7 +1478,7 @@ The SSL server required an unsupported cipher suite that has since been removed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_CIPHER = -172--><!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_CIPHER = -172-End-->
 
@@ -1494,7 +1494,7 @@ When a WebSocket handshake is done successfully and the connection has been upgr
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_WS_UPGRADE = -173--><!--Device-WebNetErrorList-ERR_WS_UPGRADE = -173-End-->
 
@@ -1510,7 +1510,7 @@ Socket ReadIfReady support is not implemented. This error should not be user vis
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_READ_IF_READY_NOT_IMPLEMENTED = -174--><!--Device-WebNetErrorList-ERR_READ_IF_READY_NOT_IMPLEMENTED = -174-End-->
 
@@ -1526,7 +1526,7 @@ No socket buffer space is available.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NO_BUFFER_SPACE = -176--><!--Device-WebNetErrorList-ERR_NO_BUFFER_SPACE = -176-End-->
 
@@ -1542,7 +1542,7 @@ There were no common signature algorithms between our client certificate private
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177-End-->
 
@@ -1558,7 +1558,7 @@ TLS 1.3 early data was rejected by the server. This will be received before any 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_EARLY_DATA_REJECTED = -178--><!--Device-WebNetErrorList-ERR_EARLY_DATA_REJECTED = -178-End-->
 
@@ -1574,7 +1574,7 @@ TLS 1.3 early data was offered, but the server responded with TLS 1.2 or earlier
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_WRONG_VERSION_ON_EARLY_DATA = -179--><!--Device-WebNetErrorList-ERR_WRONG_VERSION_ON_EARLY_DATA = -179-End-->
 
@@ -1590,7 +1590,7 @@ TLS 1.3 was enabled, but a lower version was negotiated and the server returned 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TLS13_DOWNGRADE_DETECTED = -180--><!--Device-WebNetErrorList-ERR_TLS13_DOWNGRADE_DETECTED = -180-End-->
 
@@ -1606,7 +1606,7 @@ The server's certificate has a keyUsage extension incompatible with the negotiat
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181--><!--Device-WebNetErrorList-ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181-End-->
 
@@ -1622,7 +1622,7 @@ The ECHConfigList fetched over DNS cannot be parsed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_ECH_CONFIG_LIST = -182--><!--Device-WebNetErrorList-ERR_INVALID_ECH_CONFIG_LIST = -182-End-->
 
@@ -1638,7 +1638,7 @@ ECH was enabled, but the server was unable to decrypt the encrypted ClientHello.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ECH_NOT_NEGOTIATED = -183--><!--Device-WebNetErrorList-ERR_ECH_NOT_NEGOTIATED = -183-End-->
 
@@ -1654,7 +1654,7 @@ ECH was enabled, the server was unable to decrypt the encrypted ClientHello, and
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ECH_FALLBACK_CERTIFICATE_INVALID = -184--><!--Device-WebNetErrorList-ERR_ECH_FALLBACK_CERTIFICATE_INVALID = -184-End-->
 
@@ -1670,7 +1670,7 @@ The server responded with a certificate whose common name did not match the host
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_COMMON_NAME_INVALID = -200--><!--Device-WebNetErrorList-ERR_CERT_COMMON_NAME_INVALID = -200-End-->
 
@@ -1686,7 +1686,7 @@ The server responded with a certificate that, by our clock, appears to either no
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_DATE_INVALID = -201--><!--Device-WebNetErrorList-ERR_CERT_DATE_INVALID = -201-End-->
 
@@ -1702,7 +1702,7 @@ The server responded with a certificate that is signed by an authority we don't 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_AUTHORITY_INVALID = -202--><!--Device-WebNetErrorList-ERR_CERT_AUTHORITY_INVALID = -202-End-->
 
@@ -1718,7 +1718,7 @@ The server responded with a certificate that contains errors. This error is not 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_CONTAINS_ERRORS = -203--><!--Device-WebNetErrorList-ERR_CERT_CONTAINS_ERRORS = -203-End-->
 
@@ -1734,7 +1734,7 @@ The certificate has no mechanism for determining if it is revoked. In effect, th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_NO_REVOCATION_MECHANISM = -204--><!--Device-WebNetErrorList-ERR_CERT_NO_REVOCATION_MECHANISM = -204-End-->
 
@@ -1750,7 +1750,7 @@ Revocation information for the security certificate for this site is not availab
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205--><!--Device-WebNetErrorList-ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205-End-->
 
@@ -1766,7 +1766,7 @@ The server responded with a certificate has been revoked. We have the capability
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_REVOKED = -206--><!--Device-WebNetErrorList-ERR_CERT_REVOKED = -206-End-->
 
@@ -1782,7 +1782,7 @@ The server responded with a certificate that is invalid. This error is not recov
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_INVALID = -207--><!--Device-WebNetErrorList-ERR_CERT_INVALID = -207-End-->
 
@@ -1798,7 +1798,7 @@ The server responded with a certificate that is signed using a weak signature al
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208--><!--Device-WebNetErrorList-ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208-End-->
 
@@ -1814,7 +1814,7 @@ The host name specified in the certificate is not unique.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_NON_UNIQUE_NAME = -210--><!--Device-WebNetErrorList-ERR_CERT_NON_UNIQUE_NAME = -210-End-->
 
@@ -1830,7 +1830,7 @@ The server responded with a certificate that contains a weak key (e.g. a too-sma
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_WEAK_KEY = -211--><!--Device-WebNetErrorList-ERR_CERT_WEAK_KEY = -211-End-->
 
@@ -1846,7 +1846,7 @@ The certificate claimed DNS names that are in violation of name constraints.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212--><!--Device-WebNetErrorList-ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212-End-->
 
@@ -1862,7 +1862,7 @@ The certificate's validity period is too long.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_VALIDITY_TOO_LONG = -213--><!--Device-WebNetErrorList-ERR_CERT_VALIDITY_TOO_LONG = -213-End-->
 
@@ -1878,7 +1878,7 @@ Certificate Transparency was required for this connection, but the server did no
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214--><!--Device-WebNetErrorList-ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214-End-->
 
@@ -1894,7 +1894,7 @@ The certificate chained to a legacy Symantec root that is no longer trusted.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_SYMANTEC_LEGACY = -215--><!--Device-WebNetErrorList-ERR_CERT_SYMANTEC_LEGACY = -215-End-->
 
@@ -1910,7 +1910,7 @@ The certificate is known to be used for interception by an entity other the devi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217--><!--Device-WebNetErrorList-ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217-End-->
 
@@ -1926,7 +1926,7 @@ The connection uses an obsolete version of SSL/TLS or cipher.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218--><!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218-End-->
 
@@ -1942,7 +1942,7 @@ The value immediately past the last certificate error code.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_END = -219--><!--Device-WebNetErrorList-ERR_CERT_END = -219-End-->
 
@@ -1958,7 +1958,7 @@ The URL is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_URL = -300--><!--Device-WebNetErrorList-ERR_INVALID_URL = -300-End-->
 
@@ -1974,7 +1974,7 @@ The scheme of the URL is disallowed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DISALLOWED_URL_SCHEME = -301--><!--Device-WebNetErrorList-ERR_DISALLOWED_URL_SCHEME = -301-End-->
 
@@ -1990,7 +1990,7 @@ The scheme of the URL is unknown.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNKNOWN_URL_SCHEME = -302--><!--Device-WebNetErrorList-ERR_UNKNOWN_URL_SCHEME = -302-End-->
 
@@ -2006,7 +2006,7 @@ Attempting to load an URL resulted in a redirect to an invalid URL.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_REDIRECT = -303--><!--Device-WebNetErrorList-ERR_INVALID_REDIRECT = -303-End-->
 
@@ -2022,7 +2022,7 @@ Attempting to load an URL resulted in too many redirects.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TOO_MANY_REDIRECTS = -310--><!--Device-WebNetErrorList-ERR_TOO_MANY_REDIRECTS = -310-End-->
 
@@ -2038,7 +2038,7 @@ Attempting to load an URL resulted in an unsafe redirect (e.g., a redirect to fi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNSAFE_REDIRECT = -311--><!--Device-WebNetErrorList-ERR_UNSAFE_REDIRECT = -311-End-->
 
@@ -2054,7 +2054,7 @@ Attempting to load an URL with an unsafe port number.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNSAFE_PORT = -312--><!--Device-WebNetErrorList-ERR_UNSAFE_PORT = -312-End-->
 
@@ -2070,7 +2070,7 @@ The server's response was invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_RESPONSE = -320--><!--Device-WebNetErrorList-ERR_INVALID_RESPONSE = -320-End-->
 
@@ -2086,7 +2086,7 @@ Error in chunked transfer encoding.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_CHUNKED_ENCODING = -321--><!--Device-WebNetErrorList-ERR_INVALID_CHUNKED_ENCODING = -321-End-->
 
@@ -2102,7 +2102,7 @@ The server did not support the request method.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_METHOD_UNSUPPORTED = -322--><!--Device-WebNetErrorList-ERR_METHOD_UNSUPPORTED = -322-End-->
 
@@ -2118,7 +2118,7 @@ The response was 407 (Proxy Authentication Required), yet we did not send the re
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNEXPECTED_PROXY_AUTH = -323--><!--Device-WebNetErrorList-ERR_UNEXPECTED_PROXY_AUTH = -323-End-->
 
@@ -2134,7 +2134,7 @@ The server closed the connection without sending any data.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_EMPTY_RESPONSE = -324--><!--Device-WebNetErrorList-ERR_EMPTY_RESPONSE = -324-End-->
 
@@ -2150,7 +2150,7 @@ The headers section of the response is too large.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TOO_BIG = -325--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TOO_BIG = -325-End-->
 
@@ -2166,7 +2166,7 @@ The evaluation of the PAC script failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PAC_SCRIPT_FAILED = -327--><!--Device-WebNetErrorList-ERR_PAC_SCRIPT_FAILED = -327-End-->
 
@@ -2182,7 +2182,7 @@ The response was 416 (Requested range not satisfiable) and the server cannot sat
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328--><!--Device-WebNetErrorList-ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328-End-->
 
@@ -2198,7 +2198,7 @@ The identity used for authentication is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_MALFORMED_IDENTITY = -329--><!--Device-WebNetErrorList-ERR_MALFORMED_IDENTITY = -329-End-->
 
@@ -2214,7 +2214,7 @@ Content decoding of the response body failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONTENT_DECODING_FAILED = -330--><!--Device-WebNetErrorList-ERR_CONTENT_DECODING_FAILED = -330-End-->
 
@@ -2230,7 +2230,7 @@ An operation could not be completed because all network IO is suspended.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NETWORK_IO_SUSPENDED = -331--><!--Device-WebNetErrorList-ERR_NETWORK_IO_SUSPENDED = -331-End-->
 
@@ -2246,7 +2246,7 @@ FLIP data received without receiving a SYN_REPLY on the stream.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SYN_REPLY_NOT_RECEIVED = -332--><!--Device-WebNetErrorList-ERR_SYN_REPLY_NOT_RECEIVED = -332-End-->
 
@@ -2262,7 +2262,7 @@ Converting the response to target encoding failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ENCODING_CONVERSION_FAILED = -333--><!--Device-WebNetErrorList-ERR_ENCODING_CONVERSION_FAILED = -333-End-->
 
@@ -2278,7 +2278,7 @@ The server sent an FTP directory listing in a format we do not understand.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334--><!--Device-WebNetErrorList-ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334-End-->
 
@@ -2294,7 +2294,7 @@ There are no supported proxies in the provided list.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NO_SUPPORTED_PROXIES = -336--><!--Device-WebNetErrorList-ERR_NO_SUPPORTED_PROXIES = -336-End-->
 
@@ -2310,7 +2310,7 @@ There is an HTTP/2 protocol error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PROTOCOL_ERROR = -337--><!--Device-WebNetErrorList-ERR_HTTP2_PROTOCOL_ERROR = -337-End-->
 
@@ -2326,7 +2326,7 @@ Credentials could not be established during HTTP Authentication.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_AUTH_CREDENTIALS = -338--><!--Device-WebNetErrorList-ERR_INVALID_AUTH_CREDENTIALS = -338-End-->
 
@@ -2342,7 +2342,7 @@ An HTTP Authentication scheme was tried which is not supported on this machine.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNSUPPORTED_AUTH_SCHEME = -339--><!--Device-WebNetErrorList-ERR_UNSUPPORTED_AUTH_SCHEME = -339-End-->
 
@@ -2358,7 +2358,7 @@ Detecting the encoding of the response failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ENCODING_DETECTION_FAILED = -340--><!--Device-WebNetErrorList-ERR_ENCODING_DETECTION_FAILED = -340-End-->
 
@@ -2374,7 +2374,7 @@ ERR_MISSING_AUTH_CREDENTIALS = -341
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_MISSING_AUTH_CREDENTIALS = -341--><!--Device-WebNetErrorList-ERR_MISSING_AUTH_CREDENTIALS = -341-End-->
 
@@ -2390,7 +2390,7 @@ An unexpected, but documented, SSPI or GSSAPI status code was returned.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342--><!--Device-WebNetErrorList-ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342-End-->
 
@@ -2406,7 +2406,7 @@ The environment was not set up correctly for authentication (for example, no KDC
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343--><!--Device-WebNetErrorList-ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343-End-->
 
@@ -2422,7 +2422,7 @@ An undocumented SSPI or GSSAPI status code was returned.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344--><!--Device-WebNetErrorList-ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344-End-->
 
@@ -2438,7 +2438,7 @@ The HTTP response was too big to drain.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345--><!--Device-WebNetErrorList-ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345-End-->
 
@@ -2454,7 +2454,7 @@ The HTTP response contained multiple distinct Content-Length headers.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH = -346--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH = -346-End-->
 
@@ -2470,7 +2470,7 @@ HTTP/2 headers have been received, but not all of them - status or version heade
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INCOMPLETE_HTTP2_HEADERS = -347--><!--Device-WebNetErrorList-ERR_INCOMPLETE_HTTP2_HEADERS = -347-End-->
 
@@ -2486,7 +2486,7 @@ No PAC URL configuration could be retrieved from DHCP. This can indicate either 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PAC_NOT_IN_DHCP = -348--><!--Device-WebNetErrorList-ERR_PAC_NOT_IN_DHCP = -348-End-->
 
@@ -2502,7 +2502,7 @@ The HTTP response contained multiple Content-Disposition headers.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349-End-->
 
@@ -2518,7 +2518,7 @@ The HTTP response contained multiple Location headers.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350-End-->
 
@@ -2534,7 +2534,7 @@ HTTP/2 server refused the request without processing, and sent either a GOAWAY f
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_SERVER_REFUSED_STREAM = -351--><!--Device-WebNetErrorList-ERR_HTTP2_SERVER_REFUSED_STREAM = -351-End-->
 
@@ -2550,7 +2550,7 @@ HTTP/2 server didn't respond to the PING message.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PING_FAILED = -352--><!--Device-WebNetErrorList-ERR_HTTP2_PING_FAILED = -352-End-->
 
@@ -2566,7 +2566,7 @@ The HTTP response body transferred fewer bytes than were advertised by the Conte
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONTENT_LENGTH_MISMATCH = -354--><!--Device-WebNetErrorList-ERR_CONTENT_LENGTH_MISMATCH = -354-End-->
 
@@ -2582,7 +2582,7 @@ The HTTP response body is transferred with Chunked-Encoding, but the terminating
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INCOMPLETE_CHUNKED_ENCODING = -355--><!--Device-WebNetErrorList-ERR_INCOMPLETE_CHUNKED_ENCODING = -355-End-->
 
@@ -2598,7 +2598,7 @@ There is a QUIC protocol error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_QUIC_PROTOCOL_ERROR = -356--><!--Device-WebNetErrorList-ERR_QUIC_PROTOCOL_ERROR = -356-End-->
 
@@ -2614,7 +2614,7 @@ The HTTP headers were truncated by an EOF.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TRUNCATED = -357--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TRUNCATED = -357-End-->
 
@@ -2630,7 +2630,7 @@ The QUIC crypto handshake failed. This means that the server was unable to read 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_QUIC_HANDSHAKE_FAILED = -358--><!--Device-WebNetErrorList-ERR_QUIC_HANDSHAKE_FAILED = -358-End-->
 
@@ -2646,7 +2646,7 @@ Transport security is inadequate for the HTTP/2 version.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360--><!--Device-WebNetErrorList-ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360-End-->
 
@@ -2662,7 +2662,7 @@ The peer violated HTTP/2 flow control.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_FLOW_CONTROL_ERROR = -361--><!--Device-WebNetErrorList-ERR_HTTP2_FLOW_CONTROL_ERROR = -361-End-->
 
@@ -2678,7 +2678,7 @@ The peer sent an improperly sized HTTP/2 frame.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_FRAME_SIZE_ERROR = -362--><!--Device-WebNetErrorList-ERR_HTTP2_FRAME_SIZE_ERROR = -362-End-->
 
@@ -2694,7 +2694,7 @@ Decoding or encoding of compressed HTTP/2 headers failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_COMPRESSION_ERROR = -363--><!--Device-WebNetErrorList-ERR_HTTP2_COMPRESSION_ERROR = -363-End-->
 
@@ -2710,7 +2710,7 @@ Proxy Auth Requested without a valid Client Socket Handle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364--><!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364-End-->
 
@@ -2726,7 +2726,7 @@ HTTP_1_1_REQUIRED error code received on HTTP/2 session.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP_1_1_REQUIRED = -365--><!--Device-WebNetErrorList-ERR_HTTP_1_1_REQUIRED = -365-End-->
 
@@ -2742,7 +2742,7 @@ HTTP_1_1_REQUIRED error code received on HTTP/2 session to proxy.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PROXY_HTTP_1_1_REQUIRED = -366--><!--Device-WebNetErrorList-ERR_PROXY_HTTP_1_1_REQUIRED = -366-End-->
 
@@ -2758,7 +2758,7 @@ The PAC script terminated fatally and must be reloaded.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PAC_SCRIPT_TERMINATED = -367--><!--Device-WebNetErrorList-ERR_PAC_SCRIPT_TERMINATED = -367-End-->
 
@@ -2774,7 +2774,7 @@ The server was expected to return an HTTP/1.x response, but did not. Rather than
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_HTTP_RESPONSE = -370--><!--Device-WebNetErrorList-ERR_INVALID_HTTP_RESPONSE = -370-End-->
 
@@ -2790,7 +2790,7 @@ Initializing content decoding failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CONTENT_DECODING_INIT_FAILED = -371--><!--Device-WebNetErrorList-ERR_CONTENT_DECODING_INIT_FAILED = -371-End-->
 
@@ -2806,7 +2806,7 @@ Received HTTP/2 RST_STREAM frame with NO_ERROR error code. This error should be 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372--><!--Device-WebNetErrorList-ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372-End-->
 
@@ -2822,7 +2822,7 @@ The pushed stream claimed by the request is no longer available.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373--><!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373-End-->
 
@@ -2838,7 +2838,7 @@ A pushed stream was claimed and later reset by the server. When this happens, th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374--><!--Device-WebNetErrorList-ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374-End-->
 
@@ -2854,7 +2854,7 @@ An HTTP transaction was retried too many times due for authentication or invalid
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TOO_MANY_RETRIES = -375--><!--Device-WebNetErrorList-ERR_TOO_MANY_RETRIES = -375-End-->
 
@@ -2870,7 +2870,7 @@ Received an HTTP/2 frame on a closed stream.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_STREAM_CLOSED = -376--><!--Device-WebNetErrorList-ERR_HTTP2_STREAM_CLOSED = -376-End-->
 
@@ -2886,7 +2886,7 @@ Client is refusing an HTTP/2 stream.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_CLIENT_REFUSED_STREAM = -377--><!--Device-WebNetErrorList-ERR_HTTP2_CLIENT_REFUSED_STREAM = -377-End-->
 
@@ -2902,7 +2902,7 @@ A pushed HTTP/2 stream was claimed by a request based on matching URL and reques
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378--><!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378-End-->
 
@@ -2918,7 +2918,7 @@ The server returned a non-2xx HTTP response code.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_HTTP_RESPONSE_CODE_FAILURE = -379--><!--Device-WebNetErrorList-ERR_HTTP_RESPONSE_CODE_FAILURE = -379-End-->
 
@@ -2934,7 +2934,7 @@ The certificate presented on a QUIC connection does not chain to a known root an
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_QUIC_UNKNOWN_CERT_ROOT = -380--><!--Device-WebNetErrorList-ERR_QUIC_UNKNOWN_CERT_ROOT = -380-End-->
 
@@ -2950,7 +2950,7 @@ A GOAWAY frame has been received indicating that the request has not been proces
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381--><!--Device-WebNetErrorList-ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381-End-->
 
@@ -2966,7 +2966,7 @@ The ACCEPT_CH restart has been triggered too many times.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TOO_MANY_ACCEPT_CH_RESTARTS = -382--><!--Device-WebNetErrorList-ERR_TOO_MANY_ACCEPT_CH_RESTARTS = -382-End-->
 
@@ -2982,7 +2982,7 @@ The IP address space of the remote endpoint differed from the previous observed 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383--><!--Device-WebNetErrorList-ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383-End-->
 
@@ -2998,7 +2998,7 @@ The IP address space of the cached remote endpoint is blocked by local network a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384--><!--Device-WebNetErrorList-ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384-End-->
 
@@ -3014,7 +3014,7 @@ The cache does not have the requested entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_MISS = -400--><!--Device-WebNetErrorList-ERR_CACHE_MISS = -400-End-->
 
@@ -3030,7 +3030,7 @@ Unable to read from the disk cache.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_READ_FAILURE = -401--><!--Device-WebNetErrorList-ERR_CACHE_READ_FAILURE = -401-End-->
 
@@ -3046,7 +3046,7 @@ Unable to write to the disk cache.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_WRITE_FAILURE = -402--><!--Device-WebNetErrorList-ERR_CACHE_WRITE_FAILURE = -402-End-->
 
@@ -3062,7 +3062,7 @@ The operation is not supported for this entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_OPERATION_UNSUPPORTED = -403--><!--Device-WebNetErrorList-ERR_CACHE_OPERATION_UNSUPPORTED = -403-End-->
 
@@ -3078,7 +3078,7 @@ The disk cache is unable to open this entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_OPEN_FAILURE = -404--><!--Device-WebNetErrorList-ERR_CACHE_OPEN_FAILURE = -404-End-->
 
@@ -3094,7 +3094,7 @@ The disk cache is unable to create this entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_CREATE_FAILURE = -405--><!--Device-WebNetErrorList-ERR_CACHE_CREATE_FAILURE = -405-End-->
 
@@ -3110,7 +3110,7 @@ Multiple transactions are racing to create disk cache entries.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_RACE = -406--><!--Device-WebNetErrorList-ERR_CACHE_RACE = -406-End-->
 
@@ -3126,7 +3126,7 @@ The cache was unable to read a checksum record on an entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_READ_FAILURE = -407--><!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_READ_FAILURE = -407-End-->
 
@@ -3142,7 +3142,7 @@ The cache found an entry with an invalid checksum.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_MISMATCH = -408--><!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_MISMATCH = -408-End-->
 
@@ -3158,7 +3158,7 @@ Internal error code for the HTTP cache.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_LOCK_TIMEOUT = -409--><!--Device-WebNetErrorList-ERR_CACHE_LOCK_TIMEOUT = -409-End-->
 
@@ -3174,7 +3174,7 @@ Received a challenge after the transaction has read some data, and the credentia
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410--><!--Device-WebNetErrorList-ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410-End-->
 
@@ -3190,7 +3190,7 @@ Internal not-quite error code for the HTTP cache.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_ENTRY_NOT_SUITABLE = -411--><!--Device-WebNetErrorList-ERR_CACHE_ENTRY_NOT_SUITABLE = -411-End-->
 
@@ -3206,7 +3206,7 @@ The disk cache is unable to doom this entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_DOOM_FAILURE = -412--><!--Device-WebNetErrorList-ERR_CACHE_DOOM_FAILURE = -412-End-->
 
@@ -3222,7 +3222,7 @@ The disk cache is unable to open or create this entry.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413--><!--Device-WebNetErrorList-ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413-End-->
 
@@ -3238,7 +3238,7 @@ The server's response was insecure (e.g. there was a cert error).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INSECURE_RESPONSE = -501--><!--Device-WebNetErrorList-ERR_INSECURE_RESPONSE = -501-End-->
 
@@ -3254,7 +3254,7 @@ An attempt to import a client certificate failed, as the user's key database lac
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_NO_PRIVATE_KEY_FOR_CERT = -502--><!--Device-WebNetErrorList-ERR_NO_PRIVATE_KEY_FOR_CERT = -502-End-->
 
@@ -3270,7 +3270,7 @@ An error adding a certificate to the OS certificate database.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_ADD_USER_CERT_FAILED = -503--><!--Device-WebNetErrorList-ERR_ADD_USER_CERT_FAILED = -503-End-->
 
@@ -3286,7 +3286,7 @@ An error occurred while handling a signed exchange.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_SIGNED_EXCHANGE = -504--><!--Device-WebNetErrorList-ERR_INVALID_SIGNED_EXCHANGE = -504-End-->
 
@@ -3302,7 +3302,7 @@ An error occurred while handling a Web Bundle source.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_INVALID_WEB_BUNDLE = -505--><!--Device-WebNetErrorList-ERR_INVALID_WEB_BUNDLE = -505-End-->
 
@@ -3318,7 +3318,7 @@ A Trust Tokens protocol operation-executing request failed for one of a number o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_FAILED = -506--><!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_FAILED = -506-End-->
 
@@ -3334,7 +3334,7 @@ When handling a Trust Tokens protocol operation-executing request, the system wa
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507--><!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507-End-->
 
@@ -3350,7 +3350,7 @@ A generic error for failed FTP control connection command. If possible, please u
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_FAILED = -601--><!--Device-WebNetErrorList-ERR_FTP_FAILED = -601-End-->
 
@@ -3366,7 +3366,7 @@ The server cannot fulfill the request at this point. This is a temporary error. 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_SERVICE_UNAVAILABLE = -602--><!--Device-WebNetErrorList-ERR_FTP_SERVICE_UNAVAILABLE = -602-End-->
 
@@ -3382,7 +3382,7 @@ The server has aborted the transfer. FTP response code 426.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_TRANSFER_ABORTED = -603--><!--Device-WebNetErrorList-ERR_FTP_TRANSFER_ABORTED = -603-End-->
 
@@ -3398,7 +3398,7 @@ The file is busy, or some other temporary error condition on opening the file. F
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_FILE_BUSY = -604--><!--Device-WebNetErrorList-ERR_FTP_FILE_BUSY = -604-End-->
 
@@ -3414,7 +3414,7 @@ Server rejected our command because of syntax errors. FTP response codes 500, 50
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_SYNTAX_ERROR = -605--><!--Device-WebNetErrorList-ERR_FTP_SYNTAX_ERROR = -605-End-->
 
@@ -3430,7 +3430,7 @@ Server does not support the command we issued. FTP response codes 502, 504.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_COMMAND_UNSUPPORTED = -606--><!--Device-WebNetErrorList-ERR_FTP_COMMAND_UNSUPPORTED = -606-End-->
 
@@ -3446,7 +3446,7 @@ Server rejected our command because we didn't issue the commands in right order.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_FTP_BAD_COMMAND_SEQUENCE = -607--><!--Device-WebNetErrorList-ERR_FTP_BAD_COMMAND_SEQUENCE = -607-End-->
 
@@ -3462,7 +3462,7 @@ PKCS #12 import failed due to incorrect password.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_BAD_PASSWORD = -701--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_BAD_PASSWORD = -701-End-->
 
@@ -3478,7 +3478,7 @@ PKCS #12 import failed due to other error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_FAILED = -702--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_FAILED = -702-End-->
 
@@ -3494,7 +3494,7 @@ CA import failed - not a CA cert.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_NOT_CA = -703--><!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_NOT_CA = -703-End-->
 
@@ -3510,7 +3510,7 @@ Import failed - certificate already exists in database.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_IMPORT_CERT_ALREADY_EXISTS = -704--><!--Device-WebNetErrorList-ERR_IMPORT_CERT_ALREADY_EXISTS = -704-End-->
 
@@ -3526,7 +3526,7 @@ CA import failed due to some other error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_FAILED = -705--><!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_FAILED = -705-End-->
 
@@ -3542,7 +3542,7 @@ Server certificate import failed due to some internal error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_IMPORT_SERVER_CERT_FAILED = -706--><!--Device-WebNetErrorList-ERR_IMPORT_SERVER_CERT_FAILED = -706-End-->
 
@@ -3558,7 +3558,7 @@ PKCS #12 import failed due to invalid MAC.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_MAC = -707--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_MAC = -707-End-->
 
@@ -3574,7 +3574,7 @@ PKCS #12 import failed due to invalid/corrupt file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_FILE = -708--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_FILE = -708-End-->
 
@@ -3590,7 +3590,7 @@ PKCS #12 import failed due to unsupported features.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_UNSUPPORTED = -709--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_UNSUPPORTED = -709-End-->
 
@@ -3606,7 +3606,7 @@ Key generation failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_KEY_GENERATION_FAILED = -710--><!--Device-WebNetErrorList-ERR_KEY_GENERATION_FAILED = -710-End-->
 
@@ -3622,7 +3622,7 @@ Failure to export private key.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_PRIVATE_KEY_EXPORT_FAILED = -712--><!--Device-WebNetErrorList-ERR_PRIVATE_KEY_EXPORT_FAILED = -712-End-->
 
@@ -3638,7 +3638,7 @@ Self-signed certificate generation failed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713--><!--Device-WebNetErrorList-ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713-End-->
 
@@ -3654,7 +3654,7 @@ The certificate database changed in some way.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_DATABASE_CHANGED = -714--><!--Device-WebNetErrorList-ERR_CERT_DATABASE_CHANGED = -714-End-->
 
@@ -3670,7 +3670,7 @@ The certificate verifier configuration changed in some way.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_CERT_VERIFIER_CHANGED = -716--><!--Device-WebNetErrorList-ERR_CERT_VERIFIER_CHANGED = -716-End-->
 
@@ -3686,7 +3686,7 @@ DNS resolver received a malformed response.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_MALFORMED_RESPONSE = -800--><!--Device-WebNetErrorList-ERR_DNS_MALFORMED_RESPONSE = -800-End-->
 
@@ -3702,7 +3702,7 @@ DNS server requires TCP.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_SERVER_REQUIRES_TCP = -801--><!--Device-WebNetErrorList-ERR_DNS_SERVER_REQUIRES_TCP = -801-End-->
 
@@ -3718,7 +3718,7 @@ DNS server failed. This error is returned for all of the following error conditi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_SERVER_FAILED = -802--><!--Device-WebNetErrorList-ERR_DNS_SERVER_FAILED = -802-End-->
 
@@ -3734,7 +3734,7 @@ DNS transaction timed out.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_TIMED_OUT = -803--><!--Device-WebNetErrorList-ERR_DNS_TIMED_OUT = -803-End-->
 
@@ -3750,7 +3750,7 @@ The entry was not found in cache or other local sources, for lookups where only 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_CACHE_MISS = -804--><!--Device-WebNetErrorList-ERR_DNS_CACHE_MISS = -804-End-->
 
@@ -3766,7 +3766,7 @@ Suffix search list rules prevent resolution of the given host name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_SEARCH_EMPTY = -805--><!--Device-WebNetErrorList-ERR_DNS_SEARCH_EMPTY = -805-End-->
 
@@ -3782,7 +3782,7 @@ Failed to sort addresses according to RFC3484.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_SORT_ERROR = -806--><!--Device-WebNetErrorList-ERR_DNS_SORT_ERROR = -806-End-->
 
@@ -3798,7 +3798,7 @@ Failed to resolve the hostname of a DNS-over-HTTPS server.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808--><!--Device-WebNetErrorList-ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808-End-->
 
@@ -3814,7 +3814,7 @@ DNS identified the request as disallowed for insecure connection (http/ws). Erro
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_NAME_HTTPS_ONLY = -809--><!--Device-WebNetErrorList-ERR_DNS_NAME_HTTPS_ONLY = -809-End-->
 
@@ -3830,7 +3830,7 @@ All DNS requests associated with this job have been cancelled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_REQUEST_CANCELED = -810--><!--Device-WebNetErrorList-ERR_DNS_REQUEST_CANCELED = -810-End-->
 
@@ -3846,7 +3846,7 @@ The hostname resolution of HTTPS record was expected to be resolved with alpn va
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebNetErrorList-ERR_DNS_NO_MATCHING_SUPPORTED_ALPN = -811--><!--Device-WebNetErrorList-ERR_DNS_NO_MATCHING_SUPPORTED_ALPN = -811-End-->
 

@@ -15,7 +15,7 @@ function lstat(path: string): Promise<Stat>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function lstat(path: string): Promise<Stat>--><!--Device-fileIo-function lstat(path: string): Promise<Stat>-End-->
 
@@ -59,7 +59,7 @@ function lstat(path: string, callback: AsyncCallback<Stat>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-fileIo-function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 

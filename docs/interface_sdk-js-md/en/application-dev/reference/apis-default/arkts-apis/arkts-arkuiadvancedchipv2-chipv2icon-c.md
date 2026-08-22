@@ -4,7 +4,7 @@ Defines ChipV2 icon
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare abstract class ChipV2Icon--><!--Device-unnamed-export declare abstract class ChipV2Icon-End-->
 
@@ -25,7 +25,7 @@ The constructor of ChipV2Icon
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

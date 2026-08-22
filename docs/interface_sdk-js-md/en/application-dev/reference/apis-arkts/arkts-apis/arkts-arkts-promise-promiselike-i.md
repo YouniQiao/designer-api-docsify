@@ -4,7 +4,7 @@ Represents a thenable object.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export interface PromiseLike--><!--Device-unnamed-export interface PromiseLike-End-->
 
@@ -26,7 +26,7 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

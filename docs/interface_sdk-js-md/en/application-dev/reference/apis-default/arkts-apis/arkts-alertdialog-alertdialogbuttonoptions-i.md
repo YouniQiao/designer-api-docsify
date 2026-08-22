@@ -8,7 +8,7 @@ Button param used for AlertDialogParamWithOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface AlertDialogButtonOptions--><!--Device-unnamed-export declare interface AlertDialogButtonOptions-End-->
 
@@ -26,7 +26,7 @@ Define whether the button responds to Enter/Space key by default. Anonymous Obje
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

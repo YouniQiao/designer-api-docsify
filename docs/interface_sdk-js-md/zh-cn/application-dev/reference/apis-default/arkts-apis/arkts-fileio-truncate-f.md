@@ -15,7 +15,7 @@ function truncate(file: string | int, len?: long): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function truncate(file: string | int, len?: long): Promise<void>--><!--Device-fileIo-function truncate(file: string | int, len?: long): Promise<void>-End-->
 
@@ -66,7 +66,7 @@ function truncate(file: string | int, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function truncate(file: string | int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function truncate(file: string | int, callback: AsyncCallback<void>): void-End-->
 
@@ -111,7 +111,7 @@ function truncate(file: string | int, len: long, callback: AsyncCallback<void>):
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function truncate(file: string | int, len: long, callback: AsyncCallback<void>): void--><!--Device-fileIo-function truncate(file: string | int, len: long, callback: AsyncCallback<void>): void-End-->
 

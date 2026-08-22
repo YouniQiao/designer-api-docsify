@@ -6,7 +6,7 @@ Represents an error that occurs when array is oging to be indexed out of its bou
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class ArrayIndexOutOfBoundsError--><!--Device-unnamed-export class ArrayIndexOutOfBoundsError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new ArrayIndexOutOfBoundsError instance with provided message and e
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

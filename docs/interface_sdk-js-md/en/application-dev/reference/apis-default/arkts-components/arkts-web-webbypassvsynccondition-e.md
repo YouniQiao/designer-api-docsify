@@ -4,7 +4,7 @@ Enum type supplied to [bypassVsyncCondition](arkts-web-attribute.md#bypassvsyncc
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum WebBypassVsyncCondition--><!--Device-unnamed-export declare enum WebBypassVsyncCondition-End-->
 
@@ -20,7 +20,7 @@ Not bypass vsync.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebBypassVsyncCondition-NONE = 0--><!--Device-WebBypassVsyncCondition-NONE = 0-End-->
 
@@ -36,7 +36,7 @@ bypass vsync.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebBypassVsyncCondition-SCROLLBY_FROM_ZERO_OFFSET = 1--><!--Device-WebBypassVsyncCondition-SCROLLBY_FROM_ZERO_OFFSET = 1-End-->
 

@@ -4,7 +4,7 @@ Represents the information object of the web native messaging connection.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ConnectionInfo--><!--Device-unnamed-export interface ConnectionInfo-End-->
 
@@ -27,7 +27,7 @@ Application bundle name of the caller.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConnectionInfo-bundleName: string--><!--Device-ConnectionInfo-bundleName: string-End-->
 
@@ -45,7 +45,7 @@ Connection ID.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConnectionInfo-connectionId: int--><!--Device-ConnectionInfo-connectionId: int-End-->
 
@@ -63,7 +63,7 @@ Original URL of the caller extension.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConnectionInfo-extensionOrigin: string--><!--Device-ConnectionInfo-extensionOrigin: string-End-->
 
@@ -81,7 +81,7 @@ Pipe file descriptor used to read data.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConnectionInfo-fdRead: int--><!--Device-ConnectionInfo-fdRead: int-End-->
 
@@ -99,7 +99,7 @@ Pipe file descriptor used to write data.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConnectionInfo-fdWrite: int--><!--Device-ConnectionInfo-fdWrite: int-End-->
 

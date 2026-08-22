@@ -6,7 +6,7 @@ Basic implementation of [IPrefetcher](arkts-arkuiprefetcher-iprefetcher-i.md). I
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class BasicPrefetcher--><!--Device-unnamed-export declare class BasicPrefetcher-End-->
 
@@ -27,7 +27,7 @@ Constructs a basic prefetcher instance and optionally sets the data source.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +51,7 @@ Sets the data source to bind to this prefetcher.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +75,7 @@ Call this method when the visible area changed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

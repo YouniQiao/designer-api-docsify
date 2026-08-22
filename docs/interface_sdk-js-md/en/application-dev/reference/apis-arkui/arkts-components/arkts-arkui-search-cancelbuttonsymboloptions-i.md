@@ -4,7 +4,7 @@ Defines the CancelButton symbol options
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface CancelButtonSymbolOptions--><!--Device-unnamed-export interface CancelButtonSymbolOptions-End-->
 
@@ -22,7 +22,7 @@ Set the CancelButton symbol icon. Symbol icon of the Cancel button on the right.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Set the CancelButton style. Display state of the Cancel button on the right.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

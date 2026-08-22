@@ -128,6 +128,43 @@ A constructor used to create an ArkTS map.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Map's constructor cannot be directly invoked. |
 
+## containsValue
+
+```TypeScript
+containsValue(value: V): boolean
+```
+
+Checks whether this ArkTS map maps one or more keys to the specified value.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-Map-containsValue(value: V): boolean--><!--Device-Map-containsValue(value: V): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | V | Yes | Target value. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value exists; otherwise, **false** is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The containsValue method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
+
 ## delete
 
 ```TypeScript
@@ -319,6 +356,155 @@ Returns a map iterator object that contains the key of each element in this ArkT
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound with non-sendable. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+
+## put
+
+```TypeScript
+put(key: K, value: V): V | undefined
+```
+
+Adds or updates a key-value pair to this ArkTS map and returns the previous value associated with the key.
+
+> **NOTE：**
+> 
+> - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
+> key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
+> the key exists, so that you can distinguish the case of the returned **undefined**.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-Map-put(key: K, value: V): V | undefined--><!--Device-Map-put(key: K, value: V): V | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Target key. |
+| value | V | Yes | Target value. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| V \| undefined | Previous value associated with the key. If the key is not found, **undefined** is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The put method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
+
+## putAll
+
+```TypeScript
+putAll(from: Map<K, V>): void
+```
+
+Updates this ArkTS map with key-value pairs from the specified ArkTS Map.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-Map-putAll(from: Map<K, V>): void--><!--Device-Map-putAll(from: Map<K, V>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | Map&lt;K, V&gt; | Yes | ArkTS Map that provides key-value pairs. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The putAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
+
+## putAll
+
+```TypeScript
+putAll(from: BuiltinMap<K, V>): void
+```
+
+Updates this ArkTS map with key-value pairs from the specified built-in Map.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-Map-putAll(from: BuiltinMap<K, V>): void--><!--Device-Map-putAll(from: BuiltinMap<K, V>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | [BuiltinMap](arkts-arkts-builtinmap-t.md)&lt;K, V&gt; | Yes | Built-in Map that provides key-value pairs. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The putAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
+
+## remove
+
+```TypeScript
+remove(key: K): V | undefined
+```
+
+Removes the specified key and its corresponding value from this ArkTS map.
+
+> **NOTE：**
+> 
+> - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
+> key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
+> the key exists, so that you can distinguish the case of the returned **undefined**.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-Map-remove(key: K): V | undefined--><!--Device-Map-remove(key: K): V | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | K | Yes | Target key. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| V \| undefined | Value removed. If the key is not found, **undefined** is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
 
 ## set
 

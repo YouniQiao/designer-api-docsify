@@ -4,7 +4,7 @@ Enumerates the constants of the **mode** parameter used in **open()**, which spe
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-namespace OpenMode--><!--Device-fileIo-namespace OpenMode-End-->
 

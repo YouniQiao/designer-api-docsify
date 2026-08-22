@@ -6,7 +6,7 @@ Enumerates battery health states.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-export enum BatteryHealthState--><!--Device-batteryInfo-export enum BatteryHealthState-End-->
 
@@ -22,7 +22,7 @@ Unknown state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryHealthState-UNKNOWN--><!--Device-BatteryHealthState-UNKNOWN-End-->
 
@@ -38,7 +38,7 @@ The battery is in the healthy state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryHealthState-GOOD--><!--Device-BatteryHealthState-GOOD-End-->
 
@@ -54,7 +54,7 @@ The battery is overheated.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryHealthState-OVERHEAT--><!--Device-BatteryHealthState-OVERHEAT-End-->
 
@@ -70,7 +70,7 @@ The battery voltage is over high.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryHealthState-OVERVOLTAGE--><!--Device-BatteryHealthState-OVERVOLTAGE-End-->
 
@@ -86,7 +86,7 @@ The battery temperature is low.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryHealthState-COLD--><!--Device-BatteryHealthState-COLD-End-->
 
@@ -102,7 +102,7 @@ The battery is dead.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryHealthState-DEAD--><!--Device-BatteryHealthState-DEAD-End-->
 

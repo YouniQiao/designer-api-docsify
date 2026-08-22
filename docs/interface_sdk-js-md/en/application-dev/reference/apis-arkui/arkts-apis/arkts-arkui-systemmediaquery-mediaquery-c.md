@@ -4,7 +4,7 @@ Defines the mediaquery interface.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-declare class MediaQuery--><!--Device-unnamed-declare class MediaQuery-End-->
 
@@ -26,7 +26,7 @@ Queries a media item and returns a MediaQueryList object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

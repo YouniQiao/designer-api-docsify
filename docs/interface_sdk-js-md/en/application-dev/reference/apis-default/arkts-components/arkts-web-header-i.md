@@ -4,7 +4,7 @@ Defines the Web's request/response header.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface Header--><!--Device-unnamed-export declare interface Header-End-->
 
@@ -22,7 +22,7 @@ Gets the key of the request/response header.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Header-headerKey: string--><!--Device-Header-headerKey: string-End-->
 
@@ -40,7 +40,7 @@ Gets the value of the request/response header.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Header-headerValue: string--><!--Device-Header-headerValue: string-End-->
 

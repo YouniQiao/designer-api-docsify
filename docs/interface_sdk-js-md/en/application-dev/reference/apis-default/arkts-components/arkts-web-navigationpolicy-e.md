@@ -6,7 +6,7 @@ Enum type for navigationPolicy in OnWindowNewExtEvent.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum NavigationPolicy--><!--Device-unnamed-export declare enum NavigationPolicy-End-->
 
@@ -22,7 +22,7 @@ NEW POPUP window.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NavigationPolicy-NEW_POPUP = 0--><!--Device-NavigationPolicy-NEW_POPUP = 0-End-->
 
@@ -38,7 +38,7 @@ Shift key when clicking.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NavigationPolicy-NEW_WINDOW = 1--><!--Device-NavigationPolicy-NEW_WINDOW = 1-End-->
 
@@ -54,7 +54,7 @@ Middle mouse button or meta/ctrl key when clicking.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NavigationPolicy-NEW_BACKGROUND_TAB = 2--><!--Device-NavigationPolicy-NEW_BACKGROUND_TAB = 2-End-->
 
@@ -70,7 +70,7 @@ Shift key + Middle mouse button or meta/ctrl key when clicking.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NavigationPolicy-NEW_FOREGROUND_TAB = 3--><!--Device-NavigationPolicy-NEW_FOREGROUND_TAB = 3-End-->
 

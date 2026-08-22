@@ -14,7 +14,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface WaterFlowAttribute--><!--Device-unnamed-export declare interface WaterFlowAttribute-End-->
 
@@ -28,7 +28,7 @@ attributeModifier(modifier: AttributeModifier<WaterFlowAttribute> | AttributeMod
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-attributeModifier(modifier: AttributeModifier<WaterFlowAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-WaterFlowAttribute-attributeModifier(modifier: AttributeModifier<WaterFlowAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -50,7 +50,7 @@ cachedCount(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-cachedCount(value: int | undefined): this--><!--Device-WaterFlowAttribute-cachedCount(value: int | undefined): this-End-->
 
@@ -72,7 +72,7 @@ cachedCount(count: int | undefined, show: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-cachedCount(count: int | undefined, show: boolean | undefined): this--><!--Device-WaterFlowAttribute-cachedCount(count: int | undefined, show: boolean | undefined): this-End-->
 
@@ -95,7 +95,7 @@ columnsGap(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-columnsGap(value: Length | undefined): this--><!--Device-WaterFlowAttribute-columnsGap(value: Length | undefined): this-End-->
 
@@ -117,7 +117,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this--><!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this-End-->
 
@@ -139,7 +139,7 @@ itemConstraintSize(value: ConstraintSizeOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions | undefined): this--><!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions | undefined): this-End-->
 
@@ -161,7 +161,7 @@ layoutDirection(value: FlexDirection | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection | undefined): this--><!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection | undefined): this-End-->
 
@@ -183,7 +183,7 @@ onDidScroll(handler: OnScrollCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-onDidScroll(handler: OnScrollCallback | undefined): this--><!--Device-WaterFlowAttribute-onDidScroll(handler: OnScrollCallback | undefined): this-End-->
 
@@ -205,7 +205,7 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this--><!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this-End-->
 
@@ -227,7 +227,7 @@ onScrollIndex(event: ((first: int, last: int) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-onScrollIndex(event: ((first: int, last: int) => void) | undefined): this--><!--Device-WaterFlowAttribute-onScrollIndex(event: ((first: int, last: int) => void) | undefined): this-End-->
 
@@ -249,7 +249,7 @@ onWillScroll(handler: OnWillScrollCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this--><!--Device-WaterFlowAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this-End-->
 
@@ -271,7 +271,7 @@ rowsGap(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-rowsGap(value: Length | undefined): this--><!--Device-WaterFlowAttribute-rowsGap(value: Length | undefined): this-End-->
 
@@ -293,7 +293,7 @@ rowsTemplate(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-rowsTemplate(value: string | undefined): this--><!--Device-WaterFlowAttribute-rowsTemplate(value: string | undefined): this-End-->
 
@@ -315,7 +315,7 @@ setWaterFlowOptions(options?: WaterFlowOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-setWaterFlowOptions(options?: WaterFlowOptions): this--><!--Device-WaterFlowAttribute-setWaterFlowOptions(options?: WaterFlowOptions): this-End-->
 
@@ -337,7 +337,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this--><!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this-End-->
 
@@ -359,7 +359,7 @@ syncLoad(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WaterFlowAttribute-syncLoad(enable: boolean | undefined): this--><!--Device-WaterFlowAttribute-syncLoad(enable: boolean | undefined): this-End-->
 
@@ -383,7 +383,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,7 +4,7 @@ Declare layout modes of WaterFlow.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum WaterFlowLayoutMode--><!--Device-unnamed-export declare enum WaterFlowLayoutMode-End-->
 
@@ -20,7 +20,7 @@ Default layout mode where water flow items are arranged from top to bottom. Item
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ Sliding window mode. This mode only takes into account the layout in the viewpor
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

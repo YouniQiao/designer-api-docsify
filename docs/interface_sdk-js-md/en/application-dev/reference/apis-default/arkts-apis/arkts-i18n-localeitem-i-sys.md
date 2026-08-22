@@ -4,7 +4,7 @@ Represents the locale information, which consists of the language, script, and c
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-i18n-export interface LocaleItem--><!--Device-i18n-export interface LocaleItem-End-->
 
@@ -29,7 +29,7 @@ Representation of ID in the specified locale in SystemLocaleManager.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-LocaleItem-displayName: string--><!--Device-LocaleItem-displayName: string-End-->
 
@@ -49,7 +49,7 @@ Language code or country/region code, for example, "zh" or "CN".
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-LocaleItem-id: string--><!--Device-LocaleItem-id: string-End-->
 
@@ -69,7 +69,7 @@ Local name of the ID.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-LocaleItem-localName?: string--><!--Device-LocaleItem-localName?: string-End-->
 
@@ -89,7 +89,7 @@ Language or country/region suggestion type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-LocaleItem-suggestionType: SuggestionType--><!--Device-LocaleItem-suggestionType: SuggestionType-End-->
 

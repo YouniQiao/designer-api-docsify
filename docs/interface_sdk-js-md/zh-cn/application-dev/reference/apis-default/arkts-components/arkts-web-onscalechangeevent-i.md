@@ -4,7 +4,7 @@ Defines the triggered when the scale of WebView changed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnScaleChangeEvent--><!--Device-unnamed-export declare interface OnScaleChangeEvent-End-->
 
@@ -22,7 +22,7 @@ New scale of the page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnScaleChangeEvent-newScale: double--><!--Device-OnScaleChangeEvent-newScale: double-End-->
 
@@ -40,7 +40,7 @@ Old scale of the page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnScaleChangeEvent-oldScale: double--><!--Device-OnScaleChangeEvent-oldScale: double-End-->
 

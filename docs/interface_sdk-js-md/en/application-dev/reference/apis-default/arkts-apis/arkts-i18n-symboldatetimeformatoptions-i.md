@@ -6,7 +6,7 @@ Represents optional configuration items for the SymbolDateTimeFormat object. Def
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-i18n-export interface SymbolDateTimeFormatOptions--><!--Device-i18n-export interface SymbolDateTimeFormatOptions-End-->
 
@@ -29,7 +29,7 @@ AM and PM symbol of date time period part, such as "PM" of "2:23 PM". The parame
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

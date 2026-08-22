@@ -8,7 +8,7 @@ CommonShapeMethod
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface CommonShapeMethod--><!--Device-unnamed-export declare interface CommonShapeMethod-End-->
 
@@ -22,7 +22,7 @@ allowForceDark(value: boolean): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-allowForceDark(value: boolean): this--><!--Device-CommonShapeMethod-allowForceDark(value: boolean): this-End-->
 
@@ -44,7 +44,7 @@ antiAlias(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-antiAlias(value: boolean | undefined): this--><!--Device-CommonShapeMethod-antiAlias(value: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ fill(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-fill(value: ResourceColor | undefined): this--><!--Device-CommonShapeMethod-fill(value: ResourceColor | undefined): this-End-->
 
@@ -88,7 +88,7 @@ fillOpacity(value: double | string | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-fillOpacity(value: double | string | Resource | undefined): this--><!--Device-CommonShapeMethod-fillOpacity(value: double | string | Resource | undefined): this-End-->
 
@@ -110,7 +110,7 @@ stroke(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-stroke(value: ResourceColor | undefined): this--><!--Device-CommonShapeMethod-stroke(value: ResourceColor | undefined): this-End-->
 
@@ -132,7 +132,7 @@ strokeDashArray(value: Array<Length> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeDashArray(value: Array<Length> | undefined): this--><!--Device-CommonShapeMethod-strokeDashArray(value: Array<Length> | undefined): this-End-->
 
@@ -154,7 +154,7 @@ strokeDashOffset(value: double | string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeDashOffset(value: double | string | undefined): this--><!--Device-CommonShapeMethod-strokeDashOffset(value: double | string | undefined): this-End-->
 
@@ -176,7 +176,7 @@ strokeLineCap(value: LineCapStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeLineCap(value: LineCapStyle | undefined): this--><!--Device-CommonShapeMethod-strokeLineCap(value: LineCapStyle | undefined): this-End-->
 
@@ -198,7 +198,7 @@ strokeLineJoin(value: LineJoinStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeLineJoin(value: LineJoinStyle | undefined): this--><!--Device-CommonShapeMethod-strokeLineJoin(value: LineJoinStyle | undefined): this-End-->
 
@@ -220,7 +220,7 @@ strokeMiterLimit(value: double | string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeMiterLimit(value: double | string | undefined): this--><!--Device-CommonShapeMethod-strokeMiterLimit(value: double | string | undefined): this-End-->
 
@@ -242,7 +242,7 @@ strokeOpacity(value: double | string | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeOpacity(value: double | string | Resource | undefined): this--><!--Device-CommonShapeMethod-strokeOpacity(value: double | string | Resource | undefined): this-End-->
 
@@ -264,7 +264,7 @@ strokeWidth(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CommonShapeMethod-strokeWidth(value: Length | undefined): this--><!--Device-CommonShapeMethod-strokeWidth(value: Length | undefined): this-End-->
 
@@ -288,7 +288,7 @@ Set whether the component enables the ability to invert colors. This interface n
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

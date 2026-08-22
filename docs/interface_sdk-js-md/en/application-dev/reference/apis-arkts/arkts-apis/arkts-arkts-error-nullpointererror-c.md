@@ -6,7 +6,7 @@ Represents an error that occurs when a null pointer is dereferenced.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-unnamed-class NullPointerError--><!--Device-unnamed-class NullPointerError-End-->
 
@@ -28,7 +28,7 @@ Constructs a new NullPointerError instance with provided message and error speci
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

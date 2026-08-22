@@ -15,7 +15,7 @@ Sets an extended attribute of a file or directory. This API uses a promise to re
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-fileIo-function setxattr(path: string, key: string, value: string): Promise<void>-End-->
 

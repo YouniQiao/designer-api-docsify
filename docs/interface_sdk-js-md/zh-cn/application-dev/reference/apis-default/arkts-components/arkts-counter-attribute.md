@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface CounterAttribute--><!--Device-unnamed-export declare interface CounterAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<CounterAttribute> | AttributeModif
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CounterAttribute-attributeModifier(modifier: AttributeModifier<CounterAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CounterAttribute-attributeModifier(modifier: AttributeModifier<CounterAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ enableDec(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CounterAttribute-enableDec(value: boolean | undefined): this--><!--Device-CounterAttribute-enableDec(value: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ enableInc(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CounterAttribute-enableInc(value: boolean | undefined): this--><!--Device-CounterAttribute-enableInc(value: boolean | undefined): this-End-->
 
@@ -88,7 +88,7 @@ onDec(event: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CounterAttribute-onDec(event: VoidCallback | undefined): this--><!--Device-CounterAttribute-onDec(event: VoidCallback | undefined): this-End-->
 
@@ -110,7 +110,7 @@ onInc(event: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CounterAttribute-onInc(event: VoidCallback | undefined): this--><!--Device-CounterAttribute-onInc(event: VoidCallback | undefined): this-End-->
 
@@ -132,7 +132,7 @@ setCounterOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CounterAttribute-setCounterOptions(): this--><!--Device-CounterAttribute-setCounterOptions(): this-End-->
 
@@ -150,7 +150,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

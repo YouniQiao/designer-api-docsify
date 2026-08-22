@@ -4,7 +4,7 @@ Describes a file name filter, which can be used to customize file name filtering
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export interface FileFilter--><!--Device-unnamed-export interface FileFilter-End-->
 
@@ -30,7 +30,7 @@ Filters files of the [listFileExt](arkts-fileio-listfileext-f.md) or [listFileEx
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

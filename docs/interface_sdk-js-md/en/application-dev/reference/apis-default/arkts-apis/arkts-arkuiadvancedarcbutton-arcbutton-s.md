@@ -6,7 +6,7 @@ Declare Component ArcButton
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare struct ArcButton--><!--Device-unnamed-export declare struct ArcButton-End-->
 
@@ -28,7 +28,7 @@ The method to build component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButton-@Builder  build(): void--><!--Device-ArcButton-@Builder  build(): void-End-->
 
@@ -48,7 +48,7 @@ Describes the arc button options.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButton-@Require  @Param  readonly options: ArcButtonOptions--><!--Device-ArcButton-@Require  @Param  readonly options: ArcButtonOptions-End-->
 

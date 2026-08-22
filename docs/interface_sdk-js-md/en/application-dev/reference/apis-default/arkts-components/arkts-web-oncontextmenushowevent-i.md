@@ -4,7 +4,7 @@ Defines the triggered callback when called to allow custom display of the contex
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnContextMenuShowEvent--><!--Device-unnamed-export declare interface OnContextMenuShowEvent-End-->
 
@@ -22,7 +22,7 @@ The menu-related parameters.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnContextMenuShowEvent-param: WebContextMenuParam--><!--Device-OnContextMenuShowEvent-param: WebContextMenuParam-End-->
 
@@ -40,7 +40,7 @@ The menu corresponding event is passed to the kernel.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnContextMenuShowEvent-result: WebContextMenuResult--><!--Device-OnContextMenuShowEvent-result: WebContextMenuResult-End-->
 

@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum ArcSliderPosition--><!--Device-unnamed-export declare enum ArcSliderPosition-End-->
 
@@ -20,7 +20,7 @@ LEFT = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderPosition-LEFT = 0--><!--Device-ArcSliderPosition-LEFT = 0-End-->
 
@@ -36,7 +36,7 @@ RIGHT = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderPosition-RIGHT = 1--><!--Device-ArcSliderPosition-RIGHT = 1-End-->
 

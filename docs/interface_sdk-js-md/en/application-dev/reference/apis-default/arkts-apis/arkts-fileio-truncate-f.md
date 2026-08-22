@@ -15,7 +15,7 @@ Truncates a file to the specified length. Excess content will be deleted. This A
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function truncate(file: string | int, len?: long): Promise<void>--><!--Device-fileIo-function truncate(file: string | int, len?: long): Promise<void>-End-->
 
@@ -66,7 +66,7 @@ Truncates a file and deletes its content. This API uses an asynchronous callback
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function truncate(file: string | int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function truncate(file: string | int, callback: AsyncCallback<void>): void-End-->
 
@@ -111,7 +111,7 @@ Truncates a file to the specified length. Excess content will be deleted. This A
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function truncate(file: string | int, len: long, callback: AsyncCallback<void>): void--><!--Device-fileIo-function truncate(file: string | int, len: long, callback: AsyncCallback<void>): void-End-->
 

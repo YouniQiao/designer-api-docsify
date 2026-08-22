@@ -4,7 +4,7 @@ Defines the state for download. @enum {number}
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum WebDownloadState--><!--Device-webview-enum WebDownloadState-End-->
 
@@ -20,7 +20,7 @@ The web download is in progress.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-IN_PROGRESS = 0--><!--Device-WebDownloadState-IN_PROGRESS = 0-End-->
 
@@ -36,7 +36,7 @@ The web download has been completed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-COMPLETED--><!--Device-WebDownloadState-COMPLETED-End-->
 
@@ -52,7 +52,7 @@ The web download was canceled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-CANCELED--><!--Device-WebDownloadState-CANCELED-End-->
 
@@ -68,7 +68,7 @@ The web download was interrupted.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-INTERRUPTED--><!--Device-WebDownloadState-INTERRUPTED-End-->
 
@@ -84,7 +84,7 @@ The web download is pending.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-PENDING--><!--Device-WebDownloadState-PENDING-End-->
 
@@ -100,7 +100,7 @@ The web download has been paused.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-PAUSED--><!--Device-WebDownloadState-PAUSED-End-->
 
@@ -116,7 +116,7 @@ Unknown state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebDownloadState-UNKNOWN--><!--Device-WebDownloadState-UNKNOWN-End-->
 

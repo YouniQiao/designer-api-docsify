@@ -8,7 +8,7 @@ Defines the attribute functions of Slider.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface SliderAttribute--><!--Device-unnamed-export declare interface SliderAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<SliderAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-attributeModifier(modifier: AttributeModifier<SliderAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-SliderAttribute-attributeModifier(modifier: AttributeModifier<SliderAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ blockBorderColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-blockBorderColor(value: ResourceColor | undefined): this--><!--Device-SliderAttribute-blockBorderColor(value: ResourceColor | undefined): this-End-->
 
@@ -66,7 +66,7 @@ blockBorderWidth(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-blockBorderWidth(value: Length | undefined): this--><!--Device-SliderAttribute-blockBorderWidth(value: Length | undefined): this-End-->
 
@@ -88,7 +88,7 @@ blockColor(value: ResourceColor | LinearGradient | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-blockColor(value: ResourceColor | LinearGradient | undefined): this--><!--Device-SliderAttribute-blockColor(value: ResourceColor | LinearGradient | undefined): this-End-->
 
@@ -110,7 +110,7 @@ blockSize(value: SizeOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-blockSize(value: SizeOptions | undefined): this--><!--Device-SliderAttribute-blockSize(value: SizeOptions | undefined): this-End-->
 
@@ -132,7 +132,7 @@ blockStyle(value: SliderBlockStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-blockStyle(value: SliderBlockStyle | undefined): this--><!--Device-SliderAttribute-blockStyle(value: SliderBlockStyle | undefined): this-End-->
 
@@ -154,7 +154,7 @@ contentModifier(modifier: ContentModifier<SliderConfiguration> | undefined): thi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-contentModifier(modifier: ContentModifier<SliderConfiguration> | undefined): this--><!--Device-SliderAttribute-contentModifier(modifier: ContentModifier<SliderConfiguration> | undefined): this-End-->
 
@@ -176,7 +176,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-SliderAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -198,7 +198,7 @@ enableHapticFeedback(enabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-enableHapticFeedback(enabled: boolean | undefined): this--><!--Device-SliderAttribute-enableHapticFeedback(enabled: boolean | undefined): this-End-->
 
@@ -220,7 +220,7 @@ minResponsiveDistance(value: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-minResponsiveDistance(value: double | undefined): this--><!--Device-SliderAttribute-minResponsiveDistance(value: double | undefined): this-End-->
 
@@ -242,7 +242,7 @@ onChange(callback: ((value: double, mode: SliderChangeMode) => void) | undefined
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-onChange(callback: ((value: double, mode: SliderChangeMode) => void) | undefined): this--><!--Device-SliderAttribute-onChange(callback: ((value: double, mode: SliderChangeMode) => void) | undefined): this-End-->
 
@@ -264,7 +264,7 @@ prefix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-prefix<T extends Object>(content: ComponentContent<T> | undefined, options?: SliderPrefixOptions | undefined): this--><!--Device-SliderAttribute-prefix<T extends Object>(content: ComponentContent<T> | undefined, options?: SliderPrefixOptions | undefined): this-End-->
 
@@ -287,7 +287,7 @@ selectedBorderRadius(value: Dimension | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-selectedBorderRadius(value: Dimension | undefined): this--><!--Device-SliderAttribute-selectedBorderRadius(value: Dimension | undefined): this-End-->
 
@@ -309,7 +309,7 @@ selectedColor(selectedColor: ResourceColor | LinearGradient | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-selectedColor(selectedColor: ResourceColor | LinearGradient | undefined): this--><!--Device-SliderAttribute-selectedColor(selectedColor: ResourceColor | LinearGradient | undefined): this-End-->
 
@@ -331,7 +331,7 @@ setSliderOptions(options?: SliderOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-setSliderOptions(options?: SliderOptions): this--><!--Device-SliderAttribute-setSliderOptions(options?: SliderOptions): this-End-->
 
@@ -353,7 +353,7 @@ showSteps(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-showSteps(value: boolean | undefined): this--><!--Device-SliderAttribute-showSteps(value: boolean | undefined): this-End-->
 
@@ -375,7 +375,7 @@ showSteps(value: boolean | undefined, options?: SliderShowStepOptions | undefine
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-showSteps(value: boolean | undefined, options?: SliderShowStepOptions | undefined): this--><!--Device-SliderAttribute-showSteps(value: boolean | undefined, options?: SliderShowStepOptions | undefined): this-End-->
 
@@ -398,7 +398,7 @@ showTips(value: boolean | undefined, content?: ResourceStr | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-showTips(value: boolean | undefined, content?: ResourceStr | undefined): this--><!--Device-SliderAttribute-showTips(value: boolean | undefined, content?: ResourceStr | undefined): this-End-->
 
@@ -421,7 +421,7 @@ slideRange(value: SlideRange | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-slideRange(value: SlideRange | undefined): this--><!--Device-SliderAttribute-slideRange(value: SlideRange | undefined): this-End-->
 
@@ -443,7 +443,7 @@ sliderInteractionMode(value: SliderInteraction | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-sliderInteractionMode(value: SliderInteraction | undefined): this--><!--Device-SliderAttribute-sliderInteractionMode(value: SliderInteraction | undefined): this-End-->
 
@@ -465,7 +465,7 @@ stepColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-stepColor(value: ResourceColor | undefined): this--><!--Device-SliderAttribute-stepColor(value: ResourceColor | undefined): this-End-->
 
@@ -487,7 +487,7 @@ stepSize(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-stepSize(value: Length | undefined): this--><!--Device-SliderAttribute-stepSize(value: Length | undefined): this-End-->
 
@@ -509,7 +509,7 @@ suffix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-suffix<T extends Object>(content: ComponentContent<T> | undefined, options?: SliderSuffixOptions | undefined): this--><!--Device-SliderAttribute-suffix<T extends Object>(content: ComponentContent<T> | undefined, options?: SliderSuffixOptions | undefined): this-End-->
 
@@ -532,7 +532,7 @@ trackBorderRadius(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-trackBorderRadius(value: Length | undefined): this--><!--Device-SliderAttribute-trackBorderRadius(value: Length | undefined): this-End-->
 
@@ -554,7 +554,7 @@ trackColor(value: ResourceColor | LinearGradient | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-trackColor(value: ResourceColor | LinearGradient | undefined): this--><!--Device-SliderAttribute-trackColor(value: ResourceColor | LinearGradient | undefined): this-End-->
 
@@ -576,7 +576,7 @@ trackColorMetrics(color: ColorMetricsLinearGradient | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-trackColorMetrics(color: ColorMetricsLinearGradient | undefined): this--><!--Device-SliderAttribute-trackColorMetrics(color: ColorMetricsLinearGradient | undefined): this-End-->
 
@@ -598,7 +598,7 @@ trackThickness(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SliderAttribute-trackThickness(value: Length | undefined): this--><!--Device-SliderAttribute-trackThickness(value: Length | undefined): this-End-->
 
@@ -622,7 +622,7 @@ Set slider options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

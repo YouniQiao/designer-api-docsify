@@ -4,7 +4,7 @@ Defines the configuration of web custom scheme, related to [customizeSchemes](..
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-webview-interface WebCustomScheme--><!--Device-webview-interface WebCustomScheme-End-->
 
@@ -27,7 +27,7 @@ If isCodeCacheSupported is true, then the js of this scheme can generate code ca
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isCodeCacheSupported?: boolean--><!--Device-WebCustomScheme-isCodeCacheSupported?: boolean-End-->
 
@@ -45,7 +45,7 @@ If isCspBypassing is true, then this scheme can bypass Content Security Policy (
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isCspBypassing?: boolean--><!--Device-WebCustomScheme-isCspBypassing?: boolean-End-->
 
@@ -63,7 +63,7 @@ If isDisplayIsolated is true, then the scheme can only be displayed from other c
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isDisplayIsolated?: boolean--><!--Device-WebCustomScheme-isDisplayIsolated?: boolean-End-->
 
@@ -81,7 +81,7 @@ If isLocal is true, the same security rules as those applied to the "file" URL w
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isLocal?: boolean--><!--Device-WebCustomScheme-isLocal?: boolean-End-->
 
@@ -99,7 +99,7 @@ If isSecure is true, the same security rules as those applied to the "https" URL
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isSecure?: boolean--><!--Device-WebCustomScheme-isSecure?: boolean-End-->
 
@@ -117,7 +117,7 @@ If isStandard is true, the scheme will be handled as a standard scheme. The stan
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isStandard?: boolean--><!--Device-WebCustomScheme-isStandard?: boolean-End-->
 
@@ -135,7 +135,7 @@ Whether Cross-Origin Resource Sharing is supported.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isSupportCORS: boolean--><!--Device-WebCustomScheme-isSupportCORS: boolean-End-->
 
@@ -153,7 +153,7 @@ Whether fetch request is supported.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-isSupportFetch: boolean--><!--Device-WebCustomScheme-isSupportFetch: boolean-End-->
 
@@ -171,7 +171,7 @@ Name of the custom scheme.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCustomScheme-schemeName: string--><!--Device-WebCustomScheme-schemeName: string-End-->
 

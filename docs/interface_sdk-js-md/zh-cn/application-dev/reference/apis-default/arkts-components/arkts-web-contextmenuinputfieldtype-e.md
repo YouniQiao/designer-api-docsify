@@ -4,7 +4,7 @@ Defines the context menu input field type, related to [onContextMenuShow](arkts-
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum ContextMenuInputFieldType--><!--Device-unnamed-export declare enum ContextMenuInputFieldType-End-->
 
@@ -20,7 +20,7 @@ Non-input field.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuInputFieldType-NONE = 0--><!--Device-ContextMenuInputFieldType-NONE = 0-End-->
 
@@ -36,7 +36,7 @@ Plain text field, such as the text, search, or email field
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuInputFieldType-PLAIN_TEXT = 1--><!--Device-ContextMenuInputFieldType-PLAIN_TEXT = 1-End-->
 
@@ -52,7 +52,7 @@ Password field.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuInputFieldType-PASSWORD = 2--><!--Device-ContextMenuInputFieldType-PASSWORD = 2-End-->
 
@@ -68,7 +68,7 @@ Number field.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuInputFieldType-NUMBER_DATA = 3--><!--Device-ContextMenuInputFieldType-NUMBER_DATA = 3-End-->
 
@@ -84,7 +84,7 @@ Phone number field.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuInputFieldType-TELEPHONE = 4--><!--Device-ContextMenuInputFieldType-TELEPHONE = 4-End-->
 
@@ -100,7 +100,7 @@ Field of any other type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuInputFieldType-OTHER = 5--><!--Device-ContextMenuInputFieldType-OTHER = 5-End-->
 

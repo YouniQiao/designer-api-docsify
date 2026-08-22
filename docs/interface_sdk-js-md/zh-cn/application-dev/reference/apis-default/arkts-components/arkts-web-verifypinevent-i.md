@@ -4,7 +4,7 @@ Defines the event for PIN verification.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface VerifyPinEvent--><!--Device-unnamed-export declare interface VerifyPinEvent-End-->
 
@@ -22,7 +22,7 @@ Handle the result of PIN verification.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-VerifyPinEvent-handler: VerifyPinHandler--><!--Device-VerifyPinEvent-handler: VerifyPinHandler-End-->
 
@@ -40,7 +40,7 @@ The identity of the Credential.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-VerifyPinEvent-identity: string--><!--Device-VerifyPinEvent-identity: string-End-->
 

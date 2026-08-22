@@ -4,7 +4,7 @@ Defining interface of PageLifeCycle for custom component, when decorate with @En
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface PageLifeCycle--><!--Device-unnamed-export interface PageLifeCycle-End-->
 
@@ -22,7 +22,7 @@ The page is triggered once each time it is displayed, including scenarios such a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

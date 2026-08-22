@@ -6,7 +6,7 @@ Enum type supplied to [PinVerifyResult](#pinverifyresult) when VerifyPinHandler#
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum PinVerifyResult--><!--Device-unnamed-export declare enum PinVerifyResult-End-->
 
@@ -22,7 +22,7 @@ SUCCESS.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0--><!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0-End-->
 
@@ -38,7 +38,7 @@ FAILED.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1--><!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1-End-->
 

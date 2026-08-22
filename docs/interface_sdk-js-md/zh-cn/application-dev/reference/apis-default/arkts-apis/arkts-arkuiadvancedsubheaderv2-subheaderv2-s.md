@@ -14,7 +14,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
 
@@ -36,7 +36,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SubHeaderV2-@Builder  build(): void--><!--Device-SubHeaderV2-@Builder  build(): void-End-->
 
@@ -59,7 +59,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,7 +84,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]--><!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]-End-->
 
@@ -105,7 +105,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType--><!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType-End-->
 
@@ -126,7 +126,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select--><!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select-End-->
 
@@ -147,7 +147,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,7 +170,7 @@ The method to build component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder--><!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder-End-->
 

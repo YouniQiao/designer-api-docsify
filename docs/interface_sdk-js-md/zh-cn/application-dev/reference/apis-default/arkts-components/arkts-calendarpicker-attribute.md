@@ -10,7 +10,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface CalendarPickerAttribute--><!--Device-unnamed-export declare interface CalendarPickerAttribute-End-->
 
@@ -24,7 +24,7 @@ attributeModifier(modifier: AttributeModifier<CalendarPickerAttribute> | Attribu
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CalendarPickerAttribute-attributeModifier(modifier: AttributeModifier<CalendarPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CalendarPickerAttribute-attributeModifier(modifier: AttributeModifier<CalendarPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -46,7 +46,7 @@ edgeAlign(alignType: CalendarAlign | undefined, offset?: Offset): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign | undefined, offset?: Offset): this--><!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign | undefined, offset?: Offset): this-End-->
 
@@ -69,7 +69,7 @@ markToday(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CalendarPickerAttribute-markToday(enabled: boolean | undefined): this--><!--Device-CalendarPickerAttribute-markToday(enabled: boolean | undefined): this-End-->
 
@@ -91,7 +91,7 @@ onChange(callback: Callback<Date> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date> | undefined): this--><!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date> | undefined): this-End-->
 
@@ -113,7 +113,7 @@ textStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle | undefined): this--><!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -137,7 +137,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

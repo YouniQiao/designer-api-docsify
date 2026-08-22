@@ -6,7 +6,7 @@ Represents error that is thrown in case of illegal class casting
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class ClassCastError--><!--Device-unnamed-export class ClassCastError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new ClassCastError instance with provided message and error specifi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

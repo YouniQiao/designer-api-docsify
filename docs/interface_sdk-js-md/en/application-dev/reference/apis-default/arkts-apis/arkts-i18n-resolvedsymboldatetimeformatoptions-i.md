@@ -6,7 +6,7 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions--><!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions-End-->
 
@@ -29,7 +29,7 @@ AM and PM symbol of date time period part, such as "PM" of "2:23 PM". First para
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,7 +4,7 @@ Defines the triggered when the render process exits.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnRenderExitedEvent--><!--Device-unnamed-export declare interface OnRenderExitedEvent-End-->
 
@@ -22,7 +22,7 @@ The specific reason why the rendering process exits abnormally.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnRenderExitedEvent-renderExitReason: RenderExitReason--><!--Device-OnRenderExitedEvent-renderExitReason: RenderExitReason-End-->
 

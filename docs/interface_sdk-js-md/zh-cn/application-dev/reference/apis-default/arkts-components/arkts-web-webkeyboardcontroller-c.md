@@ -4,7 +4,7 @@ Define the controller to interact with a custom keyboard, related to the [onInte
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare class WebKeyboardController--><!--Device-unnamed-export declare class WebKeyboardController-End-->
 
@@ -20,7 +20,7 @@ Close the custom keyboard.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebKeyboardController-close(): void--><!--Device-WebKeyboardController-close(): void-End-->
 
@@ -36,7 +36,7 @@ Constructor.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebKeyboardController-constructor()--><!--Device-WebKeyboardController-constructor()-End-->
 
@@ -52,7 +52,7 @@ Delete the specified length of characters in the Web input field from the beginn
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebKeyboardController-deleteBackward(length: int): void--><!--Device-WebKeyboardController-deleteBackward(length: int): void-End-->
 
@@ -74,7 +74,7 @@ Deletes the specified length of characters from the back to the front in the Web
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebKeyboardController-deleteForward(length: int): void--><!--Device-WebKeyboardController-deleteForward(length: int): void-End-->
 
@@ -96,7 +96,7 @@ Insert characters in the Web input field.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebKeyboardController-insertText(text: string): void--><!--Device-WebKeyboardController-insertText(text: string): void-End-->
 
@@ -118,7 +118,7 @@ Send the function of the key.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebKeyboardController-sendFunctionKey(key: int): void--><!--Device-WebKeyboardController-sendFunctionKey(key: int): void-End-->
 

@@ -15,7 +15,7 @@ Synchronizes the cached data of a file to storage. This API returns the result s
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function fsyncSync(fd: int): void--><!--Device-fileIo-function fsyncSync(fd: int): void-End-->
 

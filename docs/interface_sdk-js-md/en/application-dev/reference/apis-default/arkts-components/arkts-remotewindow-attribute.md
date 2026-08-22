@@ -8,7 +8,7 @@ The RemoteWindowAttribute
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface RemoteWindowAttribute--><!--Device-unnamed-export declare interface RemoteWindowAttribute-End-->
 
@@ -24,7 +24,7 @@ attributeModifier(modifier: AttributeModifier<RemoteWindowAttribute> | Attribute
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RemoteWindowAttribute-attributeModifier(modifier: AttributeModifier<RemoteWindowAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RemoteWindowAttribute-attributeModifier(modifier: AttributeModifier<RemoteWindowAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 

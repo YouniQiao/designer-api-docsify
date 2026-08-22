@@ -15,7 +15,7 @@ Creates a writeable stream. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream--><!--Device-fileIo-function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream-End-->
 

@@ -4,7 +4,7 @@ Defines the triggered callback when the resources loading is intercepted.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnInterceptRequestEvent--><!--Device-unnamed-export declare interface OnInterceptRequestEvent-End-->
 
@@ -22,7 +22,7 @@ The information of request.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnInterceptRequestEvent-request: WebResourceRequest--><!--Device-OnInterceptRequestEvent-request: WebResourceRequest-End-->
 

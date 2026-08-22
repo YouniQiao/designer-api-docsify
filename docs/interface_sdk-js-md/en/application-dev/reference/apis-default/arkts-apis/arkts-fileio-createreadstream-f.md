@@ -15,7 +15,7 @@ Creates a readable stream. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createReadStream(path: string, options?: ReadStreamOptions): ReadStream--><!--Device-fileIo-function createReadStream(path: string, options?: ReadStreamOptions): ReadStream-End-->
 

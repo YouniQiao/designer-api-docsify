@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface ContainerReaderAttribute--><!--Device-unnamed-export declare interface ContainerReaderAttribute-End-->
 
@@ -25,7 +25,7 @@ attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | Attrib
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ContainerReaderAttribute-attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ContainerReaderAttribute-attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -47,7 +47,7 @@ breakpointConfig(value?: BreakpointOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ContainerReaderAttribute-breakpointConfig(value?: BreakpointOptions): this--><!--Device-ContainerReaderAttribute-breakpointConfig(value?: BreakpointOptions): this-End-->
 
@@ -69,7 +69,7 @@ setContainerReaderOptions(value: ContainerReaderInfo): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ContainerReaderAttribute-setContainerReaderOptions(value: ContainerReaderInfo): this--><!--Device-ContainerReaderAttribute-setContainerReaderOptions(value: ContainerReaderInfo): this-End-->
 
@@ -93,7 +93,7 @@ Sets the attribute modifier.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

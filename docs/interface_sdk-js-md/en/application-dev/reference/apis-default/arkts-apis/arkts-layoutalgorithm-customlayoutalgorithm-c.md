@@ -8,7 +8,7 @@ Defines the custom layout algorithm.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-unnamed-export declare class CustomLayoutAlgorithm--><!--Device-unnamed-export declare class CustomLayoutAlgorithm-End-->
 
@@ -24,7 +24,7 @@ Method to assign a position to the DynamicLayout FrameNode and each of its child
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,7 +49,7 @@ Method to measure the DynamicLayout FrameNode and its content to determine the m
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

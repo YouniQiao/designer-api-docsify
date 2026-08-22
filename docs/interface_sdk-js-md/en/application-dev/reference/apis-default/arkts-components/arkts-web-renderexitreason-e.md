@@ -6,7 +6,7 @@ Enum type supplied to [renderExitReason](arkts-web-onrenderexitedevent-i.md#rend
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum RenderExitReason--><!--Device-unnamed-export declare enum RenderExitReason-End-->
 
@@ -22,7 +22,7 @@ Render process non-zero exit status.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderExitReason-PROCESS_ABNORMAL_TERMINATION = 0--><!--Device-RenderExitReason-PROCESS_ABNORMAL_TERMINATION = 0-End-->
 
@@ -38,7 +38,7 @@ SIGKILL or task manager kill.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderExitReason-PROCESS_WAS_KILLED = 1--><!--Device-RenderExitReason-PROCESS_WAS_KILLED = 1-End-->
 
@@ -54,7 +54,7 @@ The rendering process crashes and exits, such as a segment error.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderExitReason-PROCESS_CRASHED = 2--><!--Device-RenderExitReason-PROCESS_CRASHED = 2-End-->
 
@@ -70,7 +70,7 @@ Out of memory.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderExitReason-PROCESS_OOM = 3--><!--Device-RenderExitReason-PROCESS_OOM = 3-End-->
 
@@ -86,7 +86,7 @@ Unknown reason.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RenderExitReason-PROCESS_EXIT_UNKNOWN = 4--><!--Device-RenderExitReason-PROCESS_EXIT_UNKNOWN = 4-End-->
 

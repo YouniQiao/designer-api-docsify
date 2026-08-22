@@ -4,7 +4,7 @@ Defines triggered when the first content rendering of web page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnFirstContentfulPaintEvent--><!--Device-unnamed-export declare interface OnFirstContentfulPaintEvent-End-->
 
@@ -22,7 +22,7 @@ The time it takes to draw content for the first time from navigation, expressed 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnFirstContentfulPaintEvent-firstContentfulPaintMs: long--><!--Device-OnFirstContentfulPaintEvent-firstContentfulPaintMs: long-End-->
 
@@ -40,7 +40,7 @@ The time at which navigation begins, expressed in microseconds.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnFirstContentfulPaintEvent-navigationStartTick: long--><!--Device-OnFirstContentfulPaintEvent-navigationStartTick: long-End-->
 

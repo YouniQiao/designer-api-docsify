@@ -4,7 +4,7 @@ The rational number is mainly to compare rational numbers and obtain the numerat
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-util-class RationalNumber--><!--Device-util-class RationalNumber-End-->
 
@@ -25,7 +25,7 @@ Compares the current RationalNumber object to the given object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-compare(another: RationalNumber): int--><!--Device-RationalNumber-compare(another: RationalNumber): int-End-->
 
@@ -53,7 +53,7 @@ A constructor used to create a RationalNumber instance with a given numerator an
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-constructor()--><!--Device-RationalNumber-constructor()-End-->
 
@@ -69,7 +69,7 @@ Creates a RationalNumber object based on a given string.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber--><!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber-End-->
 
@@ -97,7 +97,7 @@ Compares two objects for equality.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-equals(obj: Object): boolean--><!--Device-RationalNumber-equals(obj: Object): boolean-End-->
 
@@ -125,7 +125,7 @@ Get the greatest common factor of two integers.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-static getCommonFactor(number1: long, number2: long): long--><!--Device-RationalNumber-static getCommonFactor(number1: long, number2: long): long-End-->
 
@@ -154,7 +154,7 @@ Gets the denominator of the current object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-getDenominator(): long--><!--Device-RationalNumber-getDenominator(): long-End-->
 
@@ -176,7 +176,7 @@ Gets the numerator of the current object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-getNumerator(): long--><!--Device-RationalNumber-getNumerator(): long-End-->
 
@@ -198,7 +198,7 @@ Checks whether the current RationalNumber object represents an infinite value.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-isFinite(): boolean--><!--Device-RationalNumber-isFinite(): boolean-End-->
 
@@ -220,7 +220,7 @@ Checks whether the current RationalNumber object represents a Not-a-Number (NaN)
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-isNaN(): boolean--><!--Device-RationalNumber-isNaN(): boolean-End-->
 
@@ -242,7 +242,7 @@ Checks whether the current RationalNumber object represents the value 0.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-isZero(): boolean--><!--Device-RationalNumber-isZero(): boolean-End-->
 
@@ -264,7 +264,7 @@ Used to create a RationalNumber instance with a given numerator and denominator.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-static parseRationalNumber(numerator: long, denominator: long): RationalNumber--><!--Device-RationalNumber-static parseRationalNumber(numerator: long, denominator: long): RationalNumber-End-->
 
@@ -293,7 +293,7 @@ Obtains a string representation of the current RationalNumber object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-toString(): string--><!--Device-RationalNumber-toString(): string-End-->
 
@@ -315,7 +315,7 @@ Gets integer and floating-point values of a rational number object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-RationalNumber-valueOf(): double--><!--Device-RationalNumber-valueOf(): double-End-->
 

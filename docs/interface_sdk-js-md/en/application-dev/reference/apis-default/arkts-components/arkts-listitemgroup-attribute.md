@@ -6,7 +6,7 @@ The ListItemGroupAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ListItemGroupAttribute--><!--Device-unnamed-export declare interface ListItemGroupAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ListItemGroupAttribute> | Attribut
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ListItemGroupAttribute-attributeModifier(modifier: AttributeModifier<ListItemGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ListItemGroupAttribute-attributeModifier(modifier: AttributeModifier<ListItemGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ childrenMainSize(value: ChildrenMainSize | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ListItemGroupAttribute-childrenMainSize(value: ChildrenMainSize | undefined): this--><!--Device-ListItemGroupAttribute-childrenMainSize(value: ChildrenMainSize | undefined): this-End-->
 
@@ -64,7 +64,7 @@ divider(value: ListDividerOptions | null | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ListItemGroupAttribute-divider(value: ListDividerOptions | null | undefined): this--><!--Device-ListItemGroupAttribute-divider(value: ListDividerOptions | null | undefined): this-End-->
 
@@ -86,7 +86,7 @@ setListItemGroupOptions(options?: ListItemGroupOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ListItemGroupAttribute-setListItemGroupOptions(options?: ListItemGroupOptions): this--><!--Device-ListItemGroupAttribute-setListItemGroupOptions(options?: ListItemGroupOptions): this-End-->
 
@@ -110,7 +110,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

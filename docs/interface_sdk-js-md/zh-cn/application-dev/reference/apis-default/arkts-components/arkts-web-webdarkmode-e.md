@@ -4,7 +4,7 @@ Enum type supplied to [darkMode](arkts-web-attribute.md#darkmode) for setting th
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum WebDarkMode--><!--Device-unnamed-export declare enum WebDarkMode-End-->
 
@@ -20,7 +20,7 @@ Disable the web dark mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebDarkMode-OFF = 0--><!--Device-WebDarkMode-OFF = 0-End-->
 
@@ -36,7 +36,7 @@ Enable the web dark mode.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebDarkMode-ON = 1--><!--Device-WebDarkMode-ON = 1-End-->
 
@@ -52,7 +52,7 @@ Make web dark mode follow the system.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebDarkMode-AUTO = 2--><!--Device-WebDarkMode-AUTO = 2-End-->
 

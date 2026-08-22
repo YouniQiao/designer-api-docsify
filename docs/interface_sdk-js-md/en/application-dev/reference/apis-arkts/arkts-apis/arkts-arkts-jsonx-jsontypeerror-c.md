@@ -6,7 +6,7 @@ Error thrown when attempting to access a JSON element with an incompatible type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-jsonx-export class JsonTypeError--><!--Device-jsonx-export class JsonTypeError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new JsonTypeError with the specified message.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

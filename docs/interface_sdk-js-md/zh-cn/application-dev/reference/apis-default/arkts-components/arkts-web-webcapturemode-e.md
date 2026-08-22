@@ -6,7 +6,7 @@ Web屏幕捕获模式。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum WebCaptureMode--><!--Device-unnamed-export declare enum WebCaptureMode-End-->
 
@@ -22,7 +22,7 @@ HOME_SCREEN = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebCaptureMode-HOME_SCREEN = 0--><!--Device-WebCaptureMode-HOME_SCREEN = 0-End-->
 

@@ -6,7 +6,7 @@ Represents the matching result returned by string.prototype.matchAll(), or the n
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class RegExpMatchArray--><!--Device-unnamed-export class RegExpMatchArray-End-->
 
@@ -27,7 +27,7 @@ Creates a RegExpMatchArray instance that contains matching results.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ Creates a RegExpMatchArray instance containing matching results.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

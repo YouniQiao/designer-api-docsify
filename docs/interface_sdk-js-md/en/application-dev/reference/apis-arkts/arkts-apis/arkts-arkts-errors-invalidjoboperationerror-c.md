@@ -6,7 +6,7 @@ Represents the error that is thrown when invalid operation is called on coroutin
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class InvalidJobOperationError--><!--Device-unnamed-export class InvalidJobOperationError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new InvalidJobOperationError instance with provided message and err
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

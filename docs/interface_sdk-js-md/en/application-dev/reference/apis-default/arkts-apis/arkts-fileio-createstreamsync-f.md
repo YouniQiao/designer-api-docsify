@@ -15,7 +15,7 @@ Creates a stream based on a file path. This API returns the result synchronously
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createStreamSync(path: string, mode: string): Stream--><!--Device-fileIo-function createStreamSync(path: string, mode: string): Stream-End-->
 

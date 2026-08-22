@@ -8,7 +8,7 @@ The callback when camera capturing state of current page has been changed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void--><!--Device-unnamed-export type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void-End-->
 

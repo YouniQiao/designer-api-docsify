@@ -6,7 +6,7 @@ The FlowItemAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface FlowItemAttribute--><!--Device-unnamed-export declare interface FlowItemAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<FlowItemAttribute> | AttributeModi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FlowItemAttribute-attributeModifier(modifier: AttributeModifier<FlowItemAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-FlowItemAttribute-attributeModifier(modifier: AttributeModifier<FlowItemAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ setFlowItemOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-FlowItemAttribute-setFlowItemOptions(): this--><!--Device-FlowItemAttribute-setFlowItemOptions(): this-End-->
 
@@ -60,7 +60,7 @@ Call attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

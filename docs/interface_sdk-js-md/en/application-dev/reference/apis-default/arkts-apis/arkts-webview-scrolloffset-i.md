@@ -4,7 +4,7 @@ Defines the scroll offset of the webpage in view port, the unit is virtual pixel
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
@@ -27,7 +27,7 @@ Get the horizontal offset. The unit is vp
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ScrollOffset-x: double--><!--Device-ScrollOffset-x: double-End-->
 
@@ -45,7 +45,7 @@ Get the vertical offset. The unit is vp
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ScrollOffset-y: double--><!--Device-ScrollOffset-y: double-End-->
 

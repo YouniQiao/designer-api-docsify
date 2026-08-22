@@ -8,7 +8,7 @@ Defines the CalendarPicker component attribute functions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface CalendarPickerAttribute--><!--Device-unnamed-export declare interface CalendarPickerAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<CalendarPickerAttribute> | Attribu
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CalendarPickerAttribute-attributeModifier(modifier: AttributeModifier<CalendarPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CalendarPickerAttribute-attributeModifier(modifier: AttributeModifier<CalendarPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ edgeAlign(alignType: CalendarAlign | undefined, offset?: Offset): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign | undefined, offset?: Offset): this--><!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign | undefined, offset?: Offset): this-End-->
 
@@ -67,7 +67,7 @@ markToday(enabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CalendarPickerAttribute-markToday(enabled: boolean | undefined): this--><!--Device-CalendarPickerAttribute-markToday(enabled: boolean | undefined): this-End-->
 
@@ -89,7 +89,7 @@ onChange(callback: Callback<Date> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date> | undefined): this--><!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date> | undefined): this-End-->
 
@@ -111,7 +111,7 @@ setCalendarPickerOptions(options?: CalendarOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CalendarPickerAttribute-setCalendarPickerOptions(options?: CalendarOptions): this--><!--Device-CalendarPickerAttribute-setCalendarPickerOptions(options?: CalendarOptions): this-End-->
 
@@ -133,7 +133,7 @@ textStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle | undefined): this--><!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -157,7 +157,7 @@ Set the attribute modifier
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

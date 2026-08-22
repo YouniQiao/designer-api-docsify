@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare class ArcSliderValueOptions--><!--Device-unnamed-export declare class ArcSliderValueOptions-End-->
 
@@ -25,7 +25,7 @@ ArcSliderValueOptions的构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)--><!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)-End-->
 
@@ -60,7 +60,7 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderValueOptions-@Trace  max?: double--><!--Device-ArcSliderValueOptions-@Trace  max?: double-End-->
 
@@ -83,7 +83,7 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderValueOptions-@Trace  min?: double--><!--Device-ArcSliderValueOptions-@Trace  min?: double-End-->
 
@@ -104,7 +104,7 @@ progress不在[min, max]范围之内，取min或者max，靠近min取min，靠�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderValueOptions-@Trace  progress?: double--><!--Device-ArcSliderValueOptions-@Trace  progress?: double-End-->
 

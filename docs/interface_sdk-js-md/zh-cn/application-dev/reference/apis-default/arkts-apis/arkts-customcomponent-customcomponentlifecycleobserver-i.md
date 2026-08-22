@@ -4,7 +4,7 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 <!--Device-unnamed-export declare interface CustomComponentLifecycleObserver--><!--Device-unnamed-export declare interface CustomComponentLifecycleObserver-End-->
 
@@ -18,7 +18,7 @@ aboutToAppear(): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CustomComponentLifecycleObserver-aboutToAppear(): void--><!--Device-CustomComponentLifecycleObserver-aboutToAppear(): void-End-->
 
@@ -30,7 +30,7 @@ aboutToDisappear(): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CustomComponentLifecycleObserver-aboutToDisappear(): void--><!--Device-CustomComponentLifecycleObserver-aboutToDisappear(): void-End-->
 
@@ -42,7 +42,7 @@ aboutToRecycle(): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CustomComponentLifecycleObserver-aboutToRecycle(): void--><!--Device-CustomComponentLifecycleObserver-aboutToRecycle(): void-End-->
 
@@ -54,7 +54,7 @@ aboutToReuse(params?: ReuseObject): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CustomComponentLifecycleObserver-aboutToReuse(params?: ReuseObject): void--><!--Device-CustomComponentLifecycleObserver-aboutToReuse(params?: ReuseObject): void-End-->
 
@@ -72,7 +72,7 @@ onDidBuild(): void
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CustomComponentLifecycleObserver-onDidBuild(): void--><!--Device-CustomComponentLifecycleObserver-onDidBuild(): void-End-->
 
@@ -86,7 +86,7 @@ default
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

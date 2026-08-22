@@ -6,7 +6,7 @@ Style the DepthComponent.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface DepthComponentAttribute--><!--Device-unnamed-export declare interface DepthComponentAttribute-End-->
 
@@ -22,7 +22,7 @@ camera(camera: DepthCameraParams): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DepthComponentAttribute-camera(camera: DepthCameraParams): this--><!--Device-DepthComponentAttribute-camera(camera: DepthCameraParams): this-End-->
 
@@ -44,7 +44,7 @@ depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DepthComponentAttribute-depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback): this--><!--Device-DepthComponentAttribute-depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback): this-End-->
 
@@ -67,7 +67,7 @@ light(light: DepthLightParams): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DepthComponentAttribute-light(light: DepthLightParams): this--><!--Device-DepthComponentAttribute-light(light: DepthLightParams): this-End-->
 
@@ -89,7 +89,7 @@ onComplete(callback: DepthComponentCompleteCallback): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DepthComponentAttribute-onComplete(callback: DepthComponentCompleteCallback): this--><!--Device-DepthComponentAttribute-onComplete(callback: DepthComponentCompleteCallback): this-End-->
 
@@ -111,7 +111,7 @@ onError(callback: DepthComponentErrorCallback): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DepthComponentAttribute-onError(callback: DepthComponentErrorCallback): this--><!--Device-DepthComponentAttribute-onError(callback: DepthComponentErrorCallback): this-End-->
 
@@ -133,7 +133,7 @@ setDepthComponentOptions(background: ResourceStr | PixelMap, options?: DepthComp
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DepthComponentAttribute-setDepthComponentOptions(background: ResourceStr | PixelMap, options?: DepthComponentOptions): this--><!--Device-DepthComponentAttribute-setDepthComponentOptions(background: ResourceStr | PixelMap, options?: DepthComponentOptions): this-End-->
 

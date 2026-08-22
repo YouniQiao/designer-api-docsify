@@ -8,7 +8,7 @@ Defines the Menu component attribute functions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface MenuAttribute--><!--Device-unnamed-export declare interface MenuAttribute-End-->
 
@@ -23,7 +23,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-attributeModifier(        modifier: AttributeModifier<MenuAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-MenuAttribute-attributeModifier(        modifier: AttributeModifier<MenuAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -45,7 +45,7 @@ font(value: Font | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-font(value: Font | undefined): this--><!--Device-MenuAttribute-font(value: Font | undefined): this-End-->
 
@@ -67,7 +67,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-MenuAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -89,7 +89,7 @@ menuItemDivider(options: DividerStyleOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-menuItemDivider(options: DividerStyleOptions | undefined): this--><!--Device-MenuAttribute-menuItemDivider(options: DividerStyleOptions | undefined): this-End-->
 
@@ -111,7 +111,7 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-menuItemGroupDivider(options: DividerStyleOptions | undefined): this--><!--Device-MenuAttribute-menuItemGroupDivider(options: DividerStyleOptions | undefined): this-End-->
 
@@ -133,7 +133,7 @@ radius(value: Dimension | BorderRadiuses | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-radius(value: Dimension | BorderRadiuses | undefined): this--><!--Device-MenuAttribute-radius(value: Dimension | BorderRadiuses | undefined): this-End-->
 
@@ -155,7 +155,7 @@ setMenuOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-setMenuOptions(): this--><!--Device-MenuAttribute-setMenuOptions(): this-End-->
 
@@ -171,7 +171,7 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this-End-->
 
@@ -193,7 +193,7 @@ subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuAttribute-subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this--><!--Device-MenuAttribute-subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this-End-->
 
@@ -217,7 +217,7 @@ Set menu options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

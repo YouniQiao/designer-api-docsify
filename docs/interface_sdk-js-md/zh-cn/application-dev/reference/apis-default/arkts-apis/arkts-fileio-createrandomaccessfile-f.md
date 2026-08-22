@@ -16,7 +16,7 @@ function createRandomAccessFile(file: string | File, mode?: int,
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function createRandomAccessFile(file: string | File, mode?: int,  options?: RandomAccessFileOptions): Promise<RandomAccessFile>--><!--Device-fileIo-function createRandomAccessFile(file: string | File, mode?: int,  options?: RandomAccessFileOptions): Promise<RandomAccessFile>-End-->
 
@@ -79,7 +79,7 @@ function createRandomAccessFile(file: string | File, callback: AsyncCallback<Ran
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void--><!--Device-fileIo-function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void-End-->
 
@@ -134,7 +134,7 @@ function createRandomAccessFile(file: string | File, mode: int, callback: AsyncC
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function createRandomAccessFile(file: string | File, mode: int, callback: AsyncCallback<RandomAccessFile>): void--><!--Device-fileIo-function createRandomAccessFile(file: string | File, mode: int, callback: AsyncCallback<RandomAccessFile>): void-End-->
 

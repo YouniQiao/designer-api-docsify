@@ -16,7 +16,7 @@ Battery technology of the device.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-function technology(): string--><!--Device-batteryInfo-function technology(): string-End-->
 

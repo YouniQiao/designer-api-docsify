@@ -4,7 +4,7 @@ Represents a full drawing result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-interface SnapshotResult--><!--Device-webview-interface SnapshotResult-End-->
 
@@ -27,7 +27,7 @@ Id of the snapshot.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SnapshotResult-id?: string--><!--Device-SnapshotResult-id?: string-End-->
 
@@ -45,7 +45,7 @@ Full drawing result in image.PixelMap format.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SnapshotResult-imagePixelMap?: image.PixelMap--><!--Device-SnapshotResult-imagePixelMap?: image.PixelMap-End-->
 
@@ -63,7 +63,7 @@ Actual size drawn on the web page. The value is of the number type, and the unit
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SnapshotResult-size?: SizeOptions--><!--Device-SnapshotResult-size?: SizeOptions-End-->
 
@@ -81,7 +81,7 @@ The status of the snapshot. The value can be true (normal) or false (failure). I
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SnapshotResult-status?: boolean--><!--Device-SnapshotResult-status?: boolean-End-->
 

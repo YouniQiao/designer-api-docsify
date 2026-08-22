@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
 
@@ -27,7 +27,7 @@ length?: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ReadOptions-length?: long--><!--Device-ReadOptions-length?: long-End-->
 
@@ -45,7 +45,7 @@ offset?: long
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ReadOptions-offset?: long--><!--Device-ReadOptions-offset?: long-End-->
 

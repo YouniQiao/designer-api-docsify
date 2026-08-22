@@ -15,7 +15,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface GridAttribute--><!--Device-unnamed-export declare interface GridAttribute-End-->
 
@@ -29,7 +29,7 @@ alignItems(alignment: GridItemAlignment | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-alignItems(alignment: GridItemAlignment | undefined): this--><!--Device-GridAttribute-alignItems(alignment: GridItemAlignment | undefined): this-End-->
 
@@ -51,7 +51,7 @@ attributeModifier(modifier: AttributeModifier<GridAttribute> | AttributeModifier
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-attributeModifier(modifier: AttributeModifier<GridAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-GridAttribute-attributeModifier(modifier: AttributeModifier<GridAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -73,7 +73,7 @@ cachedCount(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-cachedCount(value: int | undefined): this--><!--Device-GridAttribute-cachedCount(value: int | undefined): this-End-->
 
@@ -95,7 +95,7 @@ cachedCount(count: int | undefined, show: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-cachedCount(count: int | undefined, show: boolean | undefined): this--><!--Device-GridAttribute-cachedCount(count: int | undefined, show: boolean | undefined): this-End-->
 
@@ -118,7 +118,7 @@ cellLength(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-cellLength(value: double | undefined): this--><!--Device-GridAttribute-cellLength(value: double | undefined): this-End-->
 
@@ -140,7 +140,7 @@ columnsGap(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-columnsGap(value: Length | undefined): this--><!--Device-GridAttribute-columnsGap(value: Length | undefined): this-End-->
 
@@ -162,7 +162,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this--><!--Device-GridAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this-End-->
 
@@ -184,7 +184,7 @@ edgeEffect(value: EdgeEffect | undefined, options?: EdgeEffectOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-edgeEffect(value: EdgeEffect | undefined, options?: EdgeEffectOptions): this--><!--Device-GridAttribute-edgeEffect(value: EdgeEffect | undefined, options?: EdgeEffectOptions): this-End-->
 
@@ -207,7 +207,7 @@ editMode(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-editMode(value: boolean | undefined): this--><!--Device-GridAttribute-editMode(value: boolean | undefined): this-End-->
 
@@ -229,7 +229,7 @@ editModeOptions(options?: EditModeOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-editModeOptions(options?: EditModeOptions): this--><!--Device-GridAttribute-editModeOptions(options?: EditModeOptions): this-End-->
 
@@ -251,7 +251,7 @@ enableEditMode(enabled: boolean | Bindable<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-enableEditMode(enabled: boolean | Bindable<boolean> | undefined): this--><!--Device-GridAttribute-enableEditMode(enabled: boolean | Bindable<boolean> | undefined): this-End-->
 
@@ -273,7 +273,7 @@ enableScrollInteraction(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-enableScrollInteraction(value: boolean | undefined): this--><!--Device-GridAttribute-enableScrollInteraction(value: boolean | undefined): this-End-->
 
@@ -295,7 +295,7 @@ focusWrapMode(mode: FocusWrapMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-focusWrapMode(mode: FocusWrapMode | undefined): this--><!--Device-GridAttribute-focusWrapMode(mode: FocusWrapMode | undefined): this-End-->
 
@@ -317,7 +317,7 @@ friction(value: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-friction(value: double | Resource | undefined): this--><!--Device-GridAttribute-friction(value: double | Resource | undefined): this-End-->
 
@@ -339,7 +339,7 @@ layoutDirection(value: GridDirection | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-layoutDirection(value: GridDirection | undefined): this--><!--Device-GridAttribute-layoutDirection(value: GridDirection | undefined): this-End-->
 
@@ -361,7 +361,7 @@ maxCount(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-maxCount(value: int | undefined): this--><!--Device-GridAttribute-maxCount(value: int | undefined): this-End-->
 
@@ -383,7 +383,7 @@ minCount(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-minCount(value: int | undefined): this--><!--Device-GridAttribute-minCount(value: int | undefined): this-End-->
 
@@ -405,7 +405,7 @@ multiSelectable(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-multiSelectable(value: boolean | undefined): this--><!--Device-GridAttribute-multiSelectable(value: boolean | undefined): this-End-->
 
@@ -427,7 +427,7 @@ nestedScroll(value: NestedScrollOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-nestedScroll(value: NestedScrollOptions | undefined): this--><!--Device-GridAttribute-nestedScroll(value: NestedScrollOptions | undefined): this-End-->
 
@@ -449,7 +449,7 @@ onDidScroll(handler: OnScrollCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onDidScroll(handler: OnScrollCallback | undefined): this--><!--Device-GridAttribute-onDidScroll(handler: OnScrollCallback | undefined): this-End-->
 
@@ -471,7 +471,7 @@ onEditModeChange(callback: Callback<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onEditModeChange(callback: Callback<boolean> | undefined): this--><!--Device-GridAttribute-onEditModeChange(callback: Callback<boolean> | undefined): this-End-->
 
@@ -493,7 +493,7 @@ onItemDragEnter(event: ((event: ItemDragInfo) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onItemDragEnter(event: ((event: ItemDragInfo) => void) | undefined): this--><!--Device-GridAttribute-onItemDragEnter(event: ((event: ItemDragInfo) => void) | undefined): this-End-->
 
@@ -515,7 +515,7 @@ onItemDragLeave(event: ((event: ItemDragInfo, itemIndex: int) => void) | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onItemDragLeave(event: ((event: ItemDragInfo, itemIndex: int) => void) | undefined): this--><!--Device-GridAttribute-onItemDragLeave(event: ((event: ItemDragInfo, itemIndex: int) => void) | undefined): this-End-->
 
@@ -537,7 +537,7 @@ onItemDragMove(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int) =
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onItemDragMove(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int) => void) | undefined): this--><!--Device-GridAttribute-onItemDragMove(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int) => void) | undefined): this-End-->
 
@@ -559,7 +559,7 @@ onItemDragStart(event: OnItemDragStartCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onItemDragStart(event: OnItemDragStartCallback | undefined): this--><!--Device-GridAttribute-onItemDragStart(event: OnItemDragStartCallback | undefined): this-End-->
 
@@ -581,7 +581,7 @@ onItemDrop(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int, isSuc
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onItemDrop(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int, isSuccess: boolean) => void) | undefined): this--><!--Device-GridAttribute-onItemDrop(event: ((event: ItemDragInfo, itemIndex: int, insertIndex: int, isSuccess: boolean) => void) | undefined): this-End-->
 
@@ -603,7 +603,7 @@ onScrollBarUpdate(event: ((index: int, offset: double) => ComputedBarAttribute) 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onScrollBarUpdate(event: ((index: int, offset: double) => ComputedBarAttribute) | undefined): this--><!--Device-GridAttribute-onScrollBarUpdate(event: ((index: int, offset: double) => ComputedBarAttribute) | undefined): this-End-->
 
@@ -625,7 +625,7 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this--><!--Device-GridAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this-End-->
 
@@ -647,7 +647,7 @@ onScrollIndex(event: ((first: int, last: int) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onScrollIndex(event: ((first: int, last: int) => void) | undefined): this--><!--Device-GridAttribute-onScrollIndex(event: ((first: int, last: int) => void) | undefined): this-End-->
 
@@ -669,7 +669,7 @@ onWillScroll(handler: OnWillScrollCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this--><!--Device-GridAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this-End-->
 
@@ -691,7 +691,7 @@ rowsGap(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-rowsGap(value: Length | undefined): this--><!--Device-GridAttribute-rowsGap(value: Length | undefined): this-End-->
 
@@ -713,7 +713,7 @@ rowsTemplate(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-rowsTemplate(value: string | undefined): this--><!--Device-GridAttribute-rowsTemplate(value: string | undefined): this-End-->
 
@@ -735,7 +735,7 @@ scrollBar(value: BarState | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-scrollBar(value: BarState | undefined): this--><!--Device-GridAttribute-scrollBar(value: BarState | undefined): this-End-->
 
@@ -757,7 +757,7 @@ scrollBarColor(color: Color | int | string | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-scrollBarColor(color: Color | int | string | Resource | undefined): this--><!--Device-GridAttribute-scrollBarColor(color: Color | int | string | Resource | undefined): this-End-->
 
@@ -779,7 +779,7 @@ scrollBarWidth(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-scrollBarWidth(value: double | string | undefined): this--><!--Device-GridAttribute-scrollBarWidth(value: double | string | undefined): this-End-->
 
@@ -801,7 +801,7 @@ scrollBarWidth(value: Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-scrollBarWidth(value: Resource | undefined): this--><!--Device-GridAttribute-scrollBarWidth(value: Resource | undefined): this-End-->
 
@@ -823,7 +823,7 @@ setGridOptions(scroller?: Scroller, layoutOptions?: GridLayoutOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-setGridOptions(scroller?: Scroller, layoutOptions?: GridLayoutOptions): this--><!--Device-GridAttribute-setGridOptions(scroller?: Scroller, layoutOptions?: GridLayoutOptions): this-End-->
 
@@ -846,7 +846,7 @@ supportAnimation(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-supportAnimation(value: boolean | undefined): this--><!--Device-GridAttribute-supportAnimation(value: boolean | undefined): this-End-->
 
@@ -868,7 +868,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this--><!--Device-GridAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this-End-->
 
@@ -890,7 +890,7 @@ syncLoad(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GridAttribute-syncLoad(enable: boolean | undefined): this--><!--Device-GridAttribute-syncLoad(enable: boolean | undefined): this-End-->
 
@@ -914,7 +914,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

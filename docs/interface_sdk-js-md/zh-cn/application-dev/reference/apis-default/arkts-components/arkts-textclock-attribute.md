@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface TextClockAttribute--><!--Device-unnamed-export declare interface TextClockAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<TextClockAttribute> | AttributeMod
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-attributeModifier(modifier: AttributeModifier<TextClockAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TextClockAttribute-attributeModifier(modifier: AttributeModifier<TextClockAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ contentModifier(modifier: ContentModifier<TextClockConfiguration> | undefined): 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-contentModifier(modifier: ContentModifier<TextClockConfiguration> | undefined): this--><!--Device-TextClockAttribute-contentModifier(modifier: ContentModifier<TextClockConfiguration> | undefined): this-End-->
 
@@ -66,7 +66,7 @@ dateTimeOptions(dateTimeOptions: DateTimeOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-dateTimeOptions(dateTimeOptions: DateTimeOptions | undefined): this--><!--Device-TextClockAttribute-dateTimeOptions(dateTimeOptions: DateTimeOptions | undefined): this-End-->
 
@@ -88,7 +88,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-TextClockAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -110,7 +110,7 @@ fontFamily(value: ResourceStr | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-fontFamily(value: ResourceStr | undefined): this--><!--Device-TextClockAttribute-fontFamily(value: ResourceStr | undefined): this-End-->
 
@@ -132,7 +132,7 @@ fontFeature(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-fontFeature(value: string | undefined): this--><!--Device-TextClockAttribute-fontFeature(value: string | undefined): this-End-->
 
@@ -154,7 +154,7 @@ fontSize(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-fontSize(value: Length | undefined): this--><!--Device-TextClockAttribute-fontSize(value: Length | undefined): this-End-->
 
@@ -176,7 +176,7 @@ fontStyle(value: FontStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-fontStyle(value: FontStyle | undefined): this--><!--Device-TextClockAttribute-fontStyle(value: FontStyle | undefined): this-End-->
 
@@ -198,7 +198,7 @@ fontWeight(value: int | FontWeight | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-fontWeight(value: int | FontWeight | string | undefined): this--><!--Device-TextClockAttribute-fontWeight(value: int | FontWeight | string | undefined): this-End-->
 
@@ -220,7 +220,7 @@ format(value: ResourceStr | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-format(value: ResourceStr | undefined): this--><!--Device-TextClockAttribute-format(value: ResourceStr | undefined): this-End-->
 
@@ -242,7 +242,7 @@ onDateChange(event: Callback<long> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-onDateChange(event: Callback<long> | undefined): this--><!--Device-TextClockAttribute-onDateChange(event: Callback<long> | undefined): this-End-->
 
@@ -264,7 +264,7 @@ setTextClockOptions(options?: TextClockOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-setTextClockOptions(options?: TextClockOptions): this--><!--Device-TextClockAttribute-setTextClockOptions(options?: TextClockOptions): this-End-->
 
@@ -286,7 +286,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextClockAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this--><!--Device-TextClockAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this-End-->
 
@@ -310,7 +310,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

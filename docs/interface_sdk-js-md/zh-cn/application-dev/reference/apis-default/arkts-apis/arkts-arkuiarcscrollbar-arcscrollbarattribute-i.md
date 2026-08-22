@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ArcScrollBarAttribute--><!--Device-unnamed-export declare interface ArcScrollBarAttribute-End-->
 
@@ -25,7 +25,7 @@ attributeModifier(modifier: AttributeModifier<ArcScrollBarAttribute> | Attribute
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ArcScrollBarAttribute-attributeModifier(modifier: AttributeModifier<ArcScrollBarAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ArcScrollBarAttribute-attributeModifier(modifier: AttributeModifier<ArcScrollBarAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -47,7 +47,7 @@ setArcScrollBarOptions(options: ArcScrollBarOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ArcScrollBarAttribute-setArcScrollBarOptions(options: ArcScrollBarOptions): this--><!--Device-ArcScrollBarAttribute-setArcScrollBarOptions(options: ArcScrollBarOptions): this-End-->
 
@@ -71,7 +71,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcScrollBarAttribute-default--><!--Device-ArcScrollBarAttribute-default-End-->
 

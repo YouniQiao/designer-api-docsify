@@ -4,7 +4,7 @@ Defines the Web's request/response header.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-webview-interface WebHeader--><!--Device-webview-interface WebHeader-End-->
 
@@ -27,7 +27,7 @@ Gets the key of the request/response header.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebHeader-headerKey: string--><!--Device-WebHeader-headerKey: string-End-->
 
@@ -45,7 +45,7 @@ Gets the value of the request/response header.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebHeader-headerValue: string--><!--Device-WebHeader-headerValue: string-End-->
 

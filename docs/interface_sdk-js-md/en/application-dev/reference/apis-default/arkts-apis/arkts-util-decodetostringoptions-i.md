@@ -6,7 +6,7 @@ Defines the decode with stream related options parameters.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-util-interface DecodeToStringOptions--><!--Device-util-interface DecodeToStringOptions-End-->
 
@@ -29,7 +29,7 @@ Stream option controls stream processing in decoding. The default value is false
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-DecodeToStringOptions-stream?: boolean--><!--Device-DecodeToStringOptions-stream?: boolean-End-->
 

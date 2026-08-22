@@ -8,7 +8,7 @@ The type of promisify return function
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-util-type PromisifiedFunc =  (...args: FixedArray<Any>) => Promise<Any>--><!--Device-util-type PromisifiedFunc =  (...args: FixedArray<Any>) => Promise<Any>-End-->
 

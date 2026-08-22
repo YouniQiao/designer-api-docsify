@@ -4,7 +4,7 @@ Provide an interface for the style of an indicator including border radius
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface BoardStyle--><!--Device-unnamed-export interface BoardStyle-End-->
 
@@ -22,7 +22,7 @@ Define the border radius of the board
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

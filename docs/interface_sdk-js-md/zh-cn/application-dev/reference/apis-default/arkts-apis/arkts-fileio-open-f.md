@@ -15,7 +15,7 @@ function open(path: string, mode?: int): Promise<File>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function open(path: string, mode?: int): Promise<File>--><!--Device-fileIo-function open(path: string, mode?: int): Promise<File>-End-->
 
@@ -77,7 +77,7 @@ function open(path: string, callback: AsyncCallback<File>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function open(path: string, callback: AsyncCallback<File>): void--><!--Device-fileIo-function open(path: string, callback: AsyncCallback<File>): void-End-->
 
@@ -134,7 +134,7 @@ function open(path: string, mode: int, callback: AsyncCallback<File>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function open(path: string, mode: int, callback: AsyncCallback<File>): void--><!--Device-fileIo-function open(path: string, mode: int, callback: AsyncCallback<File>): void-End-->
 

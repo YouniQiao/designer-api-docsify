@@ -6,7 +6,7 @@ Define V1 decorated variable interface.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface IDecoratedV1Variable--><!--Device-unnamed-export declare interface IDecoratedV1Variable-End-->
 
@@ -22,7 +22,7 @@ Registers the watch callback function with the data source.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

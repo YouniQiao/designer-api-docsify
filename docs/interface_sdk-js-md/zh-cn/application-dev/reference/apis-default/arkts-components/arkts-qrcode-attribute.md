@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface QRCodeAttribute--><!--Device-unnamed-export declare interface QRCodeAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<QRCodeAttribute> | AttributeModifi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-QRCodeAttribute-attributeModifier(modifier: AttributeModifier<QRCodeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-QRCodeAttribute-attributeModifier(modifier: AttributeModifier<QRCodeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ backgroundColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-QRCodeAttribute-backgroundColor(value: ResourceColor | undefined): this--><!--Device-QRCodeAttribute-backgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -66,7 +66,7 @@ color(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-QRCodeAttribute-color(value: ResourceColor | undefined): this--><!--Device-QRCodeAttribute-color(value: ResourceColor | undefined): this-End-->
 
@@ -88,7 +88,7 @@ contentOpacity(value: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-QRCodeAttribute-contentOpacity(value: double | Resource | undefined): this--><!--Device-QRCodeAttribute-contentOpacity(value: double | Resource | undefined): this-End-->
 
@@ -110,7 +110,7 @@ setQRCodeOptions(value: ResourceStr): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-QRCodeAttribute-setQRCodeOptions(value: ResourceStr): this--><!--Device-QRCodeAttribute-setQRCodeOptions(value: ResourceStr): this-End-->
 
@@ -134,7 +134,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

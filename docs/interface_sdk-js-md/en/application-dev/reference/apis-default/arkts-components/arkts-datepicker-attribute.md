@@ -8,7 +8,7 @@ Defines the DatePicker component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface DatePickerAttribute--><!--Device-unnamed-export declare interface DatePickerAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<DatePickerAttribute> | AttributeMo
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-attributeModifier(modifier: AttributeModifier<DatePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-DatePickerAttribute-attributeModifier(modifier: AttributeModifier<DatePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ canLoop(isLoop: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-canLoop(isLoop: boolean | undefined): this--><!--Device-DatePickerAttribute-canLoop(isLoop: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-DatePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -88,7 +88,7 @@ disappearTextStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this--><!--Device-DatePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -110,7 +110,7 @@ enableHapticFeedback(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this--><!--Device-DatePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this-End-->
 
@@ -132,7 +132,7 @@ lunar(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-lunar(value: boolean | undefined): this--><!--Device-DatePickerAttribute-lunar(value: boolean | undefined): this-End-->
 
@@ -154,7 +154,7 @@ onDateChange(callback: Callback<Date> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-onDateChange(callback: Callback<Date> | undefined): this--><!--Device-DatePickerAttribute-onDateChange(callback: Callback<Date> | undefined): this-End-->
 
@@ -176,7 +176,7 @@ selectedTextStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this--><!--Device-DatePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -198,7 +198,7 @@ setDatePickerOptions(options?: DatePickerOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-setDatePickerOptions(options?: DatePickerOptions): this--><!--Device-DatePickerAttribute-setDatePickerOptions(options?: DatePickerOptions): this-End-->
 
@@ -220,7 +220,7 @@ textStyle(value: PickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DatePickerAttribute-textStyle(value: PickerTextStyle | undefined): this--><!--Device-DatePickerAttribute-textStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -244,7 +244,7 @@ Set the attribute modifier
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

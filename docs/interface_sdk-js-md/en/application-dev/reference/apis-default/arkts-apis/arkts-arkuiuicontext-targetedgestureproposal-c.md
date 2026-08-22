@@ -6,7 +6,7 @@ Class TargetedGestureProposal.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export abstract class TargetedGestureProposal--><!--Device-unnamed-export abstract class TargetedGestureProposal-End-->
 
@@ -29,7 +29,7 @@ The target frame node for gesture handling. This node will receive and process t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

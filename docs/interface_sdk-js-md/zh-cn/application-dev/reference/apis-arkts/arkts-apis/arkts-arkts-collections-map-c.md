@@ -128,6 +128,43 @@ constructor(iterable: Iterable<readonly [K, V]>)
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
 
+## containsValue
+
+```TypeScript
+containsValue(value: V): boolean
+```
+
+判断该Map中是否存在一个或多个键映射到指定值。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-containsValue(value: V): boolean--><!--Device-Map-containsValue(value: V): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | V | 是 | 指定值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 检查结果。如果存在指定值，则返回**true**；否则返回 **false**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The containsValue method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
+
 ## delete
 
 ```TypeScript
@@ -319,6 +356,153 @@ keys(): IterableIterator<K>
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
 | [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+
+## put
+
+```TypeScript
+put(key: K, value: V): V | undefined
+```
+
+向该Map添加或更新一个指定的键值对，并返回该键之前关联的值。
+
+> **NOTE：**
+> 
+> - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
+> **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-put(key: K, value: V): V | undefined--><!--Device-Map-put(key: K, value: V): V | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 添加或更新指定元素的键。 |
+| value | V | 是 | 添加或更新指定元素的值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 该键之前关联的值。如果键在Map对象中找不到，则返回**undefined**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The put method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
+
+## putAll
+
+```TypeScript
+putAll(from: Map<K, V>): void
+```
+
+使用指定ArkTS Map中的键值对更新该Map。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-putAll(from: Map<K, V>): void--><!--Device-Map-putAll(from: Map<K, V>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | Map&lt;K, V&gt; | 是 | 提供键值对的ArkTS Map。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The putAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
+
+## putAll
+
+```TypeScript
+putAll(from: BuiltinMap<K, V>): void
+```
+
+使用指定内建Map中的键值对更新该Map。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-putAll(from: BuiltinMap<K, V>): void--><!--Device-Map-putAll(from: BuiltinMap<K, V>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| from | [BuiltinMap](arkts-arkts-builtinmap-t.md)&lt;K, V&gt; | 是 | 提供键值对的内建Map。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The putAll method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
+
+## remove
+
+```TypeScript
+remove(key: K): V | undefined
+```
+
+删除该Map中的指定键及其对应值。
+
+> **NOTE：**
+> 
+> - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
+> **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-remove(key: K): V | undefined--><!--Device-Map-remove(key: K): V | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | K | 是 | 指定键。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| V \| undefined | 被删除的值。如果键在Map对象中找不到，则返回**undefined**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
 
 ## set
 

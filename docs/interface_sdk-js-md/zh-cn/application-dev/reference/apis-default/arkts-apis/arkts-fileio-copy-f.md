@@ -19,7 +19,7 @@ function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<v
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
 
@@ -85,7 +85,7 @@ function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): v
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -144,7 +144,7 @@ function copy(srcUri: string, destUri: string, options: CopyOptions, callback: A
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 

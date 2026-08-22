@@ -4,7 +4,7 @@ Defines the triggered function when the web page wants to display a JavaScript p
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnPromptEvent--><!--Device-unnamed-export declare interface OnPromptEvent-End-->
 
@@ -22,7 +22,7 @@ The message of prompt dialog.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnPromptEvent-message: string--><!--Device-OnPromptEvent-message: string-End-->
 
@@ -40,7 +40,7 @@ Handle the user's JavaScript result.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnPromptEvent-result: JsResult--><!--Device-OnPromptEvent-result: JsResult-End-->
 
@@ -58,7 +58,7 @@ The url of the page.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnPromptEvent-url: string--><!--Device-OnPromptEvent-url: string-End-->
 
@@ -76,7 +76,7 @@ The value of prompt dialog.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnPromptEvent-value: string--><!--Device-OnPromptEvent-value: string-End-->
 

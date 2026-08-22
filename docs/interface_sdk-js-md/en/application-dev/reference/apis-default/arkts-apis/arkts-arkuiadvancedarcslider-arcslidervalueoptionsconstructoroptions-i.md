@@ -4,7 +4,7 @@ Construct parameter types for ArcSliderValueOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ArcSliderValueOptionsConstructorOptions--><!--Device-unnamed-export interface ArcSliderValueOptionsConstructorOptions-End-->
 
@@ -29,7 +29,7 @@ Set the maximum progress value.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptionsConstructorOptions-max?: double--><!--Device-ArcSliderValueOptionsConstructorOptions-max?: double-End-->
 
@@ -49,7 +49,7 @@ Set the minimum progress value.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptionsConstructorOptions-min?: double--><!--Device-ArcSliderValueOptionsConstructorOptions-min?: double-End-->
 
@@ -67,7 +67,7 @@ Set current progress value. The default value is consistent with the value of th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderValueOptionsConstructorOptions-progress?: double--><!--Device-ArcSliderValueOptionsConstructorOptions-progress?: double-End-->
 

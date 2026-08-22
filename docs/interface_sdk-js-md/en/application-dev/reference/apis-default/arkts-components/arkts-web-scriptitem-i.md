@@ -4,7 +4,7 @@ Defines the contents of the JavaScript to be injected.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ScriptItem--><!--Device-unnamed-export declare interface ScriptItem-End-->
 
@@ -22,7 +22,7 @@ Sets the JavaScript to be injected.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ScriptItem-script: string--><!--Device-ScriptItem-script: string-End-->
 
@@ -40,7 +40,7 @@ Sets the rules of the JavaScript.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ScriptItem-scriptRules: Array<string>--><!--Device-ScriptItem-scriptRules: Array<string>-End-->
 
@@ -58,7 +58,7 @@ Set the regular expression rule that allows execution of this JavaScript.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

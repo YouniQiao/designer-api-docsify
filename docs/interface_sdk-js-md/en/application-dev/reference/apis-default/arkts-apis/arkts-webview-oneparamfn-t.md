@@ -8,7 +8,7 @@ The function with one parameter.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-type OneParamFn<T,V=void> = (param: T) => V--><!--Device-webview-type OneParamFn<T,V=void> = (param: T) => V-End-->
 

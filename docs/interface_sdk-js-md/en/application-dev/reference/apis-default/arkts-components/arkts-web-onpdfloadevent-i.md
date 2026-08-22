@@ -4,7 +4,7 @@ Defines the function triggered when the PDF loading is successful or fails.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnPdfLoadEvent--><!--Device-unnamed-export declare interface OnPdfLoadEvent-End-->
 
@@ -22,7 +22,7 @@ The PDF page loading result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnPdfLoadEvent-result: PdfLoadResult--><!--Device-OnPdfLoadEvent-result: PdfLoadResult-End-->
 
@@ -40,7 +40,7 @@ URL of the page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnPdfLoadEvent-url: string--><!--Device-OnPdfLoadEvent-url: string-End-->
 

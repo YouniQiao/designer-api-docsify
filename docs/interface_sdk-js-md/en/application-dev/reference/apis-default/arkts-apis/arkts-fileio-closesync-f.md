@@ -15,7 +15,7 @@ Closes a file or directory synchronously. After the file or directory is closed,
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function closeSync(file: int | File): void--><!--Device-fileIo-function closeSync(file: int | File): void-End-->
 

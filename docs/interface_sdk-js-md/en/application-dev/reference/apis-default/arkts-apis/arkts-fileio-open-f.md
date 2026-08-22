@@ -15,7 +15,7 @@ Opens a file or directory. This API supports the use of a URI. This API uses a p
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function open(path: string, mode?: int): Promise<File>--><!--Device-fileIo-function open(path: string, mode?: int): Promise<File>-End-->
 
@@ -77,7 +77,7 @@ Opens a file or directory. This API supports the use of a URI. This API uses an 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function open(path: string, callback: AsyncCallback<File>): void--><!--Device-fileIo-function open(path: string, callback: AsyncCallback<File>): void-End-->
 
@@ -134,7 +134,7 @@ This API supports the use of a URI.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function open(path: string, mode: int, callback: AsyncCallback<File>): void--><!--Device-fileIo-function open(path: string, mode: int, callback: AsyncCallback<File>): void-End-->
 

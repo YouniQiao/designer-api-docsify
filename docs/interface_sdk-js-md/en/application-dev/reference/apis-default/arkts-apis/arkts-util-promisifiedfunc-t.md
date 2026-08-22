@@ -8,7 +8,7 @@ The type of promisify return function
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-util-type PromisifiedFunc = (...args: FixedArray<Any>) => Promise<Any>--><!--Device-util-type PromisifiedFunc = (...args: FixedArray<Any>) => Promise<Any>-End-->
 

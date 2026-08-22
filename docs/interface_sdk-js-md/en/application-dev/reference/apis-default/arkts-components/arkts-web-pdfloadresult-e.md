@@ -4,7 +4,7 @@ Enumerates the PDF page loading results.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum PdfLoadResult--><!--Device-unnamed-export declare enum PdfLoadResult-End-->
 
@@ -20,7 +20,7 @@ The PDF file is successfully loaded.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfLoadResult-LOAD_SUCCESS = 0--><!--Device-PdfLoadResult-LOAD_SUCCESS = 0-End-->
 
@@ -36,7 +36,7 @@ The PDF file fails to be loaded.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1--><!--Device-PdfLoadResult-PARSE_ERROR_FILE = 1-End-->
 
@@ -52,7 +52,7 @@ The PDF file format is not supported.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2--><!--Device-PdfLoadResult-PARSE_ERROR_FORMAT = 2-End-->
 
@@ -68,7 +68,7 @@ The PDF file password is incorrect.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3--><!--Device-PdfLoadResult-PARSE_ERROR_PASSWORD = 3-End-->
 
@@ -84,7 +84,7 @@ The PDF file fails to be processed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4--><!--Device-PdfLoadResult-PARSE_ERROR_HANDLER = 4-End-->
 

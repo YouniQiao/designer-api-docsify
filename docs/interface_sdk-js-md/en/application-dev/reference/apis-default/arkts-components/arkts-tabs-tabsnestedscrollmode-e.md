@@ -4,7 +4,7 @@ Tabs nested scroll nested mode
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 <!--Device-unnamed-export declare enum TabsNestedScrollMode--><!--Device-unnamed-export declare enum TabsNestedScrollMode-End-->
 
@@ -20,7 +20,7 @@ The scrolling is contained within the Tabs component, and no scroll chaining occ
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ The Tabs component scrolls first, and when it hits the boundary, the parent cont
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

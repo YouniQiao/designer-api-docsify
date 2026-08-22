@@ -15,7 +15,7 @@ Creates a stream based on a file path. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createStream(path: string, mode: string): Promise<Stream>--><!--Device-fileIo-function createStream(path: string, mode: string): Promise<Stream>-End-->
 
@@ -77,7 +77,7 @@ Creates a stream based on a file path. To close the stream, use **close()** of [
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-fileIo-function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 

@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface GaugeAttribute--><!--Device-unnamed-export declare interface GaugeAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<GaugeAttribute> | AttributeModifie
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-attributeModifier(modifier: AttributeModifier<GaugeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-GaugeAttribute-attributeModifier(modifier: AttributeModifier<GaugeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGra
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, double]> | undefined): this--><!--Device-GaugeAttribute-colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, double]> | undefined): this-End-->
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<GaugeConfiguration> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-contentModifier(modifier: ContentModifier<GaugeConfiguration> | undefined): this--><!--Device-GaugeAttribute-contentModifier(modifier: ContentModifier<GaugeConfiguration> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ description(value: CustomBuilder | undefined | null): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-description(value: CustomBuilder | undefined | null): this--><!--Device-GaugeAttribute-description(value: CustomBuilder | undefined | null): this-End-->
 
@@ -110,7 +110,7 @@ endAngle(angle: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-endAngle(angle: double | undefined): this--><!--Device-GaugeAttribute-endAngle(angle: double | undefined): this-End-->
 
@@ -132,7 +132,7 @@ indicator(value: GaugeIndicatorOptions | undefined | null): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-indicator(value: GaugeIndicatorOptions | undefined | null): this--><!--Device-GaugeAttribute-indicator(value: GaugeIndicatorOptions | undefined | null): this-End-->
 
@@ -154,7 +154,7 @@ privacySensitive(isPrivacySensitiveMode: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this--><!--Device-GaugeAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this-End-->
 
@@ -176,7 +176,7 @@ setGaugeOptions(options: GaugeOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-setGaugeOptions(options: GaugeOptions): this--><!--Device-GaugeAttribute-setGaugeOptions(options: GaugeOptions): this-End-->
 
@@ -198,7 +198,7 @@ startAngle(angle: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-startAngle(angle: double | undefined): this--><!--Device-GaugeAttribute-startAngle(angle: double | undefined): this-End-->
 
@@ -220,7 +220,7 @@ strokeWidth(length: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-strokeWidth(length: Length | undefined): this--><!--Device-GaugeAttribute-strokeWidth(length: Length | undefined): this-End-->
 
@@ -242,7 +242,7 @@ trackShadow(value: GaugeShadowOptions | undefined | null): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-trackShadow(value: GaugeShadowOptions | undefined | null): this--><!--Device-GaugeAttribute-trackShadow(value: GaugeShadowOptions | undefined | null): this-End-->
 
@@ -264,7 +264,7 @@ value(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-GaugeAttribute-value(value: double | undefined): this--><!--Device-GaugeAttribute-value(value: double | undefined): this-End-->
 
@@ -288,7 +288,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

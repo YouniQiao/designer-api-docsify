@@ -15,7 +15,7 @@ function unlink(path: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function unlink(path: string): Promise<void>--><!--Device-fileIo-function unlink(path: string): Promise<void>-End-->
 
@@ -64,7 +64,7 @@ function unlink(path: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function unlink(path: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function unlink(path: string, callback: AsyncCallback<void>): void-End-->
 

@@ -4,7 +4,7 @@ Defines the copy progress information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-interface Progress--><!--Device-fileIo-interface Progress-End-->
 
@@ -27,7 +27,7 @@ Size of the copied data, in bytes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Progress-readonly processedSize: long--><!--Device-Progress-readonly processedSize: long-End-->
 
@@ -45,7 +45,7 @@ Total size of the data to be copied, in bytes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Progress-readonly totalSize: long--><!--Device-Progress-readonly totalSize: long-End-->
 

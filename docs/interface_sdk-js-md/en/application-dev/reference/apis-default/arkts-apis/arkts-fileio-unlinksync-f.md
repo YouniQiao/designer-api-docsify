@@ -15,7 +15,7 @@ Deletes a single file synchronously. This method cannot be used to delete a dire
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function unlinkSync(path: string): void--><!--Device-fileIo-function unlinkSync(path: string): void-End-->
 

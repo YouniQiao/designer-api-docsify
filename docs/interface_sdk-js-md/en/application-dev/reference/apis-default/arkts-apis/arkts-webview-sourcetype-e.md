@@ -4,7 +4,7 @@ Enumerates the media source types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum SourceType--><!--Device-webview-enum SourceType-End-->
 
@@ -20,7 +20,7 @@ URL.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SourceType-URL = 0--><!--Device-SourceType-URL = 0-End-->
 
@@ -36,7 +36,7 @@ Blob.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SourceType-MSE = 1--><!--Device-SourceType-MSE = 1-End-->
 

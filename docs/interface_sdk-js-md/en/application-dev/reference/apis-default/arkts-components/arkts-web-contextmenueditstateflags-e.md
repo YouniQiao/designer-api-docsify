@@ -4,7 +4,7 @@ Defines the context menu supported event bit flags, related to [onContextMenuSho
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum ContextMenuEditStateFlags--><!--Device-unnamed-export declare enum ContextMenuEditStateFlags-End-->
 
@@ -20,7 +20,7 @@ Editing is not allowed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuEditStateFlags-NONE = 0--><!--Device-ContextMenuEditStateFlags-NONE = 0-End-->
 
@@ -36,7 +36,7 @@ Cutting is supported.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0--><!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0-End-->
 
@@ -52,7 +52,7 @@ Copying is supported.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuEditStateFlags-CAN_COPY = 1 << 1--><!--Device-ContextMenuEditStateFlags-CAN_COPY = 1 << 1-End-->
 
@@ -68,7 +68,7 @@ Pasting is supported.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2--><!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2-End-->
 
@@ -84,7 +84,7 @@ Selecting all is supported.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuEditStateFlags-CAN_SELECT_ALL = 1 << 3--><!--Device-ContextMenuEditStateFlags-CAN_SELECT_ALL = 1 << 3-End-->
 

@@ -6,7 +6,7 @@ Enum type supplied to [cacheMode](arkts-web-attribute.md#cachemode) for setting 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum CacheMode--><!--Device-unnamed-export declare enum CacheMode-End-->
 
@@ -22,7 +22,7 @@ load cache when they are available and not expired, otherwise load online.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CacheMode-DEFAULT = 0--><!--Device-CacheMode-DEFAULT = 0-End-->
 
@@ -38,7 +38,7 @@ load cache when they are available, otherwise load online.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CacheMode-NONE = 1--><!--Device-CacheMode-NONE = 1-End-->
 
@@ -54,7 +54,7 @@ Load online and not cache.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CacheMode-ONLINE = 2--><!--Device-CacheMode-ONLINE = 2-End-->
 
@@ -70,7 +70,7 @@ load cache and not online.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CacheMode-ONLY = 3--><!--Device-CacheMode-ONLY = 3-End-->
 

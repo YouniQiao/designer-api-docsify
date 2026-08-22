@@ -4,7 +4,7 @@ Define the interface containing various material parameters.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-uiMaterial-export interface MaterialOptions--><!--Device-uiMaterial-export interface MaterialOptions-End-->
 
@@ -31,7 +31,7 @@ The type of the material.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

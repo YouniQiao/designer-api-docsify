@@ -6,7 +6,7 @@ The WaterFlowAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface WaterFlowAttribute--><!--Device-unnamed-export declare interface WaterFlowAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<WaterFlowAttribute> | AttributeMod
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-attributeModifier(modifier: AttributeModifier<WaterFlowAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-WaterFlowAttribute-attributeModifier(modifier: AttributeModifier<WaterFlowAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ cachedCount(value: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-cachedCount(value: int | undefined): this--><!--Device-WaterFlowAttribute-cachedCount(value: int | undefined): this-End-->
 
@@ -64,7 +64,7 @@ cachedCount(count: int | undefined, show: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-cachedCount(count: int | undefined, show: boolean | undefined): this--><!--Device-WaterFlowAttribute-cachedCount(count: int | undefined, show: boolean | undefined): this-End-->
 
@@ -87,7 +87,7 @@ columnsGap(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-columnsGap(value: Length | undefined): this--><!--Device-WaterFlowAttribute-columnsGap(value: Length | undefined): this-End-->
 
@@ -109,7 +109,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this--><!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this-End-->
 
@@ -131,7 +131,7 @@ itemConstraintSize(value: ConstraintSizeOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions | undefined): this--><!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions | undefined): this-End-->
 
@@ -153,7 +153,7 @@ layoutDirection(value: FlexDirection | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection | undefined): this--><!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection | undefined): this-End-->
 
@@ -175,7 +175,7 @@ onDidScroll(handler: OnScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-onDidScroll(handler: OnScrollCallback | undefined): this--><!--Device-WaterFlowAttribute-onDidScroll(handler: OnScrollCallback | undefined): this-End-->
 
@@ -197,7 +197,7 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this--><!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this-End-->
 
@@ -219,7 +219,7 @@ onScrollIndex(event: ((first: int, last: int) => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-onScrollIndex(event: ((first: int, last: int) => void) | undefined): this--><!--Device-WaterFlowAttribute-onScrollIndex(event: ((first: int, last: int) => void) | undefined): this-End-->
 
@@ -241,7 +241,7 @@ onWillScroll(handler: OnWillScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this--><!--Device-WaterFlowAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this-End-->
 
@@ -263,7 +263,7 @@ rowsGap(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-rowsGap(value: Length | undefined): this--><!--Device-WaterFlowAttribute-rowsGap(value: Length | undefined): this-End-->
 
@@ -285,7 +285,7 @@ rowsTemplate(value: string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-rowsTemplate(value: string | undefined): this--><!--Device-WaterFlowAttribute-rowsTemplate(value: string | undefined): this-End-->
 
@@ -307,7 +307,7 @@ setWaterFlowOptions(options?: WaterFlowOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-setWaterFlowOptions(options?: WaterFlowOptions): this--><!--Device-WaterFlowAttribute-setWaterFlowOptions(options?: WaterFlowOptions): this-End-->
 
@@ -329,7 +329,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this--><!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): this-End-->
 
@@ -351,7 +351,7 @@ syncLoad(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-WaterFlowAttribute-syncLoad(enable: boolean | undefined): this--><!--Device-WaterFlowAttribute-syncLoad(enable: boolean | undefined): this-End-->
 
@@ -375,7 +375,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

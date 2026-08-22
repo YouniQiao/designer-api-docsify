@@ -8,7 +8,7 @@ Represents a dynamic synchronization scene of Swiper.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class SwiperDynamicSyncScene--><!--Device-unnamed-export declare class SwiperDynamicSyncScene-End-->
 
@@ -31,7 +31,7 @@ Type of the SwiperDynamicSyncSceneType.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

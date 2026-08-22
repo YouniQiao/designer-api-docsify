@@ -15,7 +15,7 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -51,7 +51,7 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 

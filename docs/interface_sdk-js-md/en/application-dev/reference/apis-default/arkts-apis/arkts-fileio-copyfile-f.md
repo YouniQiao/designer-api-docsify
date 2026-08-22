@@ -15,7 +15,7 @@ Copies a file. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyFile(src: string | int, dest: string | int, mode?: int): Promise<void>--><!--Device-fileIo-function copyFile(src: string | int, dest: string | int, mode?: int): Promise<void>-End-->
 
@@ -69,7 +69,7 @@ Copies a file. This API overwrites the file with the same name in the destinatio
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyFile(src: string | int, dest: string | int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copyFile(src: string | int, dest: string | int, callback: AsyncCallback<void>): void-End-->
 
@@ -121,7 +121,7 @@ Copies a file with the specified mode. This API uses an asynchronous callback to
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyFile(  src: string | int,  dest: string | int,  mode: int,  callback: AsyncCallback<void>): void--><!--Device-fileIo-function copyFile(  src: string | int,  dest: string | int,  mode: int,  callback: AsyncCallback<void>): void-End-->
 

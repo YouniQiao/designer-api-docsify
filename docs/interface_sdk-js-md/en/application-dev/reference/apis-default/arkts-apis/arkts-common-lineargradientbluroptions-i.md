@@ -4,7 +4,7 @@ Linear Gradient Blur Interface
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface LinearGradientBlurOptions--><!--Device-unnamed-export declare interface LinearGradientBlurOptions-End-->
 
@@ -22,7 +22,7 @@ Direction of linear gradient blur. Undefined value means GradientDirection.Left.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Percentage of blurring effect. Undefined value means no fractionStops.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

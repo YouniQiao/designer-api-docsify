@@ -4,7 +4,7 @@ Interface for types that can be deserialized from JSON. Classes implementing thi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-jsonx-export interface JsonElementSerializable--><!--Device-jsonx-export interface JsonElementSerializable-End-->
 
@@ -25,7 +25,7 @@ Converts the object to a JsonElement.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

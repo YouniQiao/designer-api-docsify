@@ -10,7 +10,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface RemoteWindowAttribute--><!--Device-unnamed-export declare interface RemoteWindowAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(modifier: AttributeModifier<RemoteWindowAttribute> | Attribute
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RemoteWindowAttribute-attributeModifier(modifier: AttributeModifier<RemoteWindowAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RemoteWindowAttribute-attributeModifier(modifier: AttributeModifier<RemoteWindowAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 

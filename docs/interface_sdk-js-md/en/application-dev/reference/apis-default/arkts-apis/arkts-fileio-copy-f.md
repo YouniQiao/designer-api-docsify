@@ -19,7 +19,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
 
@@ -85,7 +85,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -144,7 +144,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-fileIo-function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 

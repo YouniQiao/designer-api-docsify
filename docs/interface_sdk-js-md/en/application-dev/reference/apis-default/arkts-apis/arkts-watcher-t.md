@@ -8,7 +8,7 @@ Provides APIs for observing the changes of files or directories. Before using th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-type Watcher = fileIo.Watcher--><!--Device-unnamed-type Watcher = fileIo.Watcher-End-->
 

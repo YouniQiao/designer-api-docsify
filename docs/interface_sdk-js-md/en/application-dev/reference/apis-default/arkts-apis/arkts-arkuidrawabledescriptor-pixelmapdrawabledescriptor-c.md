@@ -8,7 +8,7 @@ Use the PixelMapDrawableDescriptor class to get the resource of pixelmap or reso
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class PixelMapDrawableDescriptor--><!--Device-unnamed-export declare class PixelMapDrawableDescriptor-End-->
 
@@ -29,7 +29,7 @@ Creates a new PixelMapDrawableDescriptor.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

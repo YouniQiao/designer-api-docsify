@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface SideBarContainerAttribute--><!--Device-unnamed-export declare interface SideBarContainerAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<SideBarContainerAttribute> | Attri
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-attributeModifier(modifier: AttributeModifier<SideBarContainerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-SideBarContainerAttribute-attributeModifier(modifier: AttributeModifier<SideBarContainerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ autoHide(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-autoHide(value: boolean | undefined): this--><!--Device-SideBarContainerAttribute-autoHide(value: boolean | undefined): this-End-->
 
@@ -64,7 +64,7 @@ controlButton(value: ButtonStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-controlButton(value: ButtonStyle | undefined): this--><!--Device-SideBarContainerAttribute-controlButton(value: ButtonStyle | undefined): this-End-->
 
@@ -86,7 +86,7 @@ divider(value: DividerStyle | null | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-divider(value: DividerStyle | null | undefined): this--><!--Device-SideBarContainerAttribute-divider(value: DividerStyle | null | undefined): this-End-->
 
@@ -108,7 +108,7 @@ maxSideBarWidth(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-maxSideBarWidth(value: Length | undefined): this--><!--Device-SideBarContainerAttribute-maxSideBarWidth(value: Length | undefined): this-End-->
 
@@ -130,7 +130,7 @@ minContentWidth(value: Dimension | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-minContentWidth(value: Dimension | undefined): this--><!--Device-SideBarContainerAttribute-minContentWidth(value: Dimension | undefined): this-End-->
 
@@ -152,7 +152,7 @@ minSideBarWidth(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-minSideBarWidth(value: Length | undefined): this--><!--Device-SideBarContainerAttribute-minSideBarWidth(value: Length | undefined): this-End-->
 
@@ -174,7 +174,7 @@ onChange(callback: ((value: boolean) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-onChange(callback: ((value: boolean) => void) | undefined): this--><!--Device-SideBarContainerAttribute-onChange(callback: ((value: boolean) => void) | undefined): this-End-->
 
@@ -196,7 +196,7 @@ setSideBarContainerOptions(type?: SideBarContainerType): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-setSideBarContainerOptions(type?: SideBarContainerType): this--><!--Device-SideBarContainerAttribute-setSideBarContainerOptions(type?: SideBarContainerType): this-End-->
 
@@ -218,7 +218,7 @@ showControlButton(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-showControlButton(value: boolean | undefined): this--><!--Device-SideBarContainerAttribute-showControlButton(value: boolean | undefined): this-End-->
 
@@ -240,7 +240,7 @@ showSideBar(value: boolean | Bindable<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-showSideBar(value: boolean | Bindable<boolean> | undefined): this--><!--Device-SideBarContainerAttribute-showSideBar(value: boolean | Bindable<boolean> | undefined): this-End-->
 
@@ -262,7 +262,7 @@ showSideBarWithGesture(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-showSideBarWithGesture(value: boolean | undefined): this--><!--Device-SideBarContainerAttribute-showSideBarWithGesture(value: boolean | undefined): this-End-->
 
@@ -284,7 +284,7 @@ sideBarPosition(value: SideBarPosition | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-sideBarPosition(value: SideBarPosition | undefined): this--><!--Device-SideBarContainerAttribute-sideBarPosition(value: SideBarPosition | undefined): this-End-->
 
@@ -306,7 +306,7 @@ sideBarWidth(value: Length | Bindable<Length> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-SideBarContainerAttribute-sideBarWidth(value: Length | Bindable<Length> | undefined): this--><!--Device-SideBarContainerAttribute-sideBarWidth(value: Length | Bindable<Length> | undefined): this-End-->
 
@@ -330,7 +330,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

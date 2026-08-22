@@ -16,7 +16,7 @@ Creates a **RandomAccessFile** instance based on a file path or file object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createRandomAccessFileSync(file: string | File, mode?: int,  options?: RandomAccessFileOptions): RandomAccessFile--><!--Device-fileIo-function createRandomAccessFileSync(file: string | File, mode?: int,  options?: RandomAccessFileOptions): RandomAccessFile-End-->
 

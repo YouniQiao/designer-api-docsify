@@ -15,7 +15,7 @@ Creates a single-level directory synchronously. If the parent directory does not
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function mkdirSync(path: string): void--><!--Device-fileIo-function mkdirSync(path: string): void-End-->
 
@@ -58,7 +58,7 @@ Creates a directory. This API returns the result synchronously. The value **true
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function mkdirSync(path: string, recursion: boolean): void--><!--Device-fileIo-function mkdirSync(path: string, recursion: boolean): void-End-->
 

@@ -6,7 +6,7 @@ Defines the constructor options for UnionEffectContainer.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface UnionEffectContainerOptions--><!--Device-unnamed-export declare interface UnionEffectContainerOptions-End-->
 
@@ -28,7 +28,7 @@ Spacing indicates the ease with which fusion occurs; it does not represent actua
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

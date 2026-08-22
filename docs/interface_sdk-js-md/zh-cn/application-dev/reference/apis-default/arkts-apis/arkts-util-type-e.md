@@ -6,7 +6,7 @@ Type表示base64的四种不同编码格式。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-util-enum Type--><!--Device-util-enum Type-End-->
 
@@ -22,7 +22,7 @@ BASIC
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-Type-BASIC--><!--Device-Type-BASIC-End-->
 
@@ -38,7 +38,7 @@ MIME
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-Type-MIME--><!--Device-Type-MIME-End-->
 
@@ -54,7 +54,7 @@ BASIC_URL_SAFE
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-Type-BASIC_URL_SAFE--><!--Device-Type-BASIC_URL_SAFE-End-->
 
@@ -70,7 +70,7 @@ MIME_URL_SAFE
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-Type-MIME_URL_SAFE--><!--Device-Type-MIME_URL_SAFE-End-->
 

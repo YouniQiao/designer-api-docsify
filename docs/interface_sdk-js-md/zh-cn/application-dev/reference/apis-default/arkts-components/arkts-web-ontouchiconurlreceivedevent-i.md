@@ -4,7 +4,7 @@ Defines the triggered callback when the application receive an new url of an app
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnTouchIconUrlReceivedEvent--><!--Device-unnamed-export declare interface OnTouchIconUrlReceivedEvent-End-->
 
@@ -22,7 +22,7 @@ Corresponding to whether apple-touch-icon is precomposited.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnTouchIconUrlReceivedEvent-precomposed: boolean--><!--Device-OnTouchIconUrlReceivedEvent-precomposed: boolean-End-->
 
@@ -40,7 +40,7 @@ The apple-touch-icon URL address received.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnTouchIconUrlReceivedEvent-url: string--><!--Device-OnTouchIconUrlReceivedEvent-url: string-End-->
 

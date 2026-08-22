@@ -8,7 +8,7 @@ Defines the Toggle component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ToggleAttribute--><!--Device-unnamed-export declare interface ToggleAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<ToggleAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-attributeModifier(modifier: AttributeModifier<ToggleAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ToggleAttribute-attributeModifier(modifier: AttributeModifier<ToggleAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefined): thi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefined): this--><!--Device-ToggleAttribute-contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefined): this-End-->
 
@@ -66,7 +66,7 @@ onChange(callback: ((isOn: boolean) => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-onChange(callback: ((isOn: boolean) => void) | undefined): this--><!--Device-ToggleAttribute-onChange(callback: ((isOn: boolean) => void) | undefined): this-End-->
 
@@ -88,7 +88,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-ToggleAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -110,7 +110,7 @@ setToggleOptions(options: ToggleOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-setToggleOptions(options: ToggleOptions): this--><!--Device-ToggleAttribute-setToggleOptions(options: ToggleOptions): this-End-->
 
@@ -132,7 +132,7 @@ switchPointColor(color: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-switchPointColor(color: ResourceColor | undefined): this--><!--Device-ToggleAttribute-switchPointColor(color: ResourceColor | undefined): this-End-->
 
@@ -154,7 +154,7 @@ switchStyle(value: SwitchStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ToggleAttribute-switchStyle(value: SwitchStyle | undefined): this--><!--Device-ToggleAttribute-switchStyle(value: SwitchStyle | undefined): this-End-->
 
@@ -178,7 +178,7 @@ Set toggle options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

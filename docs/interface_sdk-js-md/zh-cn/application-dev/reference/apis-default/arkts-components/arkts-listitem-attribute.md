@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ListItemAttribute--><!--Device-unnamed-export declare interface ListItemAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ListItemAttribute> | AttributeModi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemAttribute-attributeModifier(modifier: AttributeModifier<ListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ListItemAttribute-attributeModifier(modifier: AttributeModifier<ListItemAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ onSelect(event: ((isSelected: boolean) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemAttribute-onSelect(event: ((isSelected: boolean) => void) | undefined): this--><!--Device-ListItemAttribute-onSelect(event: ((isSelected: boolean) => void) | undefined): this-End-->
 
@@ -64,7 +64,7 @@ selectable(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemAttribute-selectable(value: boolean | undefined): this--><!--Device-ListItemAttribute-selectable(value: boolean | undefined): this-End-->
 
@@ -86,7 +86,7 @@ selected(value: boolean | Bindable<boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemAttribute-selected(value: boolean | Bindable<boolean> | undefined): this--><!--Device-ListItemAttribute-selected(value: boolean | Bindable<boolean> | undefined): this-End-->
 
@@ -108,7 +108,7 @@ setListItemOptions(value?: ListItemOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemAttribute-setListItemOptions(value?: ListItemOptions): this--><!--Device-ListItemAttribute-setListItemOptions(value?: ListItemOptions): this-End-->
 
@@ -130,7 +130,7 @@ swipeAction(value: SwipeActionOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemAttribute-swipeAction(value: SwipeActionOptions | undefined): this--><!--Device-ListItemAttribute-swipeAction(value: SwipeActionOptions | undefined): this-End-->
 
@@ -154,7 +154,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,7 +4,7 @@ Defines the triggered when the url loading.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnResourceLoadEvent--><!--Device-unnamed-export declare interface OnResourceLoadEvent-End-->
 
@@ -22,7 +22,7 @@ The URL of the loaded resource file.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnResourceLoadEvent-url: string--><!--Device-OnResourceLoadEvent-url: string-End-->
 

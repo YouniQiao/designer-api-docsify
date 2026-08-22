@@ -6,7 +6,7 @@ The ScrollAttribute
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ScrollAttribute--><!--Device-unnamed-export declare interface ScrollAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ScrollAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-attributeModifier(modifier: AttributeModifier<ScrollAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ScrollAttribute-attributeModifier(modifier: AttributeModifier<ScrollAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ edgeEffect(edgeEffect: EdgeEffect | undefined, options?: EdgeEffectOptions | und
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-edgeEffect(edgeEffect: EdgeEffect | undefined, options?: EdgeEffectOptions | undefined): this--><!--Device-ScrollAttribute-edgeEffect(edgeEffect: EdgeEffect | undefined, options?: EdgeEffectOptions | undefined): this-End-->
 
@@ -65,7 +65,7 @@ enableBouncesZoom(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-enableBouncesZoom(enable: boolean | undefined): this--><!--Device-ScrollAttribute-enableBouncesZoom(enable: boolean | undefined): this-End-->
 
@@ -87,7 +87,7 @@ enablePaging(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-enablePaging(value: boolean | undefined): this--><!--Device-ScrollAttribute-enablePaging(value: boolean | undefined): this-End-->
 
@@ -109,7 +109,7 @@ enableScrollInteraction(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-enableScrollInteraction(value: boolean | undefined): this--><!--Device-ScrollAttribute-enableScrollInteraction(value: boolean | undefined): this-End-->
 
@@ -131,7 +131,7 @@ friction(value: double | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-friction(value: double | Resource | undefined): this--><!--Device-ScrollAttribute-friction(value: double | Resource | undefined): this-End-->
 
@@ -153,7 +153,7 @@ initialOffset(value: OffsetOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-initialOffset(value: OffsetOptions | undefined): this--><!--Device-ScrollAttribute-initialOffset(value: OffsetOptions | undefined): this-End-->
 
@@ -175,7 +175,7 @@ maxZoomScale(scale: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-maxZoomScale(scale: double | undefined): this--><!--Device-ScrollAttribute-maxZoomScale(scale: double | undefined): this-End-->
 
@@ -197,7 +197,7 @@ minZoomScale(scale: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-minZoomScale(scale: double | undefined): this--><!--Device-ScrollAttribute-minZoomScale(scale: double | undefined): this-End-->
 
@@ -219,7 +219,7 @@ nestedScroll(value: NestedScrollOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-nestedScroll(value: NestedScrollOptions | undefined): this--><!--Device-ScrollAttribute-nestedScroll(value: NestedScrollOptions | undefined): this-End-->
 
@@ -241,7 +241,7 @@ onDidScroll(handler: ScrollOnScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onDidScroll(handler: ScrollOnScrollCallback | undefined): this--><!--Device-ScrollAttribute-onDidScroll(handler: ScrollOnScrollCallback | undefined): this-End-->
 
@@ -263,7 +263,7 @@ onDidZoom(event: ScrollOnDidZoomCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onDidZoom(event: ScrollOnDidZoomCallback | undefined): this--><!--Device-ScrollAttribute-onDidZoom(event: ScrollOnDidZoomCallback | undefined): this-End-->
 
@@ -285,7 +285,7 @@ onScrollEdge(event: OnScrollEdgeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onScrollEdge(event: OnScrollEdgeCallback | undefined): this--><!--Device-ScrollAttribute-onScrollEdge(event: OnScrollEdgeCallback | undefined): this-End-->
 
@@ -307,7 +307,7 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this--><!--Device-ScrollAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback | undefined): this-End-->
 
@@ -329,7 +329,7 @@ onScrollStart(event: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onScrollStart(event: VoidCallback | undefined): this--><!--Device-ScrollAttribute-onScrollStart(event: VoidCallback | undefined): this-End-->
 
@@ -351,7 +351,7 @@ onScrollStop(event: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onScrollStop(event: VoidCallback | undefined): this--><!--Device-ScrollAttribute-onScrollStop(event: VoidCallback | undefined): this-End-->
 
@@ -373,7 +373,7 @@ onWillScroll(handler: ScrollOnWillScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onWillScroll(handler: ScrollOnWillScrollCallback | undefined): this--><!--Device-ScrollAttribute-onWillScroll(handler: ScrollOnWillScrollCallback | undefined): this-End-->
 
@@ -395,7 +395,7 @@ onZoomStart(event: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onZoomStart(event: VoidCallback | undefined): this--><!--Device-ScrollAttribute-onZoomStart(event: VoidCallback | undefined): this-End-->
 
@@ -417,7 +417,7 @@ onZoomStop(event: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-onZoomStop(event: VoidCallback | undefined): this--><!--Device-ScrollAttribute-onZoomStop(event: VoidCallback | undefined): this-End-->
 
@@ -439,7 +439,7 @@ scrollBar(barState: BarState | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-scrollBar(barState: BarState | undefined): this--><!--Device-ScrollAttribute-scrollBar(barState: BarState | undefined): this-End-->
 
@@ -461,7 +461,7 @@ scrollBarColor(color: Color | int | string | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-scrollBarColor(color: Color | int | string | Resource | undefined): this--><!--Device-ScrollAttribute-scrollBarColor(color: Color | int | string | Resource | undefined): this-End-->
 
@@ -483,7 +483,7 @@ scrollBarWidth(value: double | string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-scrollBarWidth(value: double | string | undefined): this--><!--Device-ScrollAttribute-scrollBarWidth(value: double | string | undefined): this-End-->
 
@@ -505,7 +505,7 @@ scrollBarWidth(value: Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-scrollBarWidth(value: Resource | undefined): this--><!--Device-ScrollAttribute-scrollBarWidth(value: Resource | undefined): this-End-->
 
@@ -527,7 +527,7 @@ scrollSnap(value: ScrollSnapOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-scrollSnap(value: ScrollSnapOptions | undefined): this--><!--Device-ScrollAttribute-scrollSnap(value: ScrollSnapOptions | undefined): this-End-->
 
@@ -549,7 +549,7 @@ scrollable(value: ScrollDirection | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection | undefined): this-End-->
 
@@ -571,7 +571,7 @@ setScrollOptions(scroller?: Scroller): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-setScrollOptions(scroller?: Scroller): this--><!--Device-ScrollAttribute-setScrollOptions(scroller?: Scroller): this-End-->
 
@@ -593,7 +593,7 @@ zoomScale(scale: double | Bindable<double> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ScrollAttribute-zoomScale(scale: double | Bindable<double> | undefined): this--><!--Device-ScrollAttribute-zoomScale(scale: double | Bindable<double> | undefined): this-End-->
 
@@ -617,7 +617,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

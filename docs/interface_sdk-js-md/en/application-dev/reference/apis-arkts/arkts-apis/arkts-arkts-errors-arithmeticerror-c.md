@@ -6,7 +6,7 @@ Represents error that is thrown when illegal arithmetic operation has occurred (
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class ArithmeticError--><!--Device-unnamed-export class ArithmeticError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new ArithmeticError instance with provided message and error specif
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

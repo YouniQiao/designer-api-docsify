@@ -6,7 +6,7 @@ Enum type supplied to threatType for the website's threat type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum ThreatType--><!--Device-unnamed-export declare enum ThreatType-End-->
 
@@ -22,7 +22,7 @@ Illegal websites.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ThreatType-THREAT_ILLEGAL = 0--><!--Device-ThreatType-THREAT_ILLEGAL = 0-End-->
 
@@ -38,7 +38,7 @@ Fraud websites.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ThreatType-THREAT_FRAUD = 1--><!--Device-ThreatType-THREAT_FRAUD = 1-End-->
 
@@ -54,7 +54,7 @@ Websites with security risks.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ThreatType-THREAT_RISK = 2--><!--Device-ThreatType-THREAT_RISK = 2-End-->
 
@@ -70,7 +70,7 @@ Websites suspected of containing unhealthy content. ArkWeb will not intercept th
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ThreatType-THREAT_WARNING = 3--><!--Device-ThreatType-THREAT_WARNING = 3-End-->
 
@@ -86,7 +86,7 @@ Security check passed, no risks found.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ThreatType-THREAT_NONE = 4--><!--Device-ThreatType-THREAT_NONE = 4-End-->
 
@@ -102,7 +102,7 @@ Security check not performed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ThreatType-THREAT_UNPROCESSED = 5--><!--Device-ThreatType-THREAT_UNPROCESSED = 5-End-->
 

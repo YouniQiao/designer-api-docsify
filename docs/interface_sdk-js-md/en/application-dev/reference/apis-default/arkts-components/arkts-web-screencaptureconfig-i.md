@@ -4,7 +4,7 @@ Provides the web screen capture configuration.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ScreenCaptureConfig--><!--Device-unnamed-export declare interface ScreenCaptureConfig-End-->
 
@@ -22,7 +22,7 @@ Web screen capture mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ScreenCaptureConfig-captureMode: WebCaptureMode--><!--Device-ScreenCaptureConfig-captureMode: WebCaptureMode-End-->
 

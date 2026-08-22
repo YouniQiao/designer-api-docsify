@@ -8,7 +8,7 @@ The callback of safe browsing check.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void--><!--Device-unnamed-export type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void-End-->
 

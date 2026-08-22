@@ -4,7 +4,7 @@ Enumerates the access modes to verify. If this parameter is left blank, the syst
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-enum AccessModeType--><!--Device-fileIo-enum AccessModeType-End-->
 
@@ -20,7 +20,7 @@ Whether the file exists.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AccessModeType-EXIST = 0--><!--Device-AccessModeType-EXIST = 0-End-->
 
@@ -36,7 +36,7 @@ Verify the write permission on the file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AccessModeType-WRITE = 2--><!--Device-AccessModeType-WRITE = 2-End-->
 
@@ -52,7 +52,7 @@ Verify the read permission on the file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AccessModeType-READ = 4--><!--Device-AccessModeType-READ = 4-End-->
 
@@ -68,7 +68,7 @@ Verify the read/write permission on the file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-AccessModeType-READ_WRITE = 6--><!--Device-AccessModeType-READ_WRITE = 6-End-->
 

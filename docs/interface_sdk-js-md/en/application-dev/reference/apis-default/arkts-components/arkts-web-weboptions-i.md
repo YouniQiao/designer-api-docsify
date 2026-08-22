@@ -4,7 +4,7 @@ Defines the Web options.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface WebOptions--><!--Device-unnamed-export declare interface WebOptions-End-->
 
@@ -22,7 +22,7 @@ Sets the controller of the Web.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebOptions-controller: WebviewController--><!--Device-WebOptions-controller: WebviewController-End-->
 
@@ -40,7 +40,7 @@ Sets whether mouse event will be transferred to touch event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebOptions-emulateTouchFromMouseEvent?: boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent?: boolean-End-->
 
@@ -58,7 +58,7 @@ Sets the incognito mode of the Web, the parameter is optional and default value 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebOptions-incognitoMode?: boolean--><!--Device-WebOptions-incognitoMode?: boolean-End-->
 
@@ -76,7 +76,7 @@ Rendering mode. RenderMode.ASYNC_RENDER (default, cannot be dynamically adjusted
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebOptions-renderMode?: RenderMode--><!--Device-WebOptions-renderMode?: RenderMode-End-->
 
@@ -94,7 +94,7 @@ A token indicating that the current Web component specifies a shared rendering p
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebOptions-sharedRenderProcessToken?: string--><!--Device-WebOptions-sharedRenderProcessToken?: string-End-->
 
@@ -112,7 +112,7 @@ Web resource address. If accessing local resource files, please use \$rawfile or
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebOptions-src: string | Resource--><!--Device-WebOptions-src: string | Resource-End-->
 

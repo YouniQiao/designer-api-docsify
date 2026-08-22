@@ -4,7 +4,7 @@ Defines the function Triggered when the over scrolling.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnOverScrollEvent--><!--Device-unnamed-export declare interface OnOverScrollEvent-End-->
 
@@ -22,7 +22,7 @@ Based on the leftmost part of the page, the horizontal scroll offset is over. Th
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnOverScrollEvent-xOffset: double--><!--Device-OnOverScrollEvent-xOffset: double-End-->
 
@@ -40,7 +40,7 @@ Based on the top of the page, the vertical scroll offset is over. The unit is vp
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnOverScrollEvent-yOffset: double--><!--Device-OnOverScrollEvent-yOffset: double-End-->
 

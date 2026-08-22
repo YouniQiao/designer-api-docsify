@@ -8,7 +8,7 @@ The callback when web engine detects current page is blank or nearly blank.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void--><!--Device-unnamed-export type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void-End-->
 

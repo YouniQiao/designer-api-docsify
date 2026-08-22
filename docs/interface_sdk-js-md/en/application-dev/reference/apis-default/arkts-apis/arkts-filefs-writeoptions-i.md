@@ -6,7 +6,7 @@ Defines the options used in **write()**. It inherits from [Options](arkts-filefs
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface WriteOptions--><!--Device-unnamed-export interface WriteOptions-End-->
 
@@ -29,7 +29,7 @@ Length of the data to write, in bytes. This parameter is optional. The default v
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WriteOptions-length?: long--><!--Device-WriteOptions-length?: long-End-->
 
@@ -47,7 +47,7 @@ Start position of the file to write, in bytes. This parameter is optional. By de
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WriteOptions-offset?: long--><!--Device-WriteOptions-offset?: long-End-->
 

@@ -8,7 +8,7 @@ Defines the dimension property with number with units(vp|px|fp|lpx|%), and resou
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

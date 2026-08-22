@@ -4,7 +4,7 @@ Enumerates the playback statuses of the player, which is an input parameter of t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum PlaybackStatus--><!--Device-webview-enum PlaybackStatus-End-->
 
@@ -20,7 +20,7 @@ Paused.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PlaybackStatus-PAUSED = 0--><!--Device-PlaybackStatus-PAUSED = 0-End-->
 
@@ -36,7 +36,7 @@ Playing.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PlaybackStatus-PLAYING = 1--><!--Device-PlaybackStatus-PLAYING = 1-End-->
 

@@ -4,7 +4,7 @@ Provides an interface for the options for the scrollable bar mode including marg
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ScrollableBarModeOptions--><!--Device-unnamed-export interface ScrollableBarModeOptions-End-->
 
@@ -24,7 +24,7 @@ Left and right margin of the tab bar in scrollable mode. It cannot be set in per
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ Tab layout mode of the tab bar when not scrolling in scrollable mode. Default va
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

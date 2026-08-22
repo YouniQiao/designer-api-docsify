@@ -4,7 +4,7 @@ Handle the result of PIN verification.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class VerifyPinHandler--><!--Device-unnamed-export declare class VerifyPinHandler-End-->
 
@@ -20,7 +20,7 @@ Passes the PIN code verify result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void--><!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void-End-->
 
@@ -42,7 +42,7 @@ Constructor.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-VerifyPinHandler-constructor()--><!--Device-VerifyPinHandler-constructor()-End-->
 

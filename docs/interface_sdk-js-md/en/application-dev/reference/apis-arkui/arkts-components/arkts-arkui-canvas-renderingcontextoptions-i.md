@@ -6,7 +6,7 @@ Defines the options for rendering context.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface RenderingContextOptions--><!--Device-unnamed-export declare interface RenderingContextOptions-End-->
 
@@ -24,7 +24,7 @@ Indicates whether anti-aliasing is enabled for rendering context. Default value 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

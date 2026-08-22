@@ -4,7 +4,7 @@ Defines struct of the parameters used to configure the next accessibility focus 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface AccessibilityNextFocusParams--><!--Device-unnamed-export declare interface AccessibilityNextFocusParams-End-->
 
@@ -22,7 +22,7 @@ isConsiderDescendants - Determines whether the focus search should consider focu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

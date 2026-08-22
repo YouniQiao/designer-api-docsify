@@ -4,7 +4,7 @@ Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaP
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-interface MediaInfo--><!--Device-webview-interface MediaInfo-End-->
 
@@ -27,7 +27,7 @@ Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-attributes: Record<string, string>--><!--Device-MediaInfo-attributes: Record<string, string>-End-->
 
@@ -45,7 +45,7 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-controlList: string[]--><!--Device-MediaInfo-controlList: string[]-End-->
 
@@ -65,7 +65,7 @@ The value **true** means that the **controls** attribute exists in **&lt;video&g
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-controlsShown: boolean--><!--Device-MediaInfo-controlsShown: boolean-End-->
 
@@ -83,7 +83,7 @@ ID of **&lt;video&gt;** or **&lt;audio&gt;** on the web page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-embedID: string--><!--Device-MediaInfo-embedID: string-End-->
 
@@ -101,7 +101,7 @@ HTTP headers that need to be included in the player's request for media resource
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-headers: Record<string, string>--><!--Device-MediaInfo-headers: Record<string, string>-End-->
 
@@ -119,7 +119,7 @@ Source of the media. There may be multiple sources. The application needs to sel
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-mediaSrcList: MediaSourceInfo[]--><!--Device-MediaInfo-mediaSrcList: MediaSourceInfo[]-End-->
 
@@ -137,7 +137,7 @@ Type of the media.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-mediaType: MediaType--><!--Device-MediaInfo-mediaType: MediaType-End-->
 
@@ -157,7 +157,7 @@ The value **true** means to mute the player, and **false** means the opposite.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-muted: boolean--><!--Device-MediaInfo-muted: boolean-End-->
 
@@ -175,7 +175,7 @@ URL of a poster.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-posterUrl: string--><!--Device-MediaInfo-posterUrl: string-End-->
 
@@ -193,7 +193,7 @@ Whether preloading is required.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-preload: Preload--><!--Device-MediaInfo-preload: Preload-End-->
 
@@ -211,7 +211,7 @@ Surface information used for same-layer rendering.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-MediaInfo-surfaceInfo: NativeMediaPlayerSurfaceInfo--><!--Device-MediaInfo-surfaceInfo: NativeMediaPlayerSurfaceInfo-End-->
 

@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface RefreshAttribute--><!--Device-unnamed-export declare interface RefreshAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<RefreshAttribute> | AttributeModif
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-attributeModifier(modifier: AttributeModifier<RefreshAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RefreshAttribute-attributeModifier(modifier: AttributeModifier<RefreshAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ maxPullDownDistance(distance: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-maxPullDownDistance(distance: double | undefined): this--><!--Device-RefreshAttribute-maxPullDownDistance(distance: double | undefined): this-End-->
 
@@ -64,7 +64,7 @@ maxPullDownDistance(distance: Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-maxPullDownDistance(distance: Resource | undefined): this--><!--Device-RefreshAttribute-maxPullDownDistance(distance: Resource | undefined): this-End-->
 
@@ -86,7 +86,7 @@ onOffsetChange(callback: Callback<double> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-onOffsetChange(callback: Callback<double> | undefined): this--><!--Device-RefreshAttribute-onOffsetChange(callback: Callback<double> | undefined): this-End-->
 
@@ -108,7 +108,7 @@ onRefreshing(callback: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-onRefreshing(callback: (() => void) | undefined): this--><!--Device-RefreshAttribute-onRefreshing(callback: (() => void) | undefined): this-End-->
 
@@ -130,7 +130,7 @@ onStateChange(callback: ((state: RefreshStatus) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-onStateChange(callback: ((state: RefreshStatus) => void) | undefined): this--><!--Device-RefreshAttribute-onStateChange(callback: ((state: RefreshStatus) => void) | undefined): this-End-->
 
@@ -152,7 +152,7 @@ pullDownRatio(ratio: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-pullDownRatio(ratio: double | undefined): this--><!--Device-RefreshAttribute-pullDownRatio(ratio: double | undefined): this-End-->
 
@@ -174,7 +174,7 @@ pullToRefresh(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-pullToRefresh(value: boolean | undefined): this--><!--Device-RefreshAttribute-pullToRefresh(value: boolean | undefined): this-End-->
 
@@ -196,7 +196,7 @@ pullUpToCancelRefresh(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-pullUpToCancelRefresh(enabled: boolean | undefined): this--><!--Device-RefreshAttribute-pullUpToCancelRefresh(enabled: boolean | undefined): this-End-->
 
@@ -218,7 +218,7 @@ refreshOffset(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-refreshOffset(value: double | undefined): this--><!--Device-RefreshAttribute-refreshOffset(value: double | undefined): this-End-->
 
@@ -240,7 +240,7 @@ refreshOffset(value: Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-refreshOffset(value: Resource | undefined): this--><!--Device-RefreshAttribute-refreshOffset(value: Resource | undefined): this-End-->
 
@@ -262,7 +262,7 @@ setRefreshOptions(options: RefreshOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-RefreshAttribute-setRefreshOptions(options: RefreshOptions): this--><!--Device-RefreshAttribute-setRefreshOptions(options: RefreshOptions): this-End-->
 
@@ -286,7 +286,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

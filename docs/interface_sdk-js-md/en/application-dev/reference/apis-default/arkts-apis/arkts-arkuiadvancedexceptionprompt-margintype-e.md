@@ -4,7 +4,7 @@ Control margin status of ExceptionPrompt. @enum { number }
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum MarginType--><!--Device-unnamed-export declare enum MarginType-End-->
 
@@ -20,7 +20,7 @@ Default margin of MarginType, Margin 1: references ohos_id_card_margin_start, ma
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Margins can be adapted of MarginType, Margin 1: references ohos_id_max_padding_s
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

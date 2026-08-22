@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface TextTimerAttribute--><!--Device-unnamed-export declare interface TextTimerAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<TextTimerAttribute> | AttributeMod
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-attributeModifier(modifier: AttributeModifier<TextTimerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TextTimerAttribute-attributeModifier(modifier: AttributeModifier<TextTimerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ contentModifier(modifier: ContentModifier<TextTimerConfiguration> | undefined): 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-contentModifier(modifier: ContentModifier<TextTimerConfiguration> | undefined): this--><!--Device-TextTimerAttribute-contentModifier(modifier: ContentModifier<TextTimerConfiguration> | undefined): this-End-->
 
@@ -66,7 +66,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-TextTimerAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -88,7 +88,7 @@ fontFamily(value: ResourceStr | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-fontFamily(value: ResourceStr | undefined): this--><!--Device-TextTimerAttribute-fontFamily(value: ResourceStr | undefined): this-End-->
 
@@ -110,7 +110,7 @@ fontSize(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-fontSize(value: Length | undefined): this--><!--Device-TextTimerAttribute-fontSize(value: Length | undefined): this-End-->
 
@@ -132,7 +132,7 @@ fontStyle(value: FontStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-fontStyle(value: FontStyle | undefined): this--><!--Device-TextTimerAttribute-fontStyle(value: FontStyle | undefined): this-End-->
 
@@ -154,7 +154,7 @@ fontWeight(value: int | FontWeight | ResourceStr | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-fontWeight(value: int | FontWeight | ResourceStr | undefined): this--><!--Device-TextTimerAttribute-fontWeight(value: int | FontWeight | ResourceStr | undefined): this-End-->
 
@@ -176,7 +176,7 @@ format(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-format(value: string | undefined): this--><!--Device-TextTimerAttribute-format(value: string | undefined): this-End-->
 
@@ -198,7 +198,7 @@ onTimer(event: TimerCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-onTimer(event: TimerCallback | undefined): this--><!--Device-TextTimerAttribute-onTimer(event: TimerCallback | undefined): this-End-->
 
@@ -220,7 +220,7 @@ setTextTimerOptions(options?: TextTimerOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-setTextTimerOptions(options?: TextTimerOptions): this--><!--Device-TextTimerAttribute-setTextTimerOptions(options?: TextTimerOptions): this-End-->
 
@@ -242,7 +242,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextTimerAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this--><!--Device-TextTimerAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this-End-->
 
@@ -266,7 +266,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,7 +4,7 @@ Enumerates the types of the relative offset position used in **lseek()**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-enum WhenceType--><!--Device-fileIo-enum WhenceType-End-->
 
@@ -20,7 +20,7 @@ Beginning of the file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WhenceType-SEEK_SET = 0--><!--Device-WhenceType-SEEK_SET = 0-End-->
 
@@ -36,7 +36,7 @@ Current offset position.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WhenceType-SEEK_CUR = 1--><!--Device-WhenceType-SEEK_CUR = 1-End-->
 
@@ -52,7 +52,7 @@ End of the file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WhenceType-SEEK_END = 2--><!--Device-WhenceType-SEEK_END = 2-End-->
 

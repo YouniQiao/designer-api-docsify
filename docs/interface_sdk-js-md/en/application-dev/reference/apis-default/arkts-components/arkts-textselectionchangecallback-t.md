@@ -8,7 +8,7 @@ Callback with the selected text after the text selection content changes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export type TextSelectionChangeCallback = (selectionText: string) => void--><!--Device-unnamed-export type TextSelectionChangeCallback = (selectionText: string) => void-End-->
 

@@ -4,7 +4,7 @@ Defines the triggered function when the web page receives a JavaScript console m
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnConsoleEvent--><!--Device-unnamed-export declare interface OnConsoleEvent-End-->
 
@@ -22,7 +22,7 @@ Console message information of the event.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnConsoleEvent-message: ConsoleMessage--><!--Device-OnConsoleEvent-message: ConsoleMessage-End-->
 

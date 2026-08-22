@@ -8,7 +8,7 @@ Defines the ImageAnimator component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ImageAnimatorAttribute--><!--Device-unnamed-export declare interface ImageAnimatorAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<ImageAnimatorAttribute> | Attribut
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-attributeModifier(modifier: AttributeModifier<ImageAnimatorAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ImageAnimatorAttribute-attributeModifier(modifier: AttributeModifier<ImageAnimatorAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ duration(value: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-duration(value: int | undefined): this--><!--Device-ImageAnimatorAttribute-duration(value: int | undefined): this-End-->
 
@@ -66,7 +66,7 @@ fillMode(value: FillMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-fillMode(value: FillMode | undefined): this--><!--Device-ImageAnimatorAttribute-fillMode(value: FillMode | undefined): this-End-->
 
@@ -88,7 +88,7 @@ fixedSize(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-fixedSize(value: boolean | undefined): this--><!--Device-ImageAnimatorAttribute-fixedSize(value: boolean | undefined): this-End-->
 
@@ -110,7 +110,7 @@ images(value: Array<ImageFrameInfo> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-images(value: Array<ImageFrameInfo> | undefined): this--><!--Device-ImageAnimatorAttribute-images(value: Array<ImageFrameInfo> | undefined): this-End-->
 
@@ -132,7 +132,7 @@ iterations(value: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-iterations(value: int | undefined): this--><!--Device-ImageAnimatorAttribute-iterations(value: int | undefined): this-End-->
 
@@ -154,7 +154,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-monitorInvisibleArea(monitorInvisibleArea: boolean | undefined): this--><!--Device-ImageAnimatorAttribute-monitorInvisibleArea(monitorInvisibleArea: boolean | undefined): this-End-->
 
@@ -176,7 +176,7 @@ onCancel(event: (() => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-onCancel(event: (() => void) | undefined): this--><!--Device-ImageAnimatorAttribute-onCancel(event: (() => void) | undefined): this-End-->
 
@@ -198,7 +198,7 @@ onFinish(event: (() => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-onFinish(event: (() => void) | undefined): this--><!--Device-ImageAnimatorAttribute-onFinish(event: (() => void) | undefined): this-End-->
 
@@ -220,7 +220,7 @@ onPause(event: (() => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-onPause(event: (() => void) | undefined): this--><!--Device-ImageAnimatorAttribute-onPause(event: (() => void) | undefined): this-End-->
 
@@ -242,7 +242,7 @@ onRepeat(event: (() => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-onRepeat(event: (() => void) | undefined): this--><!--Device-ImageAnimatorAttribute-onRepeat(event: (() => void) | undefined): this-End-->
 
@@ -264,7 +264,7 @@ onStart(event: (() => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-onStart(event: (() => void) | undefined): this--><!--Device-ImageAnimatorAttribute-onStart(event: (() => void) | undefined): this-End-->
 
@@ -286,7 +286,7 @@ reverse(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-reverse(value: boolean | undefined): this--><!--Device-ImageAnimatorAttribute-reverse(value: boolean | undefined): this-End-->
 
@@ -308,7 +308,7 @@ setImageAnimatorOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-setImageAnimatorOptions(): this--><!--Device-ImageAnimatorAttribute-setImageAnimatorOptions(): this-End-->
 
@@ -324,7 +324,7 @@ state(value: AnimationStatus | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ImageAnimatorAttribute-state(value: AnimationStatus | undefined): this--><!--Device-ImageAnimatorAttribute-state(value: AnimationStatus | undefined): this-End-->
 
@@ -348,7 +348,7 @@ Set the attribute modifier
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

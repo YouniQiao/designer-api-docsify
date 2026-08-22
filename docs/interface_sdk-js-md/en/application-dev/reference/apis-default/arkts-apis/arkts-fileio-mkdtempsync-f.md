@@ -15,7 +15,7 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function mkdtempSync(prefix: string): string--><!--Device-fileIo-function mkdtempSync(prefix: string): string-End-->
 

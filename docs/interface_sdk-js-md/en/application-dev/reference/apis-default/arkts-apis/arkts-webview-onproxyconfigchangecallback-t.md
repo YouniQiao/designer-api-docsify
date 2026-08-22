@@ -8,7 +8,7 @@ The callback for proxy changed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-type OnProxyConfigChangeCallback = () => void--><!--Device-webview-type OnProxyConfigChangeCallback = () => void-End-->
 

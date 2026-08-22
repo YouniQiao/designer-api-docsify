@@ -4,7 +4,7 @@ Provides APIs for stream operations, such as reading and writing data streams of
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-interface Stream--><!--Device-fileIo-interface Stream-End-->
 
@@ -25,7 +25,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
 
@@ -58,7 +58,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
 
@@ -91,7 +91,7 @@ Closes the file stream synchronously. After the stream is closed, it cannot be u
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
 
@@ -118,7 +118,7 @@ Flushes all data from this stream. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
 
@@ -157,7 +157,7 @@ Flushes the file stream. This API returns the result asynchronously. This API us
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -196,7 +196,7 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
@@ -232,7 +232,7 @@ Reads data from a stream file and returns the number of bytes read. This API use
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<long>--><!--Device-Stream-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<long>-End-->
 
@@ -276,7 +276,7 @@ Reads data from a stream file and returns the number of bytes read. This API use
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void-End-->
 
@@ -317,7 +317,7 @@ Reads data from a stream file and returns the number of bytes read. The read opt
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<long>  ): void--><!--Device-Stream-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<long>  ): void-End-->
 
@@ -358,7 +358,7 @@ Reads data from a stream file synchronously and returns the number of bytes read
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): long--><!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): long-End-->
 
@@ -405,7 +405,7 @@ Writes data to a stream file and returns the number of bytes written. This API u
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<long>--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<long>-End-->
 
@@ -451,7 +451,7 @@ Writes data to a stream file and returns the number of bytes written. This API u
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void-End-->
 
@@ -495,7 +495,7 @@ Writes data to a stream file and returns the number of bytes written. The write 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<long>  ): void--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<long>  ): void-End-->
 
@@ -539,7 +539,7 @@ Writes data to a stream file synchronously and returns the number of bytes writt
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): long--><!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): long-End-->
 

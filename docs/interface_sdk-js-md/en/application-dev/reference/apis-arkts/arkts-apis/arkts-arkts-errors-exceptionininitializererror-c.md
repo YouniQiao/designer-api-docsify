@@ -6,7 +6,7 @@ Represents error that is thrown when there is an error in initializer
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class ExceptionInInitializerError--><!--Device-unnamed-export class ExceptionInInitializerError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new ExceptionInInitializerError instance with provided message and 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

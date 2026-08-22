@@ -8,7 +8,7 @@ Defines the CheckboxGroup component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface CheckboxGroupAttribute--><!--Device-unnamed-export declare interface CheckboxGroupAttribute-End-->
 
@@ -23,7 +23,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-attributeModifier(        modifier: AttributeModifier<CheckboxGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CheckboxGroupAttribute-attributeModifier(        modifier: AttributeModifier<CheckboxGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -45,7 +45,7 @@ checkboxShape(value: CheckBoxShape | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-checkboxShape(value: CheckBoxShape | undefined): this--><!--Device-CheckboxGroupAttribute-checkboxShape(value: CheckBoxShape | undefined): this-End-->
 
@@ -67,7 +67,7 @@ contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | undefine
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | undefined): this--><!--Device-CheckboxGroupAttribute-contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | undefined): this-End-->
 
@@ -89,7 +89,7 @@ mark(value: MarkStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-mark(value: MarkStyle | undefined): this--><!--Device-CheckboxGroupAttribute-mark(value: MarkStyle | undefined): this-End-->
 
@@ -111,7 +111,7 @@ onChange(callback: OnCheckboxGroupChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-onChange(callback: OnCheckboxGroupChangeCallback | undefined): this--><!--Device-CheckboxGroupAttribute-onChange(callback: OnCheckboxGroupChangeCallback | undefined): this-End-->
 
@@ -133,7 +133,7 @@ selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this--><!--Device-CheckboxGroupAttribute-selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this-End-->
 
@@ -155,7 +155,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-CheckboxGroupAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -177,7 +177,7 @@ setCheckboxGroupOptions(options?: CheckboxGroupOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-setCheckboxGroupOptions(options?: CheckboxGroupOptions): this--><!--Device-CheckboxGroupAttribute-setCheckboxGroupOptions(options?: CheckboxGroupOptions): this-End-->
 
@@ -199,7 +199,7 @@ unselectedColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-CheckboxGroupAttribute-unselectedColor(value: ResourceColor | undefined): this--><!--Device-CheckboxGroupAttribute-unselectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -223,7 +223,7 @@ Set checkboxgroup options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

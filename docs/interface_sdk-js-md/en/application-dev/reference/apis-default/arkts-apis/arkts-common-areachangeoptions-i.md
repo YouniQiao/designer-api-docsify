@@ -4,7 +4,7 @@ Defines the options about AreaChangeEvent.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface AreaChangeOptions--><!--Device-unnamed-export declare interface AreaChangeOptions-End-->
 
@@ -24,7 +24,7 @@ The value of expectedUpdateInterval indicates the desired update interval (ms).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

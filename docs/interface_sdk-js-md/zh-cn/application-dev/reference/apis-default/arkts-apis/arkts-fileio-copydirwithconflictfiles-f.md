@@ -18,7 +18,7 @@ function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCall
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,   Array<ConflictFiles>>): void--><!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,   Array<ConflictFiles>>): void-End-->
 
@@ -50,7 +50,7 @@ function copyDirWithConflictFiles(src: string, dest: string, mode: int,
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, mode: int,  callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, mode: int,  callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
 

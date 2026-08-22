@@ -4,7 +4,7 @@ Defines the line spacing options.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface LineSpacingOptions--><!--Device-unnamed-export declare interface LineSpacingOptions-End-->
 
@@ -22,7 +22,7 @@ Used to set whether it will only take effect between lines.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

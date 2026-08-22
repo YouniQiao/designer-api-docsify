@@ -6,7 +6,7 @@ Defines the LoadingProgress component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface LoadingProgressAttribute--><!--Device-unnamed-export declare interface LoadingProgressAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<LoadingProgressAttribute> | Attrib
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LoadingProgressAttribute-attributeModifier(modifier: AttributeModifier<LoadingProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LoadingProgressAttribute-attributeModifier(modifier: AttributeModifier<LoadingProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ color(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LoadingProgressAttribute-color(value: ResourceColor | undefined): this--><!--Device-LoadingProgressAttribute-color(value: ResourceColor | undefined): this-End-->
 
@@ -64,7 +64,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration> | undefi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LoadingProgressAttribute-contentModifier(modifier: ContentModifier<LoadingProgressConfiguration> | undefined): this--><!--Device-LoadingProgressAttribute-contentModifier(modifier: ContentModifier<LoadingProgressConfiguration> | undefined): this-End-->
 
@@ -86,7 +86,7 @@ enableLoading(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LoadingProgressAttribute-enableLoading(value: boolean | undefined): this--><!--Device-LoadingProgressAttribute-enableLoading(value: boolean | undefined): this-End-->
 
@@ -108,7 +108,7 @@ setLoadingProgressOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LoadingProgressAttribute-setLoadingProgressOptions(): this--><!--Device-LoadingProgressAttribute-setLoadingProgressOptions(): this-End-->
 
@@ -126,7 +126,7 @@ Sets the default LoadingProgress options. The default options include the defaul
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

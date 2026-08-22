@@ -6,7 +6,7 @@ Defines the result of UIContext.resolveUIContext. This class is a subclass of UI
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class ResolvedUIContext--><!--Device-unnamed-export declare class ResolvedUIContext-End-->
 
@@ -29,7 +29,7 @@ Resolving strategy of the UIContext.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

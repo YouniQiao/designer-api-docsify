@@ -17,7 +17,7 @@ function access(path: string, mode?: AccessModeType): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function access(path: string, mode?: AccessModeType): Promise<boolean>--><!--Device-fileIo-function access(path: string, mode?: AccessModeType): Promise<boolean>-End-->
 
@@ -64,7 +64,7 @@ function access(path: string, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function access(path: string, callback: AsyncCallback<boolean>): void--><!--Device-fileIo-function access(path: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -107,7 +107,7 @@ function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promi
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>--><!--Device-fileIo-function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>-End-->
 

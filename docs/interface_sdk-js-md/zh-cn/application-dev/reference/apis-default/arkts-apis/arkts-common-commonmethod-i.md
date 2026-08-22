@@ -4,7 +4,7 @@ CommonMethod
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface CommonMethod--><!--Device-unnamed-export declare interface CommonMethod-End-->
 
@@ -18,7 +18,7 @@ accessibilityActionOptions(option: AccessibilityActionOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityActionOptions(option: AccessibilityActionOptions | undefined): this--><!--Device-CommonMethod-accessibilityActionOptions(option: AccessibilityActionOptions | undefined): this-End-->
 
@@ -40,7 +40,7 @@ accessibilityChecked(isCheck: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityChecked(isCheck: boolean | undefined): this--><!--Device-CommonMethod-accessibilityChecked(isCheck: boolean | undefined): this-End-->
 
@@ -62,7 +62,7 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined): this--><!--Device-CommonMethod-accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined): this-End-->
 
@@ -84,7 +84,7 @@ accessibilityDefaultFocus(focus: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityDefaultFocus(focus: boolean | undefined): this--><!--Device-CommonMethod-accessibilityDefaultFocus(focus: boolean | undefined): this-End-->
 
@@ -106,7 +106,7 @@ accessibilityDescription(description: Resource | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityDescription(description: Resource | string | undefined): this--><!--Device-CommonMethod-accessibilityDescription(description: Resource | string | undefined): this-End-->
 
@@ -128,7 +128,7 @@ accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel | undefined): this--><!--Device-CommonMethod-accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel | undefined): this-End-->
 
@@ -150,7 +150,7 @@ accessibilityGroup(isGroup: boolean | undefined, accessibilityOptions?: Accessib
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityGroup(isGroup: boolean | undefined, accessibilityOptions?: AccessibilityOptions): this--><!--Device-CommonMethod-accessibilityGroup(isGroup: boolean | undefined, accessibilityOptions?: AccessibilityOptions): this-End-->
 
@@ -173,7 +173,7 @@ accessibilityLevel(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityLevel(value: string | undefined): this--><!--Device-CommonMethod-accessibilityLevel(value: string | undefined): this-End-->
 
@@ -195,7 +195,7 @@ accessibilityNextFocusId(nextId: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityNextFocusId(nextId: string | undefined): this--><!--Device-CommonMethod-accessibilityNextFocusId(nextId: string | undefined): this-End-->
 
@@ -217,7 +217,7 @@ accessibilityNextFocusId(nextId: string, nextFocusParams: AccessibilityNextFocus
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityNextFocusId(nextId: string, nextFocusParams: AccessibilityNextFocusParams | undefined): this--><!--Device-CommonMethod-accessibilityNextFocusId(nextId: string, nextFocusParams: AccessibilityNextFocusParams | undefined): this-End-->
 
@@ -240,7 +240,7 @@ accessibilityRole(role: AccessibilityRoleType | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityRole(role: AccessibilityRoleType | undefined): this--><!--Device-CommonMethod-accessibilityRole(role: AccessibilityRoleType | undefined): this-End-->
 
@@ -262,7 +262,7 @@ accessibilityScrollTriggerable(isTriggerable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityScrollTriggerable(isTriggerable: boolean | undefined): this--><!--Device-CommonMethod-accessibilityScrollTriggerable(isTriggerable: boolean | undefined): this-End-->
 
@@ -284,7 +284,7 @@ accessibilitySelected(isSelect: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilitySelected(isSelect: boolean | undefined): this--><!--Device-CommonMethod-accessibilitySelected(isSelect: boolean | undefined): this-End-->
 
@@ -306,7 +306,7 @@ accessibilityStateDescription(description: string | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityStateDescription(description: string | Resource | undefined): this--><!--Device-CommonMethod-accessibilityStateDescription(description: string | Resource | undefined): this-End-->
 
@@ -328,7 +328,7 @@ accessibilityText(text: Resource | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityText(text: Resource | string | undefined): this--><!--Device-CommonMethod-accessibilityText(text: Resource | string | undefined): this-End-->
 
@@ -350,7 +350,7 @@ accessibilityTextHint(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityTextHint(value: string | undefined): this--><!--Device-CommonMethod-accessibilityTextHint(value: string | undefined): this-End-->
 
@@ -372,7 +372,7 @@ accessibilityUseSamePage(pageMode: AccessibilitySamePageMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityUseSamePage(pageMode: AccessibilitySamePageMode | undefined): this--><!--Device-CommonMethod-accessibilityUseSamePage(pageMode: AccessibilitySamePageMode | undefined): this-End-->
 
@@ -394,7 +394,7 @@ accessibilityVirtualNode(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-accessibilityVirtualNode(builder: CustomBuilder | undefined): this--><!--Device-CommonMethod-accessibilityVirtualNode(builder: CustomBuilder | undefined): this-End-->
 
@@ -416,7 +416,7 @@ advancedBlendMode(effect: BlendMode | Blender | undefined, type?: BlendApplyType
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender | undefined, type?: BlendApplyType): this--><!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender | undefined, type?: BlendApplyType): this-End-->
 
@@ -439,7 +439,7 @@ align(alignment: Alignment | LocalizedAlignment | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-align(alignment: Alignment | LocalizedAlignment | undefined): this--><!--Device-CommonMethod-align(alignment: Alignment | LocalizedAlignment | undefined): this-End-->
 
@@ -461,7 +461,7 @@ alignRules(value: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-alignRules(value: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this--><!--Device-CommonMethod-alignRules(value: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this-End-->
 
@@ -483,7 +483,7 @@ alignSelf(value: ItemAlign | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-alignSelf(value: ItemAlign | undefined): this--><!--Device-CommonMethod-alignSelf(value: ItemAlign | undefined): this-End-->
 
@@ -505,7 +505,7 @@ allowDrop(value: Array<UniformDataType> | null | Array<string> | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-allowDrop(value: Array<UniformDataType> | null | Array<string> | undefined): this--><!--Device-CommonMethod-allowDrop(value: Array<UniformDataType> | null | Array<string> | undefined): this-End-->
 
@@ -527,7 +527,7 @@ animation(value: AnimateParam | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-animation(value: AnimateParam | undefined): this--><!--Device-CommonMethod-animation(value: AnimateParam | undefined): this-End-->
 
@@ -549,7 +549,7 @@ aspectRatio(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-aspectRatio(value: double | undefined): this--><!--Device-CommonMethod-aspectRatio(value: double | undefined): this-End-->
 
@@ -571,7 +571,7 @@ backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptions?: Sys
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): this--><!--Device-CommonMethod-backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): this-End-->
 
@@ -595,7 +595,7 @@ background(content: CustomBuilder | ResourceColor | undefined, options?: Backgro
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-background(content: CustomBuilder | ResourceColor | undefined, options?: BackgroundOptions): this--><!--Device-CommonMethod-background(content: CustomBuilder | ResourceColor | undefined, options?: BackgroundOptions): this-End-->
 
@@ -618,7 +618,7 @@ backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBlurStyleO
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): this--><!--Device-CommonMethod-backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): this-End-->
 
@@ -642,7 +642,7 @@ backgroundBrightness(params: BackgroundBrightnessOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundBrightness(params: BackgroundBrightnessOptions | undefined): this--><!--Device-CommonMethod-backgroundBrightness(params: BackgroundBrightnessOptions | undefined): this-End-->
 
@@ -664,7 +664,7 @@ backgroundColor(value: ResourceColor | ColorMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundColor(value: ResourceColor | ColorMetrics | undefined): this--><!--Device-CommonMethod-backgroundColor(value: ResourceColor | ColorMetrics | undefined): this-End-->
 
@@ -686,7 +686,7 @@ backgroundEffect(options: BackgroundEffectOptions | undefined, sysOptions?: Syst
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundEffect(options: BackgroundEffectOptions | undefined, sysOptions?: SystemAdaptiveOptions): this--><!--Device-CommonMethod-backgroundEffect(options: BackgroundEffectOptions | undefined, sysOptions?: SystemAdaptiveOptions): this-End-->
 
@@ -709,7 +709,7 @@ backgroundFilter(filter: Filter | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundFilter(filter: Filter | undefined): this--><!--Device-CommonMethod-backgroundFilter(filter: Filter | undefined): this-End-->
 
@@ -731,7 +731,7 @@ backgroundImage(src: ResourceStr | PixelMap | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundImage(src: ResourceStr | PixelMap | undefined): this--><!--Device-CommonMethod-backgroundImage(src: ResourceStr | PixelMap | undefined): this-End-->
 
@@ -753,7 +753,7 @@ backgroundImage(src: ResourceStr | PixelMap | undefined, options: BackgroundImag
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundImage(src: ResourceStr | PixelMap | undefined, options: BackgroundImageOptions): this--><!--Device-CommonMethod-backgroundImage(src: ResourceStr | PixelMap | undefined, options: BackgroundImageOptions): this-End-->
 
@@ -776,7 +776,7 @@ backgroundImage(src: ResourceStr | PixelMap | undefined, repeat: ImageRepeat): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundImage(src: ResourceStr | PixelMap | undefined, repeat: ImageRepeat): this--><!--Device-CommonMethod-backgroundImage(src: ResourceStr | PixelMap | undefined, repeat: ImageRepeat): this-End-->
 
@@ -799,7 +799,7 @@ backgroundImagePosition(value: Position | Alignment | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundImagePosition(value: Position | Alignment | undefined): this--><!--Device-CommonMethod-backgroundImagePosition(value: Position | Alignment | undefined): this-End-->
 
@@ -821,7 +821,7 @@ backgroundImageResizable(value: ResizableOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundImageResizable(value: ResizableOptions | undefined): this--><!--Device-CommonMethod-backgroundImageResizable(value: ResizableOptions | undefined): this-End-->
 
@@ -843,7 +843,7 @@ backgroundImageSize(value: SizeOptions | ImageSize | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-backgroundImageSize(value: SizeOptions | ImageSize | undefined): this--><!--Device-CommonMethod-backgroundImageSize(value: SizeOptions | ImageSize | undefined): this-End-->
 
@@ -865,7 +865,7 @@ bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: Custo
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, type?: ModalTransition): this--><!--Device-CommonMethod-bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, type?: ModalTransition): this-End-->
 
@@ -889,7 +889,7 @@ bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: Custo
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, options?: ContentCoverOptions): this--><!--Device-CommonMethod-bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, options?: ContentCoverOptions): this-End-->
 
@@ -913,7 +913,7 @@ bindContextMenu(content: CustomBuilder | undefined, responseType: ResponseType |
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContextMenu(content: CustomBuilder | undefined, responseType: ResponseType | undefined, options?: ContextMenuOptions): this--><!--Device-CommonMethod-bindContextMenu(content: CustomBuilder | undefined, responseType: ResponseType | undefined, options?: ContextMenuOptions): this-End-->
 
@@ -937,7 +937,7 @@ bindContextMenu(isShow: boolean | Bindable<boolean> | undefined, content: Custom
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContextMenu(isShow: boolean | Bindable<boolean> | undefined, content: CustomBuilder | undefined, options?: ContextMenuOptions): this--><!--Device-CommonMethod-bindContextMenu(isShow: boolean | Bindable<boolean> | undefined, content: CustomBuilder | undefined, options?: ContextMenuOptions): this-End-->
 
@@ -962,7 +962,7 @@ bindContextMenuByIsShow(isShow: boolean | Bindable<boolean> | undefined,
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContextMenuByIsShow(isShow: boolean | Bindable<boolean> | undefined,        content: CustomBuilder | Array<MenuElement> | undefined, options?: ContextMenuOptions): this--><!--Device-CommonMethod-bindContextMenuByIsShow(isShow: boolean | Bindable<boolean> | undefined,        content: CustomBuilder | Array<MenuElement> | undefined, options?: ContextMenuOptions): this-End-->
 
@@ -987,7 +987,7 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement> | unde
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement> | undefined,        responseType: ResponseType | undefined, options?: ContextMenuOptions): this--><!--Device-CommonMethod-bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement> | undefined,        responseType: ResponseType | undefined, options?: ContextMenuOptions): this-End-->
 
@@ -1011,7 +1011,7 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, options?: ContextMenuOptions): this--><!--Device-CommonMethod-bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, options?: ContextMenuOptions): this-End-->
 
@@ -1035,7 +1035,7 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,        options?: ContextMenuOptions): this--><!--Device-CommonMethod-bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,        options?: ContextMenuOptions): this-End-->
 
@@ -1058,7 +1058,7 @@ bindMenu(content: Array<MenuElement> | CustomBuilder | undefined, options?: Menu
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindMenu(content: Array<MenuElement> | CustomBuilder | undefined, options?: MenuOptions): this--><!--Device-CommonMethod-bindMenu(content: Array<MenuElement> | CustomBuilder | undefined, options?: MenuOptions): this-End-->
 
@@ -1081,7 +1081,7 @@ bindMenu(isShow: boolean | Bindable<boolean> | undefined, content: Array<MenuEle
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindMenu(isShow: boolean | Bindable<boolean> | undefined, content: Array<MenuElement> | CustomBuilder | undefined, options?: MenuOptions): this--><!--Device-CommonMethod-bindMenu(isShow: boolean | Bindable<boolean> | undefined, content: Array<MenuElement> | CustomBuilder | undefined, options?: MenuOptions): this-End-->
 
@@ -1105,7 +1105,7 @@ bindPopup(show: boolean | undefined, popup: PopupOptions | CustomPopupOptions | 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindPopup(show: boolean | undefined, popup: PopupOptions | CustomPopupOptions | undefined): this--><!--Device-CommonMethod-bindPopup(show: boolean | undefined, popup: PopupOptions | CustomPopupOptions | undefined): this-End-->
 
@@ -1128,7 +1128,7 @@ bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilde
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, options?: SheetOptions): this--><!--Device-CommonMethod-bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, options?: SheetOptions): this-End-->
 
@@ -1152,7 +1152,7 @@ bindTips(message: TipsMessageType | undefined, options?: TipsOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-bindTips(message: TipsMessageType | undefined, options?: TipsOptions): this--><!--Device-CommonMethod-bindTips(message: TipsMessageType | undefined, options?: TipsOptions): this-End-->
 
@@ -1175,7 +1175,7 @@ blendMode(value: BlendMode | undefined, type?: BlendApplyType): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-blendMode(value: BlendMode | undefined, type?: BlendApplyType): this--><!--Device-CommonMethod-blendMode(value: BlendMode | undefined, type?: BlendApplyType): this-End-->
 
@@ -1198,7 +1198,7 @@ blur(blurRadius: double | undefined, options?: BlurOptions, sysOptions?: SystemA
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-blur(blurRadius: double | undefined, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): this--><!--Device-CommonMethod-blur(blurRadius: double | undefined, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): this-End-->
 
@@ -1222,7 +1222,7 @@ border(value: BorderOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-border(value: BorderOptions | undefined): this--><!--Device-CommonMethod-border(value: BorderOptions | undefined): this-End-->
 
@@ -1244,7 +1244,7 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined): this--><!--Device-CommonMethod-borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined): this-End-->
 
@@ -1266,7 +1266,7 @@ borderImage(value: BorderImageOption | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-borderImage(value: BorderImageOption | undefined): this--><!--Device-CommonMethod-borderImage(value: BorderImageOption | undefined): this-End-->
 
@@ -1288,7 +1288,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses | undefined, type?: RenderStrategy | undefined): this--><!--Device-CommonMethod-borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses | undefined, type?: RenderStrategy | undefined): this-End-->
 
@@ -1311,7 +1311,7 @@ borderStyle(value: BorderStyle | EdgeStyles | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-borderStyle(value: BorderStyle | EdgeStyles | undefined): this--><!--Device-CommonMethod-borderStyle(value: BorderStyle | EdgeStyles | undefined): this-End-->
 
@@ -1333,7 +1333,7 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths | undefined): this--><!--Device-CommonMethod-borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths | undefined): this-End-->
 
@@ -1355,7 +1355,7 @@ brightness(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-brightness(value: double | undefined): this--><!--Device-CommonMethod-brightness(value: double | undefined): this-End-->
 
@@ -1377,7 +1377,7 @@ chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this--><!--Device-CommonMethod-chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this-End-->
 
@@ -1400,7 +1400,7 @@ chainWeight(chainWeight: ChainWeightOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-chainWeight(chainWeight: ChainWeightOptions | undefined): this--><!--Device-CommonMethod-chainWeight(chainWeight: ChainWeightOptions | undefined): this-End-->
 
@@ -1422,7 +1422,7 @@ clickEffect(value: ClickEffect | null | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-clickEffect(value: ClickEffect | null | undefined): this--><!--Device-CommonMethod-clickEffect(value: ClickEffect | null | undefined): this-End-->
 
@@ -1444,7 +1444,7 @@ clip(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-clip(value: boolean | undefined): this--><!--Device-CommonMethod-clip(value: boolean | undefined): this-End-->
 
@@ -1466,7 +1466,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined): this--><!--Device-CommonMethod-clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined): this-End-->
 
@@ -1488,7 +1488,7 @@ colorBlend(value: Color | string | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-colorBlend(value: Color | string | Resource | undefined): this--><!--Device-CommonMethod-colorBlend(value: Color | string | Resource | undefined): this-End-->
 
@@ -1510,7 +1510,7 @@ compositingFilter(filter: Filter | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-compositingFilter(filter: Filter | undefined): this--><!--Device-CommonMethod-compositingFilter(filter: Filter | undefined): this-End-->
 
@@ -1532,7 +1532,7 @@ constraintSize(value: ConstraintSizeOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-constraintSize(value: ConstraintSizeOptions | undefined): this--><!--Device-CommonMethod-constraintSize(value: ConstraintSizeOptions | undefined): this-End-->
 
@@ -1554,7 +1554,7 @@ contrast(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-contrast(value: double | undefined): this--><!--Device-CommonMethod-contrast(value: double | undefined): this-End-->
 
@@ -1576,7 +1576,7 @@ customProperty(name: string, value: CustomProperty): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-customProperty(name: string, value: CustomProperty): this--><!--Device-CommonMethod-customProperty(name: string, value: CustomProperty): this-End-->
 
@@ -1599,7 +1599,7 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-CommonMethod-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
@@ -1622,7 +1622,7 @@ defaultFocus(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-defaultFocus(value: boolean | undefined): this--><!--Device-CommonMethod-defaultFocus(value: boolean | undefined): this-End-->
 
@@ -1644,7 +1644,7 @@ direction(value: Direction | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-direction(value: Direction | undefined): this--><!--Device-CommonMethod-direction(value: Direction | undefined): this-End-->
 
@@ -1666,7 +1666,7 @@ displayPriority(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-displayPriority(value: double | undefined): this--><!--Device-CommonMethod-displayPriority(value: double | undefined): this-End-->
 
@@ -1688,7 +1688,7 @@ doubleSided(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-doubleSided(value: boolean | undefined): this--><!--Device-CommonMethod-doubleSided(value: boolean | undefined): this-End-->
 
@@ -1710,7 +1710,7 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string | undefined, config?:
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-dragPreview(preview: CustomBuilder | DragItemInfo | string | undefined, config?: PreviewConfiguration): this--><!--Device-CommonMethod-dragPreview(preview: CustomBuilder | DragItemInfo | string | undefined, config?: PreviewConfiguration): this-End-->
 
@@ -1733,7 +1733,7 @@ dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteract
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteractionOptions): this--><!--Device-CommonMethod-dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteractionOptions): this-End-->
 
@@ -1756,7 +1756,7 @@ draggable(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-draggable(value: boolean | undefined): this--><!--Device-CommonMethod-draggable(value: boolean | undefined): this-End-->
 
@@ -1778,7 +1778,7 @@ drawModifier(modifier: DrawModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-drawModifier(modifier: DrawModifier | undefined): this--><!--Device-CommonMethod-drawModifier(modifier: DrawModifier | undefined): this-End-->
 
@@ -1800,7 +1800,7 @@ edgeLight(params: EdgeLightParams | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): this--><!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): this-End-->
 
@@ -1822,7 +1822,7 @@ enableClickSoundEffect(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-enableClickSoundEffect(enabled: boolean | undefined): this--><!--Device-CommonMethod-enableClickSoundEffect(enabled: boolean | undefined): this-End-->
 
@@ -1844,7 +1844,7 @@ enabled(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-enabled(value: boolean | undefined): this--><!--Device-CommonMethod-enabled(value: boolean | undefined): this-End-->
 
@@ -1866,7 +1866,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): this--><!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): this-End-->
 
@@ -1888,7 +1888,7 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): this--><!--Device-CommonMethod-expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): this-End-->
 
@@ -1911,7 +1911,7 @@ flexBasis(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-flexBasis(value: double | string | undefined): this--><!--Device-CommonMethod-flexBasis(value: double | string | undefined): this-End-->
 
@@ -1933,7 +1933,7 @@ flexGrow(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-flexGrow(value: double | undefined): this--><!--Device-CommonMethod-flexGrow(value: double | undefined): this-End-->
 
@@ -1955,7 +1955,7 @@ flexShrink(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-flexShrink(value: double | undefined): this--><!--Device-CommonMethod-flexShrink(value: double | undefined): this-End-->
 
@@ -1977,7 +1977,7 @@ focusBox(style: FocusBoxStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-focusBox(style: FocusBoxStyle | undefined): this--><!--Device-CommonMethod-focusBox(style: FocusBoxStyle | undefined): this-End-->
 
@@ -1999,7 +1999,7 @@ focusOnTouch(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-focusOnTouch(value: boolean | undefined): this--><!--Device-CommonMethod-focusOnTouch(value: boolean | undefined): this-End-->
 
@@ -2021,7 +2021,7 @@ focusScopeId(id: string | undefined, isGroup?: boolean, arrowStepOut?: boolean):
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-focusScopeId(id: string | undefined, isGroup?: boolean, arrowStepOut?: boolean): this--><!--Device-CommonMethod-focusScopeId(id: string | undefined, isGroup?: boolean, arrowStepOut?: boolean): this-End-->
 
@@ -2045,7 +2045,7 @@ focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this--><!--Device-CommonMethod-focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this-End-->
 
@@ -2068,7 +2068,7 @@ focusable(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-focusable(value: boolean | undefined): this--><!--Device-CommonMethod-focusable(value: boolean | undefined): this-End-->
 
@@ -2090,7 +2090,7 @@ foregroundBlurStyle(style: BlurStyle | undefined, options?: ForegroundBlurStyleO
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-foregroundBlurStyle(style: BlurStyle | undefined, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): this--><!--Device-CommonMethod-foregroundBlurStyle(style: BlurStyle | undefined, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): this-End-->
 
@@ -2114,7 +2114,7 @@ foregroundColor(value: ResourceColor | ColoringStrategy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-foregroundColor(value: ResourceColor | ColoringStrategy | undefined): this--><!--Device-CommonMethod-foregroundColor(value: ResourceColor | ColoringStrategy | undefined): this-End-->
 
@@ -2136,7 +2136,7 @@ foregroundEffect(options: ForegroundEffectOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-foregroundEffect(options: ForegroundEffectOptions | undefined): this--><!--Device-CommonMethod-foregroundEffect(options: ForegroundEffectOptions | undefined): this-End-->
 
@@ -2158,7 +2158,7 @@ foregroundFilter(filter: Filter | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-foregroundFilter(filter: Filter | undefined): this--><!--Device-CommonMethod-foregroundFilter(filter: Filter | undefined): this-End-->
 
@@ -2180,7 +2180,7 @@ freeze(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-freeze(value: boolean | undefined): this--><!--Device-CommonMethod-freeze(value: boolean | undefined): this-End-->
 
@@ -2202,7 +2202,7 @@ geometryTransition(id: string | undefined, options?: GeometryTransitionOptions):
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-geometryTransition(id: string | undefined, options?: GeometryTransitionOptions): this--><!--Device-CommonMethod-geometryTransition(id: string | undefined, options?: GeometryTransitionOptions): this-End-->
 
@@ -2225,7 +2225,7 @@ gesture(gesture: GestureType, mask?: GestureMask): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-gesture(gesture: GestureType, mask?: GestureMask): this--><!--Device-CommonMethod-gesture(gesture: GestureType, mask?: GestureMask): this-End-->
 
@@ -2248,7 +2248,7 @@ gestureModifier(modifier: GestureModifier | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-gestureModifier(modifier: GestureModifier | undefined): this--><!--Device-CommonMethod-gestureModifier(modifier: GestureModifier | undefined): this-End-->
 
@@ -2270,7 +2270,7 @@ grayscale(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-grayscale(value: double | undefined): this--><!--Device-CommonMethod-grayscale(value: double | undefined): this-End-->
 
@@ -2292,7 +2292,7 @@ groupDefaultFocus(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-groupDefaultFocus(value: boolean | undefined): this--><!--Device-CommonMethod-groupDefaultFocus(value: boolean | undefined): this-End-->
 
@@ -2314,7 +2314,7 @@ height(heightValue: Length | LayoutPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-height(heightValue: Length | LayoutPolicy | undefined): this--><!--Device-CommonMethod-height(heightValue: Length | LayoutPolicy | undefined): this-End-->
 
@@ -2336,7 +2336,7 @@ hitTestBehavior(value: HitTestMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-hitTestBehavior(value: HitTestMode | undefined): this--><!--Device-CommonMethod-hitTestBehavior(value: HitTestMode | undefined): this-End-->
 
@@ -2358,7 +2358,7 @@ hoverEffect(value: HoverEffect | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-hoverEffect(value: HoverEffect | undefined): this--><!--Device-CommonMethod-hoverEffect(value: HoverEffect | undefined): this-End-->
 
@@ -2380,7 +2380,7 @@ hueRotate(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-hueRotate(value: double | string | undefined): this--><!--Device-CommonMethod-hueRotate(value: double | string | undefined): this-End-->
 
@@ -2402,7 +2402,7 @@ id(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-id(value: string | undefined): this--><!--Device-CommonMethod-id(value: string | undefined): this-End-->
 
@@ -2424,7 +2424,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Array<LayoutSafeAreaEdge> | undefined): this--><!--Device-CommonMethod-ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Array<LayoutSafeAreaEdge> | undefined): this-End-->
 
@@ -2447,7 +2447,7 @@ inspectorLabel(label: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-inspectorLabel(label: string | undefined): this--><!--Device-CommonMethod-inspectorLabel(label: string | undefined): this-End-->
 
@@ -2469,7 +2469,7 @@ invert(value: double | InvertOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-invert(value: double | InvertOptions | undefined): this--><!--Device-CommonMethod-invert(value: double | InvertOptions | undefined): this-End-->
 
@@ -2491,7 +2491,7 @@ key(value: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-key(value: string | undefined): this--><!--Device-CommonMethod-key(value: string | undefined): this-End-->
 
@@ -2513,7 +2513,7 @@ keyboardShortcut(value: string | FunctionKey | undefined, keys: Array<ModifierKe
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-keyboardShortcut(value: string | FunctionKey | undefined, keys: Array<ModifierKey> | undefined, action?: () => void): this--><!--Device-CommonMethod-keyboardShortcut(value: string | FunctionKey | undefined, keys: Array<ModifierKey> | undefined, action?: () => void): this-End-->
 
@@ -2537,7 +2537,7 @@ layoutGravity(alignment: LocalizedAlignment | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-layoutGravity(alignment: LocalizedAlignment | undefined): this--><!--Device-CommonMethod-layoutGravity(alignment: LocalizedAlignment | undefined): this-End-->
 
@@ -2559,7 +2559,7 @@ layoutWeight(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-layoutWeight(value: double | string | undefined): this--><!--Device-CommonMethod-layoutWeight(value: double | string | undefined): this-End-->
 
@@ -2581,7 +2581,7 @@ lightUpEffect(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-lightUpEffect(value: double | undefined): this--><!--Device-CommonMethod-lightUpEffect(value: double | undefined): this-End-->
 
@@ -2603,7 +2603,7 @@ linearGradient(value: LinearGradientOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-linearGradient(value: LinearGradientOptions | undefined): this--><!--Device-CommonMethod-linearGradient(value: LinearGradientOptions | undefined): this-End-->
 
@@ -2625,7 +2625,7 @@ linearGradientBlur(value: double | undefined, options: LinearGradientBlurOptions
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-linearGradientBlur(value: double | undefined, options: LinearGradientBlurOptions | undefined): this--><!--Device-CommonMethod-linearGradientBlur(value: double | undefined, options: LinearGradientBlurOptions | undefined): this-End-->
 
@@ -2648,7 +2648,7 @@ margin(value: Margin | Length | LocalizedMargin | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-margin(value: Margin | Length | LocalizedMargin | undefined): this--><!--Device-CommonMethod-margin(value: Margin | Length | LocalizedMargin | undefined): this-End-->
 
@@ -2670,7 +2670,7 @@ markAnchor(value: Position | LocalizedPosition | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-markAnchor(value: Position | LocalizedPosition | undefined): this--><!--Device-CommonMethod-markAnchor(value: Position | LocalizedPosition | undefined): this-End-->
 
@@ -2692,7 +2692,7 @@ mask(value: ProgressMask | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-mask(value: ProgressMask | undefined): this--><!--Device-CommonMethod-mask(value: ProgressMask | undefined): this-End-->
 
@@ -2714,7 +2714,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined): this--><!--Device-CommonMethod-maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined): this-End-->
 
@@ -2736,7 +2736,7 @@ materialFilter(filter: Filter | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-materialFilter(filter: Filter | undefined): this--><!--Device-CommonMethod-materialFilter(filter: Filter | undefined): this-End-->
 
@@ -2758,7 +2758,7 @@ monopolizeEvents(monopolize: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-monopolizeEvents(monopolize: boolean | undefined): this--><!--Device-CommonMethod-monopolizeEvents(monopolize: boolean | undefined): this-End-->
 
@@ -2780,7 +2780,7 @@ motionBlur(value: MotionBlurOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-motionBlur(value: MotionBlurOptions | undefined): this--><!--Device-CommonMethod-motionBlur(value: MotionBlurOptions | undefined): this-End-->
 
@@ -2802,7 +2802,7 @@ motionPath(value: MotionPathOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-motionPath(value: MotionPathOptions | undefined): this--><!--Device-CommonMethod-motionPath(value: MotionPathOptions | undefined): this-End-->
 
@@ -2824,7 +2824,7 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-mouseResponseRegion(value: Array<Rectangle> | Rectangle | undefined): this--><!--Device-CommonMethod-mouseResponseRegion(value: Array<Rectangle> | Rectangle | undefined): this-End-->
 
@@ -2846,7 +2846,7 @@ nextFocus(nextStep: FocusMovement | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-nextFocus(nextStep: FocusMovement | undefined): this--><!--Device-CommonMethod-nextFocus(nextStep: FocusMovement | undefined): this-End-->
 
@@ -2868,7 +2868,7 @@ obscured(reasons: Array<ObscuredReasons> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-obscured(reasons: Array<ObscuredReasons> | undefined): this--><!--Device-CommonMethod-obscured(reasons: Array<ObscuredReasons> | undefined): this-End-->
 
@@ -2890,7 +2890,7 @@ offset(value: Position | Edges | LocalizedEdges | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-offset(value: Position | Edges | LocalizedEdges | undefined): this--><!--Device-CommonMethod-offset(value: Position | Edges | LocalizedEdges | undefined): this-End-->
 
@@ -2912,7 +2912,7 @@ onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback | 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback | undefined): this--><!--Device-CommonMethod-onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback | undefined): this-End-->
 
@@ -2934,7 +2934,7 @@ onAccessibilityFocus(callback: AccessibilityFocusCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAccessibilityFocus(callback: AccessibilityFocusCallback | undefined): this--><!--Device-CommonMethod-onAccessibilityFocus(callback: AccessibilityFocusCallback | undefined): this-End-->
 
@@ -2956,7 +2956,7 @@ onAccessibilityHover(callback: AccessibilityCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAccessibilityHover(callback: AccessibilityCallback | undefined): this--><!--Device-CommonMethod-onAccessibilityHover(callback: AccessibilityCallback | undefined): this-End-->
 
@@ -2978,7 +2978,7 @@ onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback | und
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback | undefined): this--><!--Device-CommonMethod-onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback | undefined): this-End-->
 
@@ -3000,7 +3000,7 @@ onAppear(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAppear(event: (() => void) | undefined): this--><!--Device-CommonMethod-onAppear(event: (() => void) | undefined): this-End-->
 
@@ -3022,7 +3022,7 @@ onAreaChange(event: ((oldValue: Area, newValue: Area) => void) | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAreaChange(event: ((oldValue: Area, newValue: Area) => void) | undefined): this--><!--Device-CommonMethod-onAreaChange(event: ((oldValue: Area, newValue: Area) => void) | undefined): this-End-->
 
@@ -3044,7 +3044,7 @@ onAreaChange (event: AreaChangeCallback, options?: AreaChangeOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAreaChange (event: AreaChangeCallback, options?: AreaChangeOptions): this--><!--Device-CommonMethod-onAreaChange (event: AreaChangeCallback, options?: AreaChangeOptions): this-End-->
 
@@ -3067,7 +3067,7 @@ onAttach(callback: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAttach(callback: VoidCallback | undefined): this--><!--Device-CommonMethod-onAttach(callback: VoidCallback | undefined): this-End-->
 
@@ -3089,7 +3089,7 @@ onAxisEvent(event: Callback<AxisEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onAxisEvent(event: Callback<AxisEvent> | undefined): this--><!--Device-CommonMethod-onAxisEvent(event: Callback<AxisEvent> | undefined): this-End-->
 
@@ -3111,7 +3111,7 @@ onBlur(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onBlur(event: (() => void) | undefined): this--><!--Device-CommonMethod-onBlur(event: (() => void) | undefined): this-End-->
 
@@ -3133,7 +3133,7 @@ onChildTouchTest(event: ((value: Array<TouchTestInfo>) => TouchResult) | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onChildTouchTest(event: ((value: Array<TouchTestInfo>) => TouchResult) | undefined): this--><!--Device-CommonMethod-onChildTouchTest(event: ((value: Array<TouchTestInfo>) => TouchResult) | undefined): this-End-->
 
@@ -3155,7 +3155,7 @@ onClick(event: ((event: ClickEvent) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onClick(event: ((event: ClickEvent) => void) | undefined): this--><!--Device-CommonMethod-onClick(event: ((event: ClickEvent) => void) | undefined): this-End-->
 
@@ -3177,7 +3177,7 @@ onClick(event: Callback<ClickEvent> | undefined, distanceThreshold: double | und
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onClick(event: Callback<ClickEvent> | undefined, distanceThreshold: double | undefined): this--><!--Device-CommonMethod-onClick(event: Callback<ClickEvent> | undefined, distanceThreshold: double | undefined): this-End-->
 
@@ -3200,7 +3200,7 @@ onDetach(callback: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDetach(callback: VoidCallback | undefined): this--><!--Device-CommonMethod-onDetach(callback: VoidCallback | undefined): this-End-->
 
@@ -3222,7 +3222,7 @@ onDigitalCrown(handler: Callback<CrownEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDigitalCrown(handler: Callback<CrownEvent> | undefined): this--><!--Device-CommonMethod-onDigitalCrown(handler: Callback<CrownEvent> | undefined): this-End-->
 
@@ -3244,7 +3244,7 @@ onDisAppear(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDisAppear(event: (() => void) | undefined): this--><!--Device-CommonMethod-onDisAppear(event: (() => void) | undefined): this-End-->
 
@@ -3266,7 +3266,7 @@ onDragEnd(event: ((event: DragEvent, extraParams?: string) => void) | undefined)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDragEnd(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this--><!--Device-CommonMethod-onDragEnd(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this-End-->
 
@@ -3288,7 +3288,7 @@ onDragEnter(event: ((event: DragEvent, extraParams?: string) => void) | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDragEnter(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this--><!--Device-CommonMethod-onDragEnter(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this-End-->
 
@@ -3310,7 +3310,7 @@ onDragLeave(event: ((event: DragEvent, extraParams?: string) => void) | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDragLeave(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this--><!--Device-CommonMethod-onDragLeave(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this-End-->
 
@@ -3332,7 +3332,7 @@ onDragMove(event: ((event: DragEvent, extraParams?: string) => void) | undefined
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDragMove(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this--><!--Device-CommonMethod-onDragMove(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this-End-->
 
@@ -3354,7 +3354,7 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null | undefined,
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDragSpringLoading(callback: Callback<SpringLoadingContext> | null | undefined, configuration?: DragSpringLoadingConfiguration): this--><!--Device-CommonMethod-onDragSpringLoading(callback: Callback<SpringLoadingContext> | null | undefined, configuration?: DragSpringLoadingConfiguration): this-End-->
 
@@ -3377,7 +3377,7 @@ onDragStart(event: ((event: DragEvent, extraParams?: string) => CustomBuilder | 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDragStart(event: ((event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo) | undefined): this--><!--Device-CommonMethod-onDragStart(event: ((event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo) | undefined): this-End-->
 
@@ -3399,7 +3399,7 @@ onDrop(event: ((event: DragEvent, extraParams?: string) => void) | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDrop(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this--><!--Device-CommonMethod-onDrop(event: ((event: DragEvent, extraParams?: string) => void) | undefined): this-End-->
 
@@ -3421,7 +3421,7 @@ onDrop(eventCallback: OnDragEventCallback | undefined, dropOptions: DropOptions)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onDrop(eventCallback: OnDragEventCallback | undefined, dropOptions: DropOptions): this--><!--Device-CommonMethod-onDrop(eventCallback: OnDragEventCallback | undefined, dropOptions: DropOptions): this-End-->
 
@@ -3444,7 +3444,7 @@ onFocus(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onFocus(event: (() => void) | undefined): this--><!--Device-CommonMethod-onFocus(event: (() => void) | undefined): this-End-->
 
@@ -3466,7 +3466,7 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onFocusAxisEvent(event: Callback<FocusAxisEvent> | undefined): this--><!--Device-CommonMethod-onFocusAxisEvent(event: Callback<FocusAxisEvent> | undefined): this-End-->
 
@@ -3488,7 +3488,7 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onGestureCollectIntercept(callback: GestureCollectInterceptCallback): this--><!--Device-CommonMethod-onGestureCollectIntercept(callback: GestureCollectInterceptCallback): this-End-->
 
@@ -3510,7 +3510,7 @@ onGestureJudgeBegin(callback: ((gestureInfo: GestureInfo, event: BaseGestureEven
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onGestureJudgeBegin(callback: ((gestureInfo: GestureInfo, event: BaseGestureEvent) => GestureJudgeResult) | undefined): this--><!--Device-CommonMethod-onGestureJudgeBegin(callback: ((gestureInfo: GestureInfo, event: BaseGestureEvent) => GestureJudgeResult) | undefined): this-End-->
 
@@ -3532,7 +3532,7 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | un
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | undefined): this--><!--Device-CommonMethod-onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | undefined): this-End-->
 
@@ -3554,7 +3554,7 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | un
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | undefined, exposeInnerGesture: boolean | undefined): this--><!--Device-CommonMethod-onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | undefined, exposeInnerGesture: boolean | undefined): this-End-->
 
@@ -3577,7 +3577,7 @@ onHover(event: ((isHover: boolean, event: HoverEvent) => void) | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onHover(event: ((isHover: boolean, event: HoverEvent) => void) | undefined): this--><!--Device-CommonMethod-onHover(event: ((isHover: boolean, event: HoverEvent) => void) | undefined): this-End-->
 
@@ -3599,7 +3599,7 @@ onHoverMove(event: Callback<HoverEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onHoverMove(event: Callback<HoverEvent> | undefined): this--><!--Device-CommonMethod-onHoverMove(event: Callback<HoverEvent> | undefined): this-End-->
 
@@ -3621,7 +3621,7 @@ onKeyEvent(event: Callback<KeyEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onKeyEvent(event: Callback<KeyEvent, boolean> | undefined): this--><!--Device-CommonMethod-onKeyEvent(event: Callback<KeyEvent, boolean> | undefined): this-End-->
 
@@ -3643,7 +3643,7 @@ onKeyEventDispatch(event: Callback<KeyEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onKeyEventDispatch(event: Callback<KeyEvent, boolean> | undefined): this--><!--Device-CommonMethod-onKeyEventDispatch(event: Callback<KeyEvent, boolean> | undefined): this-End-->
 
@@ -3665,7 +3665,7 @@ onKeyPreIme(event: Callback<KeyEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onKeyPreIme(event: Callback<KeyEvent, boolean> | undefined): this--><!--Device-CommonMethod-onKeyPreIme(event: Callback<KeyEvent, boolean> | undefined): this-End-->
 
@@ -3687,7 +3687,7 @@ onMouse(event: ((event: MouseEvent) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onMouse(event: ((event: MouseEvent) => void) | undefined): this--><!--Device-CommonMethod-onMouse(event: ((event: MouseEvent) => void) | undefined): this-End-->
 
@@ -3709,7 +3709,7 @@ onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | unde
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | undefined): this--><!--Device-CommonMethod-onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | undefined): this-End-->
 
@@ -3731,7 +3731,7 @@ onPreDrag(callback: Callback<PreDragStatus> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onPreDrag(callback: Callback<PreDragStatus> | undefined): this--><!--Device-CommonMethod-onPreDrag(callback: Callback<PreDragStatus> | undefined): this-End-->
 
@@ -3753,7 +3753,7 @@ onSizeChange(event: SizeChangeCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onSizeChange(event: SizeChangeCallback | undefined): this--><!--Device-CommonMethod-onSizeChange(event: SizeChangeCallback | undefined): this-End-->
 
@@ -3775,7 +3775,7 @@ onTouch(event: ((event: TouchEvent) => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onTouch(event: ((event: TouchEvent) => void) | undefined): this--><!--Device-CommonMethod-onTouch(event: ((event: TouchEvent) => void) | undefined): this-End-->
 
@@ -3797,7 +3797,7 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onTouchIntercept(callback: Callback<TouchEvent, HitTestMode> | undefined): this--><!--Device-CommonMethod-onTouchIntercept(callback: Callback<TouchEvent, HitTestMode> | undefined): this-End-->
 
@@ -3819,7 +3819,7 @@ onTouchTestDone(callback: TouchTestDoneCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onTouchTestDone(callback: TouchTestDoneCallback | undefined): this--><!--Device-CommonMethod-onTouchTestDone(callback: TouchTestDoneCallback | undefined): this-End-->
 
@@ -3841,7 +3841,7 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions | undefined, eve
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onVisibleAreaApproximateChange(options: VisibleAreaEventOptions | undefined, event: VisibleAreaChangeCallback | undefined): this--><!--Device-CommonMethod-onVisibleAreaApproximateChange(options: VisibleAreaEventOptions | undefined, event: VisibleAreaChangeCallback | undefined): this-End-->
 
@@ -3864,7 +3864,7 @@ onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeC
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeCallback | undefined): this--><!--Device-CommonMethod-onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeCallback | undefined): this-End-->
 
@@ -3887,7 +3887,7 @@ onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeC
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeCallback | undefined, measureFromViewport: boolean | undefined): this--><!--Device-CommonMethod-onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeCallback | undefined, measureFromViewport: boolean | undefined): this-End-->
 
@@ -3911,7 +3911,7 @@ opacity(value: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-opacity(value: double | Resource | undefined): this--><!--Device-CommonMethod-opacity(value: double | Resource | undefined): this-End-->
 
@@ -3933,7 +3933,7 @@ outline(value: OutlineOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-outline(value: OutlineOptions | undefined): this--><!--Device-CommonMethod-outline(value: OutlineOptions | undefined): this-End-->
 
@@ -3955,7 +3955,7 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined): this--><!--Device-CommonMethod-outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined): this-End-->
 
@@ -3977,7 +3977,7 @@ outlineRadius(value: Dimension | OutlineRadiuses | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-outlineRadius(value: Dimension | OutlineRadiuses | undefined): this--><!--Device-CommonMethod-outlineRadius(value: Dimension | OutlineRadiuses | undefined): this-End-->
 
@@ -3999,7 +3999,7 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-outlineStyle(value: OutlineStyle | EdgeOutlineStyles | undefined): this--><!--Device-CommonMethod-outlineStyle(value: OutlineStyle | EdgeOutlineStyles | undefined): this-End-->
 
@@ -4021,7 +4021,7 @@ outlineWidth(value: Dimension | EdgeOutlineWidths | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-outlineWidth(value: Dimension | EdgeOutlineWidths | undefined): this--><!--Device-CommonMethod-outlineWidth(value: Dimension | EdgeOutlineWidths | undefined): this-End-->
 
@@ -4043,7 +4043,7 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, options?: OverlayOptions): this--><!--Device-CommonMethod-overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, options?: OverlayOptions): this-End-->
 
@@ -4066,7 +4066,7 @@ padding(value: Padding | Length | LocalizedPadding | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-padding(value: Padding | Length | LocalizedPadding | undefined): this--><!--Device-CommonMethod-padding(value: Padding | Length | LocalizedPadding | undefined): this-End-->
 
@@ -4088,7 +4088,7 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-parallelGesture(gesture: GestureType, mask?: GestureMask): this--><!--Device-CommonMethod-parallelGesture(gesture: GestureType, mask?: GestureMask): this-End-->
 
@@ -4111,7 +4111,7 @@ pixelRound(value: PixelRoundPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-pixelRound(value: PixelRoundPolicy | undefined): this--><!--Device-CommonMethod-pixelRound(value: PixelRoundPolicy | undefined): this-End-->
 
@@ -4133,7 +4133,7 @@ pixelStretchEffect(options: PixelStretchEffectOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-pixelStretchEffect(options: PixelStretchEffectOptions | undefined): this--><!--Device-CommonMethod-pixelStretchEffect(options: PixelStretchEffectOptions | undefined): this-End-->
 
@@ -4155,7 +4155,7 @@ position(value: Position | Edges | LocalizedEdges | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-position(value: Position | Edges | LocalizedEdges | undefined): this--><!--Device-CommonMethod-position(value: Position | Edges | LocalizedEdges | undefined): this-End-->
 
@@ -4177,7 +4177,7 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-priorityGesture(gesture: GestureType, mask?: GestureMask): this--><!--Device-CommonMethod-priorityGesture(gesture: GestureType, mask?: GestureMask): this-End-->
 
@@ -4200,7 +4200,7 @@ radialGradient(value: RadialGradientOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-radialGradient(value: RadialGradientOptions | undefined): this--><!--Device-CommonMethod-radialGradient(value: RadialGradientOptions | undefined): this-End-->
 
@@ -4222,7 +4222,7 @@ renderFit(fitMode: RenderFit | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-renderFit(fitMode: RenderFit | undefined): this--><!--Device-CommonMethod-renderFit(fitMode: RenderFit | undefined): this-End-->
 
@@ -4244,7 +4244,7 @@ renderGroup(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-renderGroup(value: boolean | undefined): this--><!--Device-CommonMethod-renderGroup(value: boolean | undefined): this-End-->
 
@@ -4266,7 +4266,7 @@ responseRegion(value: Array<Rectangle> | Rectangle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-responseRegion(value: Array<Rectangle> | Rectangle | undefined): this--><!--Device-CommonMethod-responseRegion(value: Array<Rectangle> | Rectangle | undefined): this-End-->
 
@@ -4288,7 +4288,7 @@ responseRegionList(regions: Array<ResponseRegion> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-responseRegionList(regions: Array<ResponseRegion> | undefined): this--><!--Device-CommonMethod-responseRegionList(regions: Array<ResponseRegion> | undefined): this-End-->
 
@@ -4310,7 +4310,7 @@ restoreId(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-restoreId(value: int | undefined): this--><!--Device-CommonMethod-restoreId(value: int | undefined): this-End-->
 
@@ -4332,7 +4332,7 @@ reuse(options: ReuseOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-reuse(options: ReuseOptions | undefined): this--><!--Device-CommonMethod-reuse(options: ReuseOptions | undefined): this-End-->
 
@@ -4354,7 +4354,7 @@ reuseId(id: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-reuseId(id: string | undefined): this--><!--Device-CommonMethod-reuseId(id: string | undefined): this-End-->
 
@@ -4376,7 +4376,7 @@ rotate(value: RotateOptions | RotateAngleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-rotate(value: RotateOptions | RotateAngleOptions | undefined): this--><!--Device-CommonMethod-rotate(value: RotateOptions | RotateAngleOptions | undefined): this-End-->
 
@@ -4398,7 +4398,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undefined): this--><!--Device-CommonMethod-safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undefined): this-End-->
 
@@ -4420,7 +4420,7 @@ saturate(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-saturate(value: double | undefined): this--><!--Device-CommonMethod-saturate(value: double | undefined): this-End-->
 
@@ -4442,7 +4442,7 @@ scale(value: ScaleOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-scale(value: ScaleOptions | undefined): this--><!--Device-CommonMethod-scale(value: ScaleOptions | undefined): this-End-->
 
@@ -4464,7 +4464,7 @@ sepia(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-sepia(value: double | undefined): this--><!--Device-CommonMethod-sepia(value: double | undefined): this-End-->
 
@@ -4486,7 +4486,7 @@ shadow(value: ShadowOptions | ShadowStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-shadow(value: ShadowOptions | ShadowStyle | undefined): this--><!--Device-CommonMethod-shadow(value: ShadowOptions | ShadowStyle | undefined): this-End-->
 
@@ -4508,7 +4508,7 @@ sharedTransition(id: string | undefined, options?: sharedTransitionOptions): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-sharedTransition(id: string | undefined, options?: sharedTransitionOptions): this--><!--Device-CommonMethod-sharedTransition(id: string | undefined, options?: sharedTransitionOptions): this-End-->
 
@@ -4531,7 +4531,7 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWithCallback | undefined): this--><!--Device-CommonMethod-shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWithCallback | undefined): this-End-->
 
@@ -4553,7 +4553,7 @@ shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback | un
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback | undefined): this--><!--Device-CommonMethod-shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback | undefined): this-End-->
 
@@ -4575,7 +4575,7 @@ size(value: SizeOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-size(value: SizeOptions | undefined): this--><!--Device-CommonMethod-size(value: SizeOptions | undefined): this-End-->
 
@@ -4597,7 +4597,7 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-smartGestureShortcut(options?: SmartGestureShortcutOptions): this--><!--Device-CommonMethod-smartGestureShortcut(options?: SmartGestureShortcutOptions): this-End-->
 
@@ -4619,7 +4619,7 @@ spatialEffect(params: SpatialEffectParams | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-spatialEffect(params: SpatialEffectParams | undefined): this--><!--Device-CommonMethod-spatialEffect(params: SpatialEffectParams | undefined): this-End-->
 
@@ -4641,7 +4641,7 @@ sphericalEffect(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-sphericalEffect(value: double | undefined): this--><!--Device-CommonMethod-sphericalEffect(value: double | undefined): this-End-->
 
@@ -4663,7 +4663,7 @@ stateStyles(value: StateStyles | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-stateStyles(value: StateStyles | undefined): this--><!--Device-CommonMethod-stateStyles(value: StateStyles | undefined): this-End-->
 
@@ -4685,7 +4685,7 @@ sweepGradient(value: SweepGradientOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-sweepGradient(value: SweepGradientOptions | undefined): this--><!--Device-CommonMethod-sweepGradient(value: SweepGradientOptions | undefined): this-End-->
 
@@ -4707,7 +4707,7 @@ systemBarEffect(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-systemBarEffect(): this--><!--Device-CommonMethod-systemBarEffect(): this-End-->
 
@@ -4723,7 +4723,7 @@ systemMaterial(material: SystemUiMaterial | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): this--><!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): this-End-->
 
@@ -4745,7 +4745,7 @@ tabIndex(index: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-tabIndex(index: int | undefined): this--><!--Device-CommonMethod-tabIndex(index: int | undefined): this-End-->
 
@@ -4767,7 +4767,7 @@ tabStop(isTabStop: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-tabStop(isTabStop: boolean | undefined): this--><!--Device-CommonMethod-tabStop(isTabStop: boolean | undefined): this-End-->
 
@@ -4789,7 +4789,7 @@ toolbar(value: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-toolbar(value: CustomBuilder | undefined): this--><!--Device-CommonMethod-toolbar(value: CustomBuilder | undefined): this-End-->
 
@@ -4811,7 +4811,7 @@ transform(value: Matrix4Transit | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-transform(value: Matrix4Transit | undefined): this--><!--Device-CommonMethod-transform(value: Matrix4Transit | undefined): this-End-->
 
@@ -4833,7 +4833,7 @@ transform3D(transform: Matrix4Transit | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-transform3D(transform: Matrix4Transit | undefined): this--><!--Device-CommonMethod-transform3D(transform: Matrix4Transit | undefined): this-End-->
 
@@ -4855,7 +4855,7 @@ transition(value: TransitionEffect | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-transition(value: TransitionEffect | undefined): this--><!--Device-CommonMethod-transition(value: TransitionEffect | undefined): this-End-->
 
@@ -4877,7 +4877,7 @@ transition(effect: TransitionEffect | undefined, onFinish: TransitionFinishCallb
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-transition(effect: TransitionEffect | undefined, onFinish: TransitionFinishCallback | undefined): this--><!--Device-CommonMethod-transition(effect: TransitionEffect | undefined, onFinish: TransitionFinishCallback | undefined): this-End-->
 
@@ -4900,7 +4900,7 @@ translate(value: TranslateOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-translate(value: TranslateOptions | undefined): this--><!--Device-CommonMethod-translate(value: TranslateOptions | undefined): this-End-->
 
@@ -4922,7 +4922,7 @@ useEffect(useEffect: boolean | undefined, effectType: EffectType | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-useEffect(useEffect: boolean | undefined, effectType: EffectType | undefined): this--><!--Device-CommonMethod-useEffect(useEffect: boolean | undefined, effectType: EffectType | undefined): this-End-->
 
@@ -4945,7 +4945,7 @@ useEffect(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-useEffect(value: boolean | undefined): this--><!--Device-CommonMethod-useEffect(value: boolean | undefined): this-End-->
 
@@ -4967,7 +4967,7 @@ useShadowBatching(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-useShadowBatching(value: boolean | undefined): this--><!--Device-CommonMethod-useShadowBatching(value: boolean | undefined): this-End-->
 
@@ -4989,7 +4989,7 @@ useUnionEffect(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-useUnionEffect(value: boolean | undefined): this--><!--Device-CommonMethod-useUnionEffect(value: boolean | undefined): this-End-->
 
@@ -5011,7 +5011,7 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): this--><!--Device-CommonMethod-useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): this-End-->
 
@@ -5034,7 +5034,7 @@ visibility(value: Visibility | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-visibility(value: Visibility | undefined): this--><!--Device-CommonMethod-visibility(value: Visibility | undefined): this-End-->
 
@@ -5056,7 +5056,7 @@ visualEffect(effect: VisualEffect | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-visualEffect(effect: VisualEffect | undefined): this--><!--Device-CommonMethod-visualEffect(effect: VisualEffect | undefined): this-End-->
 
@@ -5078,7 +5078,7 @@ width(widthValue: Length | LayoutPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-width(widthValue: Length | LayoutPolicy | undefined): this--><!--Device-CommonMethod-width(widthValue: Length | LayoutPolicy | undefined): this-End-->
 
@@ -5100,7 +5100,7 @@ zIndex(value: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CommonMethod-zIndex(value: int | undefined): this--><!--Device-CommonMethod-zIndex(value: int | undefined): this-End-->
 
@@ -5124,7 +5124,7 @@ Sets whether to component is double-sided.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

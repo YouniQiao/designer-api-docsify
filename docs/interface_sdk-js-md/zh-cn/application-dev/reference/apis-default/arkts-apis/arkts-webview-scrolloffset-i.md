@@ -4,7 +4,7 @@ Defines the scroll offset of the webpage in view port, the unit is virtual pixel
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
@@ -27,7 +27,7 @@ Get the horizontal offset. The unit is vp
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ScrollOffset-x: double--><!--Device-ScrollOffset-x: double-End-->
 
@@ -45,7 +45,7 @@ Get the vertical offset. The unit is vp
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ScrollOffset-y: double--><!--Device-ScrollOffset-y: double-End-->
 

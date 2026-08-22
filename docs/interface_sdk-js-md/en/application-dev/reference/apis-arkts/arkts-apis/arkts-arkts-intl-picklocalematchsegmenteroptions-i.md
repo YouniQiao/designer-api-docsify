@@ -4,7 +4,7 @@ Options for locale matching in Segmenter supportedLocalesOf.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-Intl-export interface PickLocaleMatchSegmenterOptions--><!--Device-Intl-export interface PickLocaleMatchSegmenterOptions-End-->
 
@@ -27,7 +27,7 @@ The locale matching algorithm to use. The default is 'best fit'.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

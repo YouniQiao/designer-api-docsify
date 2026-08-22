@@ -4,7 +4,7 @@ Options for creating the NumberFormat object. Since API version 9, the NumberOpt
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-intl-export interface NumberOptions--><!--Device-intl-export interface NumberOptions-End-->
 
@@ -28,7 +28,7 @@ Compact display format. The value can be "long" or "short". The default value is
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-compactDisplay?: string--><!--Device-NumberOptions-compactDisplay?: string-End-->
 
@@ -46,7 +46,7 @@ Currency unit. The value must comply with the [ISO-4217 standard](https://www.is
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-currency?: string--><!--Device-NumberOptions-currency?: string-End-->
 
@@ -64,7 +64,7 @@ Currency display mode. The value can be "symbol", "narrowSymbol", "code", or "na
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-currencyDisplay?: string--><!--Device-NumberOptions-currencyDisplay?: string-End-->
 
@@ -82,7 +82,7 @@ urrency unit symbol. The value can be "standard" or "accounting". The default va
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-currencySign?: string--><!--Device-NumberOptions-currencySign?: string-End-->
 
@@ -100,7 +100,7 @@ Valid locale ID, for example, "zh-Hans-CN". The default value is the current sys
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-locale?: string--><!--Device-NumberOptions-locale?: string-End-->
 
@@ -118,7 +118,7 @@ Locale matching algorithm. The value can be "lookup" or "best fit". The default 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-localeMatcher?: string--><!--Device-NumberOptions-localeMatcher?: string-End-->
 
@@ -136,7 +136,7 @@ Maximum number of digits in the fraction part of a number. The value ranges from
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-maximumFractionDigits?: int--><!--Device-NumberOptions-maximumFractionDigits?: int-End-->
 
@@ -154,7 +154,7 @@ Maximum number of the least significant digits. The value ranges from 1 to 21. T
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-maximumSignificantDigits?: int--><!--Device-NumberOptions-maximumSignificantDigits?: int-End-->
 
@@ -172,7 +172,7 @@ Minimum number of digits in the fraction part of a number. The value ranges from
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-minimumFractionDigits?: int--><!--Device-NumberOptions-minimumFractionDigits?: int-End-->
 
@@ -190,7 +190,7 @@ Minimum number of digits allowed in the integer part of a number. The value rang
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-minimumIntegerDigits?: int--><!--Device-NumberOptions-minimumIntegerDigits?: int-End-->
 
@@ -208,7 +208,7 @@ Minimum number of the least significant digits. The value ranges from 1 to 21. T
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-minimumSignificantDigits?: int--><!--Device-NumberOptions-minimumSignificantDigits?: int-End-->
 
@@ -226,7 +226,7 @@ Number notation. The value can be: "standard", "scientific", "engineering", or "
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-notation?: string--><!--Device-NumberOptions-notation?: string-End-->
 
@@ -244,7 +244,7 @@ Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-numberingSystem?: string--><!--Device-NumberOptions-numberingSystem?: string-End-->
 
@@ -262,7 +262,7 @@ Rounding increment. The value can be: 1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 50
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-roundingIncrement?: int--><!--Device-NumberOptions-roundingIncrement?: int-End-->
 
@@ -280,7 +280,7 @@ Rounding mode. The value can be: "ceil": rounding up. "floor": rounding down. "e
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-roundingMode?: string--><!--Device-NumberOptions-roundingMode?: string-End-->
 
@@ -298,7 +298,7 @@ Rounding priority used when both the maximum number of fraction digits and the m
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-roundingPriority?: string--><!--Device-NumberOptions-roundingPriority?: string-End-->
 
@@ -316,7 +316,7 @@ Number sign display format. The value can be: "auto": automatically determines w
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-signDisplay?: string--><!--Device-NumberOptions-signDisplay?: string-End-->
 
@@ -334,7 +334,7 @@ Number display format. The value can be "decimal", "currency", "percent", or "un
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-style?: string--><!--Device-NumberOptions-style?: string-End-->
 
@@ -352,7 +352,7 @@ Unit name, for example, "meter", "inch", or "hectare". The combination units sup
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-unit?: string--><!--Device-NumberOptions-unit?: string-End-->
 
@@ -370,7 +370,7 @@ Display format of units. The value can be "long", "short", or "narrow". The defa
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-unitDisplay?: string--><!--Device-NumberOptions-unitDisplay?: string-End-->
 
@@ -388,7 +388,7 @@ Application scenario of units. The value can be any of the following: "default",
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-unitUsage?: string--><!--Device-NumberOptions-unitUsage?: string-End-->
 
@@ -406,7 +406,7 @@ Whether to enable grouping for display. The value "true" means to enable groupin
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NumberOptions-useGrouping?: boolean--><!--Device-NumberOptions-useGrouping?: boolean-End-->
 

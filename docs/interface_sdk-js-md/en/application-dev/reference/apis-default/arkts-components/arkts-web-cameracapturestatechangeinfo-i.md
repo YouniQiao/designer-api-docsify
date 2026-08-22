@@ -4,7 +4,7 @@ Defines the state information of the camera before and after the callback is tri
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface CameraCaptureStateChangeInfo--><!--Device-unnamed-export declare interface CameraCaptureStateChangeInfo-End-->
 
@@ -22,7 +22,7 @@ New state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CameraCaptureStateChangeInfo-newState: CameraCaptureState--><!--Device-CameraCaptureStateChangeInfo-newState: CameraCaptureState-End-->
 
@@ -40,7 +40,7 @@ Original state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CameraCaptureStateChangeInfo-originalState: CameraCaptureState--><!--Device-CameraCaptureStateChangeInfo-originalState: CameraCaptureState-End-->
 

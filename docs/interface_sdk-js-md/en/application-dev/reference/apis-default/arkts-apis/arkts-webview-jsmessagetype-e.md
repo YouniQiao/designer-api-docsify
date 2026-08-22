@@ -4,7 +4,7 @@ Enum type supplied to [runJavaScriptExt](arkts-webview-webviewcontroller-c.md#ru
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
 
@@ -20,7 +20,7 @@ Unsupported data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageType-NOT_SUPPORT--><!--Device-JsMessageType-NOT_SUPPORT-End-->
 
@@ -36,7 +36,7 @@ The string data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageType-STRING--><!--Device-JsMessageType-STRING-End-->
 
@@ -52,7 +52,7 @@ The number data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageType-NUMBER--><!--Device-JsMessageType-NUMBER-End-->
 
@@ -68,7 +68,7 @@ The boolean data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageType-BOOLEAN--><!--Device-JsMessageType-BOOLEAN-End-->
 
@@ -84,7 +84,7 @@ The arraybuffer data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageType-ARRAY_BUFFER--><!--Device-JsMessageType-ARRAY_BUFFER-End-->
 
@@ -100,7 +100,7 @@ The array data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageType-ARRAY--><!--Device-JsMessageType-ARRAY-End-->
 

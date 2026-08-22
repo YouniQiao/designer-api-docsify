@@ -6,7 +6,7 @@ Define PropRef decoration variable interface.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface IPropRefDecoratedVariable--><!--Device-unnamed-export declare interface IPropRefDecoratedVariable-End-->
 
@@ -22,7 +22,7 @@ Reset State variable when the @Reusable Component instance is reused.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

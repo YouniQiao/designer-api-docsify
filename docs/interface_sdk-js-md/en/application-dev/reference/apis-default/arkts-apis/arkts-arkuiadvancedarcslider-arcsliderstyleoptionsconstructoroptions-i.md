@@ -4,7 +4,7 @@ Construct parameter types for ArcSliderStyleOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ArcSliderStyleOptionsConstructorOptions--><!--Device-unnamed-export interface ArcSliderStyleOptionsConstructorOptions-End-->
 
@@ -31,7 +31,7 @@ Value range: [24, 36]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: double--><!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: double-End-->
 
@@ -51,7 +51,7 @@ Set the selected color of the component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string-End-->
 
@@ -71,7 +71,7 @@ Set the track blur of the component, unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: double--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: double-End-->
 
@@ -91,7 +91,7 @@ Set the track color of the component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string-End-->
 
@@ -113,7 +113,7 @@ Value range: [5, 16]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: double--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: double-End-->
 

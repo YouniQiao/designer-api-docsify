@@ -15,7 +15,7 @@ function stat(file: string | int): Promise<Stat>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function stat(file: string | int): Promise<Stat>--><!--Device-fileIo-function stat(file: string | int): Promise<Stat>-End-->
 
@@ -62,7 +62,7 @@ function stat(file: string | int, callback: AsyncCallback<Stat>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function stat(file: string | int, callback: AsyncCallback<Stat>): void--><!--Device-fileIo-function stat(file: string | int, callback: AsyncCallback<Stat>): void-End-->
 

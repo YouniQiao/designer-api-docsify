@@ -15,7 +15,7 @@ Takes an async function (or a function that returns a Promise) and returns a fun
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-util-function callbackWrapper(original: Function): Function--><!--Device-util-function callbackWrapper(original: Function): Function-End-->
 

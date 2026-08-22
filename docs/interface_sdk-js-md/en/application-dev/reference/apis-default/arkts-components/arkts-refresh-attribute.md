@@ -6,7 +6,7 @@ The RefreshAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface RefreshAttribute--><!--Device-unnamed-export declare interface RefreshAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<RefreshAttribute> | AttributeModif
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-attributeModifier(modifier: AttributeModifier<RefreshAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RefreshAttribute-attributeModifier(modifier: AttributeModifier<RefreshAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ maxPullDownDistance(distance: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-maxPullDownDistance(distance: double | undefined): this--><!--Device-RefreshAttribute-maxPullDownDistance(distance: double | undefined): this-End-->
 
@@ -64,7 +64,7 @@ maxPullDownDistance(distance: Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-maxPullDownDistance(distance: Resource | undefined): this--><!--Device-RefreshAttribute-maxPullDownDistance(distance: Resource | undefined): this-End-->
 
@@ -86,7 +86,7 @@ onOffsetChange(callback: Callback<double> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-onOffsetChange(callback: Callback<double> | undefined): this--><!--Device-RefreshAttribute-onOffsetChange(callback: Callback<double> | undefined): this-End-->
 
@@ -108,7 +108,7 @@ onRefreshing(callback: (() => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-onRefreshing(callback: (() => void) | undefined): this--><!--Device-RefreshAttribute-onRefreshing(callback: (() => void) | undefined): this-End-->
 
@@ -130,7 +130,7 @@ onStateChange(callback: ((state: RefreshStatus) => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-onStateChange(callback: ((state: RefreshStatus) => void) | undefined): this--><!--Device-RefreshAttribute-onStateChange(callback: ((state: RefreshStatus) => void) | undefined): this-End-->
 
@@ -152,7 +152,7 @@ pullDownRatio(ratio: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-pullDownRatio(ratio: double | undefined): this--><!--Device-RefreshAttribute-pullDownRatio(ratio: double | undefined): this-End-->
 
@@ -174,7 +174,7 @@ pullToRefresh(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-pullToRefresh(value: boolean | undefined): this--><!--Device-RefreshAttribute-pullToRefresh(value: boolean | undefined): this-End-->
 
@@ -196,7 +196,7 @@ pullUpToCancelRefresh(enabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-pullUpToCancelRefresh(enabled: boolean | undefined): this--><!--Device-RefreshAttribute-pullUpToCancelRefresh(enabled: boolean | undefined): this-End-->
 
@@ -218,7 +218,7 @@ refreshOffset(value: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-refreshOffset(value: double | undefined): this--><!--Device-RefreshAttribute-refreshOffset(value: double | undefined): this-End-->
 
@@ -240,7 +240,7 @@ refreshOffset(value: Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-refreshOffset(value: Resource | undefined): this--><!--Device-RefreshAttribute-refreshOffset(value: Resource | undefined): this-End-->
 
@@ -262,7 +262,7 @@ setRefreshOptions(options: RefreshOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RefreshAttribute-setRefreshOptions(options: RefreshOptions): this--><!--Device-RefreshAttribute-setRefreshOptions(options: RefreshOptions): this-End-->
 
@@ -286,7 +286,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

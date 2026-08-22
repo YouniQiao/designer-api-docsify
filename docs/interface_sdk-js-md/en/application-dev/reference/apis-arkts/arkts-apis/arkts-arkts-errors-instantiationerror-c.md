@@ -6,7 +6,7 @@ Represents an error that occurs when attempting to instantiate abstract class or
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class InstantiationError--><!--Device-unnamed-export class InstantiationError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new InstantiationError instance with provided message and error spe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

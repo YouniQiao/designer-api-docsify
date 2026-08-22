@@ -6,7 +6,7 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface LazyWaterFlowLayoutAttribute--><!--Device-unnamed-export declare interface LazyWaterFlowLayoutAttribute-End-->
 
@@ -25,7 +25,7 @@ columnsGap(value: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyWaterFlowLayoutAttribute-columnsGap(value: LengthMetrics | undefined): this--><!--Device-LazyWaterFlowLayoutAttribute-columnsGap(value: LengthMetrics | undefined): this-End-->
 
@@ -47,7 +47,7 @@ footer(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyWaterFlowLayoutAttribute-footer(builder: CustomBuilder | undefined): this--><!--Device-LazyWaterFlowLayoutAttribute-footer(builder: CustomBuilder | undefined): this-End-->
 
@@ -69,7 +69,7 @@ header(builder: CustomBuilder | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyWaterFlowLayoutAttribute-header(builder: CustomBuilder | undefined): this--><!--Device-LazyWaterFlowLayoutAttribute-header(builder: CustomBuilder | undefined): this-End-->
 
@@ -91,7 +91,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyWaterFlowLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this--><!--Device-LazyWaterFlowLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this-End-->
 
@@ -113,7 +113,7 @@ rowsGap(value: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyWaterFlowLayoutAttribute-rowsGap(value: LengthMetrics | undefined): this--><!--Device-LazyWaterFlowLayoutAttribute-rowsGap(value: LengthMetrics | undefined): this-End-->
 
@@ -135,7 +135,7 @@ sticky(sticky: StickyStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyWaterFlowLayoutAttribute-sticky(sticky: StickyStyle | undefined): this--><!--Device-LazyWaterFlowLayoutAttribute-sticky(sticky: StickyStyle | undefined): this-End-->
 
@@ -159,7 +159,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

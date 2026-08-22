@@ -4,7 +4,7 @@ Defines the triggered callback when needs ssl client certificate from the user.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnClientAuthenticationEvent--><!--Device-unnamed-export declare interface OnClientAuthenticationEvent-End-->
 
@@ -22,7 +22,7 @@ Notifies the user of the operation behavior of the web component.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnClientAuthenticationEvent-handler: ClientAuthenticationHandler--><!--Device-OnClientAuthenticationEvent-handler: ClientAuthenticationHandler-End-->
 
@@ -40,7 +40,7 @@ The hostname of the requesting certificate server.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnClientAuthenticationEvent-host: string--><!--Device-OnClientAuthenticationEvent-host: string-End-->
 
@@ -58,7 +58,7 @@ Certificates that match the private key are acceptable to the issuer.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnClientAuthenticationEvent-issuers: Array<string>--><!--Device-OnClientAuthenticationEvent-issuers: Array<string>-End-->
 
@@ -76,7 +76,7 @@ Acceptable asymmetric key types.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnClientAuthenticationEvent-keyTypes: Array<string>--><!--Device-OnClientAuthenticationEvent-keyTypes: Array<string>-End-->
 
@@ -94,7 +94,7 @@ The port number of the request certificate server.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnClientAuthenticationEvent-port: int--><!--Device-OnClientAuthenticationEvent-port: int-End-->
 

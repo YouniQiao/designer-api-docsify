@@ -4,7 +4,7 @@ ChipGroupPaddingOptions定义了ChipGroup的上下内边距，用于控制其整
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export interface ChipGroupPaddingOptions--><!--Device-unnamed-export interface ChipGroupPaddingOptions-End-->
 
@@ -31,7 +31,7 @@ ChipGroup的下方内边距（不支持百分比）。 单位：vp
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,7 +55,7 @@ ChipGroup的上方内边距（不支持百分比）。 单位：vp
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

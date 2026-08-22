@@ -10,7 +10,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface DatePickerAttribute--><!--Device-unnamed-export declare interface DatePickerAttribute-End-->
 
@@ -24,7 +24,7 @@ attributeModifier(modifier: AttributeModifier<DatePickerAttribute> | AttributeMo
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-attributeModifier(modifier: AttributeModifier<DatePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-DatePickerAttribute-attributeModifier(modifier: AttributeModifier<DatePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -46,7 +46,7 @@ canLoop(isLoop: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-canLoop(isLoop: boolean | undefined): this--><!--Device-DatePickerAttribute-canLoop(isLoop: boolean | undefined): this-End-->
 
@@ -68,7 +68,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-DatePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -90,7 +90,7 @@ disappearTextStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this--><!--Device-DatePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -112,7 +112,7 @@ enableHapticFeedback(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this--><!--Device-DatePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this-End-->
 
@@ -134,7 +134,7 @@ lunar(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-lunar(value: boolean | undefined): this--><!--Device-DatePickerAttribute-lunar(value: boolean | undefined): this-End-->
 
@@ -156,7 +156,7 @@ onDateChange(callback: Callback<Date> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-onDateChange(callback: Callback<Date> | undefined): this--><!--Device-DatePickerAttribute-onDateChange(callback: Callback<Date> | undefined): this-End-->
 
@@ -178,7 +178,7 @@ selectedTextStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this--><!--Device-DatePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -200,7 +200,7 @@ textStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DatePickerAttribute-textStyle(value: PickerTextStyle | undefined): this--><!--Device-DatePickerAttribute-textStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -224,7 +224,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,7 +6,7 @@ Enumerates battery levels.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-export enum BatteryCapacityLevel--><!--Device-batteryInfo-export enum BatteryCapacityLevel-End-->
 
@@ -22,7 +22,7 @@ Unknown battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_NONE--><!--Device-BatteryCapacityLevel-LEVEL_NONE-End-->
 
@@ -38,7 +38,7 @@ Full battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_FULL--><!--Device-BatteryCapacityLevel-LEVEL_FULL-End-->
 
@@ -54,7 +54,7 @@ High battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_HIGH--><!--Device-BatteryCapacityLevel-LEVEL_HIGH-End-->
 
@@ -70,7 +70,7 @@ Normal battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_NORMAL--><!--Device-BatteryCapacityLevel-LEVEL_NORMAL-End-->
 
@@ -86,7 +86,7 @@ Low battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_LOW--><!--Device-BatteryCapacityLevel-LEVEL_LOW-End-->
 
@@ -102,7 +102,7 @@ Alarm battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_WARNING--><!--Device-BatteryCapacityLevel-LEVEL_WARNING-End-->
 
@@ -118,7 +118,7 @@ Ultra-low battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_CRITICAL--><!--Device-BatteryCapacityLevel-LEVEL_CRITICAL-End-->
 
@@ -134,7 +134,7 @@ Power-down battery level.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN--><!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN-End-->
 

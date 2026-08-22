@@ -19,7 +19,7 @@ Moves the source directory and its content to the destination path. This API use
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function moveDir(src: string, dest: string, mode?: int): Promise<void>--><!--Device-fileIo-function moveDir(src: string, dest: string, mode?: int): Promise<void>-End-->
 
@@ -80,7 +80,7 @@ An exception will be thrown if a directory conflict occurs, that is, the destina
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -132,7 +132,7 @@ Moves the source directory and its content to the destination path. You can set 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function moveDir(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void--><!--Device-fileIo-function moveDir(src: string, dest: string, mode: int, callback: AsyncCallback<void>): void-End-->
 

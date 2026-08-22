@@ -4,7 +4,7 @@ Defines the attribute modifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface AttributeModifier--><!--Device-unnamed-export declare interface AttributeModifier-End-->
 
@@ -18,7 +18,7 @@ applyDisabledAttribute(instance: T) : void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-applyDisabledAttribute(instance: T) : void--><!--Device-AttributeModifier-applyDisabledAttribute(instance: T) : void-End-->
 
@@ -36,7 +36,7 @@ applyFocusedAttribute(instance: T) : void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-applyFocusedAttribute(instance: T) : void--><!--Device-AttributeModifier-applyFocusedAttribute(instance: T) : void-End-->
 
@@ -54,7 +54,7 @@ applyHoveredAttribute(instance: T) : void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-applyHoveredAttribute(instance: T) : void--><!--Device-AttributeModifier-applyHoveredAttribute(instance: T) : void-End-->
 
@@ -72,7 +72,7 @@ applyNormalAttribute(instance: T) : void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-applyNormalAttribute(instance: T) : void--><!--Device-AttributeModifier-applyNormalAttribute(instance: T) : void-End-->
 
@@ -90,7 +90,7 @@ applyPressedAttribute(instance: T) : void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-applyPressedAttribute(instance: T) : void--><!--Device-AttributeModifier-applyPressedAttribute(instance: T) : void-End-->
 
@@ -108,7 +108,7 @@ applySelectedAttribute(instance: T) : void
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-applySelectedAttribute(instance: T) : void--><!--Device-AttributeModifier-applySelectedAttribute(instance: T) : void-End-->
 
@@ -126,7 +126,7 @@ monitoredStates(): int
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-AttributeModifier-monitoredStates(): int--><!--Device-AttributeModifier-monitoredStates(): int-End-->
 
@@ -144,7 +144,7 @@ Specifies the states to be monitored. Override this method to specify which stat
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

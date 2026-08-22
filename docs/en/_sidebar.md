@@ -4,7 +4,7 @@
 - [Arkdata (472)](interface_sdk-js-md/en/application-dev/reference/apis-arkdata/arkts-apis/arkts-application-datashareextensionability.md)
 - [Arkgraphics2D (408)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics2d/arkts-apis/arkts-effectkit.md)
 - [Arkgraphics3D (96)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics3d/arkts-apis/arkts-scene.md)
-- [Arkts (669)](interface_sdk-js-md/en/application-dev/reference/apis-arkts/arkts-apis/arkts-buffer.md)
+- [Arkts (673)](interface_sdk-js-md/en/application-dev/reference/apis-arkts/arkts-apis/arkts-buffer.md)
 - [Arkui (2899)](interface_sdk-js-md/en/application-dev/reference/apis-arkui/arkts-apis/arkts-pipwindow.md)
 - [Arkweb (136)](interface_sdk-js-md/en/application-dev/reference/apis-arkweb/arkts-apis/arkts-web-webnativemessagingextensionability.md)
 - [Asset Store Kit (52)](interface_sdk-js-md/en/application-dev/reference/apis-asset-store-kit/arkts-apis/arkts-security-asset.md)

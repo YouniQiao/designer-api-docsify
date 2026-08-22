@@ -4,7 +4,7 @@ Defines the context menu source type, related to [onContextMenuShow](arkts-web-a
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum ContextMenuSourceType--><!--Device-unnamed-export declare enum ContextMenuSourceType-End-->
 
@@ -20,7 +20,7 @@ Other non-image media types.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuSourceType-NONE = 0--><!--Device-ContextMenuSourceType-NONE = 0-End-->
 
@@ -36,7 +36,7 @@ Mouse event.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuSourceType-MOUSE = 1--><!--Device-ContextMenuSourceType-MOUSE = 1-End-->
 
@@ -52,7 +52,7 @@ Long press event.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ContextMenuSourceType-LONG_PRESS = 2--><!--Device-ContextMenuSourceType-LONG_PRESS = 2-End-->
 

@@ -4,7 +4,7 @@ Represents the language or country/region sorting option.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-i18n-export interface SortOptions--><!--Device-i18n-export interface SortOptions-End-->
 
@@ -29,7 +29,7 @@ Whether to move the recommended language or country/region to the top in the sor
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SortOptions-isSuggestedFirst?: boolean--><!--Device-SortOptions-isSuggestedFirst?: boolean-End-->
 
@@ -49,7 +49,7 @@ Whether to use the local name for sorting. The value "true" means to use the loc
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SortOptions-isUseLocalName?: boolean--><!--Device-SortOptions-isUseLocalName?: boolean-End-->
 
@@ -69,7 +69,7 @@ Locale information, which consists of the language, script, and country/region, 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SortOptions-locale?: string--><!--Device-SortOptions-locale?: string-End-->
 

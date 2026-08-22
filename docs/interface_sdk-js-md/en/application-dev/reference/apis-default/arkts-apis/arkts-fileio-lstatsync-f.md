@@ -15,7 +15,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function lstatSync(path: string): Stat--><!--Device-fileIo-function lstatSync(path: string): Stat-End-->
 

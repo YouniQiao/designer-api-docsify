@@ -15,7 +15,7 @@ Connects the current ability to the specified web native message extension abili
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 

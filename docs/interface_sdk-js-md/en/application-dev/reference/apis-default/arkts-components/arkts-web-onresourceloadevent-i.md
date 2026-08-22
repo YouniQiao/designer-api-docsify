@@ -4,7 +4,7 @@ Defines the triggered when the url loading.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnResourceLoadEvent--><!--Device-unnamed-export declare interface OnResourceLoadEvent-End-->
 
@@ -22,7 +22,7 @@ The URL of the loaded resource file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnResourceLoadEvent-url: string--><!--Device-OnResourceLoadEvent-url: string-End-->
 

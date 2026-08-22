@@ -8,7 +8,7 @@ Defines the Radio component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface RadioAttribute--><!--Device-unnamed-export declare interface RadioAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<RadioAttribute> | AttributeModifie
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RadioAttribute-attributeModifier(modifier: AttributeModifier<RadioAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RadioAttribute-attributeModifier(modifier: AttributeModifier<RadioAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ checked(isChecked: boolean | undefined | Bindable<boolean>): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RadioAttribute-checked(isChecked: boolean | undefined | Bindable<boolean>): this--><!--Device-RadioAttribute-checked(isChecked: boolean | undefined | Bindable<boolean>): this-End-->
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RadioAttribute-contentModifier(modifier: ContentModifier<RadioConfiguration> | undefined): this--><!--Device-RadioAttribute-contentModifier(modifier: ContentModifier<RadioConfiguration> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ onChange(callback: OnRadioChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RadioAttribute-onChange(callback: OnRadioChangeCallback | undefined): this--><!--Device-RadioAttribute-onChange(callback: OnRadioChangeCallback | undefined): this-End-->
 
@@ -110,7 +110,7 @@ radioStyle(value?: RadioStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RadioAttribute-radioStyle(value?: RadioStyle | undefined): this--><!--Device-RadioAttribute-radioStyle(value?: RadioStyle | undefined): this-End-->
 
@@ -132,7 +132,7 @@ setRadioOptions(options: RadioOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RadioAttribute-setRadioOptions(options: RadioOptions): this--><!--Device-RadioAttribute-setRadioOptions(options: RadioOptions): this-End-->
 
@@ -156,7 +156,7 @@ Set radio options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,7 +15,7 @@ Obtains detailed attributes of a file or directory. The returned **Stat** object
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function stat(file: string | int): Promise<Stat>--><!--Device-fileIo-function stat(file: string | int): Promise<Stat>-End-->
 
@@ -62,7 +62,7 @@ Obtains detailed attributes of a file or directory. The returned **Stat** object
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function stat(file: string | int, callback: AsyncCallback<Stat>): void--><!--Device-fileIo-function stat(file: string | int, callback: AsyncCallback<Stat>): void-End-->
 

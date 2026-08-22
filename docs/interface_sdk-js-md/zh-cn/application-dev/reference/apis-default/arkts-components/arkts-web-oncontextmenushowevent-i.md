@@ -4,7 +4,7 @@ Defines the triggered callback when called to allow custom display of the contex
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface OnContextMenuShowEvent--><!--Device-unnamed-export declare interface OnContextMenuShowEvent-End-->
 
@@ -22,7 +22,7 @@ The menu-related parameters.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnContextMenuShowEvent-param: WebContextMenuParam--><!--Device-OnContextMenuShowEvent-param: WebContextMenuParam-End-->
 
@@ -40,7 +40,7 @@ The menu corresponding event is passed to the kernel.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-OnContextMenuShowEvent-result: WebContextMenuResult--><!--Device-OnContextMenuShowEvent-result: WebContextMenuResult-End-->
 

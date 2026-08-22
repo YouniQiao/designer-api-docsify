@@ -4,7 +4,7 @@ Defines the triggered function when the web page wants to display a JavaScript a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnAlertEvent--><!--Device-unnamed-export declare interface OnAlertEvent-End-->
 
@@ -22,7 +22,7 @@ The message of alert dialog.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnAlertEvent-message: string--><!--Device-OnAlertEvent-message: string-End-->
 
@@ -40,7 +40,7 @@ Handle the user's JavaScript result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnAlertEvent-result: JsResult--><!--Device-OnAlertEvent-result: JsResult-End-->
 
@@ -58,7 +58,7 @@ The url of the page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnAlertEvent-url: string--><!--Device-OnAlertEvent-url: string-End-->
 

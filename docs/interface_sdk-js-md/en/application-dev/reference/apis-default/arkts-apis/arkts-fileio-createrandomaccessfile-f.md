@@ -16,7 +16,7 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createRandomAccessFile(file: string | File, mode?: int,  options?: RandomAccessFileOptions): Promise<RandomAccessFile>--><!--Device-fileIo-function createRandomAccessFile(file: string | File, mode?: int,  options?: RandomAccessFileOptions): Promise<RandomAccessFile>-End-->
 
@@ -79,7 +79,7 @@ Creates a **RandomAccessFile** instance in read-only mode based on a file path o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void--><!--Device-fileIo-function createRandomAccessFile(file: string | File, callback: AsyncCallback<RandomAccessFile>): void-End-->
 
@@ -134,7 +134,7 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function createRandomAccessFile(file: string | File, mode: int, callback: AsyncCallback<RandomAccessFile>): void--><!--Device-fileIo-function createRandomAccessFile(file: string | File, mode: int, callback: AsyncCallback<RandomAccessFile>): void-End-->
 

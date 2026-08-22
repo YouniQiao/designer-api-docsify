@@ -10,7 +10,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface TimePickerAttribute--><!--Device-unnamed-export declare interface TimePickerAttribute-End-->
 
@@ -24,7 +24,7 @@ attributeModifier(modifier: AttributeModifier<TimePickerAttribute> | AttributeMo
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-attributeModifier(modifier: AttributeModifier<TimePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TimePickerAttribute-attributeModifier(modifier: AttributeModifier<TimePickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -46,7 +46,7 @@ dateTimeOptions(value: DateTimeOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-dateTimeOptions(value: DateTimeOptions | undefined): this--><!--Device-TimePickerAttribute-dateTimeOptions(value: DateTimeOptions | undefined): this-End-->
 
@@ -68,7 +68,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-TimePickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -90,7 +90,7 @@ disappearTextStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this--><!--Device-TimePickerAttribute-disappearTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -112,7 +112,7 @@ enableCascade(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-enableCascade(enabled: boolean | undefined): this--><!--Device-TimePickerAttribute-enableCascade(enabled: boolean | undefined): this-End-->
 
@@ -134,7 +134,7 @@ enableHapticFeedback(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this--><!--Device-TimePickerAttribute-enableHapticFeedback(enable: boolean | undefined): this-End-->
 
@@ -156,7 +156,7 @@ loop(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-loop(value: boolean | undefined): this--><!--Device-TimePickerAttribute-loop(value: boolean | undefined): this-End-->
 
@@ -178,7 +178,7 @@ onChange(callback: OnTimePickerChangeCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-onChange(callback: OnTimePickerChangeCallback | undefined): this--><!--Device-TimePickerAttribute-onChange(callback: OnTimePickerChangeCallback | undefined): this-End-->
 
@@ -200,7 +200,7 @@ onEnterSelectedArea(callback: Callback<TimePickerResult> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-onEnterSelectedArea(callback: Callback<TimePickerResult> | undefined): this--><!--Device-TimePickerAttribute-onEnterSelectedArea(callback: Callback<TimePickerResult> | undefined): this-End-->
 
@@ -222,7 +222,7 @@ selectedTextStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this--><!--Device-TimePickerAttribute-selectedTextStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -244,7 +244,7 @@ textStyle(value: PickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-textStyle(value: PickerTextStyle | undefined): this--><!--Device-TimePickerAttribute-textStyle(value: PickerTextStyle | undefined): this-End-->
 
@@ -266,7 +266,7 @@ useMilitaryTime(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TimePickerAttribute-useMilitaryTime(value: boolean | undefined): this--><!--Device-TimePickerAttribute-useMilitaryTime(value: boolean | undefined): this-End-->
 
@@ -290,7 +290,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

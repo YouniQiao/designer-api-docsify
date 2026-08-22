@@ -6,7 +6,7 @@ Represents error that is thrown when negative array size is supplied
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class NegativeArraySizeError--><!--Device-unnamed-export class NegativeArraySizeError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new NegativeArraySizeError instance with provided message and error
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

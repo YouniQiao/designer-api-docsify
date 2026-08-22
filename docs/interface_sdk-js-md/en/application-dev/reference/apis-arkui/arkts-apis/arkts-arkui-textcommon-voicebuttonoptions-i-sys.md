@@ -4,7 +4,7 @@ Defines the voice button options.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface VoiceButtonOptions--><!--Device-unnamed-export interface VoiceButtonOptions-End-->
 
@@ -24,7 +24,7 @@ Enable or disable voice button. True means enable voice button, false means disa
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

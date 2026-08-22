@@ -6,7 +6,7 @@ Defines the Button component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface DataPanelAttribute--><!--Device-unnamed-export declare interface DataPanelAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<DataPanelAttribute> | AttributeMod
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-attributeModifier(modifier: AttributeModifier<DataPanelAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-DataPanelAttribute-attributeModifier(modifier: AttributeModifier<DataPanelAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ closeEffect(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-closeEffect(value: boolean | undefined): this--><!--Device-DataPanelAttribute-closeEffect(value: boolean | undefined): this-End-->
 
@@ -64,7 +64,7 @@ contentModifier(modifier: ContentModifier<DataPanelConfiguration> | undefined): 
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-contentModifier(modifier: ContentModifier<DataPanelConfiguration> | undefined): this--><!--Device-DataPanelAttribute-contentModifier(modifier: ContentModifier<DataPanelConfiguration> | undefined): this-End-->
 
@@ -86,7 +86,7 @@ setDataPanelOptions(options: DataPanelOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-setDataPanelOptions(options: DataPanelOptions): this--><!--Device-DataPanelAttribute-setDataPanelOptions(options: DataPanelOptions): this-End-->
 
@@ -108,7 +108,7 @@ strokeWidth(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-strokeWidth(value: Length | undefined): this--><!--Device-DataPanelAttribute-strokeWidth(value: Length | undefined): this-End-->
 
@@ -130,7 +130,7 @@ trackBackgroundColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-trackBackgroundColor(value: ResourceColor | undefined): this--><!--Device-DataPanelAttribute-trackBackgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -152,7 +152,7 @@ trackShadow(value: DataPanelShadowOptions | undefined | null): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-trackShadow(value: DataPanelShadowOptions | undefined | null): this--><!--Device-DataPanelAttribute-trackShadow(value: DataPanelShadowOptions | undefined | null): this-End-->
 
@@ -174,7 +174,7 @@ valueColors(value: Array<ResourceColor | LinearGradient> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-DataPanelAttribute-valueColors(value: Array<ResourceColor | LinearGradient> | undefined): this--><!--Device-DataPanelAttribute-valueColors(value: Array<ResourceColor | LinearGradient> | undefined): this-End-->
 
@@ -198,7 +198,7 @@ Set DataPanel options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

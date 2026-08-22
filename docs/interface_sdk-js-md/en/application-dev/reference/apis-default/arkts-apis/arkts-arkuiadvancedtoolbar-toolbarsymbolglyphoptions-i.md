@@ -4,7 +4,7 @@ Defines the icon symbol options.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ToolBarSymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarSymbolGlyphOptions-End-->
 
@@ -29,7 +29,7 @@ Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +51,7 @@ Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

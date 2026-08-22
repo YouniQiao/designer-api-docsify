@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-batteryInfo-export enum BatteryHealthState--><!--Device-batteryInfo-export enum BatteryHealthState-End-->
 
@@ -22,7 +22,7 @@ UNKNOWN
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryHealthState-UNKNOWN--><!--Device-BatteryHealthState-UNKNOWN-End-->
 
@@ -38,7 +38,7 @@ GOOD
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryHealthState-GOOD--><!--Device-BatteryHealthState-GOOD-End-->
 
@@ -54,7 +54,7 @@ OVERHEAT
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryHealthState-OVERHEAT--><!--Device-BatteryHealthState-OVERHEAT-End-->
 
@@ -70,7 +70,7 @@ OVERVOLTAGE
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryHealthState-OVERVOLTAGE--><!--Device-BatteryHealthState-OVERVOLTAGE-End-->
 
@@ -86,7 +86,7 @@ COLD
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryHealthState-COLD--><!--Device-BatteryHealthState-COLD-End-->
 
@@ -102,7 +102,7 @@ DEAD
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BatteryHealthState-DEAD--><!--Device-BatteryHealthState-DEAD-End-->
 

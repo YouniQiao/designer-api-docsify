@@ -4,7 +4,7 @@ The options for ArcSlider style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class ArcSliderStyleOptions--><!--Device-unnamed-export declare class ArcSliderStyleOptions-End-->
 
@@ -25,7 +25,7 @@ The constructor used to create a ArcSliderStyleOptions object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)--><!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)-End-->
 
@@ -54,7 +54,7 @@ Value range: [24, 36]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: double--><!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: double-End-->
 
@@ -75,7 +75,7 @@ Set the selected color of the component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string-End-->
 
@@ -96,7 +96,7 @@ Set the track blur of the component, unit is vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: double--><!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: double-End-->
 
@@ -117,7 +117,7 @@ Set the track color of the component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string-End-->
 
@@ -140,7 +140,7 @@ Value range: [5, 16]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: double--><!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: double-End-->
 

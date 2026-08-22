@@ -13,7 +13,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
@@ -35,7 +35,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@Builder  build(): void--><!--Device-AVCastPicker-@Builder  build(): void-End-->
 
@@ -56,7 +56,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@PropRef  activeColor?: Color | int | string--><!--Device-AVCastPicker-@PropRef  activeColor?: Color | int | string-End-->
 
@@ -77,7 +77,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@PropRef  colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-@PropRef  colorMode?: AVCastPickerColorMode-End-->
 
@@ -98,7 +98,7 @@ If not set, system will show the default appearance for different device type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@BuilderParam  customPicker?: CustomBuilder--><!--Device-AVCastPicker-@BuilderParam  customPicker?: CustomBuilder-End-->
 
@@ -119,7 +119,7 @@ If not set, system will show the default appearance for different device type.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@PropRef  normalColor?: Color | int | string--><!--Device-AVCastPicker-@PropRef  normalColor?: Color | int | string-End-->
 
@@ -137,7 +137,7 @@ onStateChange?: OnPickerStateCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-onStateChange?: OnPickerStateCallback--><!--Device-AVCastPicker-onStateChange?: OnPickerStateCallback-End-->
 
@@ -158,7 +158,7 @@ onStateChange?: OnPickerStateCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@PropRef  pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-@PropRef  pickerStyle?: AVCastPickerStyle-End-->
 
@@ -177,7 +177,7 @@ onStateChange?: OnPickerStateCallback
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-AVCastPicker-@PropRef  sessionType?: string--><!--Device-AVCastPicker-@PropRef  sessionType?: string-End-->
 

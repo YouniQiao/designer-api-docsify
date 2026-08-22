@@ -6,7 +6,7 @@ Enum type supplied to error when onSslErrorEventReceive being called.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum SslError--><!--Device-unnamed-export declare enum SslError-End-->
 
@@ -22,7 +22,7 @@ General error.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SslError-INVALID = 0--><!--Device-SslError-INVALID = 0-End-->
 
@@ -38,7 +38,7 @@ Hostname mismatch.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SslError-HOST_MISMATCH = 1--><!--Device-SslError-HOST_MISMATCH = 1-End-->
 
@@ -54,7 +54,7 @@ The certificate date is invalid.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SslError-DATE_INVALID = 2--><!--Device-SslError-DATE_INVALID = 2-End-->
 
@@ -70,7 +70,7 @@ The certificate authority is not trusted.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-SslError-UNTRUSTED = 3--><!--Device-SslError-UNTRUSTED = 3-End-->
 

@@ -15,7 +15,7 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function symlink(target: string, srcPath: string): Promise<void>--><!--Device-fileIo-function symlink(target: string, srcPath: string): Promise<void>-End-->
 
@@ -68,7 +68,7 @@ Creates a symbolic link based on a file path. This API uses an asynchronous call
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 

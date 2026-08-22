@@ -16,7 +16,7 @@ Battery charging state of the current device.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-function chargingStatus(): BatteryChargeState--><!--Device-batteryInfo-function chargingStatus(): BatteryChargeState-End-->
 

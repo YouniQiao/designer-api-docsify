@@ -6,7 +6,7 @@ Describe the options for the ParallelizeUI.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ParallelOption--><!--Device-unnamed-export interface ParallelOption-End-->
 
@@ -29,7 +29,7 @@ Whether ParallelizeUI create is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

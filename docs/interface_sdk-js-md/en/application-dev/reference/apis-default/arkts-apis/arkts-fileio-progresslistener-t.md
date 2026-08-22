@@ -8,7 +8,7 @@ Listener used to observe the copy progress.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-type ProgressListener = (progress: Progress) => void--><!--Device-fileIo-type ProgressListener = (progress: Progress) => void-End-->
 

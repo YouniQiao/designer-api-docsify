@@ -15,7 +15,7 @@ Opens a file or directory. This API returns the result synchronously. This API s
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function openSync(path: string, mode?: int): File--><!--Device-fileIo-function openSync(path: string, mode?: int): File-End-->
 

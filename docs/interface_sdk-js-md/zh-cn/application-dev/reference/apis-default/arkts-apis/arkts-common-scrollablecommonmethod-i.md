@@ -8,7 +8,7 @@ CommonScrollableMethod
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ScrollableCommonMethod--><!--Device-unnamed-export declare interface ScrollableCommonMethod-End-->
 
@@ -22,7 +22,7 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-autoAdjustScrollBarMargin(enable: boolean | undefined): this--><!--Device-ScrollableCommonMethod-autoAdjustScrollBarMargin(enable: boolean | undefined): this-End-->
 
@@ -44,7 +44,7 @@ backToTop(backToTop: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-backToTop(backToTop: boolean | undefined): this--><!--Device-ScrollableCommonMethod-backToTop(backToTop: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ clipContent(clip: ContentClipMode | RectShape | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-clipContent(clip: ContentClipMode | RectShape | undefined): this--><!--Device-ScrollableCommonMethod-clipContent(clip: ContentClipMode | RectShape | undefined): this-End-->
 
@@ -88,7 +88,7 @@ contentEndOffset(offset: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-contentEndOffset(offset: double | Resource | undefined): this--><!--Device-ScrollableCommonMethod-contentEndOffset(offset: double | Resource | undefined): this-End-->
 
@@ -110,7 +110,7 @@ contentStartOffset(offset: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-contentStartOffset(offset: double | Resource | undefined): this--><!--Device-ScrollableCommonMethod-contentStartOffset(offset: double | Resource | undefined): this-End-->
 
@@ -132,7 +132,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-ScrollableCommonMethod-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -154,7 +154,7 @@ edgeEffect(edgeEffect: EdgeEffect | undefined, options?: EdgeEffectOptions): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-edgeEffect(edgeEffect: EdgeEffect | undefined, options?: EdgeEffectOptions): this--><!--Device-ScrollableCommonMethod-edgeEffect(edgeEffect: EdgeEffect | undefined, options?: EdgeEffectOptions): this-End-->
 
@@ -177,7 +177,7 @@ enableScrollInteraction(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-enableScrollInteraction(value: boolean | undefined): this--><!--Device-ScrollableCommonMethod-enableScrollInteraction(value: boolean | undefined): this-End-->
 
@@ -199,7 +199,7 @@ enableScrollWithMouse(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-enableScrollWithMouse(enabled: boolean | undefined): this--><!--Device-ScrollableCommonMethod-enableScrollWithMouse(enabled: boolean | undefined): this-End-->
 
@@ -221,7 +221,7 @@ fadingEdge(enabled: boolean | undefined, options?: FadingEdgeOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-fadingEdge(enabled: boolean | undefined, options?: FadingEdgeOptions): this--><!--Device-ScrollableCommonMethod-fadingEdge(enabled: boolean | undefined, options?: FadingEdgeOptions): this-End-->
 
@@ -244,7 +244,7 @@ flingSpeedLimit(speedLimit: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-flingSpeedLimit(speedLimit: double | undefined): this--><!--Device-ScrollableCommonMethod-flingSpeedLimit(speedLimit: double | undefined): this-End-->
 
@@ -266,7 +266,7 @@ friction(value: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-friction(value: double | Resource | undefined): this--><!--Device-ScrollableCommonMethod-friction(value: double | Resource | undefined): this-End-->
 
@@ -288,7 +288,7 @@ nestedScroll(value: NestedScrollOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-nestedScroll(value: NestedScrollOptions | undefined): this--><!--Device-ScrollableCommonMethod-nestedScroll(value: NestedScrollOptions | undefined): this-End-->
 
@@ -310,7 +310,7 @@ onDidStopDragging(handler: OnDidStopDraggingCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onDidStopDragging(handler: OnDidStopDraggingCallback | undefined): this--><!--Device-ScrollableCommonMethod-onDidStopDragging(handler: OnDidStopDraggingCallback | undefined): this-End-->
 
@@ -332,7 +332,7 @@ onDidStopFling(handler: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onDidStopFling(handler: VoidCallback | undefined): this--><!--Device-ScrollableCommonMethod-onDidStopFling(handler: VoidCallback | undefined): this-End-->
 
@@ -354,7 +354,7 @@ onReachEnd(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onReachEnd(event: (() => void) | undefined): this--><!--Device-ScrollableCommonMethod-onReachEnd(event: (() => void) | undefined): this-End-->
 
@@ -376,7 +376,7 @@ onReachStart(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onReachStart(event: (() => void) | undefined): this--><!--Device-ScrollableCommonMethod-onReachStart(event: (() => void) | undefined): this-End-->
 
@@ -398,7 +398,7 @@ onScrollStart(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onScrollStart(event: (() => void) | undefined): this--><!--Device-ScrollableCommonMethod-onScrollStart(event: (() => void) | undefined): this-End-->
 
@@ -420,7 +420,7 @@ onScrollStop(event: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onScrollStop(event: (() => void) | undefined): this--><!--Device-ScrollableCommonMethod-onScrollStop(event: (() => void) | undefined): this-End-->
 
@@ -442,7 +442,7 @@ onWillStartDragging(handler: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onWillStartDragging(handler: VoidCallback | undefined): this--><!--Device-ScrollableCommonMethod-onWillStartDragging(handler: VoidCallback | undefined): this-End-->
 
@@ -464,7 +464,7 @@ onWillStartFling(handler: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onWillStartFling(handler: VoidCallback | undefined): this--><!--Device-ScrollableCommonMethod-onWillStartFling(handler: VoidCallback | undefined): this-End-->
 
@@ -486,7 +486,7 @@ onWillStopDragging(handler: OnWillStopDraggingCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-onWillStopDragging(handler: OnWillStopDraggingCallback | undefined): this--><!--Device-ScrollableCommonMethod-onWillStopDragging(handler: OnWillStopDraggingCallback | undefined): this-End-->
 
@@ -508,7 +508,7 @@ scrollBar(barState: BarState | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-scrollBar(barState: BarState | undefined): this--><!--Device-ScrollableCommonMethod-scrollBar(barState: BarState | undefined): this-End-->
 
@@ -530,7 +530,7 @@ scrollBarColor(color: Color | int | string | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | int | string | Resource | undefined): this--><!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | int | string | Resource | undefined): this-End-->
 
@@ -552,7 +552,7 @@ scrollBarHeight(height: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-scrollBarHeight(height: LengthMetrics | undefined): this--><!--Device-ScrollableCommonMethod-scrollBarHeight(height: LengthMetrics | undefined): this-End-->
 
@@ -574,7 +574,7 @@ scrollBarMargin(margin: ScrollBarMargin | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-scrollBarMargin(margin: ScrollBarMargin | undefined): this--><!--Device-ScrollableCommonMethod-scrollBarMargin(margin: ScrollBarMargin | undefined): this-End-->
 
@@ -596,7 +596,7 @@ scrollBarWidth(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-scrollBarWidth(value: double | string | undefined): this--><!--Device-ScrollableCommonMethod-scrollBarWidth(value: double | string | undefined): this-End-->
 
@@ -618,7 +618,7 @@ scrollBarWidth(value: Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollableCommonMethod-scrollBarWidth(value: Resource | undefined): this--><!--Device-ScrollableCommonMethod-scrollBarWidth(value: Resource | undefined): this-End-->
 
@@ -642,7 +642,7 @@ Sets the scrollbar track height.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

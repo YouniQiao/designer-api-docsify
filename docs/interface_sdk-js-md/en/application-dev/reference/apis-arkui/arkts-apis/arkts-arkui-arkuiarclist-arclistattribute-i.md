@@ -6,7 +6,7 @@ The ArcListAttribute
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ArcListAttribute--><!--Device-unnamed-export declare interface ArcListAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(modifier: AttributeModifier<ArcListAttribute> | AttributeModif
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-attributeModifier(modifier: AttributeModifier<ArcListAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ArcListAttribute-attributeModifier(modifier: AttributeModifier<ArcListAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ cachedCount(count: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-cachedCount(count: int | undefined): this--><!--Device-ArcListAttribute-cachedCount(count: int | undefined): this-End-->
 
@@ -70,7 +70,7 @@ chainAnimation(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-chainAnimation(enable: boolean | undefined): this--><!--Device-ArcListAttribute-chainAnimation(enable: boolean | undefined): this-End-->
 
@@ -92,7 +92,7 @@ childrenMainSize(size: ChildrenMainSize | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-childrenMainSize(size: ChildrenMainSize | undefined): this--><!--Device-ArcListAttribute-childrenMainSize(size: ChildrenMainSize | undefined): this-End-->
 
@@ -114,7 +114,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-ArcListAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -136,7 +136,7 @@ enableScrollInteraction(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-enableScrollInteraction(enable: boolean | undefined): this--><!--Device-ArcListAttribute-enableScrollInteraction(enable: boolean | undefined): this-End-->
 
@@ -158,7 +158,7 @@ fadingEdge(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-fadingEdge(enable: boolean | undefined): this--><!--Device-ArcListAttribute-fadingEdge(enable: boolean | undefined): this-End-->
 
@@ -180,7 +180,7 @@ flingSpeedLimit(speed: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-flingSpeedLimit(speed: double | undefined): this--><!--Device-ArcListAttribute-flingSpeedLimit(speed: double | undefined): this-End-->
 
@@ -202,7 +202,7 @@ friction(friction: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-friction(friction: double | undefined): this--><!--Device-ArcListAttribute-friction(friction: double | undefined): this-End-->
 
@@ -224,7 +224,7 @@ onDidScroll(handler: OnScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onDidScroll(handler: OnScrollCallback | undefined): this--><!--Device-ArcListAttribute-onDidScroll(handler: OnScrollCallback | undefined): this-End-->
 
@@ -246,7 +246,7 @@ onReachEnd(handler: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onReachEnd(handler: VoidCallback | undefined): this--><!--Device-ArcListAttribute-onReachEnd(handler: VoidCallback | undefined): this-End-->
 
@@ -268,7 +268,7 @@ onReachStart(handler: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onReachStart(handler: VoidCallback | undefined): this--><!--Device-ArcListAttribute-onReachStart(handler: VoidCallback | undefined): this-End-->
 
@@ -290,7 +290,7 @@ onScrollIndex(handler: ArcScrollIndexHandler | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onScrollIndex(handler: ArcScrollIndexHandler | undefined): this--><!--Device-ArcListAttribute-onScrollIndex(handler: ArcScrollIndexHandler | undefined): this-End-->
 
@@ -312,7 +312,7 @@ onScrollStart(handler: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onScrollStart(handler: VoidCallback | undefined): this--><!--Device-ArcListAttribute-onScrollStart(handler: VoidCallback | undefined): this-End-->
 
@@ -334,7 +334,7 @@ onScrollStop(handler: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onScrollStop(handler: VoidCallback | undefined): this--><!--Device-ArcListAttribute-onScrollStop(handler: VoidCallback | undefined): this-End-->
 
@@ -356,7 +356,7 @@ onWillScroll(handler: OnWillScrollCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this--><!--Device-ArcListAttribute-onWillScroll(handler: OnWillScrollCallback | undefined): this-End-->
 
@@ -378,7 +378,7 @@ scrollBar(status: BarState | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-scrollBar(status: BarState | undefined): this--><!--Device-ArcListAttribute-scrollBar(status: BarState | undefined): this-End-->
 
@@ -400,7 +400,7 @@ scrollBarColor(color: ColorMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-scrollBarColor(color: ColorMetrics | undefined): this--><!--Device-ArcListAttribute-scrollBarColor(color: ColorMetrics | undefined): this-End-->
 
@@ -422,7 +422,7 @@ scrollBarWidth(width: LengthMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-scrollBarWidth(width: LengthMetrics | undefined): this--><!--Device-ArcListAttribute-scrollBarWidth(width: LengthMetrics | undefined): this-End-->
 
@@ -444,7 +444,7 @@ setArcListOptions(options?: ArkListOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-setArcListOptions(options?: ArkListOptions): this--><!--Device-ArcListAttribute-setArcListOptions(options?: ArkListOptions): this-End-->
 
@@ -466,7 +466,7 @@ space(space: LengthMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ArcListAttribute-space(space: LengthMetrics | undefined): this--><!--Device-ArcListAttribute-space(space: LengthMetrics | undefined): this-End-->
 
@@ -490,7 +490,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcListAttribute-default--><!--Device-ArcListAttribute-default-End-->
 

@@ -6,7 +6,7 @@ The LazyVGridLayoutAttribute
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface LazyVGridLayoutAttribute--><!--Device-unnamed-export declare interface LazyVGridLayoutAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<LazyVGridLayoutAttribute> | Attrib
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyVGridLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyVGridLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyVGridLayoutAttribute-attributeModifier(modifier: AttributeModifier<LazyVGridLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ columnsTemplate(value: string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string | undefined): this--><!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string | undefined): this-End-->
 
@@ -64,7 +64,7 @@ setLazyVGridLayoutOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyVGridLayoutAttribute-setLazyVGridLayoutOptions(): this--><!--Device-LazyVGridLayoutAttribute-setLazyVGridLayoutOptions(): this-End-->
 
@@ -82,7 +82,7 @@ Called attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

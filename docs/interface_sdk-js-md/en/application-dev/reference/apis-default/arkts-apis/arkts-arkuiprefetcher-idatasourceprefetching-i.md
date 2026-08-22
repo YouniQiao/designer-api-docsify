@@ -6,7 +6,7 @@ Implement this interface to provide data prefetching for the LazyForEach compone
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface IDataSourcePrefetching--><!--Device-unnamed-export declare interface IDataSourcePrefetching-End-->
 
@@ -25,7 +25,7 @@ cancel(index: int): Promise<void> | undefined
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-IDataSourcePrefetching-cancel(index: int): Promise<void> | undefined--><!--Device-IDataSourcePrefetching-cancel(index: int): Promise<void> | undefined-End-->
 
@@ -49,7 +49,7 @@ Prefetches data for the specified element in the data collection. This method ca
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,7 +79,7 @@ Cancels prefetching data for the specified element in the data collection. This 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -13,7 +13,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ProgressAttribute--><!--Device-unnamed-export declare interface ProgressAttribute-End-->
 
@@ -27,7 +27,7 @@ attributeModifier(modifier: AttributeModifier<ProgressAttribute> | AttributeModi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-attributeModifier(modifier: AttributeModifier<ProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ProgressAttribute-attributeModifier(modifier: AttributeModifier<ProgressAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -49,7 +49,7 @@ color(value: ResourceColor | LinearGradient | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient | undefined): this--><!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient | undefined): this-End-->
 
@@ -71,7 +71,7 @@ contentModifier(modifier: ContentModifier<ProgressConfiguration> | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration> | undefined): this--><!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration> | undefined): this-End-->
 
@@ -93,7 +93,7 @@ privacySensitive(isPrivacySensitiveMode: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this--><!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: boolean | undefined): this-End-->
 
@@ -115,7 +115,7 @@ setProgressOptions(options: ProgressOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-setProgressOptions(options: ProgressOptions): this--><!--Device-ProgressAttribute-setProgressOptions(options: ProgressOptions): this-End-->
 
@@ -137,7 +137,7 @@ style(value: LinearStyleOptions | RingStyleOptions | CapsuleStyleOptions | Progr
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-style(value: LinearStyleOptions | RingStyleOptions | CapsuleStyleOptions | ProgressStyleOptions | undefined): this--><!--Device-ProgressAttribute-style(value: LinearStyleOptions | RingStyleOptions | CapsuleStyleOptions | ProgressStyleOptions | undefined): this-End-->
 
@@ -159,7 +159,7 @@ value(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ProgressAttribute-value(value: double | undefined): this--><!--Device-ProgressAttribute-value(value: double | undefined): this-End-->
 
@@ -183,7 +183,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

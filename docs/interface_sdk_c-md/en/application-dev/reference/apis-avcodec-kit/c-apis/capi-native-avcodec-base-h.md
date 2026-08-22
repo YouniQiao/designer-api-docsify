@@ -1104,7 +1104,7 @@ Defines the pointer to the function that is called to report the new stream desc
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
-| OH_AVFormat \*format | Pointer to the description information about the new output stream. |
+| [OH_AVFormat](capi-core-oh-avformat.md) \*format | Pointer to the description information about the new output stream. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNeedInputData()
@@ -1129,7 +1129,7 @@ Defines the pointer to the function that is called when new input data is requir
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new input buffer. |
-| [OH_AVMemory](capi-core-oh-avmemory.md) \*data | Pointer to the data to fill in the new input buffer. |
+| OH_AVMemory \*data | Pointer to the data to fill in the new input buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNewOutputData()
@@ -1154,8 +1154,8 @@ Defines the pointer to the function that is called when new output data is gener
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new output buffer. |
-| [OH_AVMemory](capi-core-oh-avmemory.md) \*data | Pointer to the data filled in the new output buffer. |
-| OH_AVCodecBufferAttr \*attr | Pointer to the description information about the new output buffer. |
+| OH_AVMemory \*data | Pointer to the data filled in the new output buffer. |
+| [OH_AVCodecBufferAttr](capi-core-oh-avcodecbufferattr.md) \*attr | Pointer to the description information about the new output buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNeedInputBuffer()
@@ -1176,7 +1176,7 @@ Defines the pointer to the function that is called when new input data is requir
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new input buffer. |
-| OH_AVBuffer \*buffer | Pointer to the data to fill in the new input buffer. |
+| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*buffer | Pointer to the data to fill in the new input buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNewOutputBuffer()
@@ -1197,7 +1197,7 @@ Defines the pointer to the function that is called when new output data is gener
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new output buffer. |
-| OH_AVBuffer \*buffer | Pointer to the data filled in the new output buffer. |
+| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*buffer | Pointer to the data filled in the new output buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVDataSourceReadAt()
@@ -1216,7 +1216,7 @@ Defines a function pointer used to provide the capability of obtaining user-defi
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
+| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*data | Pointer to the buffer to be filled in. |
 | int32_t length | Length of the data to read. |
 | int64_t pos | Offset from which the data is read. |
 
@@ -1242,7 +1242,7 @@ Defines a function pointer used to provide the capability of obtaining user-defi
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
+| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*data | Pointer to the buffer to be filled in. |
 | int32_t length | Length of the data to read. |
 | int64_t pos | Offset from which the data is read. |
 | void \*userData | Pointer to user-defined data. |

@@ -4,7 +4,7 @@ The message for indicating the of result of JavaScript code execution.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->
 
@@ -25,7 +25,7 @@ Get the array value of the the JavaScript code execution result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getArray(): Array<string | double | long | boolean>--><!--Device-JsMessageExt-getArray(): Array<string | double | long | boolean>-End-->
 
@@ -53,7 +53,7 @@ Get the array buffer value of the JavaScript code execution result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-JsMessageExt-getArrayBuffer(): ArrayBuffer-End-->
 
@@ -81,7 +81,7 @@ Get the boolean value of the JavaScript code execution result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getBoolean(): boolean--><!--Device-JsMessageExt-getBoolean(): boolean-End-->
 
@@ -109,7 +109,7 @@ Get the exception or object of the the JavaScript code execution result and seri
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getErrorDescription(): string | null--><!--Device-JsMessageExt-getErrorDescription(): string | null-End-->
 
@@ -131,7 +131,7 @@ Get the number value of the JavaScript code execution result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getNumber(): double | long--><!--Device-JsMessageExt-getNumber(): double | long-End-->
 
@@ -159,7 +159,7 @@ Get the string value of the JavaScript code execution result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getString(): string--><!--Device-JsMessageExt-getString(): string-End-->
 
@@ -187,7 +187,7 @@ Get the type of the JavaScript code execution result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-JsMessageExt-getType(): JsMessageType--><!--Device-JsMessageExt-getType(): JsMessageType-End-->
 

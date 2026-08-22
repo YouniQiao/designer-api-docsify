@@ -8,7 +8,7 @@ Callback for picker state
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export type OnPickerStateCallback = (state: AVCastPickerState) => void--><!--Device-unnamed-export type OnPickerStateCallback = (state: AVCastPickerState) => void-End-->
 

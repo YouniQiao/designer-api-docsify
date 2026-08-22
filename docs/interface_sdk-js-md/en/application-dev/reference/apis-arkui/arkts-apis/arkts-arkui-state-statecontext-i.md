@@ -4,7 +4,7 @@ Context of a state, keeping track of changes in the given scope.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface StateContext--><!--Device-unnamed-export declare interface StateContext-End-->
 
@@ -20,7 +20,7 @@ The scope which is used to track the changes of state context.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

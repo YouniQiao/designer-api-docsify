@@ -16,7 +16,7 @@ Estimated time for fully charging the current device, in unit of milliseconds. T
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-function estimatedRemainingChargeTime(): long--><!--Device-batteryInfo-function estimatedRemainingChargeTime(): long-End-->
 

@@ -15,7 +15,7 @@ Acquire the current font-weight-scale.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-uiAppearance-function getFontWeightScale(): double--><!--Device-uiAppearance-function getFontWeightScale(): double-End-->
 

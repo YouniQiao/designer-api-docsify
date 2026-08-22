@@ -6,7 +6,7 @@ Represents error that is thrown when the requested operation is not supported.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class UnsupportedOperationError--><!--Device-unnamed-export class UnsupportedOperationError-End-->
 
@@ -27,7 +27,7 @@ Constructs an UnsupportedOperationError instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,7 +15,7 @@ Adjusts the position of the file offset pointer.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function lseek(fd: int, offset: long, whence?: WhenceType): long--><!--Device-fileIo-function lseek(fd: int, offset: long, whence?: WhenceType): long-End-->
 

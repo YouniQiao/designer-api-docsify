@@ -15,7 +15,7 @@ Reads a file text line by line synchronously. Only the files in UTF-8 format are
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function readLinesSync(filePath: string, options?: Options): ReaderIterator--><!--Device-fileIo-function readLinesSync(filePath: string, options?: Options): ReaderIterator-End-->
 

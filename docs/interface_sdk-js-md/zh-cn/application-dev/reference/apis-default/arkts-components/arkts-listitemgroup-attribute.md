@@ -6,7 +6,7 @@ The ListItemGroupAttribute.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ListItemGroupAttribute--><!--Device-unnamed-export declare interface ListItemGroupAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ListItemGroupAttribute> | Attribut
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemGroupAttribute-attributeModifier(modifier: AttributeModifier<ListItemGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ListItemGroupAttribute-attributeModifier(modifier: AttributeModifier<ListItemGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ childrenMainSize(value: ChildrenMainSize | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemGroupAttribute-childrenMainSize(value: ChildrenMainSize | undefined): this--><!--Device-ListItemGroupAttribute-childrenMainSize(value: ChildrenMainSize | undefined): this-End-->
 
@@ -64,7 +64,7 @@ divider(value: ListDividerOptions | null | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemGroupAttribute-divider(value: ListDividerOptions | null | undefined): this--><!--Device-ListItemGroupAttribute-divider(value: ListDividerOptions | null | undefined): this-End-->
 
@@ -86,7 +86,7 @@ setListItemGroupOptions(options?: ListItemGroupOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ListItemGroupAttribute-setListItemGroupOptions(options?: ListItemGroupOptions): this--><!--Device-ListItemGroupAttribute-setListItemGroupOptions(options?: ListItemGroupOptions): this-End-->
 
@@ -110,7 +110,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

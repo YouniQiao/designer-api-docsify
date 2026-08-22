@@ -12,7 +12,7 @@ DynamicLayout组件支持的布局算法基础类型。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** ArkTS-Sta起始版本为24。
 
 <!--Device-unnamed-export declare interface LayoutAlgorithm--><!--Device-unnamed-export declare interface LayoutAlgorithm-End-->
 

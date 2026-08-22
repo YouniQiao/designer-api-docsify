@@ -8,7 +8,7 @@ Defines the Rating component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface RatingAttribute--><!--Device-unnamed-export declare interface RatingAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-RatingAttribute-attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): thi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): this--><!--Device-RatingAttribute-contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): this-End-->
 
@@ -66,7 +66,7 @@ onChange(callback: OnRatingChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-onChange(callback: OnRatingChangeCallback | undefined): this--><!--Device-RatingAttribute-onChange(callback: OnRatingChangeCallback | undefined): this-End-->
 
@@ -88,7 +88,7 @@ setRatingOptions(options?: RatingOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-setRatingOptions(options?: RatingOptions): this--><!--Device-RatingAttribute-setRatingOptions(options?: RatingOptions): this-End-->
 
@@ -110,7 +110,7 @@ starStyle(options: StarStyleOptions | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions | undefined): this-End-->
 
@@ -132,7 +132,7 @@ stars(value: int | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-stars(value: int | undefined): this--><!--Device-RatingAttribute-stars(value: int | undefined): this-End-->
 
@@ -154,7 +154,7 @@ stepSize(value: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-RatingAttribute-stepSize(value: double | undefined): this--><!--Device-RatingAttribute-stepSize(value: double | undefined): this-End-->
 
@@ -178,7 +178,7 @@ Set rating options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

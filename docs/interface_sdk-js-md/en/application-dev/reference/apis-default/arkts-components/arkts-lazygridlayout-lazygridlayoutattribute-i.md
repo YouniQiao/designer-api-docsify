@@ -6,7 +6,7 @@ The LazyGridLayoutAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface LazyGridLayoutAttribute--><!--Device-unnamed-export declare interface LazyGridLayoutAttribute-End-->
 
@@ -20,7 +20,7 @@ columnsGap(value: LengthMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyGridLayoutAttribute-columnsGap(value: LengthMetrics | undefined): this--><!--Device-LazyGridLayoutAttribute-columnsGap(value: LengthMetrics | undefined): this-End-->
 
@@ -42,7 +42,7 @@ footer(builder: CustomBuilder | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyGridLayoutAttribute-footer(builder: CustomBuilder | undefined): this--><!--Device-LazyGridLayoutAttribute-footer(builder: CustomBuilder | undefined): this-End-->
 
@@ -64,7 +64,7 @@ header(builder: CustomBuilder | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyGridLayoutAttribute-header(builder: CustomBuilder | undefined): this--><!--Device-LazyGridLayoutAttribute-header(builder: CustomBuilder | undefined): this-End-->
 
@@ -86,7 +86,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyGridLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this--><!--Device-LazyGridLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this-End-->
 
@@ -108,7 +108,7 @@ rowsGap(value: LengthMetrics | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyGridLayoutAttribute-rowsGap(value: LengthMetrics | undefined): this--><!--Device-LazyGridLayoutAttribute-rowsGap(value: LengthMetrics | undefined): this-End-->
 
@@ -130,7 +130,7 @@ sticky(sticky: StickyStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyGridLayoutAttribute-sticky(sticky: StickyStyle | undefined): this--><!--Device-LazyGridLayoutAttribute-sticky(sticky: StickyStyle | undefined): this-End-->
 
@@ -154,7 +154,7 @@ Triggered when the index of child components in the visible area changes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

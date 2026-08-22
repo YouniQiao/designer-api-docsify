@@ -6,7 +6,7 @@ Enum type supplied to [onMessageEventExt](arkts-webview-webmessageport-i.md#onme
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
 
@@ -22,7 +22,7 @@ Unsupported data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-NOT_SUPPORT--><!--Device-WebMessageType-NOT_SUPPORT-End-->
 
@@ -38,7 +38,7 @@ The string data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-STRING--><!--Device-WebMessageType-STRING-End-->
 
@@ -54,7 +54,7 @@ The number data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-NUMBER--><!--Device-WebMessageType-NUMBER-End-->
 
@@ -70,7 +70,7 @@ The boolean data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-BOOLEAN--><!--Device-WebMessageType-BOOLEAN-End-->
 
@@ -86,7 +86,7 @@ The arraybuffer data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-ARRAY_BUFFER--><!--Device-WebMessageType-ARRAY_BUFFER-End-->
 
@@ -102,7 +102,7 @@ The array data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-ARRAY--><!--Device-WebMessageType-ARRAY-End-->
 
@@ -118,7 +118,7 @@ The error data type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebMessageType-ERROR--><!--Device-WebMessageType-ERROR-End-->
 

@@ -4,7 +4,7 @@ Defines the options used in **createWriteStream()**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface WriteStreamOptions--><!--Device-unnamed-export interface WriteStreamOptions-End-->
 
@@ -33,7 +33,7 @@ You can also specify the following options, separated by a bitwise OR operator (
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WriteStreamOptions-mode?: int--><!--Device-WriteStreamOptions-mode?: int-End-->
 
@@ -51,7 +51,7 @@ Start position to write the data, in bytes. This parameter is optional. By defau
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WriteStreamOptions-start?: long--><!--Device-WriteStreamOptions-start?: long-End-->
 

@@ -6,7 +6,7 @@ Represents error that is thrown when attempting to store an object of different 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class ArrayStoreError--><!--Device-unnamed-export class ArrayStoreError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new ArrayStoreError instance with provided message and error specif
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

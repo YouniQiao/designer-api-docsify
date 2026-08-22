@@ -6,7 +6,7 @@ LazyDynamicLayout属性
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface LazyDynamicLayoutAttribute--><!--Device-unnamed-export declare interface LazyDynamicLayoutAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyDynamicLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyDynamicLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyDynamicLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyDynamicLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ onVisibleIndexesChange(callback: Callback<int[]> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyDynamicLayoutAttribute-onVisibleIndexesChange(callback: Callback<int[]> | undefined): this--><!--Device-LazyDynamicLayoutAttribute-onVisibleIndexesChange(callback: Callback<int[]> | undefined): this-End-->
 
@@ -70,7 +70,7 @@ setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyDynamicLayoutAttribute-setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this--><!--Device-LazyDynamicLayoutAttribute-setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this-End-->
 
@@ -94,7 +94,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

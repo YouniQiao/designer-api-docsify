@@ -4,7 +4,7 @@ Provides detailed information about the changes of the same-layer tag lifecycle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface NativeEmbedDataInfo--><!--Device-unnamed-export declare interface NativeEmbedDataInfo-End-->
 
@@ -22,7 +22,7 @@ Unique id of the same-layer tag.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedDataInfo-embedId?: string--><!--Device-NativeEmbedDataInfo-embedId?: string-End-->
 
@@ -40,7 +40,7 @@ Detailed information about the same-layer tag.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedDataInfo-info?: NativeEmbedInfo--><!--Device-NativeEmbedDataInfo-info?: NativeEmbedInfo-End-->
 
@@ -58,7 +58,7 @@ Lifecycle status of the same-layer tag.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedDataInfo-status?: NativeEmbedStatus--><!--Device-NativeEmbedDataInfo-status?: NativeEmbedStatus-End-->
 
@@ -76,7 +76,7 @@ Psurfaceid of the NativeImage.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedDataInfo-surfaceId?: string--><!--Device-NativeEmbedDataInfo-surfaceId?: string-End-->
 

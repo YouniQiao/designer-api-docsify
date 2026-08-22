@@ -6,7 +6,7 @@ Provides an arc button style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum ArcButtonStyleMode--><!--Device-unnamed-export declare enum ArcButtonStyleMode-End-->
 
@@ -22,7 +22,7 @@ Emphasis status, light style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonStyleMode-EMPHASIZED_LIGHT = 0--><!--Device-ArcButtonStyleMode-EMPHASIZED_LIGHT = 0-End-->
 
@@ -38,7 +38,7 @@ Emphasis status, dark style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonStyleMode-EMPHASIZED_DARK = 1--><!--Device-ArcButtonStyleMode-EMPHASIZED_DARK = 1-End-->
 
@@ -54,7 +54,7 @@ Normal status, light style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonStyleMode-NORMAL_LIGHT = 2--><!--Device-ArcButtonStyleMode-NORMAL_LIGHT = 2-End-->
 
@@ -70,7 +70,7 @@ Normal status, dark style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonStyleMode-NORMAL_DARK = 3--><!--Device-ArcButtonStyleMode-NORMAL_DARK = 3-End-->
 
@@ -86,7 +86,7 @@ Custom status, custom style.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ArcButtonStyleMode-CUSTOM = 4--><!--Device-ArcButtonStyleMode-CUSTOM = 4-End-->
 

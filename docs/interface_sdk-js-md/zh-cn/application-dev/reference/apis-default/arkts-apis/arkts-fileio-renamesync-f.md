@@ -19,7 +19,7 @@ function renameSync(oldPath: string, newPath: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function renameSync(oldPath: string, newPath: string): void--><!--Device-fileIo-function renameSync(oldPath: string, newPath: string): void-End-->
 

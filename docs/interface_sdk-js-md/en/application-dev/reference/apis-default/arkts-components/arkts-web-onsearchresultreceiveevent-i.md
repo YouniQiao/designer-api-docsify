@@ -4,7 +4,7 @@ Defines function Triggered when the host application call searchAllAsync.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface OnSearchResultReceiveEvent--><!--Device-unnamed-export declare interface OnSearchResultReceiveEvent-End-->
 
@@ -22,7 +22,7 @@ The ordinal number of the currently matched lookup item (starting from 0).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnSearchResultReceiveEvent-activeMatchOrdinal: int--><!--Device-OnSearchResultReceiveEvent-activeMatchOrdinal: int-End-->
 
@@ -40,7 +40,7 @@ Indicates whether the current in-page search operation is complete. The method m
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnSearchResultReceiveEvent-isDoneCounting: boolean--><!--Device-OnSearchResultReceiveEvent-isDoneCounting: boolean-End-->
 
@@ -58,7 +58,7 @@ The number of all matched keywords.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OnSearchResultReceiveEvent-numberOfMatches: int--><!--Device-OnSearchResultReceiveEvent-numberOfMatches: int-End-->
 

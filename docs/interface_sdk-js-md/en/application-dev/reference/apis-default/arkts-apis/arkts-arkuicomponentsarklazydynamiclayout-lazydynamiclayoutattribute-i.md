@@ -6,7 +6,7 @@ The LazyDynamicLayoutAttribute
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface LazyDynamicLayoutAttribute--><!--Device-unnamed-export declare interface LazyDynamicLayoutAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyDynamicLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyDynamicLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyDynamicLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyDynamicLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ onVisibleIndexesChange(callback: Callback<int[]> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyDynamicLayoutAttribute-onVisibleIndexesChange(callback: Callback<int[]> | undefined): this--><!--Device-LazyDynamicLayoutAttribute-onVisibleIndexesChange(callback: Callback<int[]> | undefined): this-End-->
 
@@ -70,7 +70,7 @@ setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyDynamicLayoutAttribute-setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this--><!--Device-LazyDynamicLayoutAttribute-setLazyDynamicLayoutOptions(algorithm: LazyLayoutAlgorithm): this-End-->
 
@@ -94,7 +94,7 @@ Set LazyDynamicLayout options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

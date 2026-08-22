@@ -18,7 +18,7 @@ Reads the text content of a file synchronously. This API returns the result sync
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>--><!--Device-fileIo-function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>-End-->
 
@@ -67,7 +67,7 @@ Reads the text of a file. This API uses an asynchronous callback to return the r
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function readText(filePath: string, callback: AsyncCallback<string>): void--><!--Device-fileIo-function readText(filePath: string, callback: AsyncCallback<string>): void-End-->
 
@@ -113,7 +113,7 @@ Reads the text of a file. Read options can be configured. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void--><!--Device-fileIo-function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void-End-->
 

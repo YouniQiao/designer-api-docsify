@@ -6,7 +6,7 @@ Define the attribute functions of SecurityUIExtensionComponent.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface SecurityUIExtensionComponentAttribute--><!--Device-unnamed-export declare interface SecurityUIExtensionComponentAttribute-End-->
 
@@ -22,7 +22,7 @@ setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtension
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-SecurityUIExtensionComponentAttribute-setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtensionOptions): this--><!--Device-SecurityUIExtensionComponentAttribute-setSecurityUIExtensionComponentOptions(want: Want, options?: SecurityUIExtensionOptions): this-End-->
 

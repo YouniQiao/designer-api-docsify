@@ -6,7 +6,7 @@ Enum type supplied to [CredentialType](#credentialtype) when ClientAuthenticatio
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum CredentialType--><!--Device-unnamed-export declare enum CredentialType-End-->
 
@@ -22,7 +22,7 @@ User credential.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CredentialType-CREDENTIAL_USER = 2--><!--Device-CredentialType-CREDENTIAL_USER = 2-End-->
 
@@ -38,7 +38,7 @@ Application-specific credential.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CredentialType-CREDENTIAL_APP = 3--><!--Device-CredentialType-CREDENTIAL_APP = 3-End-->
 
@@ -54,7 +54,7 @@ Hardware security key credential.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CredentialType-CREDENTIAL_UKEY = 4--><!--Device-CredentialType-CREDENTIAL_UKEY = 4-End-->
 

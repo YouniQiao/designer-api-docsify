@@ -4,7 +4,7 @@ ArcSliderLayoutOptions的构造信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export interface ArcSliderLayoutOptionsConstructorOptions--><!--Device-unnamed-export interface ArcSliderLayoutOptionsConstructorOptions-End-->
 
@@ -31,7 +31,7 @@ position?: ArcSliderPosition
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderLayoutOptionsConstructorOptions-position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptionsConstructorOptions-position?: ArcSliderPosition-End-->
 
@@ -53,7 +53,7 @@ reverse?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderLayoutOptionsConstructorOptions-reverse?: boolean--><!--Device-ArcSliderLayoutOptionsConstructorOptions-reverse?: boolean-End-->
 

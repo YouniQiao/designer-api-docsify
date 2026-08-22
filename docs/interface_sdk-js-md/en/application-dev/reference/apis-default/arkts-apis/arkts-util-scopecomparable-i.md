@@ -6,7 +6,7 @@ The ScopeComparable contains comparison methods.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-util-interface ScopeComparable--><!--Device-util-interface ScopeComparable-End-->
 
@@ -27,7 +27,7 @@ The comparison function is used by the scope.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ScopeComparable-compareTo(other: T): boolean--><!--Device-ScopeComparable-compareTo(other: T): boolean-End-->
 

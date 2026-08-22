@@ -4,7 +4,7 @@ The strategy of blank screen detection.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface BlankScreenDetectionConfig--><!--Device-unnamed-export declare interface BlankScreenDetectionConfig-End-->
 
@@ -22,7 +22,7 @@ When using the specific detection method of detecting contentful nodes, the thre
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: int--><!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: int-End-->
 
@@ -40,7 +40,7 @@ The combination of blank screen detection methods.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]--><!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]-End-->
 
@@ -58,7 +58,7 @@ The settings of the timing when web try to detect current page is blank or not. 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BlankScreenDetectionConfig-detectionTiming?: double[]--><!--Device-BlankScreenDetectionConfig-detectionTiming?: double[]-End-->
 
@@ -76,7 +76,7 @@ Enable blank screen detection or not.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-BlankScreenDetectionConfig-enable: boolean--><!--Device-BlankScreenDetectionConfig-enable: boolean-End-->
 

@@ -4,7 +4,7 @@ Enum type supplied to [rotateRenderEffect](arkts-web-attribute.md#rotaterenderef
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum WebRotateEffect--><!--Device-unnamed-export declare enum WebRotateEffect-End-->
 
@@ -20,7 +20,7 @@ The content area is drawn in top-left of the node.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebRotateEffect-TOPLEFT_EFFECT = 0--><!--Device-WebRotateEffect-TOPLEFT_EFFECT = 0-End-->
 
@@ -36,7 +36,7 @@ Scale the content area to cover the node.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebRotateEffect-RESIZE_COVER_EFFECT = 1--><!--Device-WebRotateEffect-RESIZE_COVER_EFFECT = 1-End-->
 

@@ -4,7 +4,7 @@ Defines the options used in **read()**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
 
@@ -27,7 +27,7 @@ Length of the data to read, in bytes. This parameter is optional. The default va
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadOptions-length?: long--><!--Device-ReadOptions-length?: long-End-->
 
@@ -45,7 +45,7 @@ Start position of the file to read, in bytes. This parameter is optional. By def
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ReadOptions-offset?: long--><!--Device-ReadOptions-offset?: long-End-->
 

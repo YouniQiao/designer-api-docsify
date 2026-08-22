@@ -4,7 +4,7 @@ Enum type supplied to [NativeEmbedParamItem](arkts-web-nativeembedparamitem-i.md
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum NativeEmbedParamStatus--><!--Device-unnamed-export declare enum NativeEmbedParamStatus-End-->
 
@@ -20,7 +20,7 @@ The param element is created.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedParamStatus-ADD = 0--><!--Device-NativeEmbedParamStatus-ADD = 0-End-->
 
@@ -36,7 +36,7 @@ The param element is updated.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedParamStatus-UPDATE = 1--><!--Device-NativeEmbedParamStatus-UPDATE = 1-End-->
 
@@ -52,7 +52,7 @@ The param element is deleted.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-NativeEmbedParamStatus-DELETE = 2--><!--Device-NativeEmbedParamStatus-DELETE = 2-End-->
 

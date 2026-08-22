@@ -4,7 +4,7 @@ Defines the enable scan effect.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ScanEffectOptions--><!--Device-unnamed-export declare interface ScanEffectOptions-End-->
 
@@ -24,7 +24,7 @@ Enable scan effect. Default value: false.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

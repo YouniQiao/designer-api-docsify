@@ -8,7 +8,7 @@ The ParticleAttribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ParticleAttribute--><!--Device-unnamed-export declare interface ParticleAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<ParticleAttribute> | AttributeModi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ParticleAttribute-attributeModifier(modifier: AttributeModifier<ParticleAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ParticleAttribute-attributeModifier(modifier: AttributeModifier<ParticleAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ disturbanceFields(fields: Array<DisturbanceFieldOptions> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ParticleAttribute-disturbanceFields(fields: Array<DisturbanceFieldOptions> | undefined): this--><!--Device-ParticleAttribute-disturbanceFields(fields: Array<DisturbanceFieldOptions> | undefined): this-End-->
 
@@ -66,7 +66,7 @@ emitter(value: Array<EmitterProperty> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ParticleAttribute-emitter(value: Array<EmitterProperty> | undefined): this--><!--Device-ParticleAttribute-emitter(value: Array<EmitterProperty> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ rippleFields(fields: Array<RippleFieldOptions> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ParticleAttribute-rippleFields(fields: Array<RippleFieldOptions> | undefined): this--><!--Device-ParticleAttribute-rippleFields(fields: Array<RippleFieldOptions> | undefined): this-End-->
 
@@ -110,7 +110,7 @@ setParticleOptions(particles: Particles): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ParticleAttribute-setParticleOptions(particles: Particles): this--><!--Device-ParticleAttribute-setParticleOptions(particles: Particles): this-End-->
 
@@ -132,7 +132,7 @@ velocityFields(fields: Array<VelocityFieldOptions> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ParticleAttribute-velocityFields(fields: Array<VelocityFieldOptions> | undefined): this--><!--Device-ParticleAttribute-velocityFields(fields: Array<VelocityFieldOptions> | undefined): this-End-->
 
@@ -156,7 +156,7 @@ Set velocity fields of particles. The velocity field applies a force to particle
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

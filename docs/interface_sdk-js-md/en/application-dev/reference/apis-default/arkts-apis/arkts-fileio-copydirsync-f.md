@@ -15,7 +15,7 @@ Copies the source directory to the destination path. This API returns the result
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function copyDirSync(src: string, dest: string, mode?: int): void--><!--Device-fileIo-function copyDirSync(src: string, dest: string, mode?: int): void-End-->
 

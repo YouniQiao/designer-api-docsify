@@ -15,7 +15,7 @@ Sets an extended attribute of a file or directory.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function setxattrSync(path: string, key: string, value: string): void--><!--Device-fileIo-function setxattrSync(path: string, key: string, value: string): void-End-->
 

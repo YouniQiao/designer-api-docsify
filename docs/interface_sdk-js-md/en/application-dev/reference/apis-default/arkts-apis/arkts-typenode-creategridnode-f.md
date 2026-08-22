@@ -10,7 +10,7 @@ Create a FrameNode of Grid type. On API 26.0.0 and above, It can also create a F
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

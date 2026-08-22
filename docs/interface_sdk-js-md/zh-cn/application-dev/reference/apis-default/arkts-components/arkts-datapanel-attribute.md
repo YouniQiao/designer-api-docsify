@@ -8,7 +8,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface DataPanelAttribute--><!--Device-unnamed-export declare interface DataPanelAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<DataPanelAttribute> | AttributeMod
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-attributeModifier(modifier: AttributeModifier<DataPanelAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-DataPanelAttribute-attributeModifier(modifier: AttributeModifier<DataPanelAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ closeEffect(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-closeEffect(value: boolean | undefined): this--><!--Device-DataPanelAttribute-closeEffect(value: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<DataPanelConfiguration> | undefined): 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-contentModifier(modifier: ContentModifier<DataPanelConfiguration> | undefined): this--><!--Device-DataPanelAttribute-contentModifier(modifier: ContentModifier<DataPanelConfiguration> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ setDataPanelOptions(options: DataPanelOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-setDataPanelOptions(options: DataPanelOptions): this--><!--Device-DataPanelAttribute-setDataPanelOptions(options: DataPanelOptions): this-End-->
 
@@ -110,7 +110,7 @@ strokeWidth(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-strokeWidth(value: Length | undefined): this--><!--Device-DataPanelAttribute-strokeWidth(value: Length | undefined): this-End-->
 
@@ -132,7 +132,7 @@ trackBackgroundColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-trackBackgroundColor(value: ResourceColor | undefined): this--><!--Device-DataPanelAttribute-trackBackgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -154,7 +154,7 @@ trackShadow(value: DataPanelShadowOptions | undefined | null): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-trackShadow(value: DataPanelShadowOptions | undefined | null): this--><!--Device-DataPanelAttribute-trackShadow(value: DataPanelShadowOptions | undefined | null): this-End-->
 
@@ -176,7 +176,7 @@ valueColors(value: Array<ResourceColor | LinearGradient> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-DataPanelAttribute-valueColors(value: Array<ResourceColor | LinearGradient> | undefined): this--><!--Device-DataPanelAttribute-valueColors(value: Array<ResourceColor | LinearGradient> | undefined): this-End-->
 
@@ -200,7 +200,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

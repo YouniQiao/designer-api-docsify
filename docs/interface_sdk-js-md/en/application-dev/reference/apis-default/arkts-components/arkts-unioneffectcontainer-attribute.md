@@ -8,7 +8,7 @@ Defines the UnionEffectContainer attribute functions.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface UnionEffectContainerAttribute--><!--Device-unnamed-export declare interface UnionEffectContainerAttribute-End-->
 
@@ -25,7 +25,7 @@ attributeModifier(modifier: AttributeModifier<UnionEffectContainerAttribute>
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-UnionEffectContainerAttribute-attributeModifier(modifier: AttributeModifier<UnionEffectContainerAttribute>        | AttributeModifier<CommonMethod> | undefined): this--><!--Device-UnionEffectContainerAttribute-attributeModifier(modifier: AttributeModifier<UnionEffectContainerAttribute>        | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -47,7 +47,7 @@ pointLight(light: PointLightStyle): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-UnionEffectContainerAttribute-pointLight(light: PointLightStyle): this--><!--Device-UnionEffectContainerAttribute-pointLight(light: PointLightStyle): this-End-->
 
@@ -69,7 +69,7 @@ setUnionEffectContainerOptions(options?: UnionEffectContainerOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-UnionEffectContainerAttribute-setUnionEffectContainerOptions(options?: UnionEffectContainerOptions): this--><!--Device-UnionEffectContainerAttribute-setUnionEffectContainerOptions(options?: UnionEffectContainerOptions): this-End-->
 
@@ -91,7 +91,7 @@ unionMode(mode: UnionMode | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-UnionEffectContainerAttribute-unionMode(mode: UnionMode | undefined): this--><!--Device-UnionEffectContainerAttribute-unionMode(mode: UnionMode | undefined): this-End-->
 

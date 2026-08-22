@@ -4,7 +4,7 @@ ArcSliderStyleOptions的构造信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export interface ArcSliderStyleOptionsConstructorOptions--><!--Device-unnamed-export interface ArcSliderStyleOptionsConstructorOptions-End-->
 
@@ -33,7 +33,7 @@ activeTrackThickness?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: double--><!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: double-End-->
 
@@ -55,7 +55,7 @@ selectedColor?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string-End-->
 
@@ -79,7 +79,7 @@ trackBlur?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: double--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: double-End-->
 
@@ -101,7 +101,7 @@ trackColor?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string-End-->
 
@@ -125,7 +125,7 @@ trackThickness?: double
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: double--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: double-End-->
 

@@ -15,7 +15,7 @@ Get the string name of the system errno.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-util-function errnoToString(errno: int): string--><!--Device-util-function errnoToString(errno: int): string-End-->
 

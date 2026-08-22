@@ -6,7 +6,7 @@ Defines the TextTimer component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface TextTimerAttribute--><!--Device-unnamed-export declare interface TextTimerAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<TextTimerAttribute> | AttributeMod
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-attributeModifier(modifier: AttributeModifier<TextTimerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TextTimerAttribute-attributeModifier(modifier: AttributeModifier<TextTimerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ contentModifier(modifier: ContentModifier<TextTimerConfiguration> | undefined): 
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-contentModifier(modifier: ContentModifier<TextTimerConfiguration> | undefined): this--><!--Device-TextTimerAttribute-contentModifier(modifier: ContentModifier<TextTimerConfiguration> | undefined): this-End-->
 
@@ -64,7 +64,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-TextTimerAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -86,7 +86,7 @@ fontFamily(value: ResourceStr | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-fontFamily(value: ResourceStr | undefined): this--><!--Device-TextTimerAttribute-fontFamily(value: ResourceStr | undefined): this-End-->
 
@@ -108,7 +108,7 @@ fontSize(value: Length | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-fontSize(value: Length | undefined): this--><!--Device-TextTimerAttribute-fontSize(value: Length | undefined): this-End-->
 
@@ -130,7 +130,7 @@ fontStyle(value: FontStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-fontStyle(value: FontStyle | undefined): this--><!--Device-TextTimerAttribute-fontStyle(value: FontStyle | undefined): this-End-->
 
@@ -152,7 +152,7 @@ fontWeight(value: int | FontWeight | ResourceStr | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-fontWeight(value: int | FontWeight | ResourceStr | undefined): this--><!--Device-TextTimerAttribute-fontWeight(value: int | FontWeight | ResourceStr | undefined): this-End-->
 
@@ -174,7 +174,7 @@ format(value: string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-format(value: string | undefined): this--><!--Device-TextTimerAttribute-format(value: string | undefined): this-End-->
 
@@ -196,7 +196,7 @@ onTimer(event: TimerCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-onTimer(event: TimerCallback | undefined): this--><!--Device-TextTimerAttribute-onTimer(event: TimerCallback | undefined): this-End-->
 
@@ -218,7 +218,7 @@ setTextTimerOptions(options?: TextTimerOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-setTextTimerOptions(options?: TextTimerOptions): this--><!--Device-TextTimerAttribute-setTextTimerOptions(options?: TextTimerOptions): this-End-->
 
@@ -240,7 +240,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextTimerAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this--><!--Device-TextTimerAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions> | undefined): this-End-->
 
@@ -264,7 +264,7 @@ Set TextTimer options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

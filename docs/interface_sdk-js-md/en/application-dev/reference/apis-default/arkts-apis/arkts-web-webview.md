@@ -6,7 +6,7 @@ This module provides the capability to manage web modules.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
 

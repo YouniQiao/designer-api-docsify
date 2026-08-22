@@ -6,7 +6,7 @@ LazyV WaterFlowLayout属性
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 <!--Device-unnamed-export declare interface LazyVWaterFlowLayoutAttribute--><!--Device-unnamed-export declare interface LazyVWaterFlowLayoutAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyVWaterFlowLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyVWaterFlowLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyVWaterFlowLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyVWaterFlowLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this--><!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this-End-->
 
@@ -70,7 +70,7 @@ setLazyVWaterFlowLayoutOptions(): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-LazyVWaterFlowLayoutAttribute-setLazyVWaterFlowLayoutOptions(): this--><!--Device-LazyVWaterFlowLayoutAttribute-setLazyVWaterFlowLayoutOptions(): this-End-->
 
@@ -88,7 +88,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

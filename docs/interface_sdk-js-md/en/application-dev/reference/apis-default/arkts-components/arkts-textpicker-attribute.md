@@ -8,7 +8,7 @@ Defines the TextPicker component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface TextPickerAttribute--><!--Device-unnamed-export declare interface TextPickerAttribute-End-->
 
@@ -22,7 +22,7 @@ attributeModifier(modifier: AttributeModifier<TextPickerAttribute> | AttributeMo
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-attributeModifier(modifier: AttributeModifier<TextPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TextPickerAttribute-attributeModifier(modifier: AttributeModifier<TextPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ canLoop(value: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-canLoop(value: boolean | undefined): this--><!--Device-TextPickerAttribute-canLoop(value: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ defaultPickerItemHeight(value: double | string | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-defaultPickerItemHeight(value: double | string | undefined): this--><!--Device-TextPickerAttribute-defaultPickerItemHeight(value: double | string | undefined): this-End-->
 
@@ -88,7 +88,7 @@ defaultTextStyle(style: TextPickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle | undefined): this-End-->
 
@@ -110,7 +110,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -132,7 +132,7 @@ disableTextStyleAnimation(disabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean | undefined): this--><!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean | undefined): this-End-->
 
@@ -154,7 +154,7 @@ disappearTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): th
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this-End-->
 
@@ -176,7 +176,7 @@ divider(value: DividerOptions | null | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-divider(value: DividerOptions | null | undefined): this--><!--Device-TextPickerAttribute-divider(value: DividerOptions | null | undefined): this-End-->
 
@@ -198,7 +198,7 @@ enableHapticFeedback(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-enableHapticFeedback(enable: boolean | undefined): this--><!--Device-TextPickerAttribute-enableHapticFeedback(enable: boolean | undefined): this-End-->
 
@@ -220,7 +220,7 @@ gradientHeight(value: Dimension | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-gradientHeight(value: Dimension | undefined): this--><!--Device-TextPickerAttribute-gradientHeight(value: Dimension | undefined): this-End-->
 
@@ -242,7 +242,7 @@ onChange(callback: OnTextPickerChangeCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-onChange(callback: OnTextPickerChangeCallback | undefined): this--><!--Device-TextPickerAttribute-onChange(callback: OnTextPickerChangeCallback | undefined): this-End-->
 
@@ -264,7 +264,7 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback | undefined): 
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback | undefined): this--><!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback | undefined): this-End-->
 
@@ -286,7 +286,7 @@ onScrollStop(callback: TextPickerScrollStopCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback | undefined): this--><!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback | undefined): this-End-->
 
@@ -308,7 +308,7 @@ selectedBackgroundStyle(style: PickerBackgroundStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-selectedBackgroundStyle(style: PickerBackgroundStyle | undefined): this--><!--Device-TextPickerAttribute-selectedBackgroundStyle(style: PickerBackgroundStyle | undefined): this-End-->
 
@@ -330,7 +330,7 @@ selectedIndex(value: int | int[] | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-selectedIndex(value: int | int[] | undefined): this--><!--Device-TextPickerAttribute-selectedIndex(value: int | int[] | undefined): this-End-->
 
@@ -352,7 +352,7 @@ selectedTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): thi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this-End-->
 
@@ -374,7 +374,7 @@ setTextPickerOptions(options?: TextPickerOptions): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-setTextPickerOptions(options?: TextPickerOptions): this--><!--Device-TextPickerAttribute-setTextPickerOptions(options?: TextPickerOptions): this-End-->
 
@@ -396,7 +396,7 @@ textStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this-End-->
 
@@ -420,7 +420,7 @@ Set the attribute modifier
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

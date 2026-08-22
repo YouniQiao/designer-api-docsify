@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface BaseSpan--><!--Device-unnamed-export declare interface BaseSpan-End-->
 
@@ -20,7 +20,7 @@ baselineOffset(value: LengthMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-BaseSpan-baselineOffset(value: LengthMetrics | undefined): this--><!--Device-BaseSpan-baselineOffset(value: LengthMetrics | undefined): this-End-->
 
@@ -42,7 +42,7 @@ textBackgroundStyle(style: TextBackgroundStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle | undefined): this--><!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle | undefined): this-End-->
 
@@ -66,7 +66,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -17,7 +17,7 @@ This component is implemented based on [state management V2](../../../ui/state-m
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
 
@@ -39,7 +39,7 @@ The method to build component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SubHeaderV2-@Builder  build(): void--><!--Device-SubHeaderV2-@Builder  build(): void-End-->
 
@@ -62,7 +62,7 @@ Default value: **undefined**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,7 +85,7 @@ Default value: **undefined**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]--><!--Device-SubHeaderV2-@Param  readonly operationItems?: SubHeaderV2OperationItem[]-End-->
 
@@ -106,7 +106,7 @@ Default value: **SubHeaderV2OperationType.BUTTON**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType--><!--Device-SubHeaderV2-@Param  readonly operationType?: SubHeaderV2OperationType-End-->
 
@@ -127,7 +127,7 @@ Default value: **undefined**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select--><!--Device-SubHeaderV2-@Param  readonly select?: SubHeaderV2Select-End-->
 
@@ -148,7 +148,7 @@ Default value: **undefined**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,7 +171,7 @@ Default value: **() =&gt; void**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder--><!--Device-SubHeaderV2-@BuilderParam  titleBuilder?: SubHeaderV2TitleBuilder-End-->
 

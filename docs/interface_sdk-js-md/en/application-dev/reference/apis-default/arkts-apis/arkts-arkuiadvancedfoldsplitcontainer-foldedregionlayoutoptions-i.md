@@ -6,7 +6,7 @@ The layout options for the container when the foldable screen is folded.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface FoldedRegionLayoutOptions--><!--Device-unnamed-export interface FoldedRegionLayoutOptions-End-->
 
@@ -29,7 +29,7 @@ The ratio of the heights of two areas in the vertical direction.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

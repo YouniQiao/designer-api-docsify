@@ -4,7 +4,7 @@ Defines the accessible resource type, related to [onPermissionRequest](arkts-web
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum ProtectedResourceType--><!--Device-unnamed-export declare enum ProtectedResourceType-End-->
 
@@ -20,7 +20,7 @@ The MidiSysex resource. Currently, only permission events can be reported. MIDI 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ProtectedResourceType-MIDI_SYSEX = 'TYPE_MIDI_SYSEX'--><!--Device-ProtectedResourceType-MIDI_SYSEX = 'TYPE_MIDI_SYSEX'-End-->
 
@@ -36,7 +36,7 @@ The video capture resource, such as camera.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ProtectedResourceType-VIDEO_CAPTURE = 'TYPE_VIDEO_CAPTURE'--><!--Device-ProtectedResourceType-VIDEO_CAPTURE = 'TYPE_VIDEO_CAPTURE'-End-->
 
@@ -52,7 +52,7 @@ The audio capture resource, such as microphone.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ProtectedResourceType-AUDIO_CAPTURE = 'TYPE_AUDIO_CAPTURE'--><!--Device-ProtectedResourceType-AUDIO_CAPTURE = 'TYPE_AUDIO_CAPTURE'-End-->
 
@@ -70,7 +70,7 @@ SENSOR = 'TYPE_SENSOR'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ProtectedResourceType-SENSOR = 'TYPE_SENSOR'--><!--Device-ProtectedResourceType-SENSOR = 'TYPE_SENSOR'-End-->
 

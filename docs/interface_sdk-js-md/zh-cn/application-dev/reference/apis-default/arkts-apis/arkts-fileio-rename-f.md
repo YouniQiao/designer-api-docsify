@@ -19,7 +19,7 @@ function rename(oldPath: string, newPath: string): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-fileIo-function rename(oldPath: string, newPath: string): Promise<void>-End-->
 
@@ -77,7 +77,7 @@ function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-fileIo-function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-fileIo-function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 

@@ -4,7 +4,7 @@ Defines Web Elements type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum WebElementType--><!--Device-unnamed-export declare enum WebElementType-End-->
 
@@ -20,7 +20,7 @@ Image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebElementType-IMAGE = 1--><!--Device-WebElementType-IMAGE = 1-End-->
 
@@ -36,7 +36,7 @@ Hyperlink.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebElementType-LINK = 2--><!--Device-WebElementType-LINK = 2-End-->
 
@@ -52,7 +52,7 @@ Text or editable area.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-WebElementType-TEXT = 3--><!--Device-WebElementType-TEXT = 3-End-->
 

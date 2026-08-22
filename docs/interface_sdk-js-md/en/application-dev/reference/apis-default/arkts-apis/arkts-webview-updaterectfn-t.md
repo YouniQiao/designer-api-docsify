@@ -8,7 +8,7 @@ The function of the rect of video tag has changed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-type UpdateRectFn = (x: double, y: double, width: double, height: double) => void--><!--Device-webview-type UpdateRectFn = (x: double, y: double, width: double, height: double) => void-End-->
 

@@ -4,7 +4,7 @@ Define decorated variable interface.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface IDecoratedReadableVariable--><!--Device-unnamed-export declare interface IDecoratedReadableVariable-End-->
 
@@ -20,7 +20,7 @@ Get the state variable.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

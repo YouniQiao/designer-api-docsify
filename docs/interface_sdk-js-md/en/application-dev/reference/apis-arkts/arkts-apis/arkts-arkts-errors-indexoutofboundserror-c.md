@@ -6,7 +6,7 @@ Represents error that is thrown when provided collection index is out of bounds
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class IndexOutOfBoundsError--><!--Device-unnamed-export class IndexOutOfBoundsError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new IndexOutOfBoundsError instance with provided message and error 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

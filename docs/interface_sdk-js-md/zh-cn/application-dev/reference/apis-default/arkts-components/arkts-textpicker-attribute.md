@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface TextPickerAttribute--><!--Device-unnamed-export declare interface TextPickerAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<TextPickerAttribute> | AttributeMo
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-attributeModifier(modifier: AttributeModifier<TextPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-TextPickerAttribute-attributeModifier(modifier: AttributeModifier<TextPickerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ canLoop(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-canLoop(value: boolean | undefined): this--><!--Device-TextPickerAttribute-canLoop(value: boolean | undefined): this-End-->
 
@@ -64,7 +64,7 @@ defaultPickerItemHeight(value: double | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-defaultPickerItemHeight(value: double | string | undefined): this--><!--Device-TextPickerAttribute-defaultPickerItemHeight(value: double | string | undefined): this-End-->
 
@@ -86,7 +86,7 @@ defaultTextStyle(style: TextPickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle | undefined): this-End-->
 
@@ -108,7 +108,7 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this--><!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this-End-->
 
@@ -130,7 +130,7 @@ disableTextStyleAnimation(disabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean | undefined): this--><!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean | undefined): this-End-->
 
@@ -152,7 +152,7 @@ disappearTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this-End-->
 
@@ -174,7 +174,7 @@ divider(value: DividerOptions | null | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-divider(value: DividerOptions | null | undefined): this--><!--Device-TextPickerAttribute-divider(value: DividerOptions | null | undefined): this-End-->
 
@@ -196,7 +196,7 @@ enableHapticFeedback(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-enableHapticFeedback(enable: boolean | undefined): this--><!--Device-TextPickerAttribute-enableHapticFeedback(enable: boolean | undefined): this-End-->
 
@@ -218,7 +218,7 @@ gradientHeight(value: Dimension | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-gradientHeight(value: Dimension | undefined): this--><!--Device-TextPickerAttribute-gradientHeight(value: Dimension | undefined): this-End-->
 
@@ -240,7 +240,7 @@ onChange(callback: OnTextPickerChangeCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-onChange(callback: OnTextPickerChangeCallback | undefined): this--><!--Device-TextPickerAttribute-onChange(callback: OnTextPickerChangeCallback | undefined): this-End-->
 
@@ -262,7 +262,7 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback | undefined): 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback | undefined): this--><!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback | undefined): this-End-->
 
@@ -284,7 +284,7 @@ onScrollStop(callback: TextPickerScrollStopCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback | undefined): this--><!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback | undefined): this-End-->
 
@@ -306,7 +306,7 @@ selectedBackgroundStyle(style: PickerBackgroundStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-selectedBackgroundStyle(style: PickerBackgroundStyle | undefined): this--><!--Device-TextPickerAttribute-selectedBackgroundStyle(style: PickerBackgroundStyle | undefined): this-End-->
 
@@ -328,7 +328,7 @@ selectedIndex(value: int | int[] | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-selectedIndex(value: int | int[] | undefined): this--><!--Device-TextPickerAttribute-selectedIndex(value: int | int[] | undefined): this-End-->
 
@@ -350,7 +350,7 @@ selectedTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this-End-->
 
@@ -372,7 +372,7 @@ textStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this--><!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle | TextPickerTextStyle | undefined): this-End-->
 
@@ -396,7 +396,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

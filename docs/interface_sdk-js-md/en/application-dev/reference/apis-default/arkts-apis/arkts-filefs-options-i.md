@@ -4,7 +4,7 @@ Defines the options used in **readLines()**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
 
@@ -27,7 +27,7 @@ File encoding format. It is optional.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-Options-encoding?: string--><!--Device-Options-encoding?: string-End-->
 

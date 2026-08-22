@@ -6,7 +6,7 @@ Define the attribute functions of UIExtensionComponent.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface UIExtensionComponentAttribute--><!--Device-unnamed-export declare interface UIExtensionComponentAttribute-End-->
 

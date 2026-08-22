@@ -4,7 +4,7 @@ Defines a rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
 
@@ -29,7 +29,7 @@ Unit: px.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RectEvent-height: double--><!--Device-RectEvent-height: double-End-->
 
@@ -49,7 +49,7 @@ Unit: px.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RectEvent-width: double--><!--Device-RectEvent-width: double-End-->
 
@@ -67,7 +67,7 @@ X-axis coordinate of the upper left corner of the rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RectEvent-x: double--><!--Device-RectEvent-x: double-End-->
 
@@ -85,7 +85,7 @@ Y-axis coordinate of the upper left corner of the rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-RectEvent-y: double--><!--Device-RectEvent-y: double-End-->
 

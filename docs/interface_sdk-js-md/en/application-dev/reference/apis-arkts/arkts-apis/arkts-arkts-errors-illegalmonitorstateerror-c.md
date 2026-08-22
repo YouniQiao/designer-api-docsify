@@ -6,7 +6,7 @@ Represents an error that is thrown when attempting to wait, notify or notifyAll 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class IllegalMonitorStateError--><!--Device-unnamed-export class IllegalMonitorStateError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new IllegalMonitorStateError instance with provided message and err
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

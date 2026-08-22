@@ -6,7 +6,7 @@ Defines the QRCode component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface QRCodeAttribute--><!--Device-unnamed-export declare interface QRCodeAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<QRCodeAttribute> | AttributeModifi
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-QRCodeAttribute-attributeModifier(modifier: AttributeModifier<QRCodeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-QRCodeAttribute-attributeModifier(modifier: AttributeModifier<QRCodeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ backgroundColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-QRCodeAttribute-backgroundColor(value: ResourceColor | undefined): this--><!--Device-QRCodeAttribute-backgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -64,7 +64,7 @@ color(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-QRCodeAttribute-color(value: ResourceColor | undefined): this--><!--Device-QRCodeAttribute-color(value: ResourceColor | undefined): this-End-->
 
@@ -86,7 +86,7 @@ contentOpacity(value: double | Resource | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-QRCodeAttribute-contentOpacity(value: double | Resource | undefined): this--><!--Device-QRCodeAttribute-contentOpacity(value: double | Resource | undefined): this-End-->
 
@@ -108,7 +108,7 @@ setQRCodeOptions(value: ResourceStr): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-QRCodeAttribute-setQRCodeOptions(value: ResourceStr): this--><!--Device-QRCodeAttribute-setQRCodeOptions(value: ResourceStr): this-End-->
 
@@ -132,7 +132,7 @@ Set QRCode options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

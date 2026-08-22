@@ -6,7 +6,7 @@ Base error class for JSON-related errors. Thrown when general JSON parsing or ma
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-jsonx-export class JsonError--><!--Device-jsonx-export class JsonError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new JsonError with the specified message.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

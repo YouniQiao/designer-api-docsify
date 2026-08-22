@@ -15,7 +15,7 @@ Obtains detailed attributes of a file or directory synchronously. The returned *
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-fileIo-function statSync(file: string | int): Stat--><!--Device-fileIo-function statSync(file: string | int): Stat-End-->
 

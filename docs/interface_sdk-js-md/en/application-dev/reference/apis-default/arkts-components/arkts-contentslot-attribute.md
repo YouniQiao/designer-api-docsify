@@ -6,7 +6,7 @@ Define ContentSlot attribute, to prevent improper recursive usage of ContentSlot
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface ContentSlotAttribute--><!--Device-unnamed-export declare interface ContentSlotAttribute-End-->
 
@@ -22,7 +22,7 @@ Notify ContentSlot has finished setting up its attributes.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-ContentSlotAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-ContentSlotAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
@@ -63,7 +63,7 @@ Sets content slot options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,7 +93,7 @@ Set the component's source code redirection information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

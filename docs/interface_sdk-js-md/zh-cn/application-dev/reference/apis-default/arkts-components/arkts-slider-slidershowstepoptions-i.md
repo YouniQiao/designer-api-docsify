@@ -4,7 +4,7 @@ Slider刻度点的无障碍文本信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface SliderShowStepOptions--><!--Device-unnamed-export declare interface SliderShowStepOptions-End-->
 
@@ -26,7 +26,7 @@ Key取值范围：[0, INT32_MAX]，当Key设定为负数和小数时，设定项
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

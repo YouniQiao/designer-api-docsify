@@ -8,7 +8,7 @@ Defines the MenuItem component attributes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface MenuItemAttribute--><!--Device-unnamed-export declare interface MenuItemAttribute-End-->
 
@@ -23,7 +23,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-attributeModifier(        modifier: AttributeModifier<MenuItemAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-MenuItemAttribute-attributeModifier(        modifier: AttributeModifier<MenuItemAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -45,7 +45,7 @@ contentFont(value: Font | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-contentFont(value: Font | undefined): this--><!--Device-MenuItemAttribute-contentFont(value: Font | undefined): this-End-->
 
@@ -67,7 +67,7 @@ contentFontColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-contentFontColor(value: ResourceColor | undefined): this--><!--Device-MenuItemAttribute-contentFontColor(value: ResourceColor | undefined): this-End-->
 
@@ -89,7 +89,7 @@ labelFont(value: Font | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-labelFont(value: Font | undefined): this--><!--Device-MenuItemAttribute-labelFont(value: Font | undefined): this-End-->
 
@@ -111,7 +111,7 @@ labelFontColor(value: ResourceColor | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-labelFontColor(value: ResourceColor | undefined): this--><!--Device-MenuItemAttribute-labelFontColor(value: ResourceColor | undefined): this-End-->
 
@@ -133,7 +133,7 @@ onChange(callback: ((selected: boolean) => void) | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-onChange(callback: ((selected: boolean) => void) | undefined): this--><!--Device-MenuItemAttribute-onChange(callback: ((selected: boolean) => void) | undefined): this-End-->
 
@@ -155,7 +155,7 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this-End-->
 
@@ -177,7 +177,7 @@ selected(value: boolean | undefined | Bindable<boolean>): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-selected(value: boolean | undefined | Bindable<boolean>): this--><!--Device-MenuItemAttribute-selected(value: boolean | undefined | Bindable<boolean>): this-End-->
 
@@ -199,7 +199,7 @@ setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this--><!--Device-MenuItemAttribute-setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this-End-->
 
@@ -221,7 +221,7 @@ subMenuBuilder(builder: CustomBuilder | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-MenuItemAttribute-subMenuBuilder(builder: CustomBuilder | undefined): this--><!--Device-MenuItemAttribute-subMenuBuilder(builder: CustomBuilder | undefined): this-End-->
 
@@ -245,7 +245,7 @@ Set menuitem options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface CheckboxAttribute--><!--Device-unnamed-export declare interface CheckboxAttribute-End-->
 
@@ -21,7 +21,7 @@ attributeModifier(
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-attributeModifier(        modifier: AttributeModifier<CheckboxAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-CheckboxAttribute-attributeModifier(        modifier: AttributeModifier<CheckboxAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -43,7 +43,7 @@ contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undefined): this--><!--Device-CheckboxAttribute-contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undefined): this-End-->
 
@@ -65,7 +65,7 @@ mark(value: MarkStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-mark(value: MarkStyle | undefined): this--><!--Device-CheckboxAttribute-mark(value: MarkStyle | undefined): this-End-->
 
@@ -87,7 +87,7 @@ onChange(callback: OnCheckboxChangeCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-onChange(callback: OnCheckboxChangeCallback | undefined): this--><!--Device-CheckboxAttribute-onChange(callback: OnCheckboxChangeCallback | undefined): this-End-->
 
@@ -109,7 +109,7 @@ select(isSelected: boolean | undefined | Bindable<boolean>): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-select(isSelected: boolean | undefined | Bindable<boolean>): this--><!--Device-CheckboxAttribute-select(isSelected: boolean | undefined | Bindable<boolean>): this-End-->
 
@@ -131,7 +131,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-CheckboxAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -153,7 +153,7 @@ shape(value: CheckBoxShape | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-shape(value: CheckBoxShape | undefined): this--><!--Device-CheckboxAttribute-shape(value: CheckBoxShape | undefined): this-End-->
 
@@ -175,7 +175,7 @@ unselectedColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-CheckboxAttribute-unselectedColor(value: ResourceColor | undefined): this--><!--Device-CheckboxAttribute-unselectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -199,7 +199,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

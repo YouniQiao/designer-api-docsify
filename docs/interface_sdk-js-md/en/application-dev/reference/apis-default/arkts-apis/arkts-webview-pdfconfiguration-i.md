@@ -4,7 +4,7 @@ Defines the configuration of creating pdf, related to {@Link createPdf} method.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-webview-interface PdfConfiguration--><!--Device-webview-interface PdfConfiguration-End-->
 
@@ -27,7 +27,7 @@ Number of the height. Unit: in.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-height: double--><!--Device-PdfConfiguration-height: double-End-->
 
@@ -45,7 +45,7 @@ Number of the marginBottom. Unit: in.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-marginBottom: double--><!--Device-PdfConfiguration-marginBottom: double-End-->
 
@@ -63,7 +63,7 @@ Number of the marginLeft. Unit: in.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-marginLeft: double--><!--Device-PdfConfiguration-marginLeft: double-End-->
 
@@ -81,7 +81,7 @@ Number of the marginRight. Unit: in.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-marginRight: double--><!--Device-PdfConfiguration-marginRight: double-End-->
 
@@ -99,7 +99,7 @@ Number of the marginTop. Unit: in.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-marginTop: double--><!--Device-PdfConfiguration-marginTop: double-End-->
 
@@ -117,7 +117,7 @@ Number of the scaling.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-scale?: double--><!--Device-PdfConfiguration-scale?: double-End-->
 
@@ -135,7 +135,7 @@ Whether background should be printed when creating pdf.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-shouldPrintBackground?: boolean--><!--Device-PdfConfiguration-shouldPrintBackground?: boolean-End-->
 
@@ -153,7 +153,7 @@ Number of the width. Unit: in.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-PdfConfiguration-width: double--><!--Device-PdfConfiguration-width: double-End-->
 

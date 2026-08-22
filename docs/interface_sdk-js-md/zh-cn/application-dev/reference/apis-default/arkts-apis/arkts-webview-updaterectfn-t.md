@@ -8,7 +8,7 @@ The function of the rect of video tag has changed.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-webview-type UpdateRectFn = (x: double, y: double, width: double, height: double) => void--><!--Device-webview-type UpdateRectFn = (x: double, y: double, width: double, height: double) => void-End-->
 

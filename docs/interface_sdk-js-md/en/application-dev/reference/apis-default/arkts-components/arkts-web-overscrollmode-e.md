@@ -4,7 +4,7 @@ Enum type supplied to [overScrollMode](arkts-web-attribute.md#overscrollmode) fo
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum OverScrollMode--><!--Device-unnamed-export declare enum OverScrollMode-End-->
 
@@ -20,7 +20,7 @@ The overscroll mode is disabled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OverScrollMode-NEVER = 0--><!--Device-OverScrollMode-NEVER = 0-End-->
 
@@ -36,7 +36,7 @@ The overscroll mode is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-OverScrollMode-ALWAYS = 1--><!--Device-OverScrollMode-ALWAYS = 1-End-->
 

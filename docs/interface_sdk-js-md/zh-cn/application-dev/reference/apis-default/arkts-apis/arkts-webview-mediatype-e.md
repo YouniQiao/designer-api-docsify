@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-webview-enum MediaType--><!--Device-webview-enum MediaType-End-->
 
@@ -20,7 +20,7 @@ VIDEO = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-MediaType-VIDEO = 0--><!--Device-MediaType-VIDEO = 0-End-->
 
@@ -36,7 +36,7 @@ AUDIO = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-MediaType-AUDIO = 1--><!--Device-MediaType-AUDIO = 1-End-->
 

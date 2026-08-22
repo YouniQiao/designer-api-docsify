@@ -4,7 +4,7 @@ Defines the Web options.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface WebOptions--><!--Device-unnamed-export declare interface WebOptions-End-->
 
@@ -22,7 +22,7 @@ Sets the controller of the Web.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebOptions-controller: WebviewController--><!--Device-WebOptions-controller: WebviewController-End-->
 
@@ -40,7 +40,7 @@ Sets whether mouse event will be transferred to touch event.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebOptions-emulateTouchFromMouseEvent?: boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent?: boolean-End-->
 
@@ -58,7 +58,7 @@ Sets the incognito mode of the Web, the parameter is optional and default value 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebOptions-incognitoMode?: boolean--><!--Device-WebOptions-incognitoMode?: boolean-End-->
 
@@ -76,7 +76,7 @@ Rendering mode. RenderMode.ASYNC_RENDER (default, cannot be dynamically adjusted
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebOptions-renderMode?: RenderMode--><!--Device-WebOptions-renderMode?: RenderMode-End-->
 
@@ -94,7 +94,7 @@ A token indicating that the current Web component specifies a shared rendering p
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebOptions-sharedRenderProcessToken?: string--><!--Device-WebOptions-sharedRenderProcessToken?: string-End-->
 
@@ -112,7 +112,7 @@ Web resource address. If accessing local resource files, please use \$rawfile or
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebOptions-src: string | Resource--><!--Device-WebOptions-src: string | Resource-End-->
 

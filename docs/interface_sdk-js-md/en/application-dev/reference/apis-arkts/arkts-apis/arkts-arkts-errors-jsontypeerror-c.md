@@ -6,7 +6,7 @@ Represents an error that occurs when JSONValue can not be assigned to a type
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export class JSONTypeError--><!--Device-unnamed-export class JSONTypeError-End-->
 
@@ -27,7 +27,7 @@ Constructs a new JSONTypeError instance with provided message and error specific
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

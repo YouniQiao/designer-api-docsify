@@ -4,7 +4,7 @@ Defines the context menu media type, related to [onContextMenuShow](arkts-web-at
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare enum ContextMenuDataMediaType--><!--Device-unnamed-export declare enum ContextMenuDataMediaType-End-->
 
@@ -20,7 +20,7 @@ Default value, indicating that the current context menu is not associated with a
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuDataMediaType-NONE = 0--><!--Device-ContextMenuDataMediaType-NONE = 0-End-->
 
@@ -36,7 +36,7 @@ Image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuDataMediaType-IMAGE = 1--><!--Device-ContextMenuDataMediaType-IMAGE = 1-End-->
 
@@ -52,7 +52,7 @@ Video.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuDataMediaType-VIDEO = 2--><!--Device-ContextMenuDataMediaType-VIDEO = 2-End-->
 
@@ -68,7 +68,7 @@ Audio.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuDataMediaType-AUDIO = 3--><!--Device-ContextMenuDataMediaType-AUDIO = 3-End-->
 
@@ -84,7 +84,7 @@ Canvas.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ContextMenuDataMediaType-CANVAS = 4--><!--Device-ContextMenuDataMediaType-CANVAS = 4-End-->
 

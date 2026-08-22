@@ -4,7 +4,7 @@ Defines the options for creating a Collator object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-intl-export interface CollatorOptions--><!--Device-intl-export interface CollatorOptions-End-->
 
@@ -28,7 +28,7 @@ Whether upper case or lower case is sorted first. The value can be "upper", "low
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-caseFirst?: string--><!--Device-CollatorOptions-caseFirst?: string-End-->
 
@@ -46,7 +46,7 @@ Collation rule. The value can be any of the following: "big5han", "compat", "dic
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-collation?: string--><!--Device-CollatorOptions-collation?: string-End-->
 
@@ -64,7 +64,7 @@ Whether to ignore punctuation. The value "true" means to ignore punctuation, and
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-ignorePunctuation?: boolean--><!--Device-CollatorOptions-ignorePunctuation?: boolean-End-->
 
@@ -82,7 +82,7 @@ Locale matching algorithm. The value can be "lookup" or "best fit". The default 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-localeMatcher?: string--><!--Device-CollatorOptions-localeMatcher?: string-End-->
 
@@ -100,7 +100,7 @@ Whether to use numeric collation. The value "true" means to use numeric collatio
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-numeric?: boolean--><!--Device-CollatorOptions-numeric?: boolean-End-->
 
@@ -118,7 +118,7 @@ Differences in the strings that lead to non-zero return values. The value can be
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-sensitivity?: string--><!--Device-CollatorOptions-sensitivity?: string-End-->
 
@@ -136,7 +136,7 @@ Whether the comparison is for sorting or for searching. The value can be "sort" 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-CollatorOptions-usage?: string--><!--Device-CollatorOptions-usage?: string-End-->
 

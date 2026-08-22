@@ -156,7 +156,7 @@ Destroys an OH_AVSource instance and clears internal resources.An instance can b
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode):      <br>1. The value of source is nullptr.      <br>2. The value of source does not point to an OH_AVSource instance. |
+| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode):      <br>1. The value of source is nullptr.      <br>2. The value of source does not point to an OH_AVSource instance. |
 
 ### OH_AVSource_GetSourceFormat()
 

@@ -16,7 +16,7 @@ Remaining battery capacity of the device, in unit of mAh. This is a system API.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-function remainingEnergy(): int--><!--Device-batteryInfo-function remainingEnergy(): int-End-->
 

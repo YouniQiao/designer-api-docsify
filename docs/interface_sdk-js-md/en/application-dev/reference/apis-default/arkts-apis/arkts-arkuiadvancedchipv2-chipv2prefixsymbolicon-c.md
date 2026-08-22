@@ -6,7 +6,7 @@ Defines chip prefix symbol icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon-End-->
 
@@ -27,7 +27,7 @@ The constructor of ChipV2PrefixSymbolIcon
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,7 +4,7 @@ Defines conflicting file information used in **copyDir()** or **moveDir()**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export interface ConflictFiles--><!--Device-unnamed-export interface ConflictFiles-End-->
 
@@ -27,7 +27,7 @@ Path of the destination file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConflictFiles-destFile: string--><!--Device-ConflictFiles-destFile: string-End-->
 
@@ -45,7 +45,7 @@ Path of the source file.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-ConflictFiles-srcFile: string--><!--Device-ConflictFiles-srcFile: string-End-->
 

@@ -6,7 +6,7 @@ Defines the XComponent attribute.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface XComponentAttribute--><!--Device-unnamed-export declare interface XComponentAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<XComponentAttribute> | AttributeMo
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-attributeModifier(modifier: AttributeModifier<XComponentAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-XComponentAttribute-attributeModifier(modifier: AttributeModifier<XComponentAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ enableAnalyzer(enable: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-enableAnalyzer(enable: boolean | undefined): this--><!--Device-XComponentAttribute-enableAnalyzer(enable: boolean | undefined): this-End-->
 
@@ -64,7 +64,7 @@ enableSecure(isSecure: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-enableSecure(isSecure: boolean | undefined): this--><!--Device-XComponentAttribute-enableSecure(isSecure: boolean | undefined): this-End-->
 
@@ -86,7 +86,7 @@ enableTransparentLayer(enabled: boolean | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-enableTransparentLayer(enabled: boolean | undefined): this--><!--Device-XComponentAttribute-enableTransparentLayer(enabled: boolean | undefined): this-End-->
 
@@ -108,7 +108,7 @@ hdrBrightness(brightness: double | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-hdrBrightness(brightness: double | undefined): this--><!--Device-XComponentAttribute-hdrBrightness(brightness: double | undefined): this-End-->
 
@@ -130,7 +130,7 @@ hdrBrightness(brightness: double | undefined, type?: HdrType): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-hdrBrightness(brightness: double | undefined, type?: HdrType): this--><!--Device-XComponentAttribute-hdrBrightness(brightness: double | undefined, type?: HdrType): this-End-->
 
@@ -153,7 +153,7 @@ onDestroy(event: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-onDestroy(event: VoidCallback | undefined): this--><!--Device-XComponentAttribute-onDestroy(event: VoidCallback | undefined): this-End-->
 
@@ -175,7 +175,7 @@ onLoad(callback: VoidCallback | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-XComponentAttribute-onLoad(callback: VoidCallback | undefined): this--><!--Device-XComponentAttribute-onLoad(callback: VoidCallback | undefined): this-End-->
 
@@ -199,7 +199,7 @@ Sets xcomponent options.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,7 +229,7 @@ Call attributeModifier.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

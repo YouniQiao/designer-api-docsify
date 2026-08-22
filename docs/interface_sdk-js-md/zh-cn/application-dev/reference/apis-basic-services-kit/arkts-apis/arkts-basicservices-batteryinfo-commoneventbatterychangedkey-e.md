@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-batteryInfo-export enum CommonEventBatteryChangedKey--><!--Device-batteryInfo-export enum CommonEventBatteryChangedKey-End-->
 
@@ -22,7 +22,7 @@ EXTRA_SOC = 'soc'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_SOC = 'soc'--><!--Device-CommonEventBatteryChangedKey-EXTRA_SOC = 'soc'-End-->
 
@@ -38,7 +38,7 @@ EXTRA_CHARGE_STATE = 'chargeState'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_CHARGE_STATE = 'chargeState'--><!--Device-CommonEventBatteryChangedKey-EXTRA_CHARGE_STATE = 'chargeState'-End-->
 
@@ -54,7 +54,7 @@ EXTRA_HEALTH_STATE = 'healthState'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_HEALTH_STATE = 'healthState'--><!--Device-CommonEventBatteryChangedKey-EXTRA_HEALTH_STATE = 'healthState'-End-->
 
@@ -70,7 +70,7 @@ EXTRA_PLUGGED_TYPE = 'pluggedType'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_PLUGGED_TYPE = 'pluggedType'--><!--Device-CommonEventBatteryChangedKey-EXTRA_PLUGGED_TYPE = 'pluggedType'-End-->
 
@@ -86,7 +86,7 @@ EXTRA_VOLTAGE = 'voltage'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_VOLTAGE = 'voltage'--><!--Device-CommonEventBatteryChangedKey-EXTRA_VOLTAGE = 'voltage'-End-->
 
@@ -102,7 +102,7 @@ EXTRA_TECHNOLOGY = 'technology'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_TECHNOLOGY = 'technology'--><!--Device-CommonEventBatteryChangedKey-EXTRA_TECHNOLOGY = 'technology'-End-->
 
@@ -118,7 +118,7 @@ EXTRA_TEMPERATURE = 'temperature'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_TEMPERATURE = 'temperature'--><!--Device-CommonEventBatteryChangedKey-EXTRA_TEMPERATURE = 'temperature'-End-->
 
@@ -134,7 +134,7 @@ EXTRA_PRESENT = 'present'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_PRESENT = 'present'--><!--Device-CommonEventBatteryChangedKey-EXTRA_PRESENT = 'present'-End-->
 
@@ -150,7 +150,7 @@ EXTRA_CAPACITY_LEVEL = 'capacityLevel'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-CommonEventBatteryChangedKey-EXTRA_CAPACITY_LEVEL = 'capacityLevel'--><!--Device-CommonEventBatteryChangedKey-EXTRA_CAPACITY_LEVEL = 'capacityLevel'-End-->
 

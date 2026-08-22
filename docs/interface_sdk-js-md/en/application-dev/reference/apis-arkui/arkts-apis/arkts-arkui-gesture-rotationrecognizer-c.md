@@ -8,7 +8,7 @@ Defines the rotation gesture recognizer.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare class RotationRecognizer--><!--Device-unnamed-export declare class RotationRecognizer-End-->
 
@@ -24,7 +24,7 @@ Returns the rotation gesture's angle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

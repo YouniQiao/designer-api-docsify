@@ -15,7 +15,7 @@ Get the hash code of an object.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-util-function getHash(obj: RecordData): long--><!--Device-util-function getHash(obj: RecordData): long-End-->
 

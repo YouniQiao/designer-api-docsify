@@ -15,7 +15,7 @@ Get the hash code of an object.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-util-function getHash(obj: RecordData): long--><!--Device-util-function getHash(obj: RecordData): long-End-->
 

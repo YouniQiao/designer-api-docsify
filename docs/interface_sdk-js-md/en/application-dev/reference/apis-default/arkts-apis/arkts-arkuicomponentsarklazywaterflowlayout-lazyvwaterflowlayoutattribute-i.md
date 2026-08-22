@@ -6,7 +6,7 @@ The LazyVWaterFlowLayoutAttribute
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 <!--Device-unnamed-export declare interface LazyVWaterFlowLayoutAttribute--><!--Device-unnamed-export declare interface LazyVWaterFlowLayoutAttribute-End-->
 
@@ -26,7 +26,7 @@ attributeModifier(
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyVWaterFlowLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyVWaterFlowLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-LazyVWaterFlowLayoutAttribute-attributeModifier(      modifier: AttributeModifier<LazyVWaterFlowLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -48,7 +48,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this--><!--Device-LazyVWaterFlowLayoutAttribute-columnsTemplate(value: string | ItemFillPolicy | undefined): this-End-->
 
@@ -70,7 +70,7 @@ setLazyVWaterFlowLayoutOptions(): this
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-LazyVWaterFlowLayoutAttribute-setLazyVWaterFlowLayoutOptions(): this--><!--Device-LazyVWaterFlowLayoutAttribute-setLazyVWaterFlowLayoutOptions(): this-End-->
 
@@ -88,7 +88,7 @@ Sets the attribute modifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

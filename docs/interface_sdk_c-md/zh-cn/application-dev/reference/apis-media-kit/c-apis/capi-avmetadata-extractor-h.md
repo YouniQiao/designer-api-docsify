@@ -203,7 +203,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchAlbumCover(OH_AVMetadataExtractor* extr
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md)* extractor | 指向OH_AVMetadataExtractor实例的指针。 |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)** pixelMap | 从音频源获取的专辑封面。 |
+| OH_PixelmapNative** pixelMap | 从音频源获取的专辑封面。 |
 
 **返回：**
 
@@ -229,9 +229,9 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFrameByTime(OH_AVMetadataExtractor *ext
 | -- | -- |
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md) *extractor | 指向OH_AVMetadataExtractor实例的指针。 |
 | int64_t timeUs | 要从视频资源中提取图像的时间位置（单位：微秒）。 |
-| OH_AVMedia_SeekMode seekMode | 定义指定时间与关键帧之间关系的跳转模式。详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
+| [OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode) seekMode | 定义指定时间与关键帧之间关系的跳转模式。详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
 | const OH_AVMetadataExtractor_OutputParam* outputParam | 图像的输出参数，例如图像的高度或者宽度。详见[OH_AVMetadataExtractor_OutputParam](capi-avmetadataextractor-oh-avmetadataextractor-outputparam.md)。若为空指针，使用视频的原始尺寸。注意：用户需要使用[OH_PixelmapNative_Destroy](../ImageKit/capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)在使用pixelMap后将其释放。 |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)** pixelMap | 用于接收从视频源提取的图像，详见[OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)。 |
+| OH_PixelmapNative** pixelMap | 用于接收从视频源提取的图像，详见[OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)。 |
 
 **返回：**
 
@@ -270,7 +270,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFramesByTimes(OH_AVMetadataExtractor *e
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md) *extractor | 指向OH_AVMetadataExtractor实例的指针。 |
 | int64_t timesUs[] | 从视频源提取图像时的时间点数组（单位：微秒）。 |
 | uint16_t timesUsSize | 输入时间点数组的长度。 |
-| OH_AVMedia_SeekMode seekMode | 定义每个给定时间与关键帧之间关系的跳转选项，详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
+| [OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode) seekMode | 定义每个给定时间与关键帧之间关系的跳转选项，详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
 | const OH_AVMetadataExtractor_OutputParam* outputParam | 图像的输出参数，例如图像的高度或者宽度。详见[OH_AVMetadataExtractor_OutputParam](capi-avmetadataextractor-oh-avmetadataextractor-outputparam.md)。若该参数为空指针，则获取的帧使用视频原始尺寸。 |
 | [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched) onFrameInfoCallback | 每帧提取完成或提取失败后调用的回调函数。 |
 | void* userData | 传递给回调函数的用户自定义数据指针。 |

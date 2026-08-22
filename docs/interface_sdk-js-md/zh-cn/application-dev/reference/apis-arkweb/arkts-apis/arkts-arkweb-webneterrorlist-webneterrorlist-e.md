@@ -6,7 +6,7 @@ ArkWeb的网络协议栈错误列表。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum WebNetErrorList--><!--Device-unnamed-export declare enum WebNetErrorList-End-->
 
@@ -22,7 +22,7 @@ NET_OK = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-NET_OK = 0--><!--Device-WebNetErrorList-NET_OK = 0-End-->
 
@@ -38,7 +38,7 @@ ERR_IO_PENDING = -1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_IO_PENDING = -1--><!--Device-WebNetErrorList-ERR_IO_PENDING = -1-End-->
 
@@ -54,7 +54,7 @@ ERR_FAILED = -2
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FAILED = -2--><!--Device-WebNetErrorList-ERR_FAILED = -2-End-->
 
@@ -70,7 +70,7 @@ ERR_ABORTED = -3
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ABORTED = -3--><!--Device-WebNetErrorList-ERR_ABORTED = -3-End-->
 
@@ -86,7 +86,7 @@ ERR_INVALID_ARGUMENT = -4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_ARGUMENT = -4--><!--Device-WebNetErrorList-ERR_INVALID_ARGUMENT = -4-End-->
 
@@ -102,7 +102,7 @@ ERR_INVALID_HANDLE = -5
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_HANDLE = -5--><!--Device-WebNetErrorList-ERR_INVALID_HANDLE = -5-End-->
 
@@ -118,7 +118,7 @@ ERR_FILE_NOT_FOUND = -6
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FILE_NOT_FOUND = -6--><!--Device-WebNetErrorList-ERR_FILE_NOT_FOUND = -6-End-->
 
@@ -134,7 +134,7 @@ ERR_TIMED_OUT = -7
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TIMED_OUT = -7--><!--Device-WebNetErrorList-ERR_TIMED_OUT = -7-End-->
 
@@ -150,7 +150,7 @@ ERR_FILE_TOO_LARGE = -8
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FILE_TOO_LARGE = -8--><!--Device-WebNetErrorList-ERR_FILE_TOO_LARGE = -8-End-->
 
@@ -166,7 +166,7 @@ ERR_UNEXPECTED = -9
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNEXPECTED = -9--><!--Device-WebNetErrorList-ERR_UNEXPECTED = -9-End-->
 
@@ -182,7 +182,7 @@ ERR_ACCESS_DENIED = -10
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ACCESS_DENIED = -10--><!--Device-WebNetErrorList-ERR_ACCESS_DENIED = -10-End-->
 
@@ -198,7 +198,7 @@ ERR_NOT_IMPLEMENTED = -11
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NOT_IMPLEMENTED = -11--><!--Device-WebNetErrorList-ERR_NOT_IMPLEMENTED = -11-End-->
 
@@ -214,7 +214,7 @@ ERR_INSUFFICIENT_RESOURCES = -12
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INSUFFICIENT_RESOURCES = -12--><!--Device-WebNetErrorList-ERR_INSUFFICIENT_RESOURCES = -12-End-->
 
@@ -230,7 +230,7 @@ ERR_OUT_OF_MEMORY = -13
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_OUT_OF_MEMORY = -13--><!--Device-WebNetErrorList-ERR_OUT_OF_MEMORY = -13-End-->
 
@@ -246,7 +246,7 @@ ERR_UPLOAD_FILE_CHANGED = -14
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UPLOAD_FILE_CHANGED = -14--><!--Device-WebNetErrorList-ERR_UPLOAD_FILE_CHANGED = -14-End-->
 
@@ -262,7 +262,7 @@ ERR_SOCKET_NOT_CONNECTED = -15
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKET_NOT_CONNECTED = -15--><!--Device-WebNetErrorList-ERR_SOCKET_NOT_CONNECTED = -15-End-->
 
@@ -278,7 +278,7 @@ ERR_FILE_EXISTS = -16
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FILE_EXISTS = -16--><!--Device-WebNetErrorList-ERR_FILE_EXISTS = -16-End-->
 
@@ -294,7 +294,7 @@ ERR_FILE_PATH_TOO_LONG = -17
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FILE_PATH_TOO_LONG = -17--><!--Device-WebNetErrorList-ERR_FILE_PATH_TOO_LONG = -17-End-->
 
@@ -310,7 +310,7 @@ ERR_FILE_NO_SPACE = -18
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FILE_NO_SPACE = -18--><!--Device-WebNetErrorList-ERR_FILE_NO_SPACE = -18-End-->
 
@@ -326,7 +326,7 @@ ERR_FILE_VIRUS_INFECTED = -19
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FILE_VIRUS_INFECTED = -19--><!--Device-WebNetErrorList-ERR_FILE_VIRUS_INFECTED = -19-End-->
 
@@ -342,7 +342,7 @@ ERR_BLOCKED_BY_CLIENT = -20
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_CLIENT = -20--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_CLIENT = -20-End-->
 
@@ -358,7 +358,7 @@ ERR_NETWORK_CHANGED = -21
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NETWORK_CHANGED = -21--><!--Device-WebNetErrorList-ERR_NETWORK_CHANGED = -21-End-->
 
@@ -374,7 +374,7 @@ ERR_BLOCKED_BY_ADMINISTRATOR = -22
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_ADMINISTRATOR = -22--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_ADMINISTRATOR = -22-End-->
 
@@ -390,7 +390,7 @@ socket已经处于连接状态。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKET_CONNECTED = -23--><!--Device-WebNetErrorList-ERR_SOCKET_CONNECTED = -23-End-->
 
@@ -406,7 +406,7 @@ ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25--><!--Device-WebNetErrorList-ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25-End-->
 
@@ -422,7 +422,7 @@ ERR_CONTEXT_SHUT_DOWN = -26
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONTEXT_SHUT_DOWN = -26--><!--Device-WebNetErrorList-ERR_CONTEXT_SHUT_DOWN = -26-End-->
 
@@ -438,7 +438,7 @@ ERR_BLOCKED_BY_RESPONSE = -27
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_RESPONSE = -27--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_RESPONSE = -27-End-->
 
@@ -454,7 +454,7 @@ ERR_CLEARTEXT_NOT_PERMITTED = -29
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CLEARTEXT_NOT_PERMITTED = -29--><!--Device-WebNetErrorList-ERR_CLEARTEXT_NOT_PERMITTED = -29-End-->
 
@@ -470,7 +470,7 @@ ERR_BLOCKED_BY_CSP = -30
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_CSP = -30--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_CSP = -30-End-->
 
@@ -486,7 +486,7 @@ ERR_H2_OR_QUIC_REQUIRED = -31
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_H2_OR_QUIC_REQUIRED = -31--><!--Device-WebNetErrorList-ERR_H2_OR_QUIC_REQUIRED = -31-End-->
 
@@ -502,7 +502,7 @@ ERR_BLOCKED_BY_ORB = -32
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_BLOCKED_BY_ORB = -32--><!--Device-WebNetErrorList-ERR_BLOCKED_BY_ORB = -32-End-->
 
@@ -518,7 +518,7 @@ ERR_CONNECTION_CLOSED = -100
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_CLOSED = -100--><!--Device-WebNetErrorList-ERR_CONNECTION_CLOSED = -100-End-->
 
@@ -534,7 +534,7 @@ ERR_CONNECTION_RESET = -101
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_RESET = -101--><!--Device-WebNetErrorList-ERR_CONNECTION_RESET = -101-End-->
 
@@ -550,7 +550,7 @@ ERR_CONNECTION_REFUSED = -102
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_REFUSED = -102--><!--Device-WebNetErrorList-ERR_CONNECTION_REFUSED = -102-End-->
 
@@ -566,7 +566,7 @@ ERR_CONNECTION_ABORTED = -103
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_ABORTED = -103--><!--Device-WebNetErrorList-ERR_CONNECTION_ABORTED = -103-End-->
 
@@ -582,7 +582,7 @@ ERR_CONNECTION_FAILED = -104
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_FAILED = -104--><!--Device-WebNetErrorList-ERR_CONNECTION_FAILED = -104-End-->
 
@@ -598,7 +598,7 @@ ERR_NAME_NOT_RESOLVED = -105
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NAME_NOT_RESOLVED = -105--><!--Device-WebNetErrorList-ERR_NAME_NOT_RESOLVED = -105-End-->
 
@@ -614,7 +614,7 @@ ERR_INTERNET_DISCONNECTED = -106
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INTERNET_DISCONNECTED = -106--><!--Device-WebNetErrorList-ERR_INTERNET_DISCONNECTED = -106-End-->
 
@@ -630,7 +630,7 @@ SSL 协议错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_PROTOCOL_ERROR = -107--><!--Device-WebNetErrorList-ERR_SSL_PROTOCOL_ERROR = -107-End-->
 
@@ -646,7 +646,7 @@ IP地址或端口号无效（例如，无法连接到IP地址0或端口0）。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ADDRESS_INVALID = -108--><!--Device-WebNetErrorList-ERR_ADDRESS_INVALID = -108-End-->
 
@@ -662,7 +662,7 @@ ERR_ADDRESS_UNREACHABLE = -109
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ADDRESS_UNREACHABLE = -109--><!--Device-WebNetErrorList-ERR_ADDRESS_UNREACHABLE = -109-End-->
 
@@ -678,7 +678,7 @@ ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110-End-->
 
@@ -694,7 +694,7 @@ ERR_TUNNEL_CONNECTION_FAILED = -111
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TUNNEL_CONNECTION_FAILED = -111--><!--Device-WebNetErrorList-ERR_TUNNEL_CONNECTION_FAILED = -111-End-->
 
@@ -710,7 +710,7 @@ ERR_NO_SSL_VERSIONS_ENABLED = -112
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NO_SSL_VERSIONS_ENABLED = -112--><!--Device-WebNetErrorList-ERR_NO_SSL_VERSIONS_ENABLED = -112-End-->
 
@@ -726,7 +726,7 @@ ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113--><!--Device-WebNetErrorList-ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113-End-->
 
@@ -742,7 +742,7 @@ ERR_SSL_RENEGOTIATION_REQUESTED = -114
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_RENEGOTIATION_REQUESTED = -114--><!--Device-WebNetErrorList-ERR_SSL_RENEGOTIATION_REQUESTED = -114-End-->
 
@@ -758,7 +758,7 @@ ERR_PROXY_AUTH_UNSUPPORTED = -115
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PROXY_AUTH_UNSUPPORTED = -115--><!--Device-WebNetErrorList-ERR_PROXY_AUTH_UNSUPPORTED = -115-End-->
 
@@ -774,7 +774,7 @@ SSL 客户端证书错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_BAD_SSL_CLIENT_AUTH_CERT = -117--><!--Device-WebNetErrorList-ERR_BAD_SSL_CLIENT_AUTH_CERT = -117-End-->
 
@@ -790,7 +790,7 @@ ERR_CONNECTION_TIMED_OUT = -118
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONNECTION_TIMED_OUT = -118--><!--Device-WebNetErrorList-ERR_CONNECTION_TIMED_OUT = -118-End-->
 
@@ -806,7 +806,7 @@ ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119--><!--Device-WebNetErrorList-ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119-End-->
 
@@ -822,7 +822,7 @@ ERR_SOCKS_CONNECTION_FAILED = -120
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_FAILED = -120--><!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_FAILED = -120-End-->
 
@@ -838,7 +838,7 @@ ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121--><!--Device-WebNetErrorList-ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121-End-->
 
@@ -854,7 +854,7 @@ ERR_ALPN_NEGOTIATION_FAILED = -122
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ALPN_NEGOTIATION_FAILED = -122--><!--Device-WebNetErrorList-ERR_ALPN_NEGOTIATION_FAILED = -122-End-->
 
@@ -870,7 +870,7 @@ ERR_SSL_NO_RENEGOTIATION = -123
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_NO_RENEGOTIATION = -123--><!--Device-WebNetErrorList-ERR_SSL_NO_RENEGOTIATION = -123-End-->
 
@@ -886,7 +886,7 @@ Winsock有时会报告写入的数据多于传递的数据。这可能是由于L
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_WINSOCK_UNEXPECTED_WRITTEN_BYTES = -124--><!--Device-WebNetErrorList-ERR_WINSOCK_UNEXPECTED_WRITTEN_BYTES = -124-End-->
 
@@ -902,7 +902,7 @@ SSL对等端向本端发送了致命的解压失败警报。当对等方错误�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_DECOMPRESSION_FAILURE_ALERT = -125--><!--Device-WebNetErrorList-ERR_SSL_DECOMPRESSION_FAILURE_ALERT = -125-End-->
 
@@ -918,7 +918,7 @@ SSL对等端向本端发送了致命的bad_record_mac警报。一个对DEFLATE�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_BAD_RECORD_MAC_ALERT = -126--><!--Device-WebNetErrorList-ERR_SSL_BAD_RECORD_MAC_ALERT = -126-End-->
 
@@ -934,7 +934,7 @@ ERR_PROXY_AUTH_REQUESTED = -127
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED = -127--><!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED = -127-End-->
 
@@ -950,7 +950,7 @@ ERR_PROXY_CONNECTION_FAILED = -130
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PROXY_CONNECTION_FAILED = -130--><!--Device-WebNetErrorList-ERR_PROXY_CONNECTION_FAILED = -130-End-->
 
@@ -966,7 +966,7 @@ ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131--><!--Device-WebNetErrorList-ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131-End-->
 
@@ -982,7 +982,7 @@ ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133--><!--Device-WebNetErrorList-ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133-End-->
 
@@ -998,7 +998,7 @@ ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134-End-->
 
@@ -1014,7 +1014,7 @@ SSL客户端证书没有私钥。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY = -135--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY = -135-End-->
 
@@ -1030,7 +1030,7 @@ HTTPS 代理提供的证书无效。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PROXY_CERTIFICATE_INVALID = -136--><!--Device-WebNetErrorList-ERR_PROXY_CERTIFICATE_INVALID = -136-End-->
 
@@ -1046,7 +1046,7 @@ ERR_NAME_RESOLUTION_FAILED = -137
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NAME_RESOLUTION_FAILED = -137--><!--Device-WebNetErrorList-ERR_NAME_RESOLUTION_FAILED = -137-End-->
 
@@ -1062,7 +1062,7 @@ ERR_NETWORK_ACCESS_DENIED = -138
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NETWORK_ACCESS_DENIED = -138--><!--Device-WebNetErrorList-ERR_NETWORK_ACCESS_DENIED = -138-End-->
 
@@ -1078,7 +1078,7 @@ ERR_TEMPORARILY_THROTTLED = -139
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TEMPORARILY_THROTTLED = -139--><!--Device-WebNetErrorList-ERR_TEMPORARILY_THROTTLED = -139-End-->
 
@@ -1094,7 +1094,7 @@ ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140--><!--Device-WebNetErrorList-ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140-End-->
 
@@ -1110,7 +1110,7 @@ ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141-End-->
 
@@ -1126,7 +1126,7 @@ ERR_MSG_TOO_BIG = -142
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_MSG_TOO_BIG = -142--><!--Device-WebNetErrorList-ERR_MSG_TOO_BIG = -142-End-->
 
@@ -1142,7 +1142,7 @@ WebSocket协议错误。表示由于帧格式错误或其他协议冲突，正�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_WS_PROTOCOL_ERROR = -145--><!--Device-WebNetErrorList-ERR_WS_PROTOCOL_ERROR = -145-End-->
 
@@ -1158,7 +1158,7 @@ ERR_ADDRESS_IN_USE = -147
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ADDRESS_IN_USE = -147--><!--Device-WebNetErrorList-ERR_ADDRESS_IN_USE = -147-End-->
 
@@ -1174,7 +1174,7 @@ ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148--><!--Device-WebNetErrorList-ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148-End-->
 
@@ -1190,7 +1190,7 @@ SSL 公钥错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_BAD_PEER_PUBLIC_KEY = -149--><!--Device-WebNetErrorList-ERR_SSL_BAD_PEER_PUBLIC_KEY = -149-End-->
 
@@ -1206,7 +1206,7 @@ ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150--><!--Device-WebNetErrorList-ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150-End-->
 
@@ -1222,7 +1222,7 @@ ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151--><!--Device-WebNetErrorList-ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151-End-->
 
@@ -1238,7 +1238,7 @@ SSL对等端向本端发送了致命的decrypt_error警报。当对等方无法�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_DECRYPT_ERROR_ALERT = -153--><!--Device-WebNetErrorList-ERR_SSL_DECRYPT_ERROR_ALERT = -153-End-->
 
@@ -1254,7 +1254,7 @@ ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154--><!--Device-WebNetErrorList-ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154-End-->
 
@@ -1270,7 +1270,7 @@ SSL服务器证书在重新协商中更改。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_CHANGED = -156--><!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_CHANGED = -156-End-->
 
@@ -1286,7 +1286,7 @@ SSL服务器向本端发送了致命的未识别名称警报。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_UNRECOGNIZED_NAME_ALERT = -159--><!--Device-WebNetErrorList-ERR_SSL_UNRECOGNIZED_NAME_ALERT = -159-End-->
 
@@ -1302,7 +1302,7 @@ ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160--><!--Device-WebNetErrorList-ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160-End-->
 
@@ -1318,7 +1318,7 @@ ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161--><!--Device-WebNetErrorList-ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161-End-->
 
@@ -1334,7 +1334,7 @@ ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162--><!--Device-WebNetErrorList-ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162-End-->
 
@@ -1350,7 +1350,7 @@ ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163--><!--Device-WebNetErrorList-ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163-End-->
 
@@ -1366,7 +1366,7 @@ ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164-End-->
 
@@ -1382,7 +1382,7 @@ ERR_ICANN_NAME_COLLISION = -166
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ICANN_NAME_COLLISION = -166--><!--Device-WebNetErrorList-ERR_ICANN_NAME_COLLISION = -166-End-->
 
@@ -1398,7 +1398,7 @@ SSL服务器提供了一个无法解码的证书。这不是证书错误代码�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_BAD_FORMAT = -167--><!--Device-WebNetErrorList-ERR_SSL_SERVER_CERT_BAD_FORMAT = -167-End-->
 
@@ -1414,7 +1414,7 @@ Certificate Transparency: 解析signed tree head失败。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CT_STH_PARSING_FAILED = -168--><!--Device-WebNetErrorList-ERR_CT_STH_PARSING_FAILED = -168-End-->
 
@@ -1430,7 +1430,7 @@ Certificate Transparency: 解析signed tree head成功，但是缺少了一些�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CT_STH_INCOMPLETE = -169--><!--Device-WebNetErrorList-ERR_CT_STH_INCOMPLETE = -169-End-->
 
@@ -1446,7 +1446,7 @@ ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170--><!--Device-WebNetErrorList-ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170-End-->
 
@@ -1462,7 +1462,7 @@ Certificate Transparency: 一致性验证解析失败。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CT_CONSISTENCY_PROOF_PARSING_FAILED = -171--><!--Device-WebNetErrorList-ERR_CT_CONSISTENCY_PROOF_PARSING_FAILED = -171-End-->
 
@@ -1478,7 +1478,7 @@ SSL服务器需要一个不受支持的密码套件，该套件已被删除。�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_CIPHER = -172--><!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_CIPHER = -172-End-->
 
@@ -1494,7 +1494,7 @@ ERR_WS_UPGRADE = -173
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_WS_UPGRADE = -173--><!--Device-WebNetErrorList-ERR_WS_UPGRADE = -173-End-->
 
@@ -1510,7 +1510,7 @@ ERR_READ_IF_READY_NOT_IMPLEMENTED = -174
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_READ_IF_READY_NOT_IMPLEMENTED = -174--><!--Device-WebNetErrorList-ERR_READ_IF_READY_NOT_IMPLEMENTED = -174-End-->
 
@@ -1526,7 +1526,7 @@ ERR_NO_BUFFER_SPACE = -176
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NO_BUFFER_SPACE = -176--><!--Device-WebNetErrorList-ERR_NO_BUFFER_SPACE = -176-End-->
 
@@ -1542,7 +1542,7 @@ ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177--><!--Device-WebNetErrorList-ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177-End-->
 
@@ -1558,7 +1558,7 @@ TLS 1.3 early data 被服务器拒绝。这将在从套接字返回任何数据�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_EARLY_DATA_REJECTED = -178--><!--Device-WebNetErrorList-ERR_EARLY_DATA_REJECTED = -178-End-->
 
@@ -1574,7 +1574,7 @@ TLS 1.3 early data 版本错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_WRONG_VERSION_ON_EARLY_DATA = -179--><!--Device-WebNetErrorList-ERR_WRONG_VERSION_ON_EARLY_DATA = -179-End-->
 
@@ -1590,7 +1590,7 @@ TLS 1.3已启用，但已协商更低的版本，服务器返回一个值，表�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TLS13_DOWNGRADE_DETECTED = -180--><!--Device-WebNetErrorList-ERR_TLS13_DOWNGRADE_DETECTED = -180-End-->
 
@@ -1606,7 +1606,7 @@ ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181--><!--Device-WebNetErrorList-ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181-End-->
 
@@ -1622,7 +1622,7 @@ ERR_INVALID_ECH_CONFIG_LIST = -182
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_ECH_CONFIG_LIST = -182--><!--Device-WebNetErrorList-ERR_INVALID_ECH_CONFIG_LIST = -182-End-->
 
@@ -1638,7 +1638,7 @@ ECH已启用，但服务器无法解密加密的ClientHello。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ECH_NOT_NEGOTIATED = -183--><!--Device-WebNetErrorList-ERR_ECH_NOT_NEGOTIATED = -183-End-->
 
@@ -1654,7 +1654,7 @@ ECH已启用，服务器无法解密加密的ClientHello，并且没有提供对
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ECH_FALLBACK_CERTIFICATE_INVALID = -184--><!--Device-WebNetErrorList-ERR_ECH_FALLBACK_CERTIFICATE_INVALID = -184-End-->
 
@@ -1670,7 +1670,7 @@ ERR_CERT_COMMON_NAME_INVALID = -200
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_COMMON_NAME_INVALID = -200--><!--Device-WebNetErrorList-ERR_CERT_COMMON_NAME_INVALID = -200-End-->
 
@@ -1688,7 +1688,7 @@ ERR_CERT_DATE_INVALID = -201
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_DATE_INVALID = -201--><!--Device-WebNetErrorList-ERR_CERT_DATE_INVALID = -201-End-->
 
@@ -1704,7 +1704,7 @@ ERR_CERT_AUTHORITY_INVALID = -202
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_AUTHORITY_INVALID = -202--><!--Device-WebNetErrorList-ERR_CERT_AUTHORITY_INVALID = -202-End-->
 
@@ -1720,7 +1720,7 @@ ERR_CERT_CONTAINS_ERRORS = -203
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_CONTAINS_ERRORS = -203--><!--Device-WebNetErrorList-ERR_CERT_CONTAINS_ERRORS = -203-End-->
 
@@ -1736,7 +1736,7 @@ ERR_CERT_NO_REVOCATION_MECHANISM = -204
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_NO_REVOCATION_MECHANISM = -204--><!--Device-WebNetErrorList-ERR_CERT_NO_REVOCATION_MECHANISM = -204-End-->
 
@@ -1752,7 +1752,7 @@ ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205--><!--Device-WebNetErrorList-ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205-End-->
 
@@ -1768,7 +1768,7 @@ ERR_CERT_REVOKED = -206
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_REVOKED = -206--><!--Device-WebNetErrorList-ERR_CERT_REVOKED = -206-End-->
 
@@ -1784,7 +1784,7 @@ ERR_CERT_INVALID = -207
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_INVALID = -207--><!--Device-WebNetErrorList-ERR_CERT_INVALID = -207-End-->
 
@@ -1800,7 +1800,7 @@ ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208--><!--Device-WebNetErrorList-ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208-End-->
 
@@ -1816,7 +1816,7 @@ ERR_CERT_NON_UNIQUE_NAME = -210
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_NON_UNIQUE_NAME = -210--><!--Device-WebNetErrorList-ERR_CERT_NON_UNIQUE_NAME = -210-End-->
 
@@ -1832,7 +1832,7 @@ ERR_CERT_WEAK_KEY = -211
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_WEAK_KEY = -211--><!--Device-WebNetErrorList-ERR_CERT_WEAK_KEY = -211-End-->
 
@@ -1848,7 +1848,7 @@ ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212--><!--Device-WebNetErrorList-ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212-End-->
 
@@ -1864,7 +1864,7 @@ ERR_CERT_VALIDITY_TOO_LONG = -213
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_VALIDITY_TOO_LONG = -213--><!--Device-WebNetErrorList-ERR_CERT_VALIDITY_TOO_LONG = -213-End-->
 
@@ -1880,7 +1880,7 @@ ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214--><!--Device-WebNetErrorList-ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214-End-->
 
@@ -1896,7 +1896,7 @@ ERR_CERT_SYMANTEC_LEGACY = -215
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_SYMANTEC_LEGACY = -215--><!--Device-WebNetErrorList-ERR_CERT_SYMANTEC_LEGACY = -215-End-->
 
@@ -1912,7 +1912,7 @@ ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217--><!--Device-WebNetErrorList-ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217-End-->
 
@@ -1928,7 +1928,7 @@ ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218--><!--Device-WebNetErrorList-ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218-End-->
 
@@ -1944,7 +1944,7 @@ ERR_CERT_END = -219
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_END = -219--><!--Device-WebNetErrorList-ERR_CERT_END = -219-End-->
 
@@ -1960,7 +1960,7 @@ ERR_INVALID_URL = -300
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_URL = -300--><!--Device-WebNetErrorList-ERR_INVALID_URL = -300-End-->
 
@@ -1976,7 +1976,7 @@ ERR_DISALLOWED_URL_SCHEME = -301
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DISALLOWED_URL_SCHEME = -301--><!--Device-WebNetErrorList-ERR_DISALLOWED_URL_SCHEME = -301-End-->
 
@@ -1992,7 +1992,7 @@ ERR_UNKNOWN_URL_SCHEME = -302
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNKNOWN_URL_SCHEME = -302--><!--Device-WebNetErrorList-ERR_UNKNOWN_URL_SCHEME = -302-End-->
 
@@ -2008,7 +2008,7 @@ ERR_INVALID_REDIRECT = -303
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_REDIRECT = -303--><!--Device-WebNetErrorList-ERR_INVALID_REDIRECT = -303-End-->
 
@@ -2024,7 +2024,7 @@ ERR_TOO_MANY_REDIRECTS = -310
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TOO_MANY_REDIRECTS = -310--><!--Device-WebNetErrorList-ERR_TOO_MANY_REDIRECTS = -310-End-->
 
@@ -2040,7 +2040,7 @@ ERR_UNSAFE_REDIRECT = -311
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNSAFE_REDIRECT = -311--><!--Device-WebNetErrorList-ERR_UNSAFE_REDIRECT = -311-End-->
 
@@ -2056,7 +2056,7 @@ ERR_UNSAFE_PORT = -312
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNSAFE_PORT = -312--><!--Device-WebNetErrorList-ERR_UNSAFE_PORT = -312-End-->
 
@@ -2072,7 +2072,7 @@ ERR_INVALID_RESPONSE = -320
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_RESPONSE = -320--><!--Device-WebNetErrorList-ERR_INVALID_RESPONSE = -320-End-->
 
@@ -2088,7 +2088,7 @@ ERR_INVALID_CHUNKED_ENCODING = -321
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_CHUNKED_ENCODING = -321--><!--Device-WebNetErrorList-ERR_INVALID_CHUNKED_ENCODING = -321-End-->
 
@@ -2104,7 +2104,7 @@ ERR_METHOD_UNSUPPORTED = -322
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_METHOD_UNSUPPORTED = -322--><!--Device-WebNetErrorList-ERR_METHOD_UNSUPPORTED = -322-End-->
 
@@ -2120,7 +2120,7 @@ ERR_UNEXPECTED_PROXY_AUTH = -323
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNEXPECTED_PROXY_AUTH = -323--><!--Device-WebNetErrorList-ERR_UNEXPECTED_PROXY_AUTH = -323-End-->
 
@@ -2136,7 +2136,7 @@ ERR_EMPTY_RESPONSE = -324
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_EMPTY_RESPONSE = -324--><!--Device-WebNetErrorList-ERR_EMPTY_RESPONSE = -324-End-->
 
@@ -2152,7 +2152,7 @@ HTTP响应标头过大。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TOO_BIG = -325--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TOO_BIG = -325-End-->
 
@@ -2168,7 +2168,7 @@ PAC 脚本错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PAC_SCRIPT_FAILED = -327--><!--Device-WebNetErrorList-ERR_PAC_SCRIPT_FAILED = -327-End-->
 
@@ -2184,7 +2184,7 @@ ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328--><!--Device-WebNetErrorList-ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328-End-->
 
@@ -2200,7 +2200,7 @@ ERR_MALFORMED_IDENTITY = -329
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_MALFORMED_IDENTITY = -329--><!--Device-WebNetErrorList-ERR_MALFORMED_IDENTITY = -329-End-->
 
@@ -2216,7 +2216,7 @@ ERR_CONTENT_DECODING_FAILED = -330
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONTENT_DECODING_FAILED = -330--><!--Device-WebNetErrorList-ERR_CONTENT_DECODING_FAILED = -330-End-->
 
@@ -2232,7 +2232,7 @@ ERR_NETWORK_IO_SUSPENDED = -331
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NETWORK_IO_SUSPENDED = -331--><!--Device-WebNetErrorList-ERR_NETWORK_IO_SUSPENDED = -331-End-->
 
@@ -2248,7 +2248,7 @@ ERR_SYN_REPLY_NOT_RECEIVED = -332
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SYN_REPLY_NOT_RECEIVED = -332--><!--Device-WebNetErrorList-ERR_SYN_REPLY_NOT_RECEIVED = -332-End-->
 
@@ -2264,7 +2264,7 @@ ERR_ENCODING_CONVERSION_FAILED = -333
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ENCODING_CONVERSION_FAILED = -333--><!--Device-WebNetErrorList-ERR_ENCODING_CONVERSION_FAILED = -333-End-->
 
@@ -2280,7 +2280,7 @@ ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334--><!--Device-WebNetErrorList-ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334-End-->
 
@@ -2296,7 +2296,7 @@ ERR_NO_SUPPORTED_PROXIES = -336
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NO_SUPPORTED_PROXIES = -336--><!--Device-WebNetErrorList-ERR_NO_SUPPORTED_PROXIES = -336-End-->
 
@@ -2312,7 +2312,7 @@ HTTP/2协议错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PROTOCOL_ERROR = -337--><!--Device-WebNetErrorList-ERR_HTTP2_PROTOCOL_ERROR = -337-End-->
 
@@ -2328,7 +2328,7 @@ ERR_INVALID_AUTH_CREDENTIALS = -338
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_AUTH_CREDENTIALS = -338--><!--Device-WebNetErrorList-ERR_INVALID_AUTH_CREDENTIALS = -338-End-->
 
@@ -2344,7 +2344,7 @@ ERR_UNSUPPORTED_AUTH_SCHEME = -339
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNSUPPORTED_AUTH_SCHEME = -339--><!--Device-WebNetErrorList-ERR_UNSUPPORTED_AUTH_SCHEME = -339-End-->
 
@@ -2360,7 +2360,7 @@ ERR_ENCODING_DETECTION_FAILED = -340
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ENCODING_DETECTION_FAILED = -340--><!--Device-WebNetErrorList-ERR_ENCODING_DETECTION_FAILED = -340-End-->
 
@@ -2376,7 +2376,7 @@ ERR_MISSING_AUTH_CREDENTIALS = -341
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_MISSING_AUTH_CREDENTIALS = -341--><!--Device-WebNetErrorList-ERR_MISSING_AUTH_CREDENTIALS = -341-End-->
 
@@ -2392,7 +2392,7 @@ ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342--><!--Device-WebNetErrorList-ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342-End-->
 
@@ -2408,7 +2408,7 @@ ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343--><!--Device-WebNetErrorList-ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343-End-->
 
@@ -2424,7 +2424,7 @@ ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344--><!--Device-WebNetErrorList-ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344-End-->
 
@@ -2440,7 +2440,7 @@ ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345--><!--Device-WebNetErrorList-ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345-End-->
 
@@ -2456,7 +2456,7 @@ HTTP响应包含了多个不同的Content-Length响应头。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH = -346--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH = -346-End-->
 
@@ -2472,7 +2472,7 @@ ERR_INCOMPLETE_HTTP2_HEADERS = -347
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INCOMPLETE_HTTP2_HEADERS = -347--><!--Device-WebNetErrorList-ERR_INCOMPLETE_HTTP2_HEADERS = -347-End-->
 
@@ -2488,7 +2488,7 @@ PAC 不在 DHCP 中。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PAC_NOT_IN_DHCP = -348--><!--Device-WebNetErrorList-ERR_PAC_NOT_IN_DHCP = -348-End-->
 
@@ -2504,7 +2504,7 @@ ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349-End-->
 
@@ -2520,7 +2520,7 @@ ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350-End-->
 
@@ -2536,7 +2536,7 @@ HTTP/2 服务器拒绝流。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_SERVER_REFUSED_STREAM = -351--><!--Device-WebNetErrorList-ERR_HTTP2_SERVER_REFUSED_STREAM = -351-End-->
 
@@ -2552,7 +2552,7 @@ HTTP/2 ping失败。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PING_FAILED = -352--><!--Device-WebNetErrorList-ERR_HTTP2_PING_FAILED = -352-End-->
 
@@ -2568,7 +2568,7 @@ ERR_CONTENT_LENGTH_MISMATCH = -354
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONTENT_LENGTH_MISMATCH = -354--><!--Device-WebNetErrorList-ERR_CONTENT_LENGTH_MISMATCH = -354-End-->
 
@@ -2584,7 +2584,7 @@ HTTP 响应体使用分块编码传输，但在连接关闭时从未发送终止
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INCOMPLETE_CHUNKED_ENCODING = -355--><!--Device-WebNetErrorList-ERR_INCOMPLETE_CHUNKED_ENCODING = -355-End-->
 
@@ -2600,7 +2600,7 @@ ERR_QUIC_PROTOCOL_ERROR = -356
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_QUIC_PROTOCOL_ERROR = -356--><!--Device-WebNetErrorList-ERR_QUIC_PROTOCOL_ERROR = -356-End-->
 
@@ -2616,7 +2616,7 @@ HTTP 头部信息被文件结束符（EOF）截断。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TRUNCATED = -357--><!--Device-WebNetErrorList-ERR_RESPONSE_HEADERS_TRUNCATED = -357-End-->
 
@@ -2632,7 +2632,7 @@ QUIC 加密握手失败。这意味着服务器无法读取发送的任何请求
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_QUIC_HANDSHAKE_FAILED = -358--><!--Device-WebNetErrorList-ERR_QUIC_HANDSHAKE_FAILED = -358-End-->
 
@@ -2648,7 +2648,7 @@ ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360--><!--Device-WebNetErrorList-ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360-End-->
 
@@ -2664,7 +2664,7 @@ ERR_HTTP2_FLOW_CONTROL_ERROR = -361
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_FLOW_CONTROL_ERROR = -361--><!--Device-WebNetErrorList-ERR_HTTP2_FLOW_CONTROL_ERROR = -361-End-->
 
@@ -2680,7 +2680,7 @@ ERR_HTTP2_FRAME_SIZE_ERROR = -362
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_FRAME_SIZE_ERROR = -362--><!--Device-WebNetErrorList-ERR_HTTP2_FRAME_SIZE_ERROR = -362-End-->
 
@@ -2696,7 +2696,7 @@ ERR_HTTP2_COMPRESSION_ERROR = -363
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_COMPRESSION_ERROR = -363--><!--Device-WebNetErrorList-ERR_HTTP2_COMPRESSION_ERROR = -363-End-->
 
@@ -2712,7 +2712,7 @@ ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364--><!--Device-WebNetErrorList-ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364-End-->
 
@@ -2728,7 +2728,7 @@ ERR_HTTP_1_1_REQUIRED = -365
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP_1_1_REQUIRED = -365--><!--Device-WebNetErrorList-ERR_HTTP_1_1_REQUIRED = -365-End-->
 
@@ -2744,7 +2744,7 @@ ERR_PROXY_HTTP_1_1_REQUIRED = -366
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PROXY_HTTP_1_1_REQUIRED = -366--><!--Device-WebNetErrorList-ERR_PROXY_HTTP_1_1_REQUIRED = -366-End-->
 
@@ -2760,7 +2760,7 @@ PAC 脚本已终止并必须重新加载。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PAC_SCRIPT_TERMINATED = -367--><!--Device-WebNetErrorList-ERR_PAC_SCRIPT_TERMINATED = -367-End-->
 
@@ -2776,7 +2776,7 @@ ERR_INVALID_HTTP_RESPONSE = -370
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_HTTP_RESPONSE = -370--><!--Device-WebNetErrorList-ERR_INVALID_HTTP_RESPONSE = -370-End-->
 
@@ -2792,7 +2792,7 @@ ERR_CONTENT_DECODING_INIT_FAILED = -371
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CONTENT_DECODING_INIT_FAILED = -371--><!--Device-WebNetErrorList-ERR_CONTENT_DECODING_INIT_FAILED = -371-End-->
 
@@ -2808,7 +2808,7 @@ ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372--><!--Device-WebNetErrorList-ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372-End-->
 
@@ -2824,7 +2824,7 @@ ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373--><!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373-End-->
 
@@ -2840,7 +2840,7 @@ ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374--><!--Device-WebNetErrorList-ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374-End-->
 
@@ -2856,7 +2856,7 @@ ERR_TOO_MANY_RETRIES = -375
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TOO_MANY_RETRIES = -375--><!--Device-WebNetErrorList-ERR_TOO_MANY_RETRIES = -375-End-->
 
@@ -2872,7 +2872,7 @@ ERR_HTTP2_STREAM_CLOSED = -376
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_STREAM_CLOSED = -376--><!--Device-WebNetErrorList-ERR_HTTP2_STREAM_CLOSED = -376-End-->
 
@@ -2888,7 +2888,7 @@ ERR_HTTP2_CLIENT_REFUSED_STREAM = -377
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_CLIENT_REFUSED_STREAM = -377--><!--Device-WebNetErrorList-ERR_HTTP2_CLIENT_REFUSED_STREAM = -377-End-->
 
@@ -2904,7 +2904,7 @@ ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378--><!--Device-WebNetErrorList-ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378-End-->
 
@@ -2920,7 +2920,7 @@ ERR_HTTP_RESPONSE_CODE_FAILURE = -379
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_HTTP_RESPONSE_CODE_FAILURE = -379--><!--Device-WebNetErrorList-ERR_HTTP_RESPONSE_CODE_FAILURE = -379-End-->
 
@@ -2936,7 +2936,7 @@ ERR_QUIC_UNKNOWN_CERT_ROOT = -380
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_QUIC_UNKNOWN_CERT_ROOT = -380--><!--Device-WebNetErrorList-ERR_QUIC_UNKNOWN_CERT_ROOT = -380-End-->
 
@@ -2952,7 +2952,7 @@ ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381--><!--Device-WebNetErrorList-ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381-End-->
 
@@ -2968,7 +2968,7 @@ ACCEPT_CH 重启已被触发太多次。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TOO_MANY_ACCEPT_CH_RESTARTS = -382--><!--Device-WebNetErrorList-ERR_TOO_MANY_ACCEPT_CH_RESTARTS = -382-End-->
 
@@ -2984,7 +2984,7 @@ ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383--><!--Device-WebNetErrorList-ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383-End-->
 
@@ -3000,7 +3000,7 @@ ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384--><!--Device-WebNetErrorList-ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384-End-->
 
@@ -3016,7 +3016,7 @@ ERR_CACHE_MISS = -400
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_MISS = -400--><!--Device-WebNetErrorList-ERR_CACHE_MISS = -400-End-->
 
@@ -3032,7 +3032,7 @@ ERR_CACHE_READ_FAILURE = -401
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_READ_FAILURE = -401--><!--Device-WebNetErrorList-ERR_CACHE_READ_FAILURE = -401-End-->
 
@@ -3048,7 +3048,7 @@ ERR_CACHE_WRITE_FAILURE = -402
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_WRITE_FAILURE = -402--><!--Device-WebNetErrorList-ERR_CACHE_WRITE_FAILURE = -402-End-->
 
@@ -3064,7 +3064,7 @@ ERR_CACHE_OPERATION_UNSUPPORTED = -403
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_OPERATION_UNSUPPORTED = -403--><!--Device-WebNetErrorList-ERR_CACHE_OPERATION_UNSUPPORTED = -403-End-->
 
@@ -3080,7 +3080,7 @@ ERR_CACHE_OPEN_FAILURE = -404
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_OPEN_FAILURE = -404--><!--Device-WebNetErrorList-ERR_CACHE_OPEN_FAILURE = -404-End-->
 
@@ -3096,7 +3096,7 @@ ERR_CACHE_CREATE_FAILURE = -405
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_CREATE_FAILURE = -405--><!--Device-WebNetErrorList-ERR_CACHE_CREATE_FAILURE = -405-End-->
 
@@ -3112,7 +3112,7 @@ ERR_CACHE_RACE = -406
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_RACE = -406--><!--Device-WebNetErrorList-ERR_CACHE_RACE = -406-End-->
 
@@ -3128,7 +3128,7 @@ ERR_CACHE_CHECKSUM_READ_FAILURE = -407
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_READ_FAILURE = -407--><!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_READ_FAILURE = -407-End-->
 
@@ -3144,7 +3144,7 @@ ERR_CACHE_CHECKSUM_MISMATCH = -408
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_MISMATCH = -408--><!--Device-WebNetErrorList-ERR_CACHE_CHECKSUM_MISMATCH = -408-End-->
 
@@ -3160,7 +3160,7 @@ HTTP缓存的内部错误代码。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_LOCK_TIMEOUT = -409--><!--Device-WebNetErrorList-ERR_CACHE_LOCK_TIMEOUT = -409-End-->
 
@@ -3176,7 +3176,7 @@ ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410--><!--Device-WebNetErrorList-ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410-End-->
 
@@ -3192,7 +3192,7 @@ HTTP缓存的内部不完全错误代码。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_ENTRY_NOT_SUITABLE = -411--><!--Device-WebNetErrorList-ERR_CACHE_ENTRY_NOT_SUITABLE = -411-End-->
 
@@ -3208,7 +3208,7 @@ ERR_CACHE_DOOM_FAILURE = -412
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_DOOM_FAILURE = -412--><!--Device-WebNetErrorList-ERR_CACHE_DOOM_FAILURE = -412-End-->
 
@@ -3224,7 +3224,7 @@ ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413--><!--Device-WebNetErrorList-ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413-End-->
 
@@ -3240,7 +3240,7 @@ ERR_INSECURE_RESPONSE = -501
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INSECURE_RESPONSE = -501--><!--Device-WebNetErrorList-ERR_INSECURE_RESPONSE = -501-End-->
 
@@ -3256,7 +3256,7 @@ ERR_NO_PRIVATE_KEY_FOR_CERT = -502
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_NO_PRIVATE_KEY_FOR_CERT = -502--><!--Device-WebNetErrorList-ERR_NO_PRIVATE_KEY_FOR_CERT = -502-End-->
 
@@ -3272,7 +3272,7 @@ ERR_ADD_USER_CERT_FAILED = -503
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_ADD_USER_CERT_FAILED = -503--><!--Device-WebNetErrorList-ERR_ADD_USER_CERT_FAILED = -503-End-->
 
@@ -3288,7 +3288,7 @@ ERR_INVALID_SIGNED_EXCHANGE = -504
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_SIGNED_EXCHANGE = -504--><!--Device-WebNetErrorList-ERR_INVALID_SIGNED_EXCHANGE = -504-End-->
 
@@ -3304,7 +3304,7 @@ ERR_INVALID_WEB_BUNDLE = -505
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_INVALID_WEB_BUNDLE = -505--><!--Device-WebNetErrorList-ERR_INVALID_WEB_BUNDLE = -505-End-->
 
@@ -3320,7 +3320,7 @@ ERR_TRUST_TOKEN_OPERATION_FAILED = -506
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_FAILED = -506--><!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_FAILED = -506-End-->
 
@@ -3336,7 +3336,7 @@ ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507--><!--Device-WebNetErrorList-ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507-End-->
 
@@ -3352,7 +3352,7 @@ FTP控制连接命令失败的通用错误。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_FAILED = -601--><!--Device-WebNetErrorList-ERR_FTP_FAILED = -601-End-->
 
@@ -3368,7 +3368,7 @@ ERR_FTP_SERVICE_UNAVAILABLE = -602
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_SERVICE_UNAVAILABLE = -602--><!--Device-WebNetErrorList-ERR_FTP_SERVICE_UNAVAILABLE = -602-End-->
 
@@ -3384,7 +3384,7 @@ ERR_FTP_TRANSFER_ABORTED = -603
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_TRANSFER_ABORTED = -603--><!--Device-WebNetErrorList-ERR_FTP_TRANSFER_ABORTED = -603-End-->
 
@@ -3400,7 +3400,7 @@ ERR_FTP_FILE_BUSY = -604
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_FILE_BUSY = -604--><!--Device-WebNetErrorList-ERR_FTP_FILE_BUSY = -604-End-->
 
@@ -3416,7 +3416,7 @@ ERR_FTP_SYNTAX_ERROR = -605
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_SYNTAX_ERROR = -605--><!--Device-WebNetErrorList-ERR_FTP_SYNTAX_ERROR = -605-End-->
 
@@ -3432,7 +3432,7 @@ ERR_FTP_COMMAND_UNSUPPORTED = -606
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_COMMAND_UNSUPPORTED = -606--><!--Device-WebNetErrorList-ERR_FTP_COMMAND_UNSUPPORTED = -606-End-->
 
@@ -3448,7 +3448,7 @@ ERR_FTP_BAD_COMMAND_SEQUENCE = -607
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_FTP_BAD_COMMAND_SEQUENCE = -607--><!--Device-WebNetErrorList-ERR_FTP_BAD_COMMAND_SEQUENCE = -607-End-->
 
@@ -3464,7 +3464,7 @@ ERR_PKCS12_IMPORT_BAD_PASSWORD = -701
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_BAD_PASSWORD = -701--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_BAD_PASSWORD = -701-End-->
 
@@ -3480,7 +3480,7 @@ ERR_PKCS12_IMPORT_FAILED = -702
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_FAILED = -702--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_FAILED = -702-End-->
 
@@ -3496,7 +3496,7 @@ CA导入失败-不是CA证书。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_NOT_CA = -703--><!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_NOT_CA = -703-End-->
 
@@ -3512,7 +3512,7 @@ ERR_IMPORT_CERT_ALREADY_EXISTS = -704
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_IMPORT_CERT_ALREADY_EXISTS = -704--><!--Device-WebNetErrorList-ERR_IMPORT_CERT_ALREADY_EXISTS = -704-End-->
 
@@ -3528,7 +3528,7 @@ ERR_IMPORT_CA_CERT_FAILED = -705
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_FAILED = -705--><!--Device-WebNetErrorList-ERR_IMPORT_CA_CERT_FAILED = -705-End-->
 
@@ -3544,7 +3544,7 @@ ERR_IMPORT_SERVER_CERT_FAILED = -706
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_IMPORT_SERVER_CERT_FAILED = -706--><!--Device-WebNetErrorList-ERR_IMPORT_SERVER_CERT_FAILED = -706-End-->
 
@@ -3560,7 +3560,7 @@ PKCS #12 导入失败，因为 MAC（消息认证码）无效。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_MAC = -707--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_MAC = -707-End-->
 
@@ -3576,7 +3576,7 @@ PKCS #12 导入失败，因为文件无效或已损坏。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_FILE = -708--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_INVALID_FILE = -708-End-->
 
@@ -3592,7 +3592,7 @@ ERR_PKCS12_IMPORT_UNSUPPORTED = -709
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_UNSUPPORTED = -709--><!--Device-WebNetErrorList-ERR_PKCS12_IMPORT_UNSUPPORTED = -709-End-->
 
@@ -3608,7 +3608,7 @@ ERR_KEY_GENERATION_FAILED = -710
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_KEY_GENERATION_FAILED = -710--><!--Device-WebNetErrorList-ERR_KEY_GENERATION_FAILED = -710-End-->
 
@@ -3624,7 +3624,7 @@ ERR_PRIVATE_KEY_EXPORT_FAILED = -712
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_PRIVATE_KEY_EXPORT_FAILED = -712--><!--Device-WebNetErrorList-ERR_PRIVATE_KEY_EXPORT_FAILED = -712-End-->
 
@@ -3640,7 +3640,7 @@ ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713--><!--Device-WebNetErrorList-ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713-End-->
 
@@ -3656,7 +3656,7 @@ ERR_CERT_DATABASE_CHANGED = -714
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_DATABASE_CHANGED = -714--><!--Device-WebNetErrorList-ERR_CERT_DATABASE_CHANGED = -714-End-->
 
@@ -3672,7 +3672,7 @@ ERR_CERT_VERIFIER_CHANGED = -716
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_CERT_VERIFIER_CHANGED = -716--><!--Device-WebNetErrorList-ERR_CERT_VERIFIER_CHANGED = -716-End-->
 
@@ -3688,7 +3688,7 @@ DNS解析程序收到格式错误的响应。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_MALFORMED_RESPONSE = -800--><!--Device-WebNetErrorList-ERR_DNS_MALFORMED_RESPONSE = -800-End-->
 
@@ -3704,7 +3704,7 @@ DNS服务器需要TCP。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_SERVER_REQUIRES_TCP = -801--><!--Device-WebNetErrorList-ERR_DNS_SERVER_REQUIRES_TCP = -801-End-->
 
@@ -3720,7 +3720,7 @@ DNS服务器失败。对于以下所有错误情况，都会返回此错误。 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_SERVER_FAILED = -802--><!--Device-WebNetErrorList-ERR_DNS_SERVER_FAILED = -802-End-->
 
@@ -3736,7 +3736,7 @@ DNS事务超时。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_TIMED_OUT = -803--><!--Device-WebNetErrorList-ERR_DNS_TIMED_OUT = -803-End-->
 
@@ -3752,7 +3752,7 @@ ERR_DNS_CACHE_MISS = -804
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_CACHE_MISS = -804--><!--Device-WebNetErrorList-ERR_DNS_CACHE_MISS = -804-End-->
 
@@ -3768,7 +3768,7 @@ ERR_DNS_SEARCH_EMPTY = -805
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_SEARCH_EMPTY = -805--><!--Device-WebNetErrorList-ERR_DNS_SEARCH_EMPTY = -805-End-->
 
@@ -3784,7 +3784,7 @@ ERR_DNS_SORT_ERROR = -806
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_SORT_ERROR = -806--><!--Device-WebNetErrorList-ERR_DNS_SORT_ERROR = -806-End-->
 
@@ -3800,7 +3800,7 @@ ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808--><!--Device-WebNetErrorList-ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808-End-->
 
@@ -3816,7 +3816,7 @@ DNS已识别请求因不安全的连接（HTTP/WS）而被禁止。应用程序�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_NAME_HTTPS_ONLY = -809--><!--Device-WebNetErrorList-ERR_DNS_NAME_HTTPS_ONLY = -809-End-->
 
@@ -3832,7 +3832,7 @@ ERR_DNS_REQUEST_CANCELED = -810
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_REQUEST_CANCELED = -810--><!--Device-WebNetErrorList-ERR_DNS_REQUEST_CANCELED = -810-End-->
 
@@ -3848,7 +3848,7 @@ HTTPS记录的主机名解析未能使用受支持协议的ALPN值进行解析�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-WebNetErrorList-ERR_DNS_NO_MATCHING_SUPPORTED_ALPN = -811--><!--Device-WebNetErrorList-ERR_DNS_NO_MATCHING_SUPPORTED_ALPN = -811-End-->
 

@@ -8,7 +8,7 @@ Defines the Web attribute functions.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface WebAttribute--><!--Device-unnamed-export declare interface WebAttribute-End-->
 
@@ -22,7 +22,7 @@ aiSessionOptions(aiSessions: Array<AISessionEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-aiSessionOptions(aiSessions: Array<AISessionEvent> | undefined): this--><!--Device-WebAttribute-aiSessionOptions(aiSessions: Array<AISessionEvent> | undefined): this-End-->
 
@@ -44,7 +44,7 @@ allowWindowOpenMethod(flag: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-allowWindowOpenMethod(flag: boolean | undefined): this--><!--Device-WebAttribute-allowWindowOpenMethod(flag: boolean | undefined): this-End-->
 
@@ -66,7 +66,7 @@ attributeModifier(modifier: AttributeModifier<WebAttribute> | AttributeModifier<
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-attributeModifier(modifier: AttributeModifier<WebAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-WebAttribute-attributeModifier(modifier: AttributeModifier<WebAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -88,7 +88,7 @@ backToTop(backToTop: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-backToTop(backToTop: boolean | undefined): this--><!--Device-WebAttribute-backToTop(backToTop: boolean | undefined): this-End-->
 
@@ -110,7 +110,7 @@ bindSelectionMenu(elementType: WebElementType | undefined, content: CustomBuilde
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-bindSelectionMenu(elementType: WebElementType | undefined, content: CustomBuilder | undefined, responseType: WebResponseType | undefined, options?: SelectionMenuOptionsExt | undefined): this--><!--Device-WebAttribute-bindSelectionMenu(elementType: WebElementType | undefined, content: CustomBuilder | undefined, responseType: WebResponseType | undefined, options?: SelectionMenuOptionsExt | undefined): this-End-->
 
@@ -135,7 +135,7 @@ blankScreenDetectionConfig(detectConfig: BlankScreenDetectionConfig | undefined)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-blankScreenDetectionConfig(detectConfig: BlankScreenDetectionConfig | undefined): this--><!--Device-WebAttribute-blankScreenDetectionConfig(detectConfig: BlankScreenDetectionConfig | undefined): this-End-->
 
@@ -157,7 +157,7 @@ blockNetwork(block: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-blockNetwork(block: boolean | undefined): this--><!--Device-WebAttribute-blockNetwork(block: boolean | undefined): this-End-->
 
@@ -179,7 +179,7 @@ blurOnKeyboardHideMode(mode: BlurOnKeyboardHideMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-blurOnKeyboardHideMode(mode: BlurOnKeyboardHideMode | undefined): this--><!--Device-WebAttribute-blurOnKeyboardHideMode(mode: BlurOnKeyboardHideMode | undefined): this-End-->
 
@@ -201,7 +201,7 @@ bypassVsyncCondition(condition: WebBypassVsyncCondition | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-bypassVsyncCondition(condition: WebBypassVsyncCondition | undefined): this--><!--Device-WebAttribute-bypassVsyncCondition(condition: WebBypassVsyncCondition | undefined): this-End-->
 
@@ -223,7 +223,7 @@ cacheMode(cacheMode: CacheMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-cacheMode(cacheMode: CacheMode | undefined): this--><!--Device-WebAttribute-cacheMode(cacheMode: CacheMode | undefined): this-End-->
 
@@ -245,7 +245,7 @@ copyOptions(value: CopyOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-copyOptions(value: CopyOptions | undefined): this--><!--Device-WebAttribute-copyOptions(value: CopyOptions | undefined): this-End-->
 
@@ -267,7 +267,7 @@ darkMode(mode: WebDarkMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-darkMode(mode: WebDarkMode | undefined): this--><!--Device-WebAttribute-darkMode(mode: WebDarkMode | undefined): this-End-->
 
@@ -289,7 +289,7 @@ dataDetectorConfig(config: TextDataDetectorConfig | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-dataDetectorConfig(config: TextDataDetectorConfig | undefined): this--><!--Device-WebAttribute-dataDetectorConfig(config: TextDataDetectorConfig | undefined): this-End-->
 
@@ -311,7 +311,7 @@ databaseAccess(databaseAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-databaseAccess(databaseAccess: boolean | undefined): this--><!--Device-WebAttribute-databaseAccess(databaseAccess: boolean | undefined): this-End-->
 
@@ -333,7 +333,7 @@ defaultFixedFontSize(size: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-defaultFixedFontSize(size: int | undefined): this--><!--Device-WebAttribute-defaultFixedFontSize(size: int | undefined): this-End-->
 
@@ -355,7 +355,7 @@ defaultFontSize(size: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-defaultFontSize(size: int | undefined): this--><!--Device-WebAttribute-defaultFontSize(size: int | undefined): this-End-->
 
@@ -377,7 +377,7 @@ defaultTextEncodingFormat(textEncodingFormat: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-defaultTextEncodingFormat(textEncodingFormat: string | undefined): this--><!--Device-WebAttribute-defaultTextEncodingFormat(textEncodingFormat: string | undefined): this-End-->
 
@@ -399,7 +399,7 @@ domStorageAccess(domStorageAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-domStorageAccess(domStorageAccess: boolean | undefined): this--><!--Device-WebAttribute-domStorageAccess(domStorageAccess: boolean | undefined): this-End-->
 
@@ -421,7 +421,7 @@ editMenuOptions(editMenu: EditMenuOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-editMenuOptions(editMenu: EditMenuOptions | undefined): this--><!--Device-WebAttribute-editMenuOptions(editMenu: EditMenuOptions | undefined): this-End-->
 
@@ -443,7 +443,7 @@ enableAutoFill(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableAutoFill(value: boolean | undefined): this--><!--Device-WebAttribute-enableAutoFill(value: boolean | undefined): this-End-->
 
@@ -465,7 +465,7 @@ enableDataDetector(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableDataDetector(enable: boolean | undefined): this--><!--Device-WebAttribute-enableDataDetector(enable: boolean | undefined): this-End-->
 
@@ -487,7 +487,7 @@ enableDefaultContextMenu(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableDefaultContextMenu(enable: boolean | undefined): this--><!--Device-WebAttribute-enableDefaultContextMenu(enable: boolean | undefined): this-End-->
 
@@ -509,7 +509,7 @@ enableDrag(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableDrag(value: boolean | undefined): this--><!--Device-WebAttribute-enableDrag(value: boolean | undefined): this-End-->
 
@@ -531,7 +531,7 @@ enableFollowSystemFontWeight(follow: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableFollowSystemFontWeight(follow: boolean | undefined): this--><!--Device-WebAttribute-enableFollowSystemFontWeight(follow: boolean | undefined): this-End-->
 
@@ -553,7 +553,7 @@ enableHapticFeedback(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableHapticFeedback(enabled: boolean | undefined): this--><!--Device-WebAttribute-enableHapticFeedback(enabled: boolean | undefined): this-End-->
 
@@ -575,7 +575,7 @@ enableImageAnalyzer(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableImageAnalyzer(enable: boolean | undefined): this--><!--Device-WebAttribute-enableImageAnalyzer(enable: boolean | undefined): this-End-->
 
@@ -597,7 +597,7 @@ enableNativeEmbedMode(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableNativeEmbedMode(enabled: boolean | undefined): this--><!--Device-WebAttribute-enableNativeEmbedMode(enabled: boolean | undefined): this-End-->
 
@@ -619,7 +619,7 @@ enableNativeMediaPlayer(config: NativeMediaPlayerConfig | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableNativeMediaPlayer(config: NativeMediaPlayerConfig | undefined): this--><!--Device-WebAttribute-enableNativeMediaPlayer(config: NativeMediaPlayerConfig | undefined): this-End-->
 
@@ -641,7 +641,7 @@ enableScrollDirectionalLock(value: boolean | undefined, type: ScrollDirectionalL
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableScrollDirectionalLock(value: boolean | undefined, type: ScrollDirectionalLockType | undefined): this--><!--Device-WebAttribute-enableScrollDirectionalLock(value: boolean | undefined, type: ScrollDirectionalLockType | undefined): this-End-->
 
@@ -664,7 +664,7 @@ enableSelectedDataDetector(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableSelectedDataDetector(enable: boolean | undefined): this--><!--Device-WebAttribute-enableSelectedDataDetector(enable: boolean | undefined): this-End-->
 
@@ -686,7 +686,7 @@ enableWebAVSession(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-enableWebAVSession(enabled: boolean | undefined): this--><!--Device-WebAttribute-enableWebAVSession(enabled: boolean | undefined): this-End-->
 
@@ -708,7 +708,7 @@ fileAccess(fileAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-fileAccess(fileAccess: boolean | undefined): this--><!--Device-WebAttribute-fileAccess(fileAccess: boolean | undefined): this-End-->
 
@@ -730,7 +730,7 @@ forceDarkAccess(access: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-forceDarkAccess(access: boolean | undefined): this--><!--Device-WebAttribute-forceDarkAccess(access: boolean | undefined): this-End-->
 
@@ -752,7 +752,7 @@ forceDisplayScrollBar(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-forceDisplayScrollBar(enabled: boolean | undefined): this--><!--Device-WebAttribute-forceDisplayScrollBar(enabled: boolean | undefined): this-End-->
 
@@ -774,7 +774,7 @@ forceEnableZoom(enable: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-forceEnableZoom(enable: boolean | undefined): this--><!--Device-WebAttribute-forceEnableZoom(enable: boolean | undefined): this-End-->
 
@@ -796,7 +796,7 @@ geolocationAccess(geolocationAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-geolocationAccess(geolocationAccess: boolean | undefined): this--><!--Device-WebAttribute-geolocationAccess(geolocationAccess: boolean | undefined): this-End-->
 
@@ -818,7 +818,7 @@ gestureFocusMode(mode: GestureFocusMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-gestureFocusMode(mode: GestureFocusMode | undefined): this--><!--Device-WebAttribute-gestureFocusMode(mode: GestureFocusMode | undefined): this-End-->
 
@@ -840,7 +840,7 @@ horizontalScrollBarAccess(horizontalScrollBar: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-horizontalScrollBarAccess(horizontalScrollBar: boolean | undefined): this--><!--Device-WebAttribute-horizontalScrollBarAccess(horizontalScrollBar: boolean | undefined): this-End-->
 
@@ -862,7 +862,7 @@ imageAccess(imageAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-imageAccess(imageAccess: boolean | undefined): this--><!--Device-WebAttribute-imageAccess(imageAccess: boolean | undefined): this-End-->
 
@@ -884,7 +884,7 @@ initialScale(percent: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-initialScale(percent: double | undefined): this--><!--Device-WebAttribute-initialScale(percent: double | undefined): this-End-->
 
@@ -906,7 +906,7 @@ javaScriptAccess(javaScriptAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-javaScriptAccess(javaScriptAccess: boolean | undefined): this--><!--Device-WebAttribute-javaScriptAccess(javaScriptAccess: boolean | undefined): this-End-->
 
@@ -928,7 +928,7 @@ javaScriptOnDocumentEnd(scripts: Array<ScriptItem> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-javaScriptOnDocumentEnd(scripts: Array<ScriptItem> | undefined): this--><!--Device-WebAttribute-javaScriptOnDocumentEnd(scripts: Array<ScriptItem> | undefined): this-End-->
 
@@ -950,7 +950,7 @@ javaScriptOnDocumentStart(scripts: Array<ScriptItem> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-javaScriptOnDocumentStart(scripts: Array<ScriptItem> | undefined): this--><!--Device-WebAttribute-javaScriptOnDocumentStart(scripts: Array<ScriptItem> | undefined): this-End-->
 
@@ -972,7 +972,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-javaScriptProxy(javaScriptProxy: JavaScriptProxy | undefined): this--><!--Device-WebAttribute-javaScriptProxy(javaScriptProxy: JavaScriptProxy | undefined): this-End-->
 
@@ -994,7 +994,7 @@ keyboardAppearance(mode: WebKeyboardAppearanceMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-keyboardAppearance(mode: WebKeyboardAppearanceMode | undefined): this--><!--Device-WebAttribute-keyboardAppearance(mode: WebKeyboardAppearanceMode | undefined): this-End-->
 
@@ -1016,7 +1016,7 @@ keyboardAvoidMode(mode: WebKeyboardAvoidMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-keyboardAvoidMode(mode: WebKeyboardAvoidMode | undefined): this--><!--Device-WebAttribute-keyboardAvoidMode(mode: WebKeyboardAvoidMode | undefined): this-End-->
 
@@ -1038,7 +1038,7 @@ layoutMode(mode: WebLayoutMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-layoutMode(mode: WebLayoutMode | undefined): this--><!--Device-WebAttribute-layoutMode(mode: WebLayoutMode | undefined): this-End-->
 
@@ -1060,7 +1060,7 @@ mediaOptions(options: WebMediaOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-mediaOptions(options: WebMediaOptions | undefined): this--><!--Device-WebAttribute-mediaOptions(options: WebMediaOptions | undefined): this-End-->
 
@@ -1082,7 +1082,7 @@ mediaPlayGestureAccess(access: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-mediaPlayGestureAccess(access: boolean | undefined): this--><!--Device-WebAttribute-mediaPlayGestureAccess(access: boolean | undefined): this-End-->
 
@@ -1104,7 +1104,7 @@ metaViewport(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-metaViewport(enabled: boolean | undefined): this--><!--Device-WebAttribute-metaViewport(enabled: boolean | undefined): this-End-->
 
@@ -1126,7 +1126,7 @@ minFontSize(size: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-minFontSize(size: int | undefined): this--><!--Device-WebAttribute-minFontSize(size: int | undefined): this-End-->
 
@@ -1148,7 +1148,7 @@ minLogicalFontSize(size: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-minLogicalFontSize(size: int | undefined): this--><!--Device-WebAttribute-minLogicalFontSize(size: int | undefined): this-End-->
 
@@ -1170,7 +1170,7 @@ mixedMode(mixedMode: MixedMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-mixedMode(mixedMode: MixedMode | undefined): this--><!--Device-WebAttribute-mixedMode(mixedMode: MixedMode | undefined): this-End-->
 
@@ -1192,7 +1192,7 @@ multiWindowAccess(multiWindow: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-multiWindowAccess(multiWindow: boolean | undefined): this--><!--Device-WebAttribute-multiWindowAccess(multiWindow: boolean | undefined): this-End-->
 
@@ -1214,7 +1214,7 @@ nativeEmbedOptions(options?: EmbedOptions | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-nativeEmbedOptions(options?: EmbedOptions | undefined): this--><!--Device-WebAttribute-nativeEmbedOptions(options?: EmbedOptions | undefined): this-End-->
 
@@ -1236,7 +1236,7 @@ nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt | undefined): this--><!--Device-WebAttribute-nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt | undefined): this-End-->
 
@@ -1258,7 +1258,7 @@ onActivateContent(callback: VoidCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onActivateContent(callback: VoidCallback | undefined): this--><!--Device-WebAttribute-onActivateContent(callback: VoidCallback | undefined): this-End-->
 
@@ -1280,7 +1280,7 @@ onAdsBlocked(callback: OnAdsBlockedCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onAdsBlocked(callback: OnAdsBlockedCallback | undefined): this--><!--Device-WebAttribute-onAdsBlocked(callback: OnAdsBlockedCallback | undefined): this-End-->
 
@@ -1302,7 +1302,7 @@ onAlert(callback: Callback<OnAlertEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onAlert(callback: Callback<OnAlertEvent, boolean> | undefined): this--><!--Device-WebAttribute-onAlert(callback: Callback<OnAlertEvent, boolean> | undefined): this-End-->
 
@@ -1324,7 +1324,7 @@ onAudioStateChanged(callback: Callback<OnAudioStateChangedEvent> | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onAudioStateChanged(callback: Callback<OnAudioStateChangedEvent> | undefined): this--><!--Device-WebAttribute-onAudioStateChanged(callback: Callback<OnAudioStateChangedEvent> | undefined): this-End-->
 
@@ -1346,7 +1346,7 @@ onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean> | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean> | undefined): this--><!--Device-WebAttribute-onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean> | undefined): this-End-->
 
@@ -1368,7 +1368,7 @@ onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback | undefi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback | undefined): this--><!--Device-WebAttribute-onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback | undefined): this-End-->
 
@@ -1390,7 +1390,7 @@ onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent> | 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent> | undefined): this--><!--Device-WebAttribute-onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent> | undefined): this-End-->
 
@@ -1412,7 +1412,7 @@ onConfirm(callback: Callback<OnConfirmEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onConfirm(callback: Callback<OnConfirmEvent, boolean> | undefined): this--><!--Device-WebAttribute-onConfirm(callback: Callback<OnConfirmEvent, boolean> | undefined): this-End-->
 
@@ -1434,7 +1434,7 @@ onConsole(callback: Callback<OnConsoleEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onConsole(callback: Callback<OnConsoleEvent, boolean> | undefined): this--><!--Device-WebAttribute-onConsole(callback: Callback<OnConsoleEvent, boolean> | undefined): this-End-->
 
@@ -1456,7 +1456,7 @@ onContextMenuHide(callback: OnContextMenuHideCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onContextMenuHide(callback: OnContextMenuHideCallback | undefined): this--><!--Device-WebAttribute-onContextMenuHide(callback: OnContextMenuHideCallback | undefined): this-End-->
 
@@ -1478,7 +1478,7 @@ onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean> | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean> | undefined): this--><!--Device-WebAttribute-onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean> | undefined): this-End-->
 
@@ -1500,7 +1500,7 @@ onControllerAttached(callback: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onControllerAttached(callback: (() => void) | undefined): this--><!--Device-WebAttribute-onControllerAttached(callback: (() => void) | undefined): this-End-->
 
@@ -1522,7 +1522,7 @@ onDataResubmitted(callback: Callback<OnDataResubmittedEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onDataResubmitted(callback: Callback<OnDataResubmittedEvent> | undefined): this--><!--Device-WebAttribute-onDataResubmitted(callback: Callback<OnDataResubmittedEvent> | undefined): this-End-->
 
@@ -1544,7 +1544,7 @@ onDetectedBlankScreen(callback: OnDetectBlankScreenCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onDetectedBlankScreen(callback: OnDetectBlankScreenCallback | undefined): this--><!--Device-WebAttribute-onDetectedBlankScreen(callback: OnDetectBlankScreenCallback | undefined): this-End-->
 
@@ -1566,7 +1566,7 @@ onDownloadStart(callback: Callback<OnDownloadStartEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onDownloadStart(callback: Callback<OnDownloadStartEvent> | undefined): this--><!--Device-WebAttribute-onDownloadStart(callback: Callback<OnDownloadStartEvent> | undefined): this-End-->
 
@@ -1588,7 +1588,7 @@ onErrorReceive(callback: Callback<OnErrorReceiveEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onErrorReceive(callback: Callback<OnErrorReceiveEvent> | undefined): this--><!--Device-WebAttribute-onErrorReceive(callback: Callback<OnErrorReceiveEvent> | undefined): this-End-->
 
@@ -1610,7 +1610,7 @@ onFaviconReceived(callback: Callback<OnFaviconReceivedEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onFaviconReceived(callback: Callback<OnFaviconReceivedEvent> | undefined): this--><!--Device-WebAttribute-onFaviconReceived(callback: Callback<OnFaviconReceivedEvent> | undefined): this-End-->
 
@@ -1632,7 +1632,7 @@ onFirstContentfulPaint(callback: Callback<OnFirstContentfulPaintEvent> | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onFirstContentfulPaint(callback: Callback<OnFirstContentfulPaintEvent> | undefined): this--><!--Device-WebAttribute-onFirstContentfulPaint(callback: Callback<OnFirstContentfulPaintEvent> | undefined): this-End-->
 
@@ -1654,7 +1654,7 @@ onFirstMeaningfulPaint(callback: OnFirstMeaningfulPaintCallback | undefined): th
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onFirstMeaningfulPaint(callback: OnFirstMeaningfulPaintCallback | undefined): this--><!--Device-WebAttribute-onFirstMeaningfulPaint(callback: OnFirstMeaningfulPaintCallback | undefined): this-End-->
 
@@ -1676,7 +1676,7 @@ onFirstScreenPaint(callback: OnFirstScreenPaintCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onFirstScreenPaint(callback: OnFirstScreenPaintCallback | undefined): this--><!--Device-WebAttribute-onFirstScreenPaint(callback: OnFirstScreenPaintCallback | undefined): this-End-->
 
@@ -1698,7 +1698,7 @@ onFullScreenEnter(callback: OnFullScreenEnterCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onFullScreenEnter(callback: OnFullScreenEnterCallback | undefined): this--><!--Device-WebAttribute-onFullScreenEnter(callback: OnFullScreenEnterCallback | undefined): this-End-->
 
@@ -1720,7 +1720,7 @@ onFullScreenExit(callback: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onFullScreenExit(callback: (() => void) | undefined): this--><!--Device-WebAttribute-onFullScreenExit(callback: (() => void) | undefined): this-End-->
 
@@ -1742,7 +1742,7 @@ onGeolocationHide(callback: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onGeolocationHide(callback: (() => void) | undefined): this--><!--Device-WebAttribute-onGeolocationHide(callback: (() => void) | undefined): this-End-->
 
@@ -1764,7 +1764,7 @@ onGeolocationShow(callback: Callback<OnGeolocationShowEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onGeolocationShow(callback: Callback<OnGeolocationShowEvent> | undefined): this--><!--Device-WebAttribute-onGeolocationShow(callback: Callback<OnGeolocationShowEvent> | undefined): this-End-->
 
@@ -1786,7 +1786,7 @@ onHttpAuthRequest(callback: Callback<OnHttpAuthRequestEvent, boolean> | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onHttpAuthRequest(callback: Callback<OnHttpAuthRequestEvent, boolean> | undefined): this--><!--Device-WebAttribute-onHttpAuthRequest(callback: Callback<OnHttpAuthRequestEvent, boolean> | undefined): this-End-->
 
@@ -1808,7 +1808,7 @@ onHttpErrorReceive(callback: Callback<OnHttpErrorReceiveEvent> | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onHttpErrorReceive(callback: Callback<OnHttpErrorReceiveEvent> | undefined): this--><!--Device-WebAttribute-onHttpErrorReceive(callback: Callback<OnHttpErrorReceiveEvent> | undefined): this-End-->
 
@@ -1830,7 +1830,7 @@ onInputmethodAttached(callback: OnInputmethodAttachedCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onInputmethodAttached(callback: OnInputmethodAttachedCallback | undefined): this--><!--Device-WebAttribute-onInputmethodAttached(callback: OnInputmethodAttachedCallback | undefined): this-End-->
 
@@ -1852,7 +1852,7 @@ onIntelligentTrackingPreventionResult(callback: OnIntelligentTrackingPreventionC
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onIntelligentTrackingPreventionResult(callback: OnIntelligentTrackingPreventionCallback | undefined): this--><!--Device-WebAttribute-onIntelligentTrackingPreventionResult(callback: OnIntelligentTrackingPreventionCallback | undefined): this-End-->
 
@@ -1874,7 +1874,7 @@ onInterceptKeyEvent(callback: ((event: KeyEvent) => boolean) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onInterceptKeyEvent(callback: ((event: KeyEvent) => boolean) | undefined): this--><!--Device-WebAttribute-onInterceptKeyEvent(callback: ((event: KeyEvent) => boolean) | undefined): this-End-->
 
@@ -1896,7 +1896,7 @@ onInterceptKeyboardAttach(callback: WebKeyboardCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onInterceptKeyboardAttach(callback: WebKeyboardCallback | undefined): this--><!--Device-WebAttribute-onInterceptKeyboardAttach(callback: WebKeyboardCallback | undefined): this-End-->
 
@@ -1918,7 +1918,7 @@ onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceRespon
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse | null> | undefined): this--><!--Device-WebAttribute-onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse | null> | undefined): this-End-->
 
@@ -1940,7 +1940,7 @@ onLargestContentfulPaint(callback: OnLargestContentfulPaintCallback | undefined)
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onLargestContentfulPaint(callback: OnLargestContentfulPaintCallback | undefined): this--><!--Device-WebAttribute-onLargestContentfulPaint(callback: OnLargestContentfulPaintCallback | undefined): this-End-->
 
@@ -1962,7 +1962,7 @@ onLoadFinished(callback: Callback<OnLoadFinishedEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onLoadFinished(callback: Callback<OnLoadFinishedEvent> | undefined): this--><!--Device-WebAttribute-onLoadFinished(callback: Callback<OnLoadFinishedEvent> | undefined): this-End-->
 
@@ -1984,7 +1984,7 @@ onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean> | undefined): 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean> | undefined): this--><!--Device-WebAttribute-onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean> | undefined): this-End-->
 
@@ -2006,7 +2006,7 @@ onLoadStarted(callback: Callback<OnLoadStartedEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onLoadStarted(callback: Callback<OnLoadStartedEvent> | undefined): this--><!--Device-WebAttribute-onLoadStarted(callback: Callback<OnLoadStartedEvent> | undefined): this-End-->
 
@@ -2028,7 +2028,7 @@ onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback | undefined): this--><!--Device-WebAttribute-onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback | undefined): this-End-->
 
@@ -2050,7 +2050,7 @@ onNativeEmbedGestureEvent(callback: ((event: NativeEmbedTouchInfo) => void) | un
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onNativeEmbedGestureEvent(callback: ((event: NativeEmbedTouchInfo) => void) | undefined): this--><!--Device-WebAttribute-onNativeEmbedGestureEvent(callback: ((event: NativeEmbedTouchInfo) => void) | undefined): this-End-->
 
@@ -2072,7 +2072,7 @@ onNativeEmbedLifecycleChange(callback: ((event: NativeEmbedDataInfo) => void) | 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onNativeEmbedLifecycleChange(callback: ((event: NativeEmbedDataInfo) => void) | undefined): this--><!--Device-WebAttribute-onNativeEmbedLifecycleChange(callback: ((event: NativeEmbedDataInfo) => void) | undefined): this-End-->
 
@@ -2094,7 +2094,7 @@ onNativeEmbedMouseEvent(callback: MouseInfoCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onNativeEmbedMouseEvent(callback: MouseInfoCallback | undefined): this--><!--Device-WebAttribute-onNativeEmbedMouseEvent(callback: MouseInfoCallback | undefined): this-End-->
 
@@ -2116,7 +2116,7 @@ onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback | undefined): this--><!--Device-WebAttribute-onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback | undefined): this-End-->
 
@@ -2138,7 +2138,7 @@ onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback | 
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback | undefined): this--><!--Device-WebAttribute-onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback | undefined): this-End-->
 
@@ -2160,7 +2160,7 @@ onNavigationEntryCommitted(callback: OnNavigationEntryCommittedCallback | undefi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onNavigationEntryCommitted(callback: OnNavigationEntryCommittedCallback | undefined): this--><!--Device-WebAttribute-onNavigationEntryCommitted(callback: OnNavigationEntryCommittedCallback | undefined): this-End-->
 
@@ -2182,7 +2182,7 @@ onOverScroll(callback: Callback<OnOverScrollEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onOverScroll(callback: Callback<OnOverScrollEvent> | undefined): this--><!--Device-WebAttribute-onOverScroll(callback: Callback<OnOverScrollEvent> | undefined): this-End-->
 
@@ -2204,7 +2204,7 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onOverrideErrorPage(callback: OnOverrideErrorPageCallback | undefined): this--><!--Device-WebAttribute-onOverrideErrorPage(callback: OnOverrideErrorPageCallback | undefined): this-End-->
 
@@ -2226,7 +2226,7 @@ onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback | undefined): this--><!--Device-WebAttribute-onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback | undefined): this-End-->
 
@@ -2248,7 +2248,7 @@ onPageBegin(callback: Callback<OnPageBeginEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPageBegin(callback: Callback<OnPageBeginEvent> | undefined): this--><!--Device-WebAttribute-onPageBegin(callback: Callback<OnPageBeginEvent> | undefined): this-End-->
 
@@ -2270,7 +2270,7 @@ onPageEnd(callback: Callback<OnPageEndEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPageEnd(callback: Callback<OnPageEndEvent> | undefined): this--><!--Device-WebAttribute-onPageEnd(callback: Callback<OnPageEndEvent> | undefined): this-End-->
 
@@ -2292,7 +2292,7 @@ onPageVisible(callback: Callback<OnPageVisibleEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPageVisible(callback: Callback<OnPageVisibleEvent> | undefined): this--><!--Device-WebAttribute-onPageVisible(callback: Callback<OnPageVisibleEvent> | undefined): this-End-->
 
@@ -2314,7 +2314,7 @@ onPdfLoadEvent(callback: Callback<OnPdfLoadEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPdfLoadEvent(callback: Callback<OnPdfLoadEvent> | undefined): this--><!--Device-WebAttribute-onPdfLoadEvent(callback: Callback<OnPdfLoadEvent> | undefined): this-End-->
 
@@ -2336,7 +2336,7 @@ onPdfScrollAtBottom(callback: Callback<OnPdfScrollEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPdfScrollAtBottom(callback: Callback<OnPdfScrollEvent> | undefined): this--><!--Device-WebAttribute-onPdfScrollAtBottom(callback: Callback<OnPdfScrollEvent> | undefined): this-End-->
 
@@ -2358,7 +2358,7 @@ onPermissionRequest(callback: Callback<OnPermissionRequestEvent> | undefined): t
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPermissionRequest(callback: Callback<OnPermissionRequestEvent> | undefined): this--><!--Device-WebAttribute-onPermissionRequest(callback: Callback<OnPermissionRequestEvent> | undefined): this-End-->
 
@@ -2380,7 +2380,7 @@ onProgressChange(callback: Callback<OnProgressChangeEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onProgressChange(callback: Callback<OnProgressChangeEvent> | undefined): this--><!--Device-WebAttribute-onProgressChange(callback: Callback<OnProgressChangeEvent> | undefined): this-End-->
 
@@ -2402,7 +2402,7 @@ onPrompt(callback: Callback<OnPromptEvent, boolean> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onPrompt(callback: Callback<OnPromptEvent, boolean> | undefined): this--><!--Device-WebAttribute-onPrompt(callback: Callback<OnPromptEvent, boolean> | undefined): this-End-->
 
@@ -2424,7 +2424,7 @@ onRefreshAccessedHistory(callback: Callback<OnRefreshAccessedHistoryEvent> | und
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onRefreshAccessedHistory(callback: Callback<OnRefreshAccessedHistoryEvent> | undefined): this--><!--Device-WebAttribute-onRefreshAccessedHistory(callback: Callback<OnRefreshAccessedHistoryEvent> | undefined): this-End-->
 
@@ -2446,7 +2446,7 @@ onRenderExited(callback: Callback<OnRenderExitedEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onRenderExited(callback: Callback<OnRenderExitedEvent> | undefined): this--><!--Device-WebAttribute-onRenderExited(callback: Callback<OnRenderExitedEvent> | undefined): this-End-->
 
@@ -2468,7 +2468,7 @@ onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback | un
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback | undefined): this--><!--Device-WebAttribute-onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback | undefined): this-End-->
 
@@ -2490,7 +2490,7 @@ onRenderProcessResponding(callback: OnRenderProcessRespondingCallback | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onRenderProcessResponding(callback: OnRenderProcessRespondingCallback | undefined): this--><!--Device-WebAttribute-onRenderProcessResponding(callback: OnRenderProcessRespondingCallback | undefined): this-End-->
 
@@ -2512,7 +2512,7 @@ onRequestSelected(callback: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onRequestSelected(callback: (() => void) | undefined): this--><!--Device-WebAttribute-onRequestSelected(callback: (() => void) | undefined): this-End-->
 
@@ -2534,7 +2534,7 @@ onResourceLoad(callback: Callback<OnResourceLoadEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onResourceLoad(callback: Callback<OnResourceLoadEvent> | undefined): this--><!--Device-WebAttribute-onResourceLoad(callback: Callback<OnResourceLoadEvent> | undefined): this-End-->
 
@@ -2556,7 +2556,7 @@ onSafeBrowsingCheckFinish(callback: OnSafeBrowsingCheckResultCallback | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onSafeBrowsingCheckFinish(callback: OnSafeBrowsingCheckResultCallback | undefined): this--><!--Device-WebAttribute-onSafeBrowsingCheckFinish(callback: OnSafeBrowsingCheckResultCallback | undefined): this-End-->
 
@@ -2578,7 +2578,7 @@ onSafeBrowsingCheckResult(callback: OnSafeBrowsingCheckResultCallback | undefine
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onSafeBrowsingCheckResult(callback: OnSafeBrowsingCheckResultCallback | undefined): this--><!--Device-WebAttribute-onSafeBrowsingCheckResult(callback: OnSafeBrowsingCheckResultCallback | undefined): this-End-->
 
@@ -2600,7 +2600,7 @@ onScaleChange(callback: Callback<OnScaleChangeEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onScaleChange(callback: Callback<OnScaleChangeEvent> | undefined): this--><!--Device-WebAttribute-onScaleChange(callback: Callback<OnScaleChangeEvent> | undefined): this-End-->
 
@@ -2622,7 +2622,7 @@ onScreenCaptureRequest(callback: Callback<OnScreenCaptureRequestEvent> | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onScreenCaptureRequest(callback: Callback<OnScreenCaptureRequestEvent> | undefined): this--><!--Device-WebAttribute-onScreenCaptureRequest(callback: Callback<OnScreenCaptureRequestEvent> | undefined): this-End-->
 
@@ -2644,7 +2644,7 @@ onScroll(callback: Callback<OnScrollEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onScroll(callback: Callback<OnScrollEvent> | undefined): this--><!--Device-WebAttribute-onScroll(callback: Callback<OnScrollEvent> | undefined): this-End-->
 
@@ -2666,7 +2666,7 @@ onSearchResultReceive(callback: Callback<OnSearchResultReceiveEvent> | undefined
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onSearchResultReceive(callback: Callback<OnSearchResultReceiveEvent> | undefined): this--><!--Device-WebAttribute-onSearchResultReceive(callback: Callback<OnSearchResultReceiveEvent> | undefined): this-End-->
 
@@ -2688,7 +2688,7 @@ onShowFileSelector(callback: Callback<OnShowFileSelectorEvent, boolean> | undefi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onShowFileSelector(callback: Callback<OnShowFileSelectorEvent, boolean> | undefined): this--><!--Device-WebAttribute-onShowFileSelector(callback: Callback<OnShowFileSelectorEvent, boolean> | undefined): this-End-->
 
@@ -2710,7 +2710,7 @@ onSslErrorEvent(callback: OnSslErrorEventCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onSslErrorEvent(callback: OnSslErrorEventCallback | undefined): this--><!--Device-WebAttribute-onSslErrorEvent(callback: OnSslErrorEventCallback | undefined): this-End-->
 
@@ -2732,7 +2732,7 @@ onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent> | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent> | undefined): this--><!--Device-WebAttribute-onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent> | undefined): this-End-->
 
@@ -2754,7 +2754,7 @@ onTextSelectionChange(callback: TextSelectionChangeCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onTextSelectionChange(callback: TextSelectionChangeCallback | undefined): this--><!--Device-WebAttribute-onTextSelectionChange(callback: TextSelectionChangeCallback | undefined): this-End-->
 
@@ -2776,7 +2776,7 @@ onTitleReceive(callback: Callback<OnTitleReceiveEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onTitleReceive(callback: Callback<OnTitleReceiveEvent> | undefined): this--><!--Device-WebAttribute-onTitleReceive(callback: Callback<OnTitleReceiveEvent> | undefined): this-End-->
 
@@ -2798,7 +2798,7 @@ onTouchIconUrlReceived(callback: Callback<OnTouchIconUrlReceivedEvent> | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onTouchIconUrlReceived(callback: Callback<OnTouchIconUrlReceivedEvent> | undefined): this--><!--Device-WebAttribute-onTouchIconUrlReceived(callback: Callback<OnTouchIconUrlReceivedEvent> | undefined): this-End-->
 
@@ -2820,7 +2820,7 @@ onVerifyPin(callback: OnVerifyPinCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onVerifyPin(callback: OnVerifyPinCallback | undefined): this--><!--Device-WebAttribute-onVerifyPin(callback: OnVerifyPinCallback | undefined): this-End-->
 
@@ -2842,7 +2842,7 @@ onViewportFitChanged(callback: OnViewportFitChangedCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onViewportFitChanged(callback: OnViewportFitChangedCallback | undefined): this--><!--Device-WebAttribute-onViewportFitChanged(callback: OnViewportFitChangedCallback | undefined): this-End-->
 
@@ -2864,7 +2864,7 @@ onWindowExit(callback: (() => void) | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onWindowExit(callback: (() => void) | undefined): this--><!--Device-WebAttribute-onWindowExit(callback: (() => void) | undefined): this-End-->
 
@@ -2886,7 +2886,7 @@ onWindowNew(callback: Callback<OnWindowNewEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onWindowNew(callback: Callback<OnWindowNewEvent> | undefined): this--><!--Device-WebAttribute-onWindowNew(callback: Callback<OnWindowNewEvent> | undefined): this-End-->
 
@@ -2908,7 +2908,7 @@ onWindowNewExt(callback: Callback<OnWindowNewExtEvent> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onWindowNewExt(callback: Callback<OnWindowNewExtEvent> | undefined): this--><!--Device-WebAttribute-onWindowNewExt(callback: Callback<OnWindowNewExtEvent> | undefined): this-End-->
 
@@ -2930,7 +2930,7 @@ onlineImageAccess(onlineImageAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-onlineImageAccess(onlineImageAccess: boolean | undefined): this--><!--Device-WebAttribute-onlineImageAccess(onlineImageAccess: boolean | undefined): this-End-->
 
@@ -2952,7 +2952,7 @@ optimizeParserBudget(optimizeParserBudget: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-optimizeParserBudget(optimizeParserBudget: boolean | undefined): this--><!--Device-WebAttribute-optimizeParserBudget(optimizeParserBudget: boolean | undefined): this-End-->
 
@@ -2974,7 +2974,7 @@ overScrollMode(mode: OverScrollMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-overScrollMode(mode: OverScrollMode | undefined): this--><!--Device-WebAttribute-overScrollMode(mode: OverScrollMode | undefined): this-End-->
 
@@ -2996,7 +2996,7 @@ overviewModeAccess(overviewModeAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-overviewModeAccess(overviewModeAccess: boolean | undefined): this--><!--Device-WebAttribute-overviewModeAccess(overviewModeAccess: boolean | undefined): this-End-->
 
@@ -3018,7 +3018,7 @@ pinchSmooth(isEnabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-pinchSmooth(isEnabled: boolean | undefined): this--><!--Device-WebAttribute-pinchSmooth(isEnabled: boolean | undefined): this-End-->
 
@@ -3040,7 +3040,7 @@ registerNativeEmbedRule(tag: string | undefined, type: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-registerNativeEmbedRule(tag: string | undefined, type: string | undefined): this--><!--Device-WebAttribute-registerNativeEmbedRule(tag: string | undefined, type: string | undefined): this-End-->
 
@@ -3063,7 +3063,7 @@ rotateRenderEffect(effect: WebRotateEffect | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-rotateRenderEffect(effect: WebRotateEffect | undefined): this--><!--Device-WebAttribute-rotateRenderEffect(effect: WebRotateEffect | undefined): this-End-->
 
@@ -3085,7 +3085,7 @@ runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem> | undefined): this--><!--Device-WebAttribute-runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem> | undefined): this-End-->
 
@@ -3107,7 +3107,7 @@ runJavaScriptOnDocumentStart(scripts: Array<ScriptItem> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-runJavaScriptOnDocumentStart(scripts: Array<ScriptItem> | undefined): this--><!--Device-WebAttribute-runJavaScriptOnDocumentStart(scripts: Array<ScriptItem> | undefined): this-End-->
 
@@ -3129,7 +3129,7 @@ runJavaScriptOnHeadEnd(scripts: Array<ScriptItem> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-runJavaScriptOnHeadEnd(scripts: Array<ScriptItem> | undefined): this--><!--Device-WebAttribute-runJavaScriptOnHeadEnd(scripts: Array<ScriptItem> | undefined): this-End-->
 
@@ -3151,7 +3151,7 @@ scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy | undefined): this--><!--Device-WebAttribute-scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy | undefined): this-End-->
 
@@ -3173,7 +3173,7 @@ textAutosizing(textAutosizing: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-textAutosizing(textAutosizing: boolean | undefined): this--><!--Device-WebAttribute-textAutosizing(textAutosizing: boolean | undefined): this-End-->
 
@@ -3195,7 +3195,7 @@ textZoomRatio(textZoomRatio: int | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-textZoomRatio(textZoomRatio: int | undefined): this--><!--Device-WebAttribute-textZoomRatio(textZoomRatio: int | undefined): this-End-->
 
@@ -3217,7 +3217,7 @@ verticalScrollBarAccess(verticalScrollBar: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-verticalScrollBarAccess(verticalScrollBar: boolean | undefined): this--><!--Device-WebAttribute-verticalScrollBarAccess(verticalScrollBar: boolean | undefined): this-End-->
 
@@ -3239,7 +3239,7 @@ webCursiveFont(family: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-webCursiveFont(family: string | undefined): this--><!--Device-WebAttribute-webCursiveFont(family: string | undefined): this-End-->
 
@@ -3261,7 +3261,7 @@ webFantasyFont(family: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-webFantasyFont(family: string | undefined): this--><!--Device-WebAttribute-webFantasyFont(family: string | undefined): this-End-->
 
@@ -3283,7 +3283,7 @@ webFixedFont(family: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-webFixedFont(family: string | undefined): this--><!--Device-WebAttribute-webFixedFont(family: string | undefined): this-End-->
 
@@ -3305,7 +3305,7 @@ webSansSerifFont(family: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-webSansSerifFont(family: string | undefined): this--><!--Device-WebAttribute-webSansSerifFont(family: string | undefined): this-End-->
 
@@ -3327,7 +3327,7 @@ webSerifFont(family: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-webSerifFont(family: string | undefined): this--><!--Device-WebAttribute-webSerifFont(family: string | undefined): this-End-->
 
@@ -3349,7 +3349,7 @@ webStandardFont(family: string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-webStandardFont(family: string | undefined): this--><!--Device-WebAttribute-webStandardFont(family: string | undefined): this-End-->
 
@@ -3371,7 +3371,7 @@ zoomAccess(zoomAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-zoomAccess(zoomAccess: boolean | undefined): this--><!--Device-WebAttribute-zoomAccess(zoomAccess: boolean | undefined): this-End-->
 
@@ -3393,7 +3393,7 @@ zoomControlAccess(zoomControlAccess: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-WebAttribute-zoomControlAccess(zoomControlAccess: boolean | undefined): this--><!--Device-WebAttribute-zoomControlAccess(zoomControlAccess: boolean | undefined): this-End-->
 
@@ -3417,7 +3417,7 @@ The callback is triggered when the inputmethod is attached to the IMF.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,7 @@
 
 **Since:** -1
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version -1.
+**ArkTS mode:** ArkTS-Sta since version -1.
 
 <!--Device-unnamed-class Animator--><!--Device-unnamed-class Animator-End-->
 
@@ -21,7 +21,7 @@ Create an animator object for custom animation. This interface depends on the UI
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

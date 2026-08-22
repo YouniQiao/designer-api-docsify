@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ScrollBarAttribute--><!--Device-unnamed-export declare interface ScrollBarAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ScrollBarAttribute> | AttributeMod
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollBarAttribute-attributeModifier(modifier: AttributeModifier<ScrollBarAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ScrollBarAttribute-attributeModifier(modifier: AttributeModifier<ScrollBarAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ enableNestedScroll(enabled: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollBarAttribute-enableNestedScroll(enabled: boolean | undefined): this--><!--Device-ScrollBarAttribute-enableNestedScroll(enabled: boolean | undefined): this-End-->
 
@@ -64,7 +64,7 @@ scrollBarColor(color: ColorMetrics | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollBarAttribute-scrollBarColor(color: ColorMetrics | undefined): this--><!--Device-ScrollBarAttribute-scrollBarColor(color: ColorMetrics | undefined): this-End-->
 
@@ -86,7 +86,7 @@ setScrollBarOptions(value: ScrollBarOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ScrollBarAttribute-setScrollBarOptions(value: ScrollBarOptions): this--><!--Device-ScrollBarAttribute-setScrollBarOptions(value: ScrollBarOptions): this-End-->
 
@@ -110,7 +110,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

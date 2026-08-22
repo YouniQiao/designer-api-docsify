@@ -12,7 +12,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface AlphabetIndexerAttribute--><!--Device-unnamed-export declare interface AlphabetIndexerAttribute-End-->
 
@@ -26,7 +26,7 @@ alignStyle(value: IndexerAlign | undefined, offset?: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-alignStyle(value: IndexerAlign | undefined, offset?: Length | undefined): this--><!--Device-AlphabetIndexerAttribute-alignStyle(value: IndexerAlign | undefined, offset?: Length | undefined): this-End-->
 
@@ -49,7 +49,7 @@ attributeModifier(modifier: AttributeModifier<AlphabetIndexerAttribute> | Attrib
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-attributeModifier(modifier: AttributeModifier<AlphabetIndexerAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-AlphabetIndexerAttribute-attributeModifier(modifier: AttributeModifier<AlphabetIndexerAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -71,7 +71,7 @@ autoCollapse(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-autoCollapse(value: boolean | undefined): this--><!--Device-AlphabetIndexerAttribute-autoCollapse(value: boolean | undefined): this-End-->
 
@@ -93,7 +93,7 @@ color(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-color(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-color(value: ResourceColor | undefined): this-End-->
 
@@ -115,7 +115,7 @@ enableHapticFeedback(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-enableHapticFeedback(value: boolean | undefined): this--><!--Device-AlphabetIndexerAttribute-enableHapticFeedback(value: boolean | undefined): this-End-->
 
@@ -137,7 +137,7 @@ font(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-font(value: Font | undefined): this--><!--Device-AlphabetIndexerAttribute-font(value: Font | undefined): this-End-->
 
@@ -159,7 +159,7 @@ itemBorderRadius(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-itemBorderRadius(value: double | undefined): this--><!--Device-AlphabetIndexerAttribute-itemBorderRadius(value: double | undefined): this-End-->
 
@@ -181,7 +181,7 @@ itemSize(value: string | double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-itemSize(value: string | double | undefined): this--><!--Device-AlphabetIndexerAttribute-itemSize(value: string | double | undefined): this-End-->
 
@@ -203,7 +203,7 @@ onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback | undefined): this--><!--Device-AlphabetIndexerAttribute-onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback | undefined): this-End-->
 
@@ -225,7 +225,7 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback | undefin
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback | undefined): this--><!--Device-AlphabetIndexerAttribute-onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback | undefined): this-End-->
 
@@ -247,7 +247,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-onSelect(callback: OnAlphabetIndexerSelectCallback | undefined): this--><!--Device-AlphabetIndexerAttribute-onSelect(callback: OnAlphabetIndexerSelectCallback | undefined): this-End-->
 
@@ -269,7 +269,7 @@ popupBackground(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupBackground(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-popupBackground(value: ResourceColor | undefined): this-End-->
 
@@ -291,7 +291,7 @@ popupBackgroundBlurStyle(value: BlurStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupBackgroundBlurStyle(value: BlurStyle | undefined): this--><!--Device-AlphabetIndexerAttribute-popupBackgroundBlurStyle(value: BlurStyle | undefined): this-End-->
 
@@ -313,7 +313,7 @@ popupColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupColor(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-popupColor(value: ResourceColor | undefined): this-End-->
 
@@ -335,7 +335,7 @@ popupFont(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupFont(value: Font | undefined): this--><!--Device-AlphabetIndexerAttribute-popupFont(value: Font | undefined): this-End-->
 
@@ -357,7 +357,7 @@ popupItemBackgroundColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupItemBackgroundColor(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-popupItemBackgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -379,7 +379,7 @@ popupItemBorderRadius(value: double | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupItemBorderRadius(value: double | undefined): this--><!--Device-AlphabetIndexerAttribute-popupItemBorderRadius(value: double | undefined): this-End-->
 
@@ -401,7 +401,7 @@ popupItemFont(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupItemFont(value: Font | undefined): this--><!--Device-AlphabetIndexerAttribute-popupItemFont(value: Font | undefined): this-End-->
 
@@ -423,7 +423,7 @@ popupPosition(value: Position | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupPosition(value: Position | undefined): this--><!--Device-AlphabetIndexerAttribute-popupPosition(value: Position | undefined): this-End-->
 
@@ -445,7 +445,7 @@ popupSelectedColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupSelectedColor(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-popupSelectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -467,7 +467,7 @@ popupTitleBackground(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupTitleBackground(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-popupTitleBackground(value: ResourceColor | undefined): this-End-->
 
@@ -489,7 +489,7 @@ popupUnselectedColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-popupUnselectedColor(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-popupUnselectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -511,7 +511,7 @@ selected(index: int | Bindable<int> | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-selected(index: int | Bindable<int> | undefined): this--><!--Device-AlphabetIndexerAttribute-selected(index: int | Bindable<int> | undefined): this-End-->
 
@@ -533,7 +533,7 @@ selectedBackgroundColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-selectedBackgroundColor(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-selectedBackgroundColor(value: ResourceColor | undefined): this-End-->
 
@@ -555,7 +555,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-selectedColor(value: ResourceColor | undefined): this--><!--Device-AlphabetIndexerAttribute-selectedColor(value: ResourceColor | undefined): this-End-->
 
@@ -577,7 +577,7 @@ selectedFont(value: Font | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-selectedFont(value: Font | undefined): this--><!--Device-AlphabetIndexerAttribute-selectedFont(value: Font | undefined): this-End-->
 
@@ -599,7 +599,7 @@ setAlphabetIndexerOptions(info: AlphabetIndexerOptions): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-setAlphabetIndexerOptions(info: AlphabetIndexerOptions): this--><!--Device-AlphabetIndexerAttribute-setAlphabetIndexerOptions(info: AlphabetIndexerOptions): this-End-->
 
@@ -621,7 +621,7 @@ usingPopup(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-AlphabetIndexerAttribute-usingPopup(value: boolean | undefined): this--><!--Device-AlphabetIndexerAttribute-usingPopup(value: boolean | undefined): this-End-->
 
@@ -645,7 +645,7 @@ default
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

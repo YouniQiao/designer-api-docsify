@@ -6,7 +6,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare interface ButtonAttribute--><!--Device-unnamed-export declare interface ButtonAttribute-End-->
 
@@ -20,7 +20,7 @@ attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ButtonAttribute-attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
@@ -42,7 +42,7 @@ buttonStyle(value: ButtonStyleMode | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-buttonStyle(value: ButtonStyleMode | undefined): this--><!--Device-ButtonAttribute-buttonStyle(value: ButtonStyleMode | undefined): this-End-->
 
@@ -64,7 +64,7 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): thi
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): this--><!--Device-ButtonAttribute-contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): this-End-->
 
@@ -86,7 +86,7 @@ controlSize(value: ControlSize | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-controlSize(value: ControlSize | undefined): this--><!--Device-ButtonAttribute-controlSize(value: ControlSize | undefined): this-End-->
 
@@ -108,7 +108,7 @@ fontColor(value: ResourceColor | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-fontColor(value: ResourceColor | undefined): this--><!--Device-ButtonAttribute-fontColor(value: ResourceColor | undefined): this-End-->
 
@@ -130,7 +130,7 @@ fontFamily(value: string | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-fontFamily(value: string | Resource | undefined): this--><!--Device-ButtonAttribute-fontFamily(value: string | Resource | undefined): this-End-->
 
@@ -152,7 +152,7 @@ fontSize(value: Length | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-fontSize(value: Length | undefined): this--><!--Device-ButtonAttribute-fontSize(value: Length | undefined): this-End-->
 
@@ -174,7 +174,7 @@ fontStyle(value: FontStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-fontStyle(value: FontStyle | undefined): this--><!--Device-ButtonAttribute-fontStyle(value: FontStyle | undefined): this-End-->
 
@@ -196,7 +196,7 @@ fontWeight(value: int | FontWeight | string | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-fontWeight(value: int | FontWeight | string | undefined): this--><!--Device-ButtonAttribute-fontWeight(value: int | FontWeight | string | undefined): this-End-->
 
@@ -218,7 +218,7 @@ labelStyle(value: ButtonLabelStyle | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-labelStyle(value: ButtonLabelStyle | undefined): this--><!--Device-ButtonAttribute-labelStyle(value: ButtonLabelStyle | undefined): this-End-->
 
@@ -240,7 +240,7 @@ maxFontScale(scale: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-maxFontScale(scale: double | Resource | undefined): this--><!--Device-ButtonAttribute-maxFontScale(scale: double | Resource | undefined): this-End-->
 
@@ -262,7 +262,7 @@ minFontScale(scale: double | Resource | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-minFontScale(scale: double | Resource | undefined): this--><!--Device-ButtonAttribute-minFontScale(scale: double | Resource | undefined): this-End-->
 
@@ -284,7 +284,7 @@ role(value: ButtonRole | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-role(value: ButtonRole | undefined): this--><!--Device-ButtonAttribute-role(value: ButtonRole | undefined): this-End-->
 
@@ -306,7 +306,7 @@ stateEffect(value: boolean | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-stateEffect(value: boolean | undefined): this--><!--Device-ButtonAttribute-stateEffect(value: boolean | undefined): this-End-->
 
@@ -328,7 +328,7 @@ type(value: ButtonType | undefined): this
 
 **起始版本：** -1
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为-1。
+**ArkTS模式：** ArkTS-Sta起始版本为-1。
 
 <!--Device-ButtonAttribute-type(value: ButtonType | undefined): this--><!--Device-ButtonAttribute-type(value: ButtonType | undefined): this-End-->
 
@@ -352,7 +352,7 @@ default
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

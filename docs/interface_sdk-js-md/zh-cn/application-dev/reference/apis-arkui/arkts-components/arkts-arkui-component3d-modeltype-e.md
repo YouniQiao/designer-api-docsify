@@ -4,7 +4,7 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-unnamed-export declare enum ModelType--><!--Device-unnamed-export declare enum ModelType-End-->
 
@@ -20,7 +20,7 @@ TEXTURE = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ModelType-TEXTURE = 0--><!--Device-ModelType-TEXTURE = 0-End-->
 
@@ -36,7 +36,7 @@ SURFACE = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** ArkTS-Sta起始版本为23。
 
 <!--Device-ModelType-SURFACE = 1--><!--Device-ModelType-SURFACE = 1-End-->
 

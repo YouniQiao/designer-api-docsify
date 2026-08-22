@@ -4,7 +4,7 @@ Provides detailed information about the first meaningful paint.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-unnamed-export declare interface FirstMeaningfulPaint--><!--Device-unnamed-export declare interface FirstMeaningfulPaint-End-->
 
@@ -22,7 +22,7 @@ Paint time of first meaningful content. <br>Unit:microseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-FirstMeaningfulPaint-firstMeaningfulPaintTime?: long--><!--Device-FirstMeaningfulPaint-firstMeaningfulPaintTime?: long-End-->
 
@@ -40,7 +40,7 @@ Start time of navigation. <br>Unit:microseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-FirstMeaningfulPaint-navigationStartTime?: long--><!--Device-FirstMeaningfulPaint-navigationStartTime?: long-End-->
 

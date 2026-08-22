@@ -16,7 +16,7 @@ Battery level of the device.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Sta since version 23.
 
 <!--Device-batteryInfo-function batteryCapacityLevel(): BatteryCapacityLevel--><!--Device-batteryInfo-function batteryCapacityLevel(): BatteryCapacityLevel-End-->
 
